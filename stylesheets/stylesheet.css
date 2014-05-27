@@ -143,6 +143,7 @@ p {
 .nav {
   margin: 20px auto 20px auto;
   width: 600px;
+  text-align: center;
 }
 
 .nav ul li {
