@@ -83,16 +83,19 @@ h1 {
   color: #bbb349;
   font-size: 2em;
   font-weight: 400;
+  text-align: center;
 }
 
 h2 {
   color: #2F353B;
   font-size: 1.5em;
   font-weight: 400;
+  text-align: center;
 }
 
-h3 {
-  color: 2F353B;
+h3, h4 {
+  color: #2F353B;
   font-size: 1em;
   font-weight: 400;
+  text-align: center;
 }
