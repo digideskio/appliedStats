@@ -141,6 +141,15 @@ p {
 *******************************/
 
 .nav {
-  float: left;
-  width: 200px;
+  margin: 20px auto 20px auto;
+  width: 600px;
+}
+
+.nav ul li {
+  list-style: none;
+  display: inline;
+  font-size: 1.15em;
+  font-weight: 300;
+  padding-right: 15px;
+  position: relative;
 }
