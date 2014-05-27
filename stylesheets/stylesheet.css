@@ -113,3 +113,15 @@ h4 {
   font-weight: 300;
   text-align: left;
 }
+
+.chapter a, .chapter a:visited {
+  text-decoration: none;
+  color: #24890d;
+  font-weight: 400;
+
+}
+
+.chapter a:active, .chapter a:hover {
+  text-decoration: none;
+  color: #41a62a;
+}
