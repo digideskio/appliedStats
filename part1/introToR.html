@@ -28,9 +28,16 @@
     
     <h3>Reading in Data</h3>
     <p>There are two strategies used for reading in data: the command line or RStudio's graphical interface. To load data via the command line, we will type a command such as:</p>
-    <pre><code>
-      myData <- read.csv("/Path/to/File.csv", headers=TRUE)
-    </code></pre>
+    <pre>
+      <code>
+# Here, myData is what we will name our data once we load it.
+# We use the function read.csv to tell R to load our data
+# from the path specified. If you aren't sure where your
+# working directory is, type the function getwd()
+# and hit Enter.
+myData <- read.csv("/Path/to/File.csv", headers=TRUE)
+      </code>
+    </pre>
     
     <h3>Creating a Script</h3>
     <p></p>
