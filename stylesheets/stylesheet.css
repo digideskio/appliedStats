@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 ol, ul {
-  list-style: none;
+  list-style: upper-latin;
 }
 
 table {
