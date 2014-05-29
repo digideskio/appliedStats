@@ -149,13 +149,11 @@ p {
 .dt {
   font-weight: 400;
   color: #24890d;
-  display: inline;
 }
 
 .dd {
   font-weight: 300;
   font-style: italic;
-  display: inline;
   padding-bottom: 15px;
 }
 
