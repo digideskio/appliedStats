@@ -29,7 +29,8 @@ footer, header, hgroup, menu, nav, section {
 }
 
 ol, ul {
-  list-style: upper-latin;
+  list-style: decimal;
+  padding-left: 10px;
 }
 
 table {
