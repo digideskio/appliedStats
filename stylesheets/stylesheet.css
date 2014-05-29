@@ -146,13 +146,13 @@ p {
   border-left: #24890d;
 }
 
-dt {
+.dt {
   font-weight: 400;
   color: #24890d;
   display: inline-block;
 }
 
-dd {
+.dd {
   font-weight: 300;
   font-style: italic;
   display: inline-block;
