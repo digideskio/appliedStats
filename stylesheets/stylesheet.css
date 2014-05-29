@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 
 ol, ul {
   list-style: decimal;
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 table {
