@@ -188,7 +188,7 @@ code {
   background-clip: padding-box;
   border: 1px solid #ccc;
   background-color: #52595d;
-  padding: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 15px;
   display: block;
   margin: 0px;
 }
