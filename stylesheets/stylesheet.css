@@ -150,12 +150,14 @@ p {
   font-weight: 400;
   color: #24890d;
   display: inline;
+  line-height: 1.25em;
 }
 
 .dd {
   font-weight: 300;
   font-style: italic;
   display: inline;
+  line-height: 1.25em;
 }
 
 /*******************************
