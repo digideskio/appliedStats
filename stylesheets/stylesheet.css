@@ -146,6 +146,16 @@ p {
   border-left: #24890d;
 }
 
+dt {
+  font-weight: 400;
+  color: #24890d;
+}
+
+dfn {
+  font-weight: 300;
+  font-style: italic;
+}
+
 /*******************************
  Code blocks
 *******************************/
