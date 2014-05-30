@@ -107,9 +107,7 @@
     
     <p>Now, before we can use standard deviations, we have to calculate them. The formula for standard deviation looks like:</p>
     
-    $$
-    \sigma = \sqrt{\frac{1}{n}\sum_{i=1}^n\left(x_i-\mu\right)^2}\text{, where } \mu=\frac{1}{n}\sum_{i=1}^n(x_i)
-    $$
+    \[ \sigma = \sqrt{\frac{1}{n}\sum_{i=1}^n\left(x_i-\mu\right)^2}\text{, where } \mu=\frac{1}{n}\sum_{i=1}^n(x_i) \]
     
     <p>Let's unpack that: it's saying that we start by finding the mean (\( \mu \)) of the data. Next, we'll go ahead and take every data point and subtract the mean from it (the \( x_i-\mu \) part of the equation). So what we're doing is basically finding out how many units away from the mean each data point is. But there's a problem: some data points might give us a negative number, others a positive number. So we'll take that difference and raise it to the second power (remember, a negative number times a negative number is always equal to a positive number). Now we just repeat that for every other data point in our sample and add them all together.</p>
     
@@ -118,16 +116,14 @@
     <h3>Variance</h3>
     <p>In many ways, variance and standard deviation are two sides of the same coin. If you remember, standard deviation is calculated:</p>
     
-    $$
-    \sigma = \sqrt{\frac{1}{n}\sum_{i=1}^n\left(x_i-\mu\right)^2}\text{, where } \mu=\frac{1}{n}\sum_{i=1}^n(x_i)
-    $$
+    \[ \sigma = \sqrt{\frac{1}{n}\sum_{i=1}^n\left(x_i-\mu\right)^2}\text{, where } \mu=\frac{1}{n}\sum_{i=1}^n(x_i) \]
     
     <p>Variance, then, is:</p>
     
-    $$
-    \sigma^2 = \frac{1}{n}\sum_{i=1}^n\left(x_i-\mu\right)^2
+    \[ \begin{eqnarray*}
+    \sigma^2 = \frac{1}{n}\sum_{i=1}^n\left(x_i-\mu\right)^2 \\
     = \left(\frac{1}{n}\sum_{i=1}^nx_i\right)-\mu^2\text{, where } \mu=\frac{1}{n}\sum_{i=1}^n(x_i)
-    $$
+    \end{eqnarray*} \]
     
     <p>So, we can see that population variance is calculated exactly the same as is standard deviation, except we never take a square root at the end of it all. But if they're calculated so similarly and they both measure essentially the same thing, why would we use one over the other and why do we have both?</p>
     
@@ -136,7 +132,7 @@
     <p>This rule tells us that 65% of all observations in a normal distribution will fall within 1 standard deviation of the mean; 97% will fall within 2 standard deviations of the mean; and 99.5% will fall within 3 standard deviations of the mean. We can illustrate this:</p>
     
     <img src="assets/stdevDiagram.svg" width="700px" height="366px" />
-    <span class="figure">Source: <a href="http://en.wikipedia.org/wiki/Standard_deviation" target="_blank">Wikipedia</a></span>
+    <span class="figure">The 68-97-99.5% rule states that nearly all observed data points will be within 3 standard deviations of the mean. This is often useful for flagging outliers or inappropriate distributions to fit your data to. Source: <a href="http://en.wikipedia.org/wiki/Standard_deviation" target="_blank">Wikipedia</a></span>
     
     <p>So, for instance, if we wanted to find what proportion of our data would be more than 1 standard deviation above the mean, we would add 13.6%, 2.1%, and 0.1% to end up with 15.8% of our data being more than 1 standard deviation above the mean.</p>
     

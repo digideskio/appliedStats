@@ -168,6 +168,7 @@ img {
 .figure {
   width: 700px;
   margin: 0 0 0 20px;
+  padding: 3px 3px 3px 3px;
   font-weight: 300;
   font-size: 0.8em;
   -webkit-border-radius: 3px;
