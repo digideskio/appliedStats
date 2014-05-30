@@ -137,7 +137,26 @@
     <p>So, for instance, if we wanted to find what proportion of our data would be more than 1 standard deviation above the mean, we would add 13.6%, 2.1%, and 0.1% to end up with 15.8% of our data being more than 1 standard deviation above the mean.</p>
     
     <h3>Interquartile Range</h3>
-    <p></p>
+    <p>The last measure of spread that we will discuss is the interquartile range. This is most commonly used when the median used rather than the mean. This number is based off of what is known as the "5-number summary," defined as:</p>
+    
+    <span class="dt">Minimum: </span> <span class="dd">The smallest value in your data set</span><br />
+    <span class="dt">Q1: </span> <span class="dd">The value in your data set that is larger than 25% of all other values</span><br />
+    <span class="dt">Median: </span> <span class="dd">The median value in your data set</span><br />
+    <span class="dt">Q3: </span> <span class="dd">The value in your data set that is larger than 75% of all other values</span><br />
+    <span class="dt">Maximum: </span> <span class="dd">The maximum value in your data set</span><br />
+    
+    <p>You'll quickly recognize this information if you're familiar with boxplots (if not, we cover them below). To derive the interquartile range (IQR) from these, we simply take Q3 - Q1. From the definitions above, we know that exactly 50% of our data points lie between these two values. Given this, the IQR can be said to be another measure of the dispersion of our data: instead of a 65-97-99.5% rule, here we have a 50-25-25% rule: 50% of our observations lie within the range given by the IQR; 25% lie above it; and 25% lie below it. As with standard deviation, a smaller IQR indicates a tighter spread of data (i.e., more of the data points are squished together) and a larger IQR indicates more variance of the data.</p>
+    
+    <p>Finally, the IQR is often used to identify outliers in a data set. To do this, we will usually find our upper and lower cutoffs by:</p>
+    
+    \[
+    \begin{eqnarray*}
+    \text{Upper} &=& Q3+1.5\cdot IQR \\
+    \text{Lower} &=& Q1-1.5\cdot IQR
+    \end{eqnarray*}
+    \]
+    
+    <p>That is, any data point more than 1.5 times the IQR above Q3 or more than 1.5 times the IQR below Q1 can be considered suspect and possibly an outlier. Important to note, however, is that this isn't a hard-and-fast rule: there is no real reason that we use 1.5 times the IQR as a cutoff. (Actually, the statistician who came up with this measure chose 1.5 times because 1 seemed too small and 2 seemed too large.)</p>
     
     <h2>Sampling Distributions</h2>
     <hr>
