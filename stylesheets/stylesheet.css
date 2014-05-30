@@ -159,13 +159,15 @@ p {
 }
 
 img {
-  margin: 20px 0 20px 0;
+  margin: 20px 0 0px 0;
   padding: 0 0 0 20px;
   border-left: 5px #24890d solid;
   display: block;
 }
 
 .figure {
+  width: 700px;
+  padding: 0 0 0 20px;
   font-weight: 300;
   font-size: 0.75em;
   -webkit-border-radius: 3px;
