@@ -160,8 +160,8 @@ p {
 
 img {
   margin: 0 0 0 0;
-  padding-left: 20px;
-  border-left: 6px #24890d solid;
+  padding: 20px 0 20px 20px;
+  border-left: 5px #24890d solid;
   display: block;
 }
 
