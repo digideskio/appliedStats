@@ -38,6 +38,33 @@
     
     <p>Finally, the <span class="dt">mode</span> is the most frequently-occurring number in a series of data. Usually, we will compute the mode when working with categorical data: for instance, it could tell us that the majority of survey respondents were female or were Jewish or lived in the Midwest.</p>
     
+    <p>If we want to calculate these in R, we would do something like this:</p>
+    
+    <pre>
+      <code>
+# First we will generate 200 random values
+# with mean 0 and standard deviation 1
+
+> set.seed(0)
+> data <- rnorm(200, mean=0, sd=1)
+
+# Now we will find the mean:
+
+> mean(data)
+[1] -0.01144155
+
+# We can see that the mean of -0.011 is
+# close to the value (0) we specified above.
+# Next let's calculate the median
+
+> median(data)
+[1] -0.1061751
+
+# We see that the median differs from the mean!
+# That means that our data are a little skewed
+# We'll talk about skewness in the next section.
+      </code>
+    </pre>
     <h3>Skewness and Mean vs. Median</h3>
     <p></p>
     
