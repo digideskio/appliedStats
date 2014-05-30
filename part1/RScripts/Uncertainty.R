@@ -1,8 +1,15 @@
+###############################################################################
+# Mean, Median, and Mode
+###############################################################################
 set.seed(0)
 data <- rnorm(200,0,1)
 
 mean(data)
 median(data)
+
+###############################################################################
+# Skewness and Mean vs. Median
+###############################################################################
 
 # overlay histogram and normal density
 p0 = qplot(data, geom = 'blank') +
@@ -28,3 +35,23 @@ mean(data2)
 
 median(data)
 median(data2)
+
+###############################################################################
+# Standard Deviation
+###############################################################################
+
+# Small standard deviation (sd = 1)
+x=seq(-20,20,length=200)
+y=dnorm(x,mean=0,sd=1)
+plot(x,y,type="l",lwd=2,col="red", main="SD = 1")
+polygon(c(-20,x,20),c(0,y,0),col="gray")
+
+# Moderate standard deviation (sd = 3)
+y=dnorm(x,mean=0,sd=3)
+plot(x,y,type="l",lwd=2,col="red", main="SD = 3")
+polygon(c(-20,x,20),c(0,y,0),col="gray")
+
+# Large standard deviation (sd = 6)
+y=dnorm(x,mean=0,sd=6)
+plot(x,y,type="l",lwd=2,col="red", main="SD = 6")
+polygon(c(-20,x,20),c(0,y,0),col="gray")
