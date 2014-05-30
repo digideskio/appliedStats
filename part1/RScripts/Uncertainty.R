@@ -55,3 +55,19 @@ polygon(c(-20,x,20),c(0,y,0),col="gray")
 y=dnorm(x,mean=0,sd=6)
 plot(x,y,type="l",lwd=2,col="red", main="SD = 6")
 polygon(c(-20,x,20),c(0,y,0),col="gray")
+
+###############################################################################
+# Visualizing Data
+###############################################################################
+
+# Histogram
+hist(data)
+
+# Kernel density plot
+plot(density(data))
+
+# Boxplots
+boxplot(data)
+
+# Scatterplot
+plot(data)
