@@ -70,8 +70,33 @@
     
     <img src="assets/skewHistogram.jpeg" width="700px" height="366px" />
     
-    <p>The smooth line that you see above is the <a href="http://en.wikipedia.org/wiki/Normal_distribution" target="_blank">normal distribution</a>; the columns represent our actual observations. As you can see, the two don't line up perfectly. Rather, our graph is stretched out to the right a bit. We call this stretching <span class="dt">skewness</span>: the idea that, rather than being perfectly symmetrical about the mean, out data are stretched out to the right or to the left. In cases where our data are stretched out to the right, we </p>
+    <p>The smooth line that you see above is the <a href="http://en.wikipedia.org/wiki/Normal_distribution" target="_blank">normal distribution</a>; the columns represent our actual observations. As you can see, the two don't line up perfectly. Rather, our graph is stretched out to the right a bit. We call this stretching <span class="dt">skewness</span>: the idea that, rather than being perfectly symmetrical about the mean, out data are stretched out to the right or to the left. In cases where our data are stretched out to the right, we say that they are skewed right; when they are stretched to the left, we say they are skewed left.</p>
     
+    <p>Many times, as in this example, there isn't very much skewness and our data, even though they aren't perfect, are still fairly symmetrical. However, sometimes we will have strong outliers that really mess up that symmetry. For instance:</p>
+    
+    <img src="assets/skew2.jpeg" width="700px" height="366px" />
+
+    <p>Here, we have a strong rightward skew. Now, let's go ahead and compare the means and medians of our two datasets:</p>
+    
+    <pre>
+      <code>
+# First we'll compare the means
+> mean(data)
+[1] -0.01144155
+
+> mean(data2)
+[1] 0.2489018
+
+# And now the medians
+> median(data)
+[1] -0.1061751
+
+> median(data2)
+[1] -0.005767173
+      </code>
+    </pre>
+    
+    <p>As you can see, both the mean and the median change. However, the median changes much less than the mean does. (There's a change of 0.26 in the means versus a change of 0.10 in the medians.) In casaes where you have strongly skewed data, it will often be better to describe them using the median rather than the mean: specifically, the median is what we call <span class="dt">resistent to outliers</span>. In other words, when you have a few outliers (numbers that are far away from every other data point), the median will be changed much less than the mean will.</p>
     <h3>Standard Deviation</h3>
     <p></p>
     
