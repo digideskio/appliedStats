@@ -159,8 +159,8 @@ p {
 }
 
 img {
-  margin: 0 0 0 0;
-  padding: 20px 0 20px 20px;
+  margin: 20px 0 20px 0;
+  padding: 0 0 0 20px;
   border-left: 5px #24890d solid;
   display: block;
 }
