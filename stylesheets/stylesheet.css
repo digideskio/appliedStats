@@ -159,9 +159,9 @@ p {
 }
 
 img {
-  margin: 0 auto 0 auto;
+  margin: 0 0 0 0;
   padding-left: 20px;
-  border-left: 4px #24890d solid;
+  border-left: 6px #24890d solid;
   display: block;
 }
 
