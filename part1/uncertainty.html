@@ -11,6 +11,8 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
   <title>Measuring Uncertainty | Applied Statistics</title>
+  
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
 
 <body>
@@ -22,7 +24,19 @@
     <hr>
     
     <h3>Mean, Median, Mode</h3>
-    <p></p>
+    <p>Mean, median, and mode represent the three common ways of describing important features of a data set at a glance. The <span class="dt">arithmetic mean</span> of a sample, \( x_1, x_2, \ldots, x_n \), is denoted by \( \bar{x} \) (pronounced "x-bar"). For a sample of \( n \) observations, it is calculated:</p>
+    
+    $$ \bar{x} = \frac{x_1 +x_2+\ldots +x_n}{n} $$
+    
+    <p>Alternately, it may be represented as:</p>
+    
+    $$ \bar{x} = \frac{\sum_i^n x_i}{n} $$
+    
+    <p>This means we add up every item in a set of \( n \) items and then divide by however many items we added together. Here, the capital sigma indicates that we take a sum (that is, we add up all the values). This is the most commonly-used measure of central tendency, although it should never be used when dealing with ordinal or categorical data. (That is, ranked data&mdash;such as "rate these from best to worst"&mdash;or categories&mdash;such as male/female or religion. Although technically possible, the result will be difficult to interpret, if not impossible.)</p>
+    
+    <p>The <span class="dt">median</span> of a set of data is, quite literally, the middle value. If we take a series of numbers, order them from smallest to largest, and pick the number that's right in the middle (think of a see-saw balancing at its fulcrum), then we have the median. This can be calculated in many of the same cases as the mean and is more resistent to outliers (values that are unusually far away from most other data points) than is the mean.</p>
+    
+    <p>Finally, the <span class="dt">mode</span> is the most frequently-occurring number in a series of data. Usually, we will compute the mode when working with categorical data: for instance, it could tell us that the majority of survey respondents were female or were Jewish or lived in the Midwest.</p>
     
     <h3>Skewness and Mean vs. Median</h3>
     <p></p>
