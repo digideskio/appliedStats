@@ -167,9 +167,9 @@ img {
 
 .figure {
   width: 700px;
-  padding: 0 0 0 20px;
+  margin: 0 0 0 20px;
   font-weight: 300;
-  font-size: 0.75em;
+  font-size: 0.8em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -178,6 +178,7 @@ img {
   background-clip: padding-box;
   border: 1px solid #ccc;
   background-color: #F9F9F9;
+  display: block;
 }
 
 /*******************************
