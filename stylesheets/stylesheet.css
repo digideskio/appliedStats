@@ -158,6 +158,13 @@ p {
   text-align: left;
 }
 
+img {
+  margin: 0 auto 0 auto;
+  padding-left: 20px;
+  border-left: 4px #24890d solid;
+  display: block;
+}
+
 /*******************************
  Code blocks
 *******************************/
