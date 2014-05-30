@@ -116,7 +116,29 @@
     <p>So now we have summed up all of those squared differences, right? Next, we will divide by the number (\( n \)) of observations (just like when we calculated the mean) to get the <span class="dt">average distance from the mean</span>. But there's one last step before we're done: since we raised everything to the second power a couple steps ago, we have to undo that operation. To do this, we'll take the square root of everything, leaving us at last with the standard deviation.</p>
     
     <h3>Variance</h3>
-    <p></p>
+    <p>In many ways, variance and standard deviation are two sides of the same coin. If you remember, standard deviation is calculated:</p>
+    
+    $$
+    \sigma = \sqrt{\frac{1}{n}\sum_{i=1}^n\left(x_i-\mu\right)^2}\text{, where } \mu=\frac{1}{n}\sum_{i=1}^n(x_i)
+    $$
+    
+    <p>Variance, then, is:</p>
+    
+    $$
+    \sigma^2 &=& \frac{1}{n}\sum_{i=1}^n\left(x_i-\mu\right)^2 \\
+    &=& \left(\frac{1}{n}\sum_{i=1}^nx_i\right)-\mu^2\text{, where } \mu=\frac{1}{n}\sum_{i=1}^n(x_i)
+    $$
+    
+    <p>So, we can see that population variance is calculated exactly the same as is standard deviation, except we never take a square root at the end of it all. But if they're calculated so similarly and they both measure essentially the same thing, why would we use one over the other and why do we have both?</p>
+    
+    <p>One big reason for using standard deviation instead of variance, at least in applied statistics, is that the standard deviation is in the same units as your data. (E.g., if you're looking at weights, the standard deviation is in pounds.) Variance, on the other hand, is in squared units. (So instead of pounds, you'd have a variance in pounds squared. That's less easy to interpret, isn't it?) Beyond this, standard deviation also gives us the 65-97-99.5% rule.</p>
+    
+    <p>This rule tells us that 65% of all observations in a normal distribution will fall within 1 standard deviation of the mean; 97% will fall within 2 standard deviations of the mean; and 99.5% will fall within 3 standard deviations of the mean. We can illustrate this:</p>
+    
+    <img src="assets/stdevDiagram.svg" width="700px" height="366px" />
+    <span class="figure">Source: <a href="http://en.wikipedia.org/wiki/Standard_deviation" target="_blank">Wikipedia</a></span>
+    
+    <p>So, for instance, if we wanted to find what proportion of our data would be more than 1 standard deviation above the mean, we would add 13.6%, 2.1%, and 0.1% to end up with 15.8% of our data being more than 1 standard deviation above the mean.</p>
     
     <h3>Interquartile Range</h3>
     <p></p>
