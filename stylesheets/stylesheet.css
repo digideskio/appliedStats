@@ -191,19 +191,8 @@ img {
  Code blocks
 *******************************/
 
-.inline {
-  font: 12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
-  color: #F9F9F9;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  border: 1px solid #ccc;
-  background-color: #52595d;
-  padding: 0px 3px;
-  display: inline-block;
+pre {
+  margin: 10px 0 10px 0;
 }
 
 code {
@@ -219,7 +208,11 @@ code {
   background-color: #52595d;
   padding: 2px 5px 2px 15px;
   display: block;
-  margin: 10px 0 10px 0;
+  margin: 0 0 0 0;
+}
+
+p code, li code {
+  display: inline-block;
 }
 
 /*******************************
