@@ -191,7 +191,7 @@ img {
  Code blocks
 *******************************/
 
-p code, li code {
+.inline {
   font: 12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
   color: #F9F9F9;
   -webkit-border-radius: 3px;

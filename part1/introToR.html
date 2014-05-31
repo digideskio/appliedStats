@@ -24,7 +24,7 @@
     <h3>Installing R, RStudio</h3>
     <p>Although this software isn't required, we do recommend that you use R. It's what we will be using to carry out analyses in all of our examples and what we will use to analyze data in the end-of-chapter exercises. Although there won't be any major differences using other statistical software, occasionally you may obtain different results than we do.</p>
     
-    <p>To install R, select any of <a href="http://cran.r-project.org/mirrors.html" target="_blank">the available download mirrors</a> from its website. Select the version that is appropriate for your operating system&mdash;Windows, Mac OS, or a Linux distribution. You may also wish <a href="http://www.rstudio.com" target="_blank">to install RStudio</a>. You will be fine if you don't install it; however, it pretties up R's graphical interface and makes working with data a bit easier for newcomers to the software. To use RStudio, you <strong>must</strong> have R installed on your computer already: installing RSTudio <strong>does not</strong> also install R.</p>
+    <p>To install R, select any of <a href="http://cran.r-project.org/mirrors.html" target="_blank">the available download mirrors</a> from its website. Select the version that is appropriate for your operating system&mdash;Windows, Mac OS, or a Linux distribution. You may also wish <a href="http://www.rstudio.com" target="_blank">to install RStudio</a>. You will be fine if you don't install it; however, it pretties up R's graphical interface and makes working with data a bit easier for newcomers to the software. To use RStudio, you <strong>must</strong> have R installed on your computer already: installing RStudio <strong>does not</strong> also install R.</p>
     
     <h3>Reading in Data</h3>
     <p>There are two strategies used for reading in data: the command line or RStudio's graphical interface. To load data via the command line, we will type a command such as:</p>
@@ -40,9 +40,9 @@ myData <- read.csv("/Path/to/File.csv", headers=TRUE)
       </code>
     </pre>
     
-    <p>Alternately, in RStudio's <code>Environment</code> tab, we can click the <code>Import Dataset</code> button and choose a local file or web URL to read our data from.</p>
+    <p>Alternately, in RStudio's <code class="inline">Environment</code> tab, we can click the <code class="inline">Import Dataset</code> button and choose a local file or web URL to read our data from.</p>
     
-    <p>Whichever option you choose, be sure to use a .txt, .dat, .csv, or similar file: R can't read many proprietary file formats (E.g., Excel's .xslx; SPSS .sav; etc.). Usually, whatever program you use to manage your data will have an option to allow you to save to CSV that you can access through the <code>File -> Save As</code> menu.</p>
+    <p>Whichever option you choose, be sure to use a .txt, .dat, .csv, or similar file: R can't read many proprietary file formats (E.g., Excel's .xslx; SPSS .sav; etc.). Usually, whatever program you use to manage your data will have an option to allow you to save to CSV that you can access through the <code class="inline">File -> Save As</code> menu.</p>
     
     <h3>Creating a Script</h3>
     <p>Working in R, there are two ways that you can execute commands: through the console and through a script. The console is what first opens when you start R. It will usually contain some text like:</p>
@@ -59,7 +59,7 @@ Type 'license()' or 'licence()' for distribution details.
       </code>
     </pre>
     
-    <p>When you're working in the console, all you have to do is type in your command and hit <code>Enter</code>; the code will be automatically evaluated. Alternately, however, you can use a script by clicking <code>File -> New File -> R Script</code>. This allows you to write multiple lines of R code at once and then selectively run them by holding <code>Ctrl/Cmd + Enter</code> (depending on whether you are using a Mac or PC keyboard). By default, this will execute whatever line is currently selected by your pointer; however, you can also highlight multiple lines, hit <code>Ctrl/Cmd + Enter</code>, and evaluate everything highlighted at once.</p>
+    <p>When you're working in the console, all you have to do is type in your command and hit <code class="inline">Enter</code>; the code will be automatically evaluated. Alternately, however, you can use a script by clicking <code class="inline">File -> New File -> R Script</code>. This allows you to write multiple lines of R code at once and then selectively run them by holding <code class="inline">Ctrl/Cmd + Enter</code> (depending on whether you are using a Mac or PC keyboard). By default, this will execute whatever line is currently selected by your pointer; however, you can also highlight multiple lines, hit <code class="inline">Ctrl/Cmd + Enter</code>, and evaluate everything highlighted at once.</p>
     
     <p>We will generally recommend using an R script as this can be saved and referenced later. It also makes it easier to go back and rerun old code or to reference old work. (Opposed to the console, where you have a much more limited history.)</p>
     <br />
@@ -86,8 +86,8 @@ download.file("https://raw.githubusercontent.com/faulconbridge/appliedStats/gh-p
         </code>
       </pre>
       </li>
-      <li>Now we will assign the data to an object. This makes it easier to work with once we start plotting it and running analyses on the data. To do this, run the command: <code>myData <- read.csv("sampleData.csv",header=TRUE,sep=",")</code>. To see if you did this correctly, run the command <code>head(myData)</code>. If you don't get an error, then you're good to go.</li>
-      <li>Finally, we will load a file from the desktop. <a href="https://raw.githubusercontent.com/faulconbridge/appliedStats/gh-pages/part1/data/introToR_01.csv">Click here to download the data.</a> Save it to your desktop. Now, in RStudio, click <code>Import Dataset</code>, select the file, make sure that you choose <code>Yes</code> for the Heading option, and import it.</li>
+      <li>Now we will assign the data to an object. This makes it easier to work with once we start plotting it and running analyses on the data. To do this, run the command: <code class="inline">myData <- read.csv("sampleData.csv",header=TRUE,sep=",")</code>. To see if you did this correctly, run the command <code class="inline">head(myData)</code>. If you don't get an error, then you're good to go.</li>
+      <li>Finally, we will load a file from the desktop. <a href="https://raw.githubusercontent.com/faulconbridge/appliedStats/gh-pages/part1/data/introToR_01.csv">Click here to download the data.</a> Save it to your desktop. Now, in RStudio, click <code class="inline">Import Dataset</code>, select the file, make sure that you choose <code class="inline">Yes</code> for the Heading option, and import it.</li>
     </ol>
     <br />
     
