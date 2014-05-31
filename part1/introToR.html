@@ -68,6 +68,22 @@ Type 'license()' or 'licence()' for distribution details.
     <p>We won't go into detail about manipulating data here: rather, we will discuss it as needed throughout subsequent chapters as it becomes relevant to constructing graphical representations of our data and running statistical analyses.</p>
     <br />
     
+    <h2>Exercises</h2>
+    <hr>
+    
+    <ol>
+      <li>Download a data file from the web. To do this, you'll want to use the code: <code>download.file("https://github.com/faulconbridge/semsat/raw/master/Semsat1a/semsat1a.csv", "semsat1a.csv", "wget", extra="--no-check-certificate")</code>. Paste that into the R console and hit <code>enter</code>. If it's successful, you should see:
+      <pre>
+        <code>
+2014-05-30 20:12:15 (172 KB/s) - 'semsat1a.csv' saved [997890/997890]
+        </code>
+      </pre>
+      </li>
+      <li>Now we will assign the data to an object. This makes it easier to work with once we start plotting it and running analyses on the data. To do this, run the command: <code>myData <- read.csv("semsat1a.csv",header=TRUE,sep=",")</code>. To see if you did this correctly, run the command <code>head(myData)</code>. If you don't get an error, then you're good to go.</li>
+      <li>Finally, we will load a file from the desktop. <a href="https://github.com/faulconbridge/semsat/raw/master/Semsat1a/semsat1a.csv">Click here to download the data.</a> Save it to your desktop. Now, in RStudio, click <code>Import Dataset</code>, select the file, make sure that you choose <code>Yes</code> for the Heading option, and import it.</li>
+    </ol>
+    <br />
+    
     <h2>Additional Resources</h2>
     <hr>
     
