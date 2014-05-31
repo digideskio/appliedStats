@@ -167,7 +167,7 @@ img {
 
 .figure {
   width: 700px;
-  margin: 0 0 0 20px;
+  margin: 10px 0 10px 20px;
   padding: 3px 3px 3px 3px;
   font-weight: 300;
   font-size: 0.8em;
@@ -181,6 +181,10 @@ img {
   border: 1px solid #ccc;
   background-color: #F9F9F9;
   display: block;
+}
+
+.exercises {
+  margin: 0 0 15px 0;
 }
 
 /*******************************
