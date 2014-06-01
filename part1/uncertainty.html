@@ -187,16 +187,41 @@
     <hr>
     
     <h3>Histograms</h3>
-    <p></p>
+    <p>A <span class="dt">histogram</span> displays the number of observations that fall within a given range. For instance, in the height examples above, we would count the number of men in our sample between 5 feet and 5.2 feet and display them all in one column. Then we'd do the same for 5.2 to 5.4 feet, for 5.4 to 5.6 feet, and so on. This gives us something like:</p>
+    
+    <pre>
+      <code>
+hist(avgHeight)
+      </code>
+    </pre>
+    
+    <img src="assets/samplingDistribution.jpeg" width="700px" height="366px" />
     
     <h3>Kernel Density Plots</h3>
-    <p></p>
+    <p>A kernel density plot is similar to a histogram in that it shows us about what proportion of our sample is likely to be at any certain value. The big difference between kernel density plots and histograms is that density plots are continuous: whereas histograms take all of your data and lump them together in ranges, a density plot displays these data continuously. For instance, taking the same data that we used in our histogram example:</p>
+    
+    <pre>
+      <code>
+plot(density(avgHeight))
+      </code>
+    </pre>
+    
+    <img src="assets/kernel.jpeg" width="700px" height="366px" />
+    
+    <p>Comparing the two graphs, they tell about the same story. However, the kernel density plot isn't subject to issues of binning. Specifically, when using histograms, the width of the bins that you use (or the range of each column) can drastically impact your interpretation of the data. For instance, if we increase the number of bins, we get something like:</p>
+    
+    <img src="assets/binning.jpeg" width="700px" height="366px" />
+    
+    <p>As the range of each bin varies, we can go from a nice-looking normal distribution to a much worse looking non-normal distribution. But with a kernel density plot, you remove those issues in interpretation:</p>
+    
+    <img src="assets/kernel1.jpeg" width="700px" height="366px" />
+    
+    <p>As we can see, in reality, it actually is a roughly normal distribution with some funky skewness over to the right.</p>
     
     <h3>Boxplots</h3>
-    <p></p>
+    <p>As discussed previously, boxplots are good to use when you're working with the median, interquartile range, and 5-number summary. These take that 5-number summary and present the data visually:</p>
     
-    <h3>Scatterplots</h3>
-    <p></p>
+    <img src="assets/boxplot.jpeg" width="700px" height="366px" />
     
     <h2>Additional Resources</h2>
     <hr>
