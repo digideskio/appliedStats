@@ -162,10 +162,26 @@
     <hr>
     
     <h3>Central Limit Theorem and Sampling Distributions</h3>
-    <p></p>
+    <p>Does the central limit theorem ring any bells? Probably not. But it's still probably something that you've heard of before. Specifically, you may have heard of it in the context of <a href="http://en.wikipedia.org/wiki/Regression_toward_the_mean" target="_blank"><span class="dt">regression to the mean</span></a>. This is the idea that (let's use height as an example) if you randomly choose one adult male in the U.S., his height could very easily be 7'3". That's obvioualy a lot taller than most people. But the next person you choose will probably have a height less than the first guy's. And if you keep choosing more and more people and measuring their heights, pretty soon, the average height of everyone you chose will be pretty darned close to the actual national average height for adult males. More generally, the idea is that every now and then there will always be extreme scores. But every time you get one of those strong outliers, the next observation is almost certainly going to be less extreme and it is going to pull things back down to the population average.</p>
+    
+    <p>The <a href="http://en.wikipedia.org/wiki/Central_limit_theorem" target="_blacnk"><span class="dt">central limit theorem</span></a> is sort of similar: it states that the distribution of an average tends to be normal, even if the population is not itself normal.</p>
+    
+    <p>Make sense? Maybe not (that's okay!), so let's break it down a bit. Whenever we're talking about a distribution of averages, we call that a <span class="dt">sampling distribution</span>. To continue with our height example from above, let's say that we randomly choose 25 guys and measure their heights. Then we choose another 25 guys and measure their heights. Then we choose <em>another</em> 25 guys and measure their heights. Assuming that the mean male adult height is 5'8" with a 4" standard deviation (we have to represent that with decimals in R, so it becomes a mean of 5.67 feet and a standard deviation of 0.33 feet), our three samples might look like this:</p>
+    
+    <img src="assets/sampleDists.jpeg" width="700px" height="366px" />
+    
+    <p>We can see that there's a lot of variation among our three groups, right? And groups 2 and 3 don't really look all that normal. But, let's say that we take the average male height of each of our three samples. Now, let's repeat that with another 497 batches of 25 men each. If we make a histogram of the average height from each of those 500 groups, it will look like:</p>
+    
+    <img src="assets/samplingDistribution.jpeg" width="700px" height="366px" />
+    
+    All of a sudden, we have a normal distribution with a mean height of 5.67 feet (or 5'8") and a standard deviation of 0.068 feet (or 0.81 inches). We see that the mean of our sampling distribution is exactly equal to the mean of our population: that's the central limit theorem in action.
     
     <h3>Standard Error</h3>
-    <p></p>
+    <p>You might have noticed that the standard deviation of the sampling distribution above was much smaller than the standard deviation of the actual population (0.81 inches versus 4 inches). That's because what we're looking at is actually the <a href="http://en.wikipedia.org/wiki/Standard_error_(statistics)" target="_blank"><span class="dt">standard error</span></a>, a specific term referring to the standard deviation of a sampling distribution. This will always be smaller than the standard deviation of the population and can be estimated by:</p>
+    
+    \[ \text{SE}_{\bar{x}= \frac{s}{\sqrt{n}} \]
+    
+    <p>Here, \(s\) is the sample standard deviation and \(n\) is the number of observations (that is, the number of samples&mdash;here, 500). As you can see, the standard error is always going to be smaller than the population's actual standard deviation. In short, the <span class="dt">standard error</span> is a measure of how far a sample mean is likely to be from the population mean; the <span class="dt">standard deviation</span> is a measure of how far an individual observation is likely to be from the sample mean.</p>
     
     <h2>Visualizing Data</h2>
     <hr>
