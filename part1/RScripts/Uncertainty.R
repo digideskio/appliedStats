@@ -40,6 +40,7 @@ median(data2)
 # Standard Deviation
 ###############################################################################
 
+layout(matrix(c(1,2,3),1,3))
 # Small standard deviation (sd = 1)
 x=seq(-20,20,length=200)
 y=dnorm(x,mean=0,sd=1)
@@ -56,18 +57,54 @@ y=dnorm(x,mean=0,sd=6)
 plot(x,y,type="l",lwd=2,col="red", main="SD = 6")
 polygon(c(-20,x,20),c(0,y,0),col="gray")
 
+
+###############################################################################
+# Sampling Distributions
+###############################################################################
+
+set.seed(0)
+layout(matrix(c(1,2,3),1,3))
+
+height1 <- rnorm(25, 5.6667, 1/3)
+height2 <- rnorm(25, 5.6667, 1/3)
+height3 <- rnorm(25, 5.6667, 1/3)
+
+hist(height1, main="Heights of group 1", xlab="Height (feet)")
+hist(height2, main="Heights of group 2", xlab="Height (feet)")
+hist(height3, main="Heights of group 3", xlab="Height (feet)")
+
+layout(matrix(c(1),1,1))
+
+avgHeight <- NULL
+
+for(i in 1:500) {
+  height <- rnorm(25, 5.6667, 1/3)
+  avgHeight <- rbind(avgHeight, mean(height))
+}
+
+hist(avgHeight, main="Average heights of 500 groups of men", xlab="Height (feet)")
+mean(avgHeight)
+sd(avgHeight)
+
 ###############################################################################
 # Visualizing Data
 ###############################################################################
 
 # Histogram
-hist(data)
+hist(avgHeight)
 
 # Kernel density plot
-plot(density(data))
+plot(density(avgHeight), main="Kernel Density of Average Heights", xlab="Height (feet)")
+
+layout(matrix(c(1,2),1,2))
+hist(height1, main="Heights of Group 1", xlab="Height (feet)")
+hist(height1, breaks=10, main="Heights of Group 1", xlab="Height (feet)")
+
+layout(matrix(c(1),1,1))
+plot(density(height1),main="Kernel Density of Heights of Group 1", xlab="Height (feet)")
 
 # Boxplots
-boxplot(data)
+boxplot(avgHeight, main="Boxplot of Average Male Heights", horizontal=TRUE, xlab="Height (feet)")
 
 # Scatterplot
-plot(data)
+plot(height1, height2)
