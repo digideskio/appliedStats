@@ -230,8 +230,8 @@ plot(density(avgHeight))
     
     <ol class="exercises">
       <li>In R, execute the following code:
-      <pre>
-        <code>
+        <pre>
+          <code>
 set.seed(0)
 height1 <- rnorm(25, 5.6667, 1/3)
 
@@ -241,8 +241,8 @@ for(i in 1:500) {
   height <- rnorm(25, 5.6667, 1/3)
   avgHeight <- rbind(avgHeight, mean(height))
 }
-        </code>
-      </pre>
+          </code>
+        </pre>
       </li>
       <li>What are the mean and median values of <code>height1</code> and <code>avgHeight</code>? What are their standard deviations?</li>
       <li>What would we expect the standard error of avgHeight to be if we had 500 samples and a population standard deviation of 0.33 feet? Does our standard error differ from this estimate? Why do you think this might be?</li>
