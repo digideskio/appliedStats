@@ -177,11 +177,11 @@
     <p>All of a sudden, we have a normal distribution with a mean height of 5.67 feet (or 5'8") and a standard deviation of 0.068 feet (or 0.81 inches). We see that the mean of our sampling distribution is exactly equal to the mean of our population: that's the central limit theorem in action.</p>
     
     <h3>Standard Error</h3>
-    <p>You might have noticed that the standard deviation of the sampling distribution above was much smaller than the standard deviation of the actual population (0.81 inches versus 4 inches). That's because what we're looking at is actually the <a href="http://en.wikipedia.org/wiki/Standard_error_(statistics)" target="_blank"><span class="dt">standard error</span></a>, a specific term referring to the standard deviation of a sampling distribution. This will always be smaller than the standard deviation of the population and can be estimated by:</p>
+    <p>You might have noticed that the standard deviation of the sampling distribution above was much smaller than the standard deviation of the actual population (0.81 inches versus 4 inches). This arises because we're looking at the variation of a set of means (which themselves are the average value of a larger set of data): these will always vary less than the individual data points that we sample from. And actually, when we're talking about the variation of sample means, instead of standard deviation, we will want to use what's called the <a href="http://en.wikipedia.org/wiki/Standard_error_(statistics)" target="_blank"><span class="dt">standard error</span></a>, a specific term referring to the standard deviation of a sampling distribution. This will always be smaller than the standard deviation of the population and can be estimated by:</p>
     
     \[ \text{SE}_{\bar{x}}= \frac{s}{\sqrt{n}} \]
     
-    <p>Here, \(s\) is the sample standard deviation and \(n\) is the number of observations (that is, the number of samples&mdash;here, 500). As you can see, the standard error is always going to be smaller than the population's actual standard deviation. In short, the <span class="dt">standard error</span> is a measure of how far a sample mean is likely to be from the population mean; the <span class="dt">standard deviation</span> is a measure of how far an individual observation is likely to be from the sample mean.</p>
+    <p>Here, \(s\) is the sample standard deviation (here, 0.81 inches) and \(n\) is the number of observations (that is, the number of samples&mdash;here, 500). As you can see, the standard error is always going to be smaller than the population's actual standard deviation. In short, the <span class="dt">standard error</span> is a measure of how far a sample mean is likely to be from the population mean; the <span class="dt">standard deviation</span> is a measure of how far an individual observation is likely to be from the sample mean.</p>
     
     <h2>Visualizing Data</h2>
     <hr>
@@ -245,7 +245,7 @@ for(i in 1:500) {
         </pre>
       </li>
       <li>What are the mean and median values of <code>height1</code> and <code>avgHeight</code>? What are their standard deviations?</li>
-      <li>What would we expect the standard error of avgHeight to be if we had 500 samples and a population standard deviation of 0.33 feet? Does our standard error differ from this estimate? Why do you think this might be?</li>
+      <li>What would we expect the standard error of avgHeight to be if we had 500 samples and a population standard deviation of 0.33 feet?</li>
       <li>Prepare a histogram of <code>height1</code> and <code>avgHeight</code>. Do they differ? Does either look problematic? (E.g., departures from normality)</li>
       <li>Make a kernel density plot of <code>height1</code>. Does it differ from the histogram? Which gives a better picture of the data?</li>
       <li>Make a boxplot of <code>avgHeight</code>. Are there any outliers present?</li>
@@ -253,7 +253,7 @@ for(i in 1:500) {
     
     <h2>Additional Resources</h2>
     <ul>
-      <li><a href="https://raw.githubusercontent.com/faulconbridge/appliedStats/gh-pages/part1/RScripts/Uncertainty.R" target="_blank">R script</a> containing all commands used in examples throughout this chapter</li>
+      <li><a href="https://raw.githubusercontent.com/faulconbridge/appliedStats/gh-pages/part1/RScripts/ch03.R" target="_blank">R script</a> containing all commands used in examples throughout this chapter</li>
     </ul>
     <hr>
     
