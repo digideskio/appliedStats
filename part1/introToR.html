@@ -64,9 +64,52 @@ Type 'license()' or 'licence()' for distribution details.
     <p>We will generally recommend using an R script as this can be saved and referenced later. It also makes it easier to go back and rerun old code or to reference old work. (Opposed to the console, where you have a much more limited history.)</p>
     <br />
     
+    <h2>Basic R Syntax</h2>
+    <hr>
+    
+    <h3>Constants</h3>
+    <p>Constants are just what they sound like: things. They don't do anything; they can't take in one number and spit out another; they're just static objects. This can mean a number or a string of text, or something more complex like a vector, matrix, or data frame. So let's first define the different data types that R supports. (NOTE: throughout the rest of the book, we will use the term data type rather than constant.)</p>
+    
+    <h4>Vectors</h4>
+    <p>A vector, in this case, you can think of as being a column of data in Excel. It's just a series of items that are all stored in one object. For instance, let's say that we want a column of numbers from 1 through 10:</p>
+    
+    <code>
+      myNumbers <- c(seq(from=1, to=10, by=1))
+      moreNumbers <- c(1,2,3,4,5,6,7,8,9,10)
+    </code>
+    
+    <p>In both of the above examples, we create a column of data with the numbers 1 through 10. But these don't have to only be numeric. For instance:</p>
+    
+    <code>
+      characters <- c("one","two","three","four","five") # a character vector
+      boolean <- c(TRUE, FALSE, FALSE, FALSE, TRUE)      # a boolean (logical) vector
+    </code>
+    
+    <p>We can see that there are three basic types of vectors you can construct: numeric; character; and logical. Numeric vectors are composed of arabic numerals; character vectors of strings of text; and logical vectors of TRUE/FALSE booleans.</p>
+    
+    <h4>Matrices</h4>
+    
+    <h4>Data Frames</h4>
+    
+    <h4>Lists</h4>
+    
+    <h4>Factors</h4>
+    
+    <h3>Arithmetic and Logical Operators</h3>
+    <p></p>
+    
+    <h3>Function Calls</h3>
+    <p></p>
+    
+    <h3>Symbols and Assignment</h3>
+    <p></p>
+    <br />
+    
     <h2>Manipulating Data</h2>
     <p>We won't go into detail about manipulating data here: rather, we will discuss it as needed throughout subsequent chapters as it becomes relevant to constructing graphical representations of our data and running statistical analyses.</p>
     <br />
+    
+    <h2></h2>
     
     <h2>Exercises</h2>
     <hr>
