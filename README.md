@@ -17,11 +17,13 @@ ToDo:
   - [X] Reading in data
   - [ ] Basic R syntax
   - [X] Additional resources
-- [ ] Measuring Uncertainty
-  - [ ] Spread, measures of central tendency
-  - [ ] Sampling distributions
-  - [ ] Visualizing uncertainty
-  - [ ] Representativeness
+- [X] Measuring Uncertainty
+  - [X] Measures of central tendency; skewness
+  - [X] SD; variance; IQR
+  - [X] Sampling distributions; CLT; SE
+  - [X] Visualizing uncertainty
+  - [X] Exercises
+  - [X] Additional resources
 - [ ] Research Design
   - [ ] Relating design and analysis
   - [ ] Designing sound experiments (garbage in, garbage out)
