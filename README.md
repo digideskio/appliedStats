@@ -12,9 +12,10 @@ ToDo:
   - [X] Structure of the book (explanations, exercises, answers)
   - [X] What you'll need (R, RStudio, etc.)
   - [X] Statistical terminology
-- [X] R Basics
+- [ ] R Basics
   - [X] Installing R, RStudio
   - [X] Reading in data
+  - [ ] Basic R syntax
   - [X] Additional resources
 - [ ] Measuring Uncertainty
   - [ ] Spread, measures of central tendency
@@ -25,8 +26,22 @@ ToDo:
   - [ ] Relating design and analysis
   - [ ] Designing sound experiments (garbage in, garbage out)
   - [ ] Collecting good data
-- [ ] Choosing the Right Analysis: A Cheat Sheet
+- [ ] Intro to Statistical Inference
+  - [ ] Research question
+  - [ ] Hypotheses: directional and non-directional
+  - [ ] Fundamental test statistics
+  - [ ] Standardized test statistics
+  - [ ] Significance: p-values; CIs; etc.
+  - [ ] Drawing conclusions
 - [ ] Correlation
+  - [ ] Visualizing relationships
+  - [ ] Measuring linear association
+  - [ ] Multiple correlation
+  - [ ] Partial correlation
+  - [ ] Limitations (sensitivity to distribution; causality; linearity)
+  - [X] Case study
+  - [ ] Exercises
+  - [ ] Additional resources
 - [ ] Simple Linear Regression
 - [ ] Multiple Regression
 - [ ] Related Issues in Regression
