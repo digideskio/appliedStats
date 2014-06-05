@@ -12,10 +12,10 @@ ToDo:
   - [X] Structure of the book (explanations, exercises, answers)
   - [X] What you'll need (R, RStudio, etc.)
   - [X] Statistical terminology
-- [ ] R Basics
+- [X] R Basics
   - [X] Installing R, RStudio
   - [X] Reading in data
-  - [ ] Basic R syntax
+  - [X] Basic R syntax
   - [X] Additional resources
 - [X] Measuring Uncertainty
   - [X] Measures of central tendency; skewness
