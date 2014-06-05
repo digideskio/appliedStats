@@ -74,8 +74,8 @@ Type 'license()' or 'licence()' for distribution details.
     <p>A vector, in this case, you can think of as being a column of data in Excel. It's just a series of items that are all stored in one object. For instance, let's say that we want a column of numbers from 1 through 10:</p>
     <pre>
       <code>
-      myNumbers <- c(seq(from=1, to=10, by=1))
-      moreNumbers <- c(1,2,3,4,5,6,7,8,9,10)
+myNumbers <- c(seq(from=1, to=10, by=1))
+moreNumbers <- c(1,2,3,4,5,6,7,8,9,10)
       </code>
     </pre>
     
@@ -91,21 +91,91 @@ boolean <- c(TRUE, FALSE, FALSE, FALSE, TRUE)      # a boolean (logical) vector
     <p>We can see that there are three basic types of vectors you can construct: numeric; character; and logical. Numeric vectors are composed of arabic numerals; character vectors of strings of text; and logical vectors of TRUE/FALSE booleans.</p>
     
     <h4>Matrices</h4>
+    <p>You can think of a matrix in R as either (1) a single vector split up into multiple rows/columns or (2) multiple vectors of the same length piled up next to one another. It's roughly analgous to a spreadsheet. However, the one caveat is that, just like with vectors, all elements in a matrix must have the same type (i.e., all numeric, all character, or all logical). There's no mixing and matching here. The basic syntax for creating a matrix is:</p>
+    
+    <pre>
+      <code>
+myMatrix <- matrix(vector, nrow=r, ncol=c, byrow=FALSE, 
+  	 dimnames=list(c("rownames"), c("colnames"))
+      </code>
+    </pre>
+    
+    <p>Here, <code>vector</code> is a vector of elements that you would like to divide into rows and columns; <code>nrow</code> and <code>ncol</code> respectively refer to the number of rows and columns in your matrix; <code>byrow</code> takes a TRUE/FALSE boolean and indicates whether the matrix should be filled in by rows (TRUE) or by columns (FALSE). Finally, <code>dimnames</code> is an optional argument that specifies the column and row names.</p>
+    
+    <p>As an example, let's create a 4x3 matrix:</p>
+    
+    <pre>
+      <code>
+matrixVector <- c(21, 5.9, 147,
+                  28, 5.7, 168,
+                  18, 5.5, 126,
+                  24, 6.1, 195)
+myMatrix <- matrix(matrixVector, nrow=4, ncol=3, byrow=TRUE,
+                   dimnames=list(c("Chris", "John", "Amy", "Max"),
+                   c("Age", "Height", "Weight")))
+      </code>
+    </pre>
+    
+    <p>This will result in a matrix that looks like this:</p>
+    
+    <pre>
+      <code>
+      Age   Height   Weight
+Chris  21      5.9      147
+ John  28      5.7      168
+  Amy  18      5.5      126
+  Max  24      6.1      195
+      </code>
+    </pre>
     
     <h4>Data Frames</h4>
     
-    <h4>Lists</h4>
+    <p>A data frame in R is a generalized instance of a matrix: this you can truly think of as a page of an Excel spreadsheet. Each column represents a vector of a single type; however, each column can be of a different data type. So, for instance, if we wanted to turn the matrix above into a data frame but also add in a column for hair color, we would do somthing like:</p>
+    
+    <pre>
+      <code>
+name <- c("Chris", "John", "Amy", "Max")
+age <- c(21, 28, 18, 24)
+height <- c(5.9, 5.7, 5.5, 6.1)
+weight <- c(147, 168, 126, 195)
+hair <- c("brown", "blonde", "red", "brown")
+
+myData <- data.frame(name, age, height, weight, hair)
+colnames(myData) <- c("name", "age", "height", "weight", "hair")
+      </code>
+    </pre>
+    
+    <p>Just like the matrix, this will give us the following:</p>
+    
+    <pre>
+      <code>
+ Name   Age   Height   Weight     Hair
+Chris    21      5.9      147    brown
+ John    28      5.7      168   blonde
+  Amy    18      5.5      126      red
+  Max    24      6.1      195    brown
+      </code>
+    </pre>
     
     <h4>Factors</h4>
+    <p>Oftentimes in experiments we will have factors: nominal variables that indicate levels. For example, we might have a placebo group and an experimental group. In this case, these are important variables for R to properly interpret; however, they are non-numeric and don't make sense to interpret as a string. In these cases, we can indicate to R that they should be interpreted as factors. For example:</p>
     
-    <h3>Arithmetic and Logical Operators</h3>
-    <p></p>
-    
-    <h3>Function Calls</h3>
-    <p></p>
-    
-    <h3>Symbols and Assignment</h3>
-    <p></p>
+    <pre>
+      <code>
+# The variable 'drugCondition' contains 20 experimental trials
+# and 20 control trials. Currently, these values are stored
+# as characters. You can check this by running str(drugCondition)
+# You should see 'chr' indicating the elements are characters
+
+drugCondition <- c(rep("experimental",20), rep("control",20))
+
+# We will now convert the elements to factors.
+# If you run str(drugCondition) again, you should see:
+# Factor w/ 2 levels "control","experimental"
+
+drugCondition <- factor(drugCondition)
+      </code>
+    </pre>
     <br />
     
     <h2>Manipulating Data</h2>
