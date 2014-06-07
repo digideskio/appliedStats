@@ -201,8 +201,8 @@ download.file(
       <li>Now we will assign the data to an object. This makes it easier to work with once we start plotting it and running analyses on the data. To do this, run the command: <code>myData <- read.csv("sampleData.csv",header=TRUE,sep=",")</code>. To see if you did this correctly, run the command <code>head(myData)</code>. If you don't get an error, then you're good to go.</li>
       <li>Finally, we will load a file from the desktop. <a href="https://raw.githubusercontent.com/faulconbridge/appliedStats/gh-pages/part1/data/ch02Ex01.csv">Click here to download the data.</a> Save it to your desktop. Now, in RStudio, click <code>Import Dataset</code>, select the file, make sure that you choose <code>Yes</code> for the Heading option, and import it.</li>
       <li>Next we will practice working with different data structures in R. Run <code>head(myData)</code>; describe what the function does. What about <code>colnames(myData)</code>?</li>
-      <li>Make a vector called 'myVector' containing the numbers 20 through 30.</li>
-      <li>Now make a matrix with two rows and five columns called 'myMatrix' that uses the vector you made in the previous problem.</li>
+      <li>Make a vector called <code>myVector</code> containing the numbers 20 through 30.</li>
+      <li>Now make a matrix with two rows and five columns called <code>myMatrix</code> that uses the vector you made in the previous problem.</li>
       <li>Run the following code:
       <pre>
         <code>
@@ -211,7 +211,7 @@ age <- c(sample(1:100,10,replace=TRUE))
 weight <- c(sample(95:200,10,replace=TRUE))
         </code>
       </pre>
-      And now combine the three vectors above with <code>myVector</code> to create a data frame called myDataFrame.</li>
+      And now combine the three vectors above with <code>myVector</code> to create a data frame called <code>myDataFrame</code>.</li>
       <li>Almost there! Finally, convert the column <code>sex</code> into a factor. (HINT: to reference a single column of a data frame, try myDataFrame$sex.)</li>
     </ol>
     <br />
