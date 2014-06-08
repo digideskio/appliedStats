@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset='utf-8' />
-  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-  <meta name="description" content="Applied Statistics: An Introduction to Statistical Analysis. An overview of basic techniques for sound analysis and interpretation of experimental data for non-statisticians." />
-  <meta name="keywords" content="Stats, Statistics, Statistical analysis, Applied statistics">
-  <meta name="author" content="Chris Wetherill" />
-
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
-  <title>Intro to R | Applied Statistics</title>
-</head>
-
-<body>
-  <div class="content">
+<?php
+  $title = "Intro to R | Applied Statistics";
+  require_once("../header.php")
+?> 
     <h1>02 &mdash; Introduction to R</h1>
     <br />
     
@@ -230,9 +217,9 @@ weight <- c(sample(95:200,10,replace=TRUE))
   </div>
   <div class="nav">
     <ul>
-      <li><a href="preface.html">&larr; Preface</a></li>
+      <li><a href="preface">&larr; Preface</a></li>
       <li><a href="/">Home</a></li>
-      <li><a href="uncertainty.html">Measuring Uncertainty &rarr;</a></li>
+      <li><a href="uncertainty">Measuring Uncertainty &rarr;</a></li>
     </ul>
   </div>
 
