@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset='utf-8' />
-  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-  <meta name="description" content="Applied Statistics: An Introduction to Statistical Analysis. An overview of basic techniques for sound analysis and interpretation of experimental data for non-statisticians." />
-  <meta name="keywords" content="Stats, Statistics, Statistical analysis, Applied statistics">
-  <meta name="author" content="Chris Wetherill" />
-
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
-  <title>Research Design | Applied Statistics</title>
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</head>
-
-<body>
-  <div class="content">
+<?php
+  $title = "Research Design | Applied Statistics";
+  require_once("../header.php")
+?> 
     <h1>04 &mdash; Research Design</h1>
     <br />
     
@@ -50,7 +36,7 @@
     <p>When conducting a study, there are various strategies that you can use to help ensure a representative sample is chosen. A brief list of these includes:</p>
     
     <ol>
-      <li><span class="dt">Simple Random Sampling</span>&mdash;</li>
+      <li><span class="dt">Simple Random Sampling</span> &mdash; This implies that everyone in a population has an equal probability of being selected. For instance, say that we want to choose 100 students out of a university with 2000 students. A way to simple randomly sample these students would be to put every student's name into a hat and draw 100 names at random without replacemens (i.e., not putting a name back into the hat after it has been drawn). This would give any individual student a 1-in-20 (5%) chance of being selected.</li>
       <li><span class="dt">Systematic Sampling</span>&mdash;</li>
       <li><span class="dt">Stratified Random Sampling</span>&mdash;</li>
       <li><span class="dt">Multistage Sampling</span>&mdash;</li>
@@ -104,9 +90,9 @@
   </div>
   <div class="nav">
     <ul>
-      <li><a href="uncertainty.html">&larr; Measuring Uncertainty</a></li>
+      <li><a href="uncertainty">&larr; Measuring Uncertainty</a></li>
       <li><a href="/">Home</a></li>
-      <li><a href="inference.html">Introduction to Statistical Inference &rarr;</a></li>
+      <li><a href="inference">Introduction to Statistical Inference &rarr;</a></li>
     </ul>
   </div>
 
