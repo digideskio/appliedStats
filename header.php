@@ -1,3 +1,4 @@
+<?php   require_once("chapters.php"); ?>
 <!DOCTYPE html>
 <html>
 

@@ -56,11 +56,9 @@
       </ul>
       
   </div>
-  <div class="nav">
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="introToR">Introduction to R &rarr;</a></li>
-    </ul>
-  </div>
-</body>
-</html>
+<?php
+  $part = "part1";
+  $title = "Preface";
+  require_once("../footer.php");
+?>
+  

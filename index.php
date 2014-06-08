@@ -1,7 +1,6 @@
 <?php
   $title = "Applied Statistics";
   require_once("header.php");
-  require_once("chapters.php");
   $count = 1;
 ?>
     <h1 class="title">Applied Statistics</h1>
@@ -14,8 +13,8 @@
     
     <?php
       for ($i = 0; $i < count($index["part1"]); $i++) {
-        echo "<h3><a href=\"".$index["part1"][$i]["link"]."\">".$count." &mdash; ".$index["part1"][$i]["title"]."</a></h3>";
-        echo "<p>".$index["part1"][$i]["description"]."</p>";
+        echo "<h3><a href=\"".$index["part1"][$chapterKeys[0][$i]]["link"]."\">".$count." &mdash; ".$chapterKeys[0][$i]."</a></h3>";
+        echo "<p>".$index["part1"][$chapterKeys[0][$i]]["description"]."</p>";
         $count++;
       }
     ?>
@@ -25,8 +24,8 @@
     
     <?php
       for ($i = 0; $i < count($index["part2"]); $i++) {
-        echo "<h3><a href=\"".$index["part2"][$i]["link"]."\">".$count." &mdash; ".$index["part2"][$i]["title"]."</a></h3>";
-        echo "<p>".$index["part2"][$i]["description"]."</p>";
+        echo "<h3><a href=\"".$index["part2"][$chapterKeys[1][$i]]["link"]."\">".$count." &mdash; ".$chapterKeys[1][$i]."</a></h3>";
+        echo "<p>".$index["part2"][$chapterKeys[1][$i]]["description"]."</p>";
         $count++;
       }
     ?>
@@ -36,8 +35,8 @@
     
     <?php
       for ($i = 0; $i < count($index["part3"]); $i++) {
-        echo "<h3><a href=\"".$index["part3"][$i]["link"]."\">".$count." &mdash; ".$index["part3"][$i]["title"]."</a></h3>";
-        echo "<p>".$index["part3"][$i]["description"]."</p>";
+        echo "<h3><a href=\"".$index["part3"][$chapterKeys[2][$i]]["link"]."\">".$count." &mdash; ".$chapterKeys[2][$i]."</a></h3>";
+        echo "<p>".$index["part3"][$chapterKeys[2][$i]]["description"]."</p>";
         $count++;
       }
     ?>
@@ -47,8 +46,8 @@
     
     <?php
       for ($i = 0; $i < count($index["part4"]); $i++) {
-        echo "<h3><a href=\"".$index["part4"][$i]["link"]."\">".$count." &mdash; ".$index["part4"][$i]["title"]."</a></h3>";
-        echo "<p>".$index["part4"][$i]["description"]."</p>";
+        echo "<h3><a href=\"".$index["part4"][$chapterKeys[3][$i]]["link"]."\">".$count." &mdash; ".$chapterKeys[3][$i]."</a></h3>";
+        echo "<p>".$index["part4"][$chapterKeys[3][$i]]["description"]."</p>";
         $count++;
       }
     ?>
@@ -58,8 +57,8 @@
     
     <?php
       for ($i = 0; $i < count($index["part5"]); $i++) {
-        echo "<h3><a href=\"".$index["part5"][$i]["link"]."\">".$count." &mdash; ".$index["part5"][$i]["title"]."</a></h3>";
-        echo "<p>".$index["part5"][$i]["description"]."</p>";
+        echo "<h3><a href=\"".$index["part5"][$chapterKeys[4][$i]]["link"]."\">".$count." &mdash; ".$chapterKeys[4][$i]."</a></h3>";
+        echo "<p>".$index["part5"][$chapterKeys[4][$i]]["description"]."</p>";
         $count++;
       }
     ?>

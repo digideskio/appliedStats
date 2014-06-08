@@ -1,109 +1,134 @@
 <?php
     $index = array(
         "part1" => array(
-            array(
-                "title" => "Preface",
+            "Preface" => array(
                 "description" => "This chapter includes the motivations for writing this book; why you should care about good statistical analysis; how the book is structured; what software and background knowledge are recommended; and some commonly-used statistical terminologies. It's a good place to start if you're new to the game, but perfectly okay to skip if you already have some experience with applied statistics.",
                 "link" => "part1/preface",
+                "previous" => "",
+                "next" => "",
             ),
-            array(
-                "title" => "Introduction to R",
+            "Introduction to R" => array(
                 "description" => "Throughout this book, R is used to illustrate examples and conduct all analyses. This chapter is meant to serve as a quick primer for those who have not used the software before. Topics include installation, reading data, authoring scripts, and basic data manipulation, graphics generation, and statistical modeling.",
                 "link" => "part1/introToR",
+                "previous" => "",
+                "next" => "",
             ),
-            array(
-                "title" => "Measuring Uncertainty",
+            "Measuring Uncertainty" => array(
                 "description" => "Before working with inferential statistics, you should have a solid understanding of how we quantify uncertainty. Included in this chapter is an overview of measures of spread and central tendency and their important to applied statistics; sampling distributions; methods to visualize and understand data; and a basic discussion of probability.",
                 "link" => "part1/uncertainty",
+                "previous" => "",
+                "next" => "",
             ),
-            array(
-                "title" => "Research Design",
+            "Research Design" => array(
                 "description" => "",
                 "link" => "part1/design",
+                "previous" => "",
+                "next" => "",
             ),
-            array(
-                "title" => "Introduction to Statistical Inference",
+            "Introduction to Statistical Inference" => array(
                 "description" => "",
                 "link" => "part1/inference",
+                "previous" => "",
+                "next" => "",
             ),
         ),
         "part2" => array(
-            array(
-                "title" => "Correlation",
+            "Correlation" => array(
                 "description" => "Correlation is a statistical technique used to illustrate dependence between multiple variables. (I.e., correlation quantifies the degree to which different variables change together.) In this chapter, we give an overview of correlational tests, illustrate when they are appropriate, and discuss their limitations of inference.",
                 "link" => "part2/correlation",
+                "previous" => "",
+                "next" => "",
             ),
-            array(
-                "title" => "Simple Linear Regression",
+            "Simple Linear Regression" => array(
                 "description" => "",
                 "link" => "part2/regression",
+                "previous" => "",
+                "next" => "",
             ),
-            array(
-                "title" => "Multiple Regression",
+            "Multiple Regression" => array(
                 "description" => "",
                 "link" => "part2/multipleRegression",
+                "previous" => "",
+                "next" => "",
             ),
-            array(
-                "title" => "Related Issues in Regression",
+            "Related Issues in Regression" => array(
                 "description" => "",
                 "link" => "part2/moreRegression",
+                "previous" => "",
+                "next" => "",
             ),
         ),
         "part3" => array(
-            array(
-                "title" => "t-Tools",
+            "t-Tools" => array(
                 "description" => "",
                 "link" => "",
+                "previous" => "",
+                "next" => "",
             ),
-            array(
-                "title" => "Alternatives to t-Tools",
+            "Alternatives to t-Tools" => array(
                 "description" => "",
                 "link" => "",
+                "previous" => "",
+                "next" => "",
             ),
-            array(
-                "title" => "One-Way ANOVA",
+            "One-Way ANOVA" => array(
                 "description" => "",
                 "link" => "",
+                "previous" => "",
+                "next" => "",
             ),
-            array(
-                "title" => "Multifactor Studies",
+            "Multifactor Studies" => array(
                 "description" => "",
                 "link" => "",
+                "previous" => "",
+                "next" => "",
             ),
-            array(
-                "title" => "Multifactor Studies with Replication",
+            "Multifactor Studies with Replication" => array(
                 "description" => "",
                 "link" => "",
+                "previous" => "",
+                "next" => "",
             ),
         ),
         "part4" => array(
-            array(
-                "title" => "Time-Series Data",
+            "Time-Series Data" => array(
                 "description" => "",
                 "link" => "",
+                "previous" => "",
+                "next" => "",
             ),
-            array(
-                "title" => "Rank-Ordered Data",
+            "Rank-Ordered Data" => array(
                 "description" => "",
                 "link" => "",
+                "previous" => "",
+                "next" => "",
             ),
-            array(
-                "title" => "Counts, Proportions, and Odds",
+            "Counts, Proportions, and Odds" => array(
                 "description" => "",
                 "link" => "",
+                "previous" => "",
+                "next" => "",
             ),
         ),
         "part5" => array(
-            array(
-                "title" => "Choosing the Right Analysis: A Cheat Sheet",
+            "Choosing the Right Analysis: A Cheat Sheet" => array(
                 "description" => "",
                 "link" => "",
+                "previous" => "",
+                "next" => "",
             ),
-            array(
-                "title" => "License",
+            "License" => array(
                 "description" => "",
                 "link" => "license",
+                "previous" => "",
+                "next" => "",
             ),
         ),
     );
+    
+    $partKeys = array_keys($index);
+    $chapterKeys = array();
+    for($i =0; $i < count($partKeys); $i++) {
+        $chapterKeys[] = array_keys($index[$partKeys[$i]]);
+    };
 ?>
