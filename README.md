@@ -24,10 +24,9 @@ ToDo:
   - [X] Visualizing uncertainty
   - [X] Exercises
   - [X] Additional resources
-- [ ] Research Design
-  - [ ] Relating design and analysis
-  - [ ] Designing sound experiments (garbage in, garbage out)
-  - [ ] Collecting good data
+- [X] Research Design
+  - [X] Relating design and analysis
+  - [X] Designing sound experiments (garbage in, garbage out)
 - [ ] Intro to Statistical Inference
   - [ ] Research question
   - [ ] Hypotheses: directional and non-directional

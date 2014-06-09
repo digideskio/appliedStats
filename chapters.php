@@ -26,7 +26,7 @@
                 "next" => "inference",
             ),
             "Introduction to Statistical Inference" => array(
-                "description" => "",
+                "description" => "The fundamentals of statistical inference underlie every statistical model that you will use and every conclusion drawn from these models. This chapter provides an overview of the generalities of statistical inference, the assumptions underlying inference, and considerations on the scope and limitations of such inference.",
                 "link" => "part1/inference",
                 "previous" => "design",
                 "next" => "../part2/correlation",
