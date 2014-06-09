@@ -20,7 +20,7 @@
                 "next" => "design",
             ),
             "Research Design" => array(
-                "description" => "",
+                "description" => "To make informed conclusions about a study and to generalize its findings to broader populations, the study must be both internally and externally valid. Here we provide a discussion of common threats to a study's validity and pointers how to help avoid many of them.",
                 "link" => "part1/design",
                 "previous" => "uncertainty",
                 "next" => "inference",
