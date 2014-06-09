@@ -2,7 +2,7 @@
   $title = "Correlation | Applied Statistics";
   require_once("../header.php");
 ?>
-    <h1>06 &mdash; Correlation</h1>
+    <h1>Correlation</h1>
     <br />
     
     <h2>Displaying Relationships</h2>
@@ -138,14 +138,8 @@ sample estimates:
     
     
     
-  </div>
-  <div class="nav">
-    <ul>
-      <li><a href="../part1/inference">&larr; Introduction to Statistical Inference</a></li>
-      <li><a href="/">Home</a></li>
-      <li><a href="regression">Simple Linear Regression &rarr;</a></li>
-    </ul>
-  </div>
-
-</body>
-</html>
+<?php
+  $part = "part2";
+  $title = "Correlation";
+  require_once("../footer.php");
+?>

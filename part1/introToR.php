@@ -2,7 +2,7 @@
   $title = "Intro to R | Applied Statistics";
   require_once("../header.php")
 ?> 
-    <h1>02 &mdash; Introduction to R</h1>
+    <h1>Introduction to R</h1>
     <br />
     
     <h2>Getting Started</h2>
@@ -214,14 +214,8 @@ weight <- c(sample(95:200,10,replace=TRUE))
       <li><a href="http://statistics.ats.ucla.edu/stat/r/" target="_blank">R Resources</a> by IDRE (UCLA)</li>
     </ul>
     
-  </div>
-  <div class="nav">
-    <ul>
-      <li><a href="preface">&larr; Preface</a></li>
-      <li><a href="/">Home</a></li>
-      <li><a href="uncertainty">Measuring Uncertainty &rarr;</a></li>
-    </ul>
-  </div>
-
-</body>
-</html>
+<?php
+  $part = "part1";
+  $title = "Introduction to R";
+  require_once("../footer.php");
+?>

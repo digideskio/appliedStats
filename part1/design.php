@@ -2,7 +2,7 @@
   $title = "Research Design | Applied Statistics";
   require_once("../header.php")
 ?> 
-    <h1>04 &mdash; Research Design</h1>
+    <h1>Research Design</h1>
     <br />
     
     <h2>Relating Design and Analysis</h2>
@@ -87,14 +87,8 @@
     
     <h3></h3>
     <p></p>
-  </div>
-  <div class="nav">
-    <ul>
-      <li><a href="uncertainty">&larr; Measuring Uncertainty</a></li>
-      <li><a href="/">Home</a></li>
-      <li><a href="inference">Introduction to Statistical Inference &rarr;</a></li>
-    </ul>
-  </div>
-
-</body>
-</html>
+<?php
+  $part = "part1";
+  $title = "Research Design";
+  require_once("../footer.php");
+?>

@@ -1,12 +1,15 @@
 <div class="nav">
     <ul>
         <?php
-            if($index[$part][$chapter]["previous"]!=NULL) {
-                echo "<a href=\"".$index[$part][$chapter]["previous"]."\"&larr; ".$index[$part][$chapter]["title"];
+            $chKey = array_search($title, $chapters);
+            if($index[$part][$title]["previous"]!=NULL) {
+                echo "<li><a href=\"".$index[$part][$title]["previous"]."\">&larr; ".$chapters[$chKey-1]."</a></li>";
             }
+            echo "<li><a href=\"/\">Home</a></li>";
+            if($index[$part][$title]["next"]!=NULL) {
+                echo "<li><a href=\"".$index[$part][$title]["next"]."\">".$chapters[$chKey+1]." &rarr;</a></li>";
+            }            
         ?>
-        <li><a href="/">Home</a></li>
-        <li><a href="introToR">Introduction to R &rarr;</a></li>
     </ul>
   </div>
 </body>

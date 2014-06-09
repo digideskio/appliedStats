@@ -2,7 +2,7 @@
   $title = "Preface | Applied Statistics";
   require_once("../header.php");
 ?>
-    <h1>01 &mdash; Preface</h1>
+    <h1>Preface</h1>
     <br />
     
     <h2>Introduction to the Book</h2>
