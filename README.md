@@ -27,13 +27,11 @@ ToDo:
 - [X] Research Design
   - [X] Relating design and analysis
   - [X] Designing sound experiments (garbage in, garbage out)
-- [ ] Intro to Statistical Inference
-  - [ ] Research question
-  - [ ] Hypotheses: directional and non-directional
-  - [ ] Fundamental test statistics
-  - [ ] Standardized test statistics
-  - [ ] Significance: p-values; CIs; etc.
-  - [ ] Drawing conclusions
+- [X] Intro to Statistical Inference
+  - [X] Hypotheses: directional and non-directional
+  - [X] Standardized test statistics
+  - [X] Significance: p-values; CIs; etc.
+  - [X] Drawing conclusions
 - [ ] Correlation
   - [ ] Visualizing relationships
   - [ ] Measuring linear association
