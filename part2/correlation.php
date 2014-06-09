@@ -1,10 +1,8 @@
 <?php
-  $title = "Correlation | Applied Statistics";
+  $part = "part2";
+  $title = "Correlation";
   require_once("../header.php");
 ?>
-    <h1>Correlation</h1>
-    <br />
-    
     <h2>Displaying Relationships</h2>
     <hr>
     
@@ -139,7 +137,5 @@ sample estimates:
     
     
 <?php
-  $part = "part2";
-  $title = "Correlation";
   require_once("../footer.php");
 ?>

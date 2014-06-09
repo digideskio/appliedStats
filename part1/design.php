@@ -1,10 +1,8 @@
 <?php
-  $title = "Research Design | Applied Statistics";
-  require_once("../header.php")
-?> 
-    <h1>Research Design</h1>
-    <br />
-    
+  $part = "part1";
+  $title = "Research Design";
+  require_once("../header.php");
+?>
     <h2>Relating Design and Analysis</h2>
     <hr>
     
@@ -88,7 +86,5 @@
     <h3></h3>
     <p></p>
 <?php
-  $part = "part1";
-  $title = "Research Design";
   require_once("../footer.php");
 ?>

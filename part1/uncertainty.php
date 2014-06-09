@@ -1,10 +1,8 @@
 <?php
-  $title = "Measuring Uncertainty | Applied Statistics";
-  require_once("../header.php")
+  $part = "part1";
+  $title = "Measuring Uncertainty";
+  require_once("../header.php");
 ?> 
-    <h1>Measuring Uncertainty</h1>
-    <br />
-    
     <h2>Measures of Central Tendency and Spread</h2>
     <hr>
     
@@ -245,7 +243,5 @@ for(i in 1:500) {
     
   </div>
 <?php
-  $part = "part1";
-  $title = "Measuring Uncertainty";
   require_once("../footer.php");
 ?>

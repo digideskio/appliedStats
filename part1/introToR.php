@@ -1,10 +1,8 @@
 <?php
-  $title = "Intro to R | Applied Statistics";
-  require_once("../header.php")
+  $part = "part1";
+  $title = "Introduction to R";
+  require_once("../header.php");
 ?> 
-    <h1>Introduction to R</h1>
-    <br />
-    
     <h2>Getting Started</h2>
     <hr>
     
@@ -215,7 +213,5 @@ weight <- c(sample(95:200,10,replace=TRUE))
     </ul>
     
 <?php
-  $part = "part1";
-  $title = "Introduction to R";
   require_once("../footer.php");
 ?>

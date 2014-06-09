@@ -1,10 +1,8 @@
 <?php
-  $title = "Preface | Applied Statistics";
+  $part = "part1";
+  $title = "Preface";
   require_once("../header.php");
 ?>
-    <h1>Preface</h1>
-    <br />
-    
     <h2>Introduction to the Book</h2>
     <hr>
       
@@ -57,8 +55,6 @@
       
   </div>
 <?php
-  $part = "part1";
-  $title = "Preface";
   require_once("../footer.php");
 ?>
   

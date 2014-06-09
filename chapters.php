@@ -133,8 +133,8 @@
     };
     
     $chapters = array();
-    foreach($chapterKeys as $part) {
-        foreach($part as $chapter) {
+    foreach($chapterKeys as $parts) {
+        foreach($parts as $chapter) {
             $chapters[] = $chapter;
         }
     }
