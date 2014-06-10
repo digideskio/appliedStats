@@ -147,10 +147,10 @@ Chris    21      5.9      147    brown
     
     <pre>
       <code>
-# The variable 'drugCondition' contains 20 experimental trials
+# The variable "drugCondition" contains 20 experimental trials
 # and 20 control trials. Currently, these values are stored
 # as characters. You can check this by running str(drugCondition)
-# You should see 'chr' indicating the elements are characters
+# You should see "chr" indicating the elements are characters
 
 drugCondition <- c(rep("experimental",20), rep("control",20))
 

@@ -59,7 +59,7 @@ download.file(
     "census.csv","wget",extra="--no-check-certificate")
 
 # And now we will read the data into R and store it
-# in a data frame called 'data'
+# in a data frame called "data"
 
 data <- read.csv("census.csv",header=TRUE,sep=",")
       </code>
