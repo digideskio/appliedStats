@@ -7,7 +7,9 @@
     <hr>
     
     <h3>Scatterplots</h3>
-    <p>Okay, so this is something that we could have presented back a few chapters ago when we talked about data visualization. Unfortunately, that wouldn't haev worked with the example we were using, so instead of completely switching gears on you, we decided to wait until now to present it. </p>
+    <p>Okay, so this is something that we could have presented back a few chapters ago when we talked about data visualization. Unfortunately, that wouldn't haev worked with the example we were using, so instead of completely switching gears on you, we decided to wait until now to present it.</p>
+    
+    <p>Scatterplots are used to display data using cartesian coordinates. For instance, we may wish to visualize the growth of the U.S. population by decade:</p>
     
     <h3>Scatterplots with Categorical Variables</h3>
     <p></p>

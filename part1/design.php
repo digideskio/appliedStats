@@ -34,7 +34,7 @@
     
     <img src="assets/spuriousCorr.jpeg" width="700px" height="366px" />
     
-    <p>we see that they correlate. And pretty highly. But that's also an idiotic relationship: U.S. spending on science and technology has no effect on the number of suicides by hanging each year. The fact that these two variables correlate is either purely coincidental or mediated by some third variable that we haven't considered.</p>
+    <p>we see that they correlate. And pretty highly. But that's also an idiotic relationship: U.S. spending on science and technology has no effect on the number of suicides by hanging each year. The fact that these two variables correlate is either purely coincidental or mediated by some third variable that we haven't considered. (For instance, over that 10-year span, the U.S. has experienced both inflation&mdash;about 28%&mdash;and population growth&mdash;about 13%&mdash;that would each cause the increases that we see in our two variables.)</p>
     
     <p>Yet, if we ignore the absurdity of it and only look at the statistics, we see that there is a highly significant correlation between the two (r = 0.99; t = 23.90; <em>p</em>-value < 0.001). That's probably the best correlation (or at least the highest Pearson's r) you'll see in your natural-born life. Without context, that would be a highly convincing correlation. Yet, as soon as we stop and think about this, it becomes clear that this is likely a spurious relationship.</p>
     

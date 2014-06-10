@@ -177,14 +177,14 @@ drugCondition <- factor(drugCondition)
       <pre>
         <code>
 download.file(
-    "https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part1/data/ch02Ex01.csv",
+    "https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part1/data/introToREx01.csv",
     "sampleData.csv", "wget", extra="--no-check-certificate")
         </code>
       </pre>
       Paste that into the R console and hit <code>enter</code>. If it's successful, you should see something similar to <code>2014-05-30 20:12:15 (172 KB/s) - 'sampleData.csv' saved [8528/8528]</code>.
       </li>
       <li>Now we will assign the data to an object. This makes it easier to work with once we start plotting it and running analyses on the data. To do this, run the command: <code>myData <- read.csv("sampleData.csv",header=TRUE,sep=",")</code>. To see if you did this correctly, run the command <code>head(myData)</code>. If you don't get an error, then you're good to go.</li>
-      <li>Finally, we will load a file from the desktop. <a href="https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part1/data/ch02Ex01.csv">Click here to download the data.</a> Save it to your desktop. Now, in RStudio, click <code>Import Dataset</code>, select the file, make sure that you choose <code>Yes</code> for the Heading option, and import it.</li>
+      <li>Finally, we will load a file from the desktop. <a href="https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part1/data/introToREx01.csv">Click here to download the data.</a> Save it to your desktop. Now, in RStudio, click <code>Import Dataset</code>, select the file, make sure that you choose <code>Yes</code> for the Heading option, and import it.</li>
       <li>Next we will practice working with different data structures in R. Run <code>head(myData)</code>; describe what the function does. What about <code>colnames(myData)</code>?</li>
       <li>Make a vector called <code>myVector</code> containing the numbers 20 through 30.</li>
       <li>Now make a matrix with two rows and five columns called <code>myMatrix</code> that uses the vector you made in the previous problem.</li>

@@ -117,6 +117,12 @@
                 "previous" => "",
                 "next" => "",
             ),
+            "References" => array(
+              "description" => "",
+              "link" => "",
+              "previous" => "",
+              "next" => "",
+            ),
             "License" => array(
                 "description" => "",
                 "link" => "license",
