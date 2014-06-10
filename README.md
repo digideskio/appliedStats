@@ -33,15 +33,23 @@ ToDo:
   - [X] Significance: p-values; CIs; etc.
   - [X] Drawing conclusions
 - [ ] Correlation
-  - [ ] Visualizing relationships
-  - [ ] Measuring linear association
-  - [ ] Multiple correlation
-  - [ ] Partial correlation
+  - [X] Visualizing relationships
+  - [X] Measuring linear association
+  - [X] Multiple correlation
+  - [X] Partial correlation
   - [ ] Limitations (sensitivity to distribution; causality; linearity)
   - [X] Case study
   - [ ] Exercises
-  - [ ] Additional resources
+  - [X] Additional resources
 - [ ] Simple Linear Regression
+  - [ ] Uses of SLR
+  - [ ] Least squares fitting
+  - [ ] Coefficient of determination
+  - [ ] Residuals
+  - [ ] Outliers
+  - [ ] Case study
+  - [ ] Exercises
+  - [ ] Assitional resources
 - [ ] Multiple Regression
 - [ ] Related Issues in Regression
 - [ ] *t*-Tests
