@@ -11,8 +11,12 @@
     
     <p>Scatterplots are used to display data using cartesian coordinates. For instance, we may wish to visualize the growth of the U.S. population by decade:</p>
     
+    <img src="assets/correlationScatter.jpeg" width="700px" height="366px" />
+    
     <h3>Scatterplots with Categorical Variables</h3>
-    <p></p>
+    <p>Additionally, we can use scatterplots to visualize data with categorical indicators. For example, if we wanted to look at the U.S population by year, split by males and females:</p>
+    
+    <img src="assets/correlationCategorical.jpeg" width="700px" height="366px" />
     
     <h2>Correlation</h2>
     <hr>
@@ -35,16 +39,79 @@
     
     <p>Unfortunately, most of us will never see a correlation that strong in real life: that would mean that there is absolutely no variance of your data. Now, if we're talking about a physical law and measuring it with incredibly high-precision instruments, it's entirely possible that we will have a correlation that strong. However, in most studies, there will be some random variance thrown in that weakens the correlation.</p>
     
+    <p>So remember:</p>
+    
+    \[ \begin{eqnarray*}
+    r&=& \pm1 &\implies \text{strong correlation} \\
+    r&=& 0 &\implies \text{weak correlation}
+    \end{eqnarray*} \]
+    
     <h3>Correlation Matrices (Multiple Correlation)</h3>
-    <p></p>
+    <p>We know that correlation is a measure of dependence between two variables. However, there may be times when you want to examine multiple variables at once. In cases like this, it may be useful to create a <span class="dt">correlation matrix</span>. This is simply a lower-triangular matrix of correlations among multiple variables.</p>
+    
+    <p>For instance, let's say that I want to see how adiposity in different parts of the body correlate. I may do something like:</p>
+    
+    <pre>
+      <code>
+as.dist(cor(bodyFat))
+
+           Neck   Chest  Abdomen      Hip
+        +--------------------------------
+  Chest | 0.766                             
+Abdomen | 0.728   0.911
+    Hip | 0.705   0.823    0.860          
+  Thigh | 0.668   0.708    0.736    0.881
+      </code>
+    </pre>
+    
+    <p>Here we can see the correlations between Neck, Chest, Abdomen, Hip, and Thigh adiposity&mdash;ranging from 0.67 to 0.91. However, what if we wanted to visualize these correlations as scatterplots?</p>
+    
+    <pre>
+      <code>
+pairs(~Neck+Chest+Abdomen+Hip+Thigh,data=bodyFat,upper.panel=NULL)
+      </code>
+    </pre>
+    
+    <img src="assets/correlationMatrix.jpeg" "width="700px" height="366px" />
+    
+    <p>Finally, we will likely want to assess the significance of these correlations. To do so, we will have to install the <code>Hmisc</code> package:</p>
+    
+    <pre>
+      <code>
+install.packages("Hmisc")
+library(Hmisc)
+rcorr(as.matrix(bodyFat))
+      </code>
+    </pre>
+    
+    <p>This will return all bivariate correlations and levels of significance for the specified matrix. (NB: The data must be input as a matrix for this function to work. If you are using a data frame, first pass it through the <code>as.matrix()</code> function.)</p>
     
     <h3>Partial Correlations</h3>
-    <p></p>
+    <p>In our previous section, we looked at correlations among multiple variables. These were all referred to as <span class="dt">bivariate correlations</span> because each correlation only looked at exactly two variables. However, we saw that each of those 5 variables correlated significantly with each of the others. So it may be more appropriate to conduct a <span class="dt">partial correlation</span>: this will take two variables&mdash;say, Neck and Chest&mdash; and measure their degree of association after controlling for the effect of Abdome, Hip, and Thigh. Doing so gives the result:</p>
+    
+    <pre>
+      <code>
+neck <- bodyFat$Neck
+chest <- bodyFat$Chest
+others <- subset(bodyFat, select=c(Abdomen:Thigh))
+
+pcor.test(neck,chest,others)
+
+   estimate      p.value  statistic    n
+      0.344      9.7e-09       5.73  249
+      </code>
+    </pre>
+    
+    <p>We can see that the observed correlation drops from \(r=0.766\) with the bivariate correlation to \(r=0.344\) with the partial correlation. This means that, when we control for the effects of Abdomen, Hip, and Thigh adiposity, neck and chest still covary significantly with a correlation of about 0.34.</p>
     
     <h3>Sensitivity to the Data Distribution</h3>
     <p></p>
     
     <h3>Some Considerations: Causality and Linearity</h3>
+    <h4>Causal Inferences</h4>
+    <p></p>
+    
+    <h4>Linearity of the Relationship</h4>
     <p></p>
     
     <h2>Case Study: National Education Trends</h2>
@@ -57,7 +124,7 @@
 # This will let us download the file from a remote URL
 
 download.file(
-    "https://raw.githubusercontent.com/faulconbridge/appliedStats/gh-pages/part1/data/ch06CaseStudy.csv",
+    "https://raw.githubusercontent.com/faulconbridge/appliedStats/gh-pages/part1/data/correlationCaseStudy.csv",
     "census.csv","wget",extra="--no-check-certificate")
 
 # And now we will read the data into R and store it
@@ -89,7 +156,7 @@ abline(fit)
       </code>
     </pre>
     
-    <img src="assets/ch06CaseStudy.jpeg" width="700px" height="366px" />
+    <img src="assets/correlationCaseStudy.jpeg" width="700px" height="366px" />
     
     <p>As we can see, there appears to be a positive linear relationship between per capita income and the proportion of a state's residents having a high school diploma or higher. Our next step is then to quantify the strength of this relationship. To do this, we will perform a bivariate correlation</p>
     
@@ -118,24 +185,16 @@ sample estimates:
     
     <p>If it weren't obvious from the scatterplot above, this is a positive correlation with a Pearson's r=0.37, meaning that there exists a fair positive relationship between our two variables. I.e., when one is larger, the other will also tend to be larger.</p>
     
-    <h3></h3>
-    <p></p>
-    
-    <h3></h3>
-    <p></p>
-    
-    <h3></h3>
-    <p></p>
-    
-    <h3></h3>
-    <p></p>
-    
     <h2>Exercises</h2>
     <hr>
     
     <h2>Additional Resources</h2>
     <hr>
-    
+    <ol>
+      <li><a href="data/" target="_blank">All data sets</a> used in the chapter</li>
+      <li><a href="RScripts/" target="_blank">All R scripts</a> used in the chapter</li>
+      <li><a href="" target="_blank">Answer key</a> to the chapter's exercises</li>
+    </ol>
     
     
 <?php

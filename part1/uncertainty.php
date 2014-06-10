@@ -236,8 +236,8 @@ for(i in 1:500) {
     
     <h2>Additional Resources</h2>
     <ul>
-      <li><a href="http://book.chriswetherill.me/part1/RScripts/ch03.R" target="_blank">R script</a> containing all commands used in examples throughout this chapter</li>
-      <li><a href="http://book.chriswetherill.me/part1/answers/ch03.html" target="_blank">Answer key</a> for the chapter's exercises</li>
+      <li><a href="http://book.chriswetherill.me/part1/RScripts/uncertainty.R" target="_blank">R script</a> containing all commands used in examples throughout this chapter</li>
+      <li><a href="http://book.chriswetherill.me/part1/answers/uncertainty.html" target="_blank">Answer key</a> for the chapter's exercises</li>
     </ul>
     <hr>
     
