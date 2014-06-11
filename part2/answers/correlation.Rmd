@@ -1,0 +1,68 @@
+Answers for Correlation Exercises
+========================================================
+
+1. Download the Patient Satisfaction data set from GitHub. This dataset contains information from patients surveyed at various hospitals following their treatment to assess their satisfaction with the experience. We will be using these data for the first few exercises.
+
+  ```{r echo=FALSE, results='hide'}
+  download.file("https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationEx01.csv", "ex01.csv", method="wget", extra="--no-check-certificate")
+  ex01 <- read.csv("ex01.csv", header=TRUE)
+  ```
+
+2. Do nurse and doctor communication ratings correlate? First we can construct a scatterplot of our data:
+
+  ```{r}
+  plot(ex01$nursesCommunicateWell,ex01$doctorsCommunicateWell,
+       xlab="Percent patients who say nurses communicate well",
+       ylab="Percent patients who say doctors communicate well")
+  ```
+
+  We can see that the assumption of linearity does not appear to be violated. Given this, we can perform a bivatiate correlation test of these data:
+
+  ```{r}
+  cor.test(ex01$nursesCommunicateWell,ex01$doctorsCommunicateWell)
+  ```
+
+  Clearly, patient ratings of nurses' and doctors' abilities to communicate well correlate highly (r=0.74) and to a level of statistical significance (t=70.03; p-value < 0.001).
+
+3. Give the partial correlation between doctor and nurse communicativity controlling for staffExplainedMedications and givenInformationAboutRecovery. First we will make a data frame containing the two variables we wish to control for. We will also load the source code to perform a partial correlation:
+
+  ```{r}
+  source("http://www.yilab.gatech.edu/pcor.R")
+  controlled <- subset(ex01, select=c(givenInformationAboutRecovery,staffExplainedMedications))
+  ```
+  
+  And we will conduct the correlation test:
+  
+  ```{r}
+  pcor.test(ex01$nursesCommunicateWell,ex01$doctorsCommunicateWell,controlled)
+  ```
+  
+  Again we see a strong correlation (r = 0.50) that reaches a level of statistical significance (t = 35.31; p-value < 0.001).
+
+4. Create a lower-diagonal correlation matrix and comment on it.
+
+  ```{r}
+  corMatrix <- subset(ex01, select=c(nursesCommunicateWell:rateHospitalPositively))
+  corMatrix <- na.omit(corMatrix)
+  as.dist(cor(corMatrix))
+  
+  install.packages("Hmisc")
+  library(Hmisc)
+  
+  rcorr(as.matrix(corMatrix))
+  ```
+  
+  As we can see, all bivariate correlations reach a level of statistical significance
+
+5. Comment on assumptions for correlation.
+
+  ```{r}
+  pairs(~nursesCommunicateWell + doctorsCommunicateWell + receivedImmediateHelp +
+      painManagedByTreatment + staffExplainedMedications + bathroomsAlwaysClean +
+      givenInformationAboutRecovery + rateHospitalPositively,
+      data=ex01, upper.panel=NULL)
+  ```
+  
+  E.g., The scatterplot for givenInformationAboutRecovery by rateHospitalPositively shows a bit of an odd trend: it almost looks like it may be a logistic curve.
+  
+  These comments are rather subjective: the important thing is that you are looking critically at your data to make sure that the test's assumptions are met.

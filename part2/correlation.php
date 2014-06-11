@@ -91,6 +91,8 @@ rcorr(as.matrix(bodyFat))
     
     <pre>
       <code>
+source("http://www.yilab.gatech.edu/pcor.R")
+
 neck <- bodyFat$Neck
 chest <- bodyFat$Chest
 others <- subset(bodyFat, select=c(Abdomen:Thigh))
@@ -188,12 +190,30 @@ sample estimates:
     <h2>Exercises</h2>
     <hr>
     
+    <ol>
+      <li>Download the <a href="https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationEx01.csv" target="_blank">Patient Satisfaction data set</a> from GitHub. This dataset contains information from patients surveyed at various hospitals following their treatment to assess their satisfaction with the experience. We will be using these data for the first few exercises.</li>
+      <li>Do patient ratings for <code>nursesCommunicateWell</code> and <code>doctorsCommunicateWell</code> correlate with one another? Provide evidence to back up your answer. Include a scatterplot of the data.</li>
+      <li>Now perform a partial correlation between those two same variables, but controlling for <code>givenInformationAboutRecovery</code> and <code>staffExplainedMedications</code>.</li>
+      <li>Create a lower-diagonal correlation matrix correlating all of the variables included in the dataset (except for the hospital ID). What correlations are significant? Are there any that are non-significant? (NOTE: You will have to remove null values using the <code>na.omit()</code> function for this to work properly.</li>
+      <li>Construct a scatterplot matrix of all bivariate correlations using the code:
+      <pre>
+        <code>
+pairs(~nursesCommunicateWell + doctorsCommunicateWell + receivedImmediateHelp +
+      painManagedByTreatment + staffExplainedMedications + bathroomsAlwaysClean +
+      givenInformationAboutRecovery + rateHospitalPositively,
+      data=ex01, upper.panel=NULL)
+        </code>
+      </pre>
+      
+      Do any of the scattplots look concerning? Look for outliers, non-linear trends, etc.</li>
+    </ol>
+    
     <h2>Additional Resources</h2>
     <hr>
     <ol>
       <li><a href="data/" target="_blank">All data sets</a> used in the chapter</li>
       <li><a href="RScripts/" target="_blank">All R scripts</a> used in the chapter</li>
-      <li><a href="" target="_blank">Answer key</a> to the chapter's exercises</li>
+      <li><a href="answers/correlatioin.html" target="_blank">Answer key</a> to the chapter's exercises</li>
     </ol>
     
     
