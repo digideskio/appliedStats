@@ -191,7 +191,7 @@ sample estimates:
     <hr>
     
     <ol>
-      <li>Download the <a href="https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationEx01.csv" target="_blank">Patient Satisfaction data set</a> from GitHub. This dataset contains information from patients surveyed at various hospitals following their treatment to assess their satisfaction with the experience. We will be using these data for the first few exercises.</li>
+      <li>Download the <a href="https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationEx01.csv" target="_blank">Patient Satisfaction data set</a> from GitHub. This dataset contains information from patients surveyed at various hospitals following their treatment to assess their satisfaction with the experience. We will be using these data for these exercises.</li>
       <li>Do patient ratings for <code>nursesCommunicateWell</code> and <code>doctorsCommunicateWell</code> correlate with one another? Provide evidence to back up your answer. Include a scatterplot of the data.</li>
       <li>Now perform a partial correlation between those two same variables, but controlling for <code>givenInformationAboutRecovery</code> and <code>staffExplainedMedications</code>.</li>
       <li>Create a lower-diagonal correlation matrix correlating all of the variables included in the dataset (except for the hospital ID). What correlations are significant? Are there any that are non-significant? (NOTE: You will have to remove null values using the <code>na.omit()</code> function for this to work properly.</li>
@@ -206,6 +206,7 @@ pairs(~nursesCommunicateWell + doctorsCommunicateWell + receivedImmediateHelp +
       </pre>
       
       Do any of the scatterplots look concerning? Look for outliers, non-linear trends, etc.</li>
+      <li><span class="dt">Test yourself:</span> Choose two new variables and performa bivariate correlation test. Do they correlate significantly? Do you think there are any other variables that should be controlled for? If so, perform a partial correlation, controlling for those additional variables. Do the results differ? Explain why they do. Comment on the assumptions made by the correlation tests you have run. Are they met? Are any violated?</li>
     </ol>
     
     <h2>Additional Resources</h2>
