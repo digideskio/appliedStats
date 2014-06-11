@@ -66,3 +66,32 @@ Answers for Correlation Exercises
   E.g., The scatterplot for givenInformationAboutRecovery by rateHospitalPositively shows a bit of an odd trend: it almost looks like it may be a logistic curve.
   
   These comments are rather subjective: the important thing is that you are looking critically at your data to make sure that the test's assumptions are met.
+
+6. --NOT INCLUDED--
+
+7. Download the ACS data
+
+  ```{r}
+  download.file("https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationCaseStudy.csv","acs.csv",method="wget",extra="--no-check-certificate")
+  acs <- read.csv("acs.csv", header=TRUE)
+  ```
+
+8. Do noHighSchoolDiploma and publicTransit correlate?
+
+  ```{r}
+  cor.test(acs$noHighSchoolDiploma,acs$publicTransit)
+  ```
+
+9. Do HighSchoolOrHigher and percentOnSNAP correlate?
+
+  ```{r}
+  cor.test(acs$HighSchoolOrHigher,acs$percentOnSNAP)
+  plot(acs$HighSchoolOrHigher,acs$percentOnSNAP)
+  ```
+
+10. Do medianRent and percentImpoverished correlate?
+
+  ```{r}
+  cor.test(acs$medianRent,acs$percentImpoverished)
+  plot(acs$percentImpoverished,acs$medianRent)
+  ```

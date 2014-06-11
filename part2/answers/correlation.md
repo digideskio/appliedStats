@@ -283,3 +283,93 @@ Answers for Correlation Exercises
   E.g., The scatterplot for givenInformationAboutRecovery by rateHospitalPositively shows a bit of an odd trend: it almost looks like it may be a logistic curve.
   
   These comments are rather subjective: the important thing is that you are looking critically at your data to make sure that the test's assumptions are met.
+
+6. --NOT INCLUDED--
+
+7. Download the ACS data
+
+  
+  ```r
+  download.file("https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationCaseStudy.csv", 
+      "acs.csv", method = "wget", extra = "--no-check-certificate")
+  acs <- read.csv("acs.csv", header = TRUE)
+  ```
+
+
+8. Do noHighSchoolDiploma and publicTransit correlate?
+
+  
+  ```r
+  cor.test(acs$noHighSchoolDiploma, acs$publicTransit)
+  ```
+  
+  ```
+  ## 
+  ## 	Pearson's product-moment correlation
+  ## 
+  ## data:  acs$noHighSchoolDiploma and acs$publicTransit
+  ## t = -0.0777, df = 49, p-value = 0.9384
+  ## alternative hypothesis: true correlation is not equal to 0
+  ## 95 percent confidence interval:
+  ##  -0.2858  0.2653
+  ## sample estimates:
+  ##     cor 
+  ## -0.0111
+  ```
+
+
+9. Do HighSchoolOrHigher and percentOnSNAP correlate?
+
+  
+  ```r
+  cor.test(acs$HighSchoolOrHigher, acs$percentOnSNAP)
+  ```
+  
+  ```
+  ## 
+  ## 	Pearson's product-moment correlation
+  ## 
+  ## data:  acs$HighSchoolOrHigher and acs$percentOnSNAP
+  ## t = -4.106, df = 49, p-value = 0.0001521
+  ## alternative hypothesis: true correlation is not equal to 0
+  ## 95 percent confidence interval:
+  ##  -0.6859 -0.2677
+  ## sample estimates:
+  ##    cor 
+  ## -0.506
+  ```
+  
+  ```r
+  plot(acs$HighSchoolOrHigher, acs$percentOnSNAP)
+  ```
+  
+  ![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
+
+
+10. Do medianRent and percentImpoverished correlate?
+
+  
+  ```r
+  cor.test(acs$medianRent, acs$percentImpoverished)
+  ```
+  
+  ```
+  ## 
+  ## 	Pearson's product-moment correlation
+  ## 
+  ## data:  acs$medianRent and acs$percentImpoverished
+  ## t = -2.431, df = 49, p-value = 0.01876
+  ## alternative hypothesis: true correlation is not equal to 0
+  ## 95 percent confidence interval:
+  ##  -0.55359 -0.05769
+  ## sample estimates:
+  ##     cor 
+  ## -0.3281
+  ```
+  
+  ```r
+  plot(acs$percentImpoverished, acs$medianRent)
+  ```
+  
+  ![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11.png) 
+

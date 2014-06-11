@@ -191,7 +191,7 @@ sample estimates:
     <hr>
     
     <ol>
-      <li>Download the <a href="https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationEx01.csv" target="_blank">Patient Satisfaction data set</a> from GitHub. This dataset contains information from patients surveyed at various hospitals following their treatment to assess their satisfaction with the experience. We will be using these data for these exercises.</li>
+      <li>Download the <a href="https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationEx01.csv" target="_blank">Patient Satisfaction data set</a> from GitHub. This dataset contains information from patients surveyed at various hospitals following their treatment to assess their satisfaction with the experience. We will be using these data for the following exercises.</li>
       <li>Do patient ratings for <code>nursesCommunicateWell</code> and <code>doctorsCommunicateWell</code> correlate with one another? Provide evidence to back up your answer. Include a scatterplot of the data.</li>
       <li>Now perform a partial correlation between those two same variables, but controlling for <code>givenInformationAboutRecovery</code> and <code>staffExplainedMedications</code>.</li>
       <li>Create a lower-diagonal correlation matrix correlating all of the variables included in the dataset (except for the hospital ID). What correlations are significant? Are there any that are non-significant? (NOTE: You will have to remove null values using the <code>na.omit()</code> function for this to work properly.</li>
@@ -207,6 +207,11 @@ pairs(~nursesCommunicateWell + doctorsCommunicateWell + receivedImmediateHelp +
       
       Do any of the scatterplots look concerning? Look for outliers, non-linear trends, etc.</li>
       <li><span class="dt">Test yourself:</span> Choose two new variables and performa bivariate correlation test. Do they correlate significantly? Do you think there are any other variables that should be controlled for? If so, perform a partial correlation, controlling for those additional variables. Do the results differ? Explain why they do. Comment on the assumptions made by the correlation tests you have run. Are they met? Are any violated?</li>
+      <li>Download the <a href="https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationCaseStudy.csv" target="_blank">Census American Community Survey</a> from GitHub. This dataset, used in the case study above, contains information about employment and other demographic characteristics nationwide.</li>
+      <li>Is there a correlation between <code>noHighSchoolDiploma</code> (the proportion of residents without a HS diploma or GED equivalent) and <code>publicTransit</code> (the proportion of residents who use public transit to go to and from work)?</li>
+      <li>Is there a correlation between <code>HighSchoolOrHigher</code> and <code>percentOnSNAP</code>? Justify your findings and include at least one figure.</li>
+      <li>Is there a correlation between <code>medianRent</code> and <code>percentImpoverished</code>? Are there any variables we might want to control for using a partial correlation?</li>
+      <li><span class="dt">Test yourself:</span> Choose some (or all) of the variables in this dataset and make a correlation matrix for them. Choose a correlation that looks interesting or surprising and investigate it further. If applicable, perform a partial correlation test rather than a bivariate correlation.</li>
     </ol>
     
     <h2>Additional Resources</h2>
