@@ -34,12 +34,12 @@
     <p>We understand that different statistical packages have different interfaces and very different ways of presenting analysis results. And although we only document R in this book, we do our best to give you links to additional resources that explain how to run and interpret the analysis using other popular commercial stats packages. If you're ever desperate to run an analysis in another statistical package and we don't provide links to help you, you're welcome to open an <a href="https://github.com/faulconbridge/appliedStats/issues" target="_blank">issue on GitHub</a>, although we can't promise that we will have a good answer for you.</p>
     
     <h3>Common Statistical Terms</h3>
-      <span class="dt">Statistic: </span> <span class="dd">Any qantity that can be calculated from a set of data.</span> <br />
+      <span class="dt">Statistic: </span> <span class="dd">Any quantity that can be calculated from a set of data.</span> <br />
       <span class="dt">Population: </span> <span class="dd">The collection of all possible measurements taken. For example, "the heights of every 12-year-old boy in America" or "all automobiles with three wheels."</span><br />
-      <span class="dt">Sample: </span> <span class="dd">A subet of a population. For example, "the heights of 100 12-year-old boys from Ohio" or "20 tricycles bought from Toys-R-Us."</span><br />
+      <span class="dt">Sample: </span> <span class="dd">A subset of a population. For example, "the heights of 100 12-year-old boys from Ohio" or "20 tricycles bought from Toys-R-Us."</span><br />
       <span class="dt">Parameter: </span><span class="dd">A statistic referring to a population. This is usually denoted by a Greek letter.</span><br />
       <span class="dt">Estimate: </span><span class="dd">A statistic referring to a sample. This is a "best guess" at the parameter for the population. Estimates are denoted by either a hat or a Roman letter.</span><br />
-      <span class="dt">Mean: </span><span class="dd">The arthmetic mean of a set of data. When referring to the parameter, we denote this \( \mu \); when referring to the estimate, we denote this \( \bar{x} \) (pronounced "x-bar") or \( \hat{\mu} \) (pronounced "mu-hat").</span><br />
+      <span class="dt">Mean: </span><span class="dd">The arithmetic mean of a set of data. When referring to the parameter, we denote this \( \mu \); when referring to the estimate, we denote this \( \bar{x} \) (pronounced "x-bar") or \( \hat{\mu} \) (pronounced "mu-hat").</span><br />
       <span class="dt">Standard Deviation: </span><span class="dd">A measure of how far dispersed observations are from their mean. Denoted \( \sigma \) when referring to the parameter or \( s \) for the estimate.</span><br />
       <span class="dt">Standard Error: </span><span class="dd">The standard deviation of the sampling distribution of a statistic. Denoted \( s.e. \) or \( SE \).</span>
     

@@ -87,7 +87,7 @@ rcorr(as.matrix(bodyFat))
     <p>This will return all bivariate correlations and levels of significance for the specified matrix. (NB: The data must be input as a matrix for this function to work. If you are using a data frame, first pass it through the <code>as.matrix()</code> function.)</p>
     
     <h3>Partial Correlations</h3>
-    <p>In our previous section, we looked at correlations among multiple variables. These were all referred to as <span class="dt">bivariate correlations</span> because each correlation only looked at exactly two variables. However, we saw that each of those 5 variables correlated significantly with each of the others. So it may be more appropriate to conduct a <span class="dt">partial correlation</span>: this will take two variables&mdash;say, Neck and Chest&mdash; and measure their degree of association after controlling for the effect of Abdome, Hip, and Thigh. Doing so gives the result:</p>
+    <p>In our previous section, we looked at correlations among multiple variables. These were all referred to as <span class="dt">bivariate correlations</span> because each correlation only looked at exactly two variables. However, we saw that each of those 5 variables correlated significantly with each of the others. So it may be more appropriate to conduct a <span class="dt">partial correlation</span>: this will take two variables&mdash;say, Neck and Chest&mdash; and measure their degree of association after controlling for the effect of Abdomen, Hip, and Thigh. Doing so gives the result:</p>
     
     <pre>
       <code>
@@ -205,7 +205,7 @@ pairs(~nursesCommunicateWell + doctorsCommunicateWell + receivedImmediateHelp +
         </code>
       </pre>
       
-      Do any of the scattplots look concerning? Look for outliers, non-linear trends, etc.</li>
+      Do any of the scatterplots look concerning? Look for outliers, non-linear trends, etc.</li>
     </ol>
     
     <h2>Additional Resources</h2>
@@ -213,7 +213,7 @@ pairs(~nursesCommunicateWell + doctorsCommunicateWell + receivedImmediateHelp +
     <ol>
       <li><a href="data/" target="_blank">All data sets</a> used in the chapter</li>
       <li><a href="RScripts/" target="_blank">All R scripts</a> used in the chapter</li>
-      <li><a href="answers/correlatioin.html" target="_blank">Answer key</a> to the chapter's exercises</li>
+      <li><a href="answers/correlation.html" target="_blank">Answer key</a> to the chapter's exercises</li>
     </ol>
     
     
