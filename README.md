@@ -39,7 +39,7 @@ ToDo:
   - [X] Partial correlation
   - [ ] Limitations (sensitivity to distribution; causality; linearity)
   - [X] Case study
-  - [ ] Exercises
+  - [X] Exercises
   - [X] Additional resources
 - [ ] Simple Linear Regression
   - [ ] Uses of SLR
