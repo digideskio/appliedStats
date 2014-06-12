@@ -111,10 +111,20 @@ pcor.test(neck,chest,others)
     
     <h3>Some Considerations: Causality and Linearity</h3>
     <h4>Causal Inferences</h4>
-    <p></p>
+    <p>Importantly, one cannot make causal inferences from correlational designs: if you think back to the chapter on research design, for a causal inference to by justified, there must be (1) temporal precedence; (2) covariation; and (3) nonspuriousness. Here, we violate the first and third assumptions. Regarding temporal precedence, neither of the measures that we are looking at clearly precedes the other: the measurements could be made simultaneously; one could always occur before the other; or the order of occurrence could be random at each point of measurement. Additionally, correlational studies don't have any control or experimental conditions in place to ensure that potential confounding variables are controlled for and don't give rise to spurious correlations.</p>
+    
+    <p>Given these concerns, we are only able to say that Variable A and Variable B tend to covary: that is, when one changes in a certain way, the other is likely to change in a certain way. For instance, consider height and weight. Let's say that there is a positive correlation between the two (i.e., that taller people tend to weigh more and that people who weigh less tend to be shorter). We can say that someone who is 6'1" is likely to weigh more than someone who is 4'10"; however, it becomes silly to say that if someone loses weight, he or she will start shrinking in height. Likewise, by gaining weight, no one will ever grow taller. There is a general trend of the data; however, this does not mean that a change in one ever causes a change in the other.</p>
     
     <h4>Linearity of the Relationship</h4>
-    <p></p>
+    <p>Another consideration when looking at correlations is the relationship between the two variables of interest. Namely, there must be a linear trend. In this context, a linear trend is going to mean that every time Variable A changes by \( x \) units, Variable B will change by \(y\) units. For instance, take these four plots:</p>
+    
+    <img src="assets/correlationLinearity.jpeg" width="700px" height="366px" />
+    
+    <p>Here we have four different relationships between our two variables with the same regression line plotted against all of them. As far as a correlation is concerned, the data follow that solid line. So when we have things like a quadratic relationship where \(y=x^2\), that will throw things off considerably. Take the below example, for instance:</p>
+    
+    <img src="assets/correlationLeastSquares.jpeg" width="700px" height="366px" />
+    
+    <p>Here we have our actual data points plotted as circles and a best fit line plotted over that. The vertical lines represent the difference between our predicted and observed values. For some values (\(1\leq x \leq 2\)) our data stay pretty close to that line. However, at more extreme values, those differences become much more pronounced. We also can see that the presence of outliers can significantly change the magnitude of the correlation observed.</p>
     
     <h2>Case Study: National Education Trends</h2>
     <hr>

@@ -32,12 +32,12 @@ ToDo:
   - [X] Standardized test statistics
   - [X] Significance: p-values; CIs; etc.
   - [X] Drawing conclusions
-- [ ] Correlation
+- [X] Correlation
   - [X] Visualizing relationships
   - [X] Measuring linear association
   - [X] Multiple correlation
   - [X] Partial correlation
-  - [ ] Limitations (sensitivity to distribution; causality; linearity)
+  - [X] Limitations (sensitivity to distribution; causality; linearity)
   - [X] Case study
   - [X] Exercises
   - [X] Additional resources

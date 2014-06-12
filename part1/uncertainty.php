@@ -79,7 +79,7 @@
       </code>
     </pre>
     
-    <p>As you can see, both the mean and the median change. However, the median changes much less than the mean does. (There's a change of 0.26 in the means versus a change of 0.10 in the medians.) In casaes where you have strongly skewed data, it will often be better to describe them using the median rather than the mean: specifically, the median is what we call <span class="dt">resistent to outliers</span>. In other words, when you have a few outliers (numbers that are far away from every other data point), the median will be changed much less than the mean will.</p>
+    <p>As you can see, both the mean and the median change. However, the median changes much less than the mean does. (There's a change of 0.26 in the means versus a change of 0.10 in the medians.) In casaes where you have strongly skewed data, it will often be better to describe them using the median rather than the mean: specifically, the median is what we call <span class="dt">resistant to outliers</span>. In other words, when you have a few outliers (numbers that are far away from every other data point), the median will be changed much less than the mean will.</p>
     
     <h3>Standard Deviation</h3>
     <p><span class="dt">Standard deviation</span> (represented as \( s \) or \( \sigma \)) is a measure of dispersion: that is, it tells us how far from or close to the mean our data tend to be. A data set with a small standard deviation, for instance, tells us that most of our data points are fairly close together and are all near the mean. Alternately, a large standard deviation means that our data points are much more spread out. We can visualize this using three data sets, all with mean \( \mu = 0 \) but with different standard deviations:</p>

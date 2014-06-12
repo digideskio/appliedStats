@@ -52,3 +52,35 @@ chest <- bodyFat$Chest
 others <- subset(bodyFat, select=c(Abdomen:Thigh))
 
 pcor.test(neck,chest,others)
+
+###############################################################################
+# Linearity Example
+###############################################################################
+
+layout(matrix(c(1,2,3,4),2,2))
+par(mar=c(5, 5, 1, 5) + 0.1)
+
+ff <- y ~ x
+for(i in 1:4) {
+  ff[[2]] <- as.name(paste("y", i, sep=""))
+  ff[[3]] <- as.name(paste("x", i, sep=""))
+  lmi <- lm(ff, data= anscombe)
+  xl <- substitute(expression(x[i]), list(i=i))  
+  yl <- substitute(expression(y[i]), list(i=i))
+  plot(ff, data=anscombe, col="red", pch=21, cex=1, bg = "grey", 
+       xlim=c(3,19), ylim=c(3,13), 
+       xlab="x", ylab="y"
+  )  
+  abline(lmi, col="blue")
+}
+
+layout(matrix(1),1)
+
+x <- c(seq(from=0,to=5, by=0.5))
+quadratic <- x^2
+plot(x,quadratic,type="p",main="Quadratic Relationship",
+     ylab="y", ylim=c(-3.75,25))
+abline(lm(quadratic~x))
+for(i in 1:length(x)) {
+  lines(x=c(x[i],x[i]),y=c(x[i]^2,5*x[i]-3.75))
+}

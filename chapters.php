@@ -117,6 +117,12 @@
                 "previous" => "",
                 "next" => "",
             ),
+            "Getting Outside Help" => array(
+              "description" => "",
+              "link" => "",
+              "previous" => "",
+              "next" => "",
+            ),
             "References" => array(
               "description" => "",
               "link" => "",
