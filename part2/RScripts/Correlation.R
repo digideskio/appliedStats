@@ -74,13 +74,9 @@ for(i in 1:4) {
   abline(lmi, col="blue")
 }
 
-layout(matrix(1),1)
+###############################################################################
+# Distribution Example
+###############################################################################
 
-x <- c(seq(from=0,to=5, by=0.5))
-quadratic <- x^2
-plot(x,quadratic,type="p",main="Quadratic Relationship",
-     ylab="y", ylim=c(-3.75,25))
-abline(lm(quadratic~x))
-for(i in 1:length(x)) {
-  lines(x=c(x[i],x[i]),y=c(x[i]^2,5*x[i]-3.75))
-}
+layout(matrix(1),1,1)
+

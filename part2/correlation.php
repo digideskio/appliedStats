@@ -120,11 +120,10 @@ pcor.test(neck,chest,others)
     
     <img src="assets/correlationLinearity.jpeg" width="700px" height="366px" />
     
-    <p>Here we have four different relationships between our two variables with the same regression line plotted against all of them. As far as a correlation is concerned, the data follow that solid line. So when we have things like a quadratic relationship where \(y=x^2\), that will throw things off considerably. Take the below example, for instance:</p>
+    <p>Here we have four different relationships between our two variables with the same regression line plotted against all of them. As far as a correlation is concerned, the data follow that solid line.</p>
     
-    <img src="assets/correlationLeastSquares.jpeg" width="700px" height="366px" />
-    
-    <p>Here we have our actual data points plotted as circles and a best fit line plotted over that. The vertical lines represent the difference between our predicted and observed values. For some values (\(1\leq x \leq 2\)) our data stay pretty close to that line. However, at more extreme values, those differences become much more pronounced. We also can see that the presence of outliers can significantly change the magnitude of the correlation observed.</p>
+    <h4>Sensitivity to the Distribution</h4>
+    <p>Also important is the sensitivity of </p>
     
     <h2>Case Study: National Education Trends</h2>
     <hr>

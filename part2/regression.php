@@ -18,7 +18,7 @@
     
     <div id="least_squares" style="display: inline-block;"></div>
     
-  	<script src="js/least.squares.js"></script>
+    <script src="js/least.squares.js"></script>
 
     
     <h3>Coefficient of Determination</h3>

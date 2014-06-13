@@ -21,41 +21,20 @@ least.squares = function(
   rss = rep(NA, nmax)
   par(mfrow = mfrow)
   
-  if (ani.type == 'slope') {
-    if (missing(b.range))
-      bseq = tan(seq(pi/10, 3.5 * pi/10, length = nmax))
-    else bseq = seq(b.range[1], b.range[2], length = nmax)
-    
-    for (i in 1:nmax) {
-      dev.hold()
-      plot(x, y, ...)
-      abline(fit, col = ab.col[1])
-      abline(a, bseq[i], col = ab.col[2])
-      points(x, bseq[i] * x + a, pch = est.pch)
-      segments(x, bseq[i] * x + a, x, y, col = v.col, lty = v.lty)
-      rss[i] = sum((y - bseq[i] * x - a)^2)
-      ani.pause()
-    }
-#    return(invisible(list(lmfit = fit, anifit = c(x = bseq[which.min(rss)]))))
-  } else if (ani.type == 'intercept') {
-    aseq = if (missing(a.range))
-      seq(-5, 5, length = nmax) else seq(a.range[1], a.range[2], length = nmax)
-    for (i in 1:nmax) {
-      dev.hold()
-      plot(x, y, ...)
-      abline(fit, col = ab.col[1])
-      abline(aseq[i], b, col = ab.col[2])
-      points(x, b * x + aseq[i], pch = est.pch)
-      segments(x, b * x + aseq[i], x, y, col = v.col, lty = v.lty)
-      rss[i] = sum((y - b * x - aseq[i])^2)
-      plot(
-        1:nmax, rss, xlab = paste('Intercept =', round(aseq[i], 3)),
-        ylab = 'Residual Sum of Squares', pch = rss.pch, type = rss.type
-      )
-      ani.pause()
-    }
-    return(invisible(list(lmfit = fit, anifit = c('(Intercept)' = aseq[which.min(rss)]))))
-  } else warning('Incorrect animation type!')
+  if (missing(b.range))
+    bseq = tan(seq(pi/10, 3.5 * pi/10, length = nmax))
+  else bseq = seq(b.range[1], b.range[2], length = nmax)
+  
+  for (i in 1:nmax) {
+    dev.hold()
+    plot(x, y, ...)
+    abline(fit, col = ab.col[1])
+    abline(a, bseq[i], col = ab.col[2])
+    points(x, bseq[i] * x + a, pch = est.pch)
+    segments(x, bseq[i] * x + a, x, y, col = v.col, lty = v.lty)
+    rss[i] = sum((y - bseq[i] * x - a)^2)
+    ani.pause()
+  }
 }
 
 least.squares()
