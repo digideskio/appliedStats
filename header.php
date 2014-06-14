@@ -10,8 +10,12 @@
   <meta name="author" content="Chris Wetherill" />
 
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="http://book.chriswetherill.me/stylesheets/stylesheet.css">
+  <link rel="stylesheet" href="http://book.chriswetherill.me/stylesheets/shCore.css" />
+  <link rel="stylesheet" href="http://book.chriswetherill.me/stylesheets/shThemeDefault.css" />
+  
   <title><?php echo $title." | Applied Statistics"; ?></title>
+  
   <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -22,6 +26,8 @@
     ga('create', 'UA-51762248-1', 'chriswetherill.me');
     ga('send', 'pageview');
   </script>
+  <script src="http://book.chriswetherill.me/js/shCore.js"></script>
+  <script src="http://book.chriswetherill.me/js/shAutoloader.js"></script>
 </head>
 
 <body>

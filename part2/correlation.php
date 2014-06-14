@@ -51,8 +51,7 @@
     
     <p>For instance, let's say that I want to see how adiposity in different parts of the body correlate. I may do something like:</p>
     
-    <pre>
-      <code>
+    <pre class="brush: r">
 as.dist(cor(bodyFat))
 
            Neck   Chest  Abdomen      Hip
@@ -61,36 +60,30 @@ as.dist(cor(bodyFat))
 Abdomen | 0.728   0.911
     Hip | 0.705   0.823    0.860          
   Thigh | 0.668   0.708    0.736    0.881
-      </code>
     </pre>
     
     <p>Here we can see the correlations between Neck, Chest, Abdomen, Hip, and Thigh adiposity&mdash;ranging from 0.67 to 0.91. However, what if we wanted to visualize these correlations as scatterplots?</p>
     
-    <pre>
-      <code>
+    <pre class="brush: r">
 pairs(~Neck+Chest+Abdomen+Hip+Thigh,data=bodyFat,upper.panel=NULL)
-      </code>
     </pre>
     
     <img src="assets/correlationMatrix.jpeg" "width="700px" height="366px" />
     
-    <p>Finally, we will likely want to assess the significance of these correlations. To do so, we will have to install the <code>Hmisc</code> package:</p>
+    <p>Finally, we will likely want to assess the significance of these correlations. To do so, we will have to install the Hmisc package:</p>
     
-    <pre>
-      <code>
+    <pre class="brush: r">
 install.packages("Hmisc")
 library(Hmisc)
 rcorr(as.matrix(bodyFat))
-      </code>
     </pre>
     
-    <p>This will return all bivariate correlations and levels of significance for the specified matrix. (NB: The data must be input as a matrix for this function to work. If you are using a data frame, first pass it through the <code>as.matrix()</code> function.)</p>
+    <p>This will return all bivariate correlations and levels of significance for the specified matrix. (NB: The data must be input as a matrix for this function to work. If you are using a data frame, first pass it through the as.matrix() function.)</p>
     
     <h3>Partial Correlations</h3>
     <p>In our previous section, we looked at correlations among multiple variables. These were all referred to as <span class="dt">bivariate correlations</span> because each correlation only looked at exactly two variables. However, we saw that each of those 5 variables correlated significantly with each of the others. So it may be more appropriate to conduct a <span class="dt">partial correlation</span>: this will take two variables&mdash;say, Neck and Chest&mdash; and measure their degree of association after controlling for the effect of Abdomen, Hip, and Thigh. Doing so gives the result:</p>
     
-    <pre>
-      <code>
+    <pre class="brush: r">
 source("http://www.yilab.gatech.edu/pcor.R")
 
 neck <- bodyFat$Neck
@@ -101,7 +94,6 @@ pcor.test(neck,chest,others)
 
    estimate      p.value  statistic    n
       0.344      9.7e-09       5.73  249
-      </code>
     </pre>
     
     <p>We can see that the observed correlation drops from \(r=0.766\) with the bivariate correlation to \(r=0.344\) with the partial correlation. This means that, when we control for the effects of Abdomen, Hip, and Thigh adiposity, neck and chest still covary significantly with a correlation of about 0.34.</p>
@@ -130,8 +122,7 @@ pcor.test(neck,chest,others)
     
     <p>First let's go ahead and download our data from GitHub:</p>
 
-    <pre>
-      <code>
+    <pre class="brush: r">
 # This will let us download the file from a remote URL
 
 download.file(
@@ -142,13 +133,11 @@ download.file(
 # in a data frame called "data"
 
 data <- read.csv("census.csv",header=TRUE,sep=",")
-      </code>
     </pre>
     
     <p>Now, we have two columns that we're interested in: highSchoolorHigher and perCapitaIncome. We would like to see if there is a relation between a state's per capita income and the proportion of its residents to have completed high school or higher. So let's start by constructing a scatterplot of the two variables:</p>
     
-    <pre>
-      <code>
+    <pre class="brush: r">
 # Notice, when we reference a column we use the syntax
 # dataset$column. The first half tells R which data set
 # we are referencing, the dollar sign indicates that we
@@ -164,15 +153,13 @@ plot(data$HighSchoolOrHigher,data$perCapitaIncome,
 
 fit <- lm(data$perCapitaIncome~data$HighSchoolOrHigher)
 abline(fit)
-      </code>
     </pre>
     
     <img src="assets/correlationCaseStudy.jpeg" width="700px" height="366px" />
     
     <p>As we can see, there appears to be a positive linear relationship between per capita income and the proportion of a state's residents having a high school diploma or higher. Our next step is then to quantify the strength of this relationship. To do this, we will perform a bivariate correlation</p>
     
-    <pre>
-      <code>
+    <pre class="brush: r">
 # The syntax for a correlation test in R is easy:
 # it is cor.test(var1, var2) where var1 and var2
 # are the two variables that you're interested in.
@@ -189,7 +176,6 @@ alternative hypothesis: true correlation is not equal to 0
 sample estimates:
       cor 
 0.3685491 
-      </code>
     </pre>
     
     <p>As we can see, there are several noteworthy items presented in this table. Firstly, we have a <em>t</em>-statistic of 2.78. This is above the 1.96 threshold that we set, indicating that our correlation is probably going to be significant. From there, we can look at our <em>p</em>-value (0.008) and see that it is below the 0.05 threshold, indicating that we do indeed have a significant correlation.</p>
@@ -201,25 +187,23 @@ sample estimates:
     
     <ol>
       <li>Download the <a href="https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationEx01.csv" target="_blank">Patient Satisfaction data set</a> from GitHub. This dataset contains information from patients surveyed at various hospitals following their treatment to assess their satisfaction with the experience. We will be using these data for the following exercises.</li>
-      <li>Do patient ratings for <code>nursesCommunicateWell</code> and <code>doctorsCommunicateWell</code> correlate with one another? Provide evidence to back up your answer. Include a scatterplot of the data.</li>
-      <li>Now perform a partial correlation between those two same variables, but controlling for <code>givenInformationAboutRecovery</code> and <code>staffExplainedMedications</code>.</li>
-      <li>Create a lower-diagonal correlation matrix correlating all of the variables included in the dataset (except for the hospital ID). What correlations are significant? Are there any that are non-significant? (NOTE: You will have to remove null values using the <code>na.omit()</code> function for this to work properly.</li>
+      <li>Do patient ratings for nursesCommunicateWell and doctorsCommunicateWell correlate with one another? Provide evidence to back up your answer. Include a scatterplot of the data.</li>
+      <li>Now perform a partial correlation between those two same variables, but controlling for givenInformationAboutRecovery and staffExplainedMedications.</li>
+      <li>Create a lower-diagonal correlation matrix correlating all of the variables included in the dataset (except for the hospital ID). What correlations are significant? Are there any that are non-significant? (NOTE: You will have to remove null values using the na.omit() function for this to work properly.</li>
       <li>Construct a scatterplot matrix of all bivariate correlations using the code:
-      <pre>
-        <code>
+      <pre class="brush: r">
 pairs(~nursesCommunicateWell + doctorsCommunicateWell + receivedImmediateHelp +
       painManagedByTreatment + staffExplainedMedications + bathroomsAlwaysClean +
       givenInformationAboutRecovery + rateHospitalPositively,
       data=ex01, upper.panel=NULL)
-        </code>
       </pre>
       
       Do any of the scatterplots look concerning? Look for outliers, non-linear trends, etc.</li>
       <li><span class="dt">Test yourself:</span> Choose two new variables and performa bivariate correlation test. Do they correlate significantly? Do you think there are any other variables that should be controlled for? If so, perform a partial correlation, controlling for those additional variables. Do the results differ? Explain why they do. Comment on the assumptions made by the correlation tests you have run. Are they met? Are any violated?</li>
       <li>Download the <a href="https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationCaseStudy.csv" target="_blank">Census American Community Survey</a> from GitHub. This dataset, used in the case study above, contains information about employment and other demographic characteristics nationwide.</li>
-      <li>Is there a correlation between <code>noHighSchoolDiploma</code> (the proportion of residents without a HS diploma or GED equivalent) and <code>publicTransit</code> (the proportion of residents who use public transit to go to and from work)?</li>
-      <li>Is there a correlation between <code>HighSchoolOrHigher</code> and <code>percentOnSNAP</code>? Justify your findings and include at least one figure.</li>
-      <li>Is there a correlation between <code>medianRent</code> and <code>percentImpoverished</code>? Are there any variables we might want to control for using a partial correlation?</li>
+      <li>Is there a correlation between noHighSchoolDiploma (the proportion of residents without a HS diploma or GED equivalent) and publicTransit (the proportion of residents who use public transit to go to and from work)?</li>
+      <li>Is there a correlation between HighSchoolOrHigher and percentOnSNAP? Justify your findings and include at least one figure.</li>
+      <li>Is there a correlation between medianRent and percentImpoverished? Are there any variables we might want to control for using a partial correlation?</li>
       <li><span class="dt">Test yourself:</span> Choose some (or all) of the variables in this dataset and make a correlation matrix for them. Choose a correlation that looks interesting or surprising and investigate it further. If applicable, perform a partial correlation test rather than a bivariate correlation.</li>
     </ol>
     
@@ -230,8 +214,7 @@ pairs(~nursesCommunicateWell + doctorsCommunicateWell + receivedImmediateHelp +
       <li><a href="RScripts/" target="_blank">All R scripts</a> used in the chapter</li>
       <li><a href="answers/correlation.html" target="_blank">Answer key</a> to the chapter's exercises</li>
     </ol>
-    
-    
+
 <?php
   require_once("../footer.php");
 ?>

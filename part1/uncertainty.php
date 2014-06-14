@@ -23,8 +23,7 @@
     
     <p>If we want to calculate these in R, we would do something like this:</p>
     
-    <pre>
-      <code>
+    <pre class="brush: r">
 # First we will generate 200 random values
 # with mean 0 and standard deviation 1
 
@@ -46,7 +45,6 @@
 # We see that the median differs from the mean!
 # That means that our data are a little skewed
 # We'll talk about skewness in the next section.
-      </code>
     </pre>
     <h3>Skewness and Mean vs. Median</h3>
     <p>To get an idea of skewness, let's make a histogram of those data that we just generated. If you aren't familiar with a histogram, it takes your data and counts how many data points fall within a certain range, giving you something like this:</p>
@@ -61,8 +59,7 @@
 
     <p>Here, we have a strong rightward skew. Now, let's go ahead and compare the means and medians of our two datasets:</p>
     
-    <pre>
-      <code>
+    <pre class="brush: r">
 # First we'll compare the means
 > mean(data)
 [1] -0.01144155
@@ -76,7 +73,6 @@
 
 > median(data2)
 [1] -0.005767173
-      </code>
     </pre>
     
     <p>As you can see, both the mean and the median change. However, the median changes much less than the mean does. (There's a change of 0.26 in the means versus a change of 0.10 in the medians.) In casaes where you have strongly skewed data, it will often be better to describe them using the median rather than the mean: specifically, the median is what we call <span class="dt">resistant to outliers</span>. In other words, when you have a few outliers (numbers that are far away from every other data point), the median will be changed much less than the mean will.</p>
@@ -172,10 +168,8 @@
     <h3>Histograms</h3>
     <p>A <span class="dt">histogram</span> displays the number of observations that fall within a given range. For instance, in the height examples above, we would count the number of men in our sample between 5 feet and 5.2 feet and display them all in one column. Then we'd do the same for 5.2 to 5.4 feet, for 5.4 to 5.6 feet, and so on. This gives us something like:</p>
     
-    <pre>
-      <code>
+    <pre class="brush: r">
 hist(avgHeight)
-      </code>
     </pre>
     
     <img src="assets/samplingDistribution.jpeg" width="700px" height="366px" />
@@ -183,10 +177,8 @@ hist(avgHeight)
     <h3>Kernel Density Plots</h3>
     <p>A kernel density plot is similar to a histogram in that it shows us about what proportion of our sample is likely to be at any certain value. The big difference between kernel density plots and histograms is that density plots are continuous: whereas histograms take all of your data and lump them together in ranges, a density plot displays these data continuously. For instance, taking the same data that we used in our histogram example:</p>
     
-    <pre>
-      <code>
+    <pre class="brush: r">
 plot(density(avgHeight))
-      </code>
     </pre>
     
     <img src="assets/kernel.jpeg" width="700px" height="366px" />
@@ -213,8 +205,7 @@ plot(density(avgHeight))
     
     <ol class="exercises">
       <li>In R, execute the following code:
-        <pre>
-          <code>
+        <pre class="brush: r">
 set.seed(0)
 height1 <- rnorm(25, 5.6667, 1/3)
 
@@ -224,14 +215,13 @@ for(i in 1:500) {
   height <- rnorm(25, 5.6667, 1/3)
   avgHeight <- rbind(avgHeight, mean(height))
 }
-          </code>
         </pre>
       </li>
-      <li>What are the mean and median values of <code>height1</code> and <code>avgHeight</code>? What are their standard deviations?</li>
+      <li>What are the mean and median values of height1 and avgHeight? What are their standard deviations?</li>
       <li>What would we expect the standard error of avgHeight to be if we had 500 samples and a population standard deviation of 0.33 feet?</li>
-      <li>Prepare a histogram of <code>height1</code> and <code>avgHeight</code>. Do they differ? Does either look problematic? (E.g., departures from normality)</li>
-      <li>Make a kernel density plot of <code>height1</code>. Does it differ from the histogram? Which gives a better picture of the data?</li>
-      <li>Make a boxplot of <code>avgHeight</code>. Are there any outliers present?</li>
+      <li>Prepare a histogram of height1 and avgHeight. Do they differ? Does either look problematic? (E.g., departures from normality)</li>
+      <li>Make a kernel density plot of height1. Does it differ from the histogram? Which gives a better picture of the data?</li>
+      <li>Make a boxplot of avgHeight. Are there any outliers present?</li>
     </ol>
     
     <h2>Additional Resources</h2>
