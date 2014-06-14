@@ -217,10 +217,10 @@ for(i in 1:500) {
 }
         </pre>
       </li>
-      <li>What are the mean and median values of height1 and avgHeight? What are their standard deviations?</li>
-      <li>What would we expect the standard error of avgHeight to be if we had 500 samples and a population standard deviation of 0.33 feet?</li>
-      <li>Prepare a histogram of height1 and avgHeight. Do they differ? Does either look problematic? (E.g., departures from normality)</li>
-      <li>Make a kernel density plot of height1. Does it differ from the histogram? Which gives a better picture of the data?</li>
+      <li>What are the mean and median values of <code>height1</code> and <code>avgHeight</code>? What are their standard deviations?</li>
+      <li>What would we expect the standard error of <code>avgHeight</code> to be if we had 500 samples and a population standard deviation of 0.33 feet?</li>
+      <li>Prepare a histogram of <code>height1</code> and <code>avgHeight</code>. Do they differ? Does either look problematic? (E.g., departures from normality)</li>
+      <li>Make a kernel density plot of <code>height1</code>. Does it differ from the histogram? Which gives a better picture of the data?</li>
       <li>Make a boxplot of avgHeight. Are there any outliers present?</li>
     </ol>
     
