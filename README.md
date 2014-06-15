@@ -1,11 +1,9 @@
 Applied Statistics
 ============
 
-An introduction to statistical analysis
----------------------------------------
-
 ToDo:
 -----
+- [ ] Convert this to Oreilly's HTMLBook specification? Maybeh?
 - [X] Introduction
   - [X] Why I'm writing this
   - [X] Why you should care
