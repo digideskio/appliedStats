@@ -159,21 +159,21 @@ download.file(
     "https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part1/data/introToREx01.csv",
     "sampleData.csv", "wget", extra="--no-check-certificate")
       </pre>
-      Paste that into the R console and hit enter. If it's successful, you should see something similar to 2014-05-30 20:12:15 (172 KB/s) - 'sampleData.csv' saved [8528/8528].
+      Paste that into the R console and hit enter. If it's successful, you should see something similar to <code>2014-05-30 20:12:15 (172 KB/s) - 'sampleData.csv' saved [8528/8528]</code>.
       </li>
-      <li>Now we will assign the data to an object. This makes it easier to work with once we start plotting it and running analyses on the data. To do this, run the command: myData <- read.csv("sampleData.csv",header=TRUE,sep=","). To see if you did this correctly, run the command head(myData). If you don't get an error, then you're good to go.</li>
+      <li>Now we will assign the data to an object. This makes it easier to work with once we start plotting it and running analyses on the data. To do this, run the command: <code>myData <- read.csv("sampleData.csv",header=TRUE,sep=",") </code>. To see if you did this correctly, run the command head(myData). If you don't get an error, then you're good to go.</li>
       <li>Finally, we will load a file from the desktop. <a href="https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part1/data/introToREx01.csv">Click here to download the data.</a> Save it to your desktop. Now, in RStudio, click Import Dataset, select the file, make sure that you choose Yes for the Heading option, and import it.</li>
-      <li>Next we will practice working with different data structures in R. Run head(myData); describe what the function does. What about colnames(myData)?</li>
-      <li>Make a vector called myVector containing the numbers 20 through 30.</li>
-      <li>Now make a matrix with two rows and five columns called myMatrix that uses the vector you made in the previous problem.</li>
+      <li>Next we will practice working with different data structures in R. Run <code>head(myData)</code>; describe what the function does. What about <code>colnames(myData)?</code></li>
+      <li>Make a vector called <code>myVector</code> containing the numbers 20 through 30.</li>
+      <li>Now make a matrix with two rows and five columns called <code>myMatrix</code> that uses the vector you made in the previous problem.</li>
       <li>Run the following code:
       <pre class="brush: r">
 sex <- c(rep("male",5),rep("female",5)
 age <- c(sample(1:100,10,replace=TRUE))
 weight <- c(sample(95:200,10,replace=TRUE))
       </pre>
-      And now combine the three vectors above with myVector to create a data frame called myDataFrame.</li>
-      <li>Almost there! Finally, convert the column sex into a factor. (HINT: to reference a single column of a data frame, try myDataFrame$sex.)</li>
+      And now combine the three vectors above with myVector to create a data frame called <code>myDataFrame</code>.</li>
+      <li>Almost there! Finally, convert the column <code>sex</code> into a factor. (HINT: to reference a single column of a data frame, try <code>myDataFrame$sex</code>.)</li>
     </ol>
     <br />
     
