@@ -1,0 +1,258 @@
+%!TEX root=../book.tex
+
+\chapter[Introduction to R]{Introduction to R}
+
+\section{Getting Started}
+
+\subsection{Installing R and R Studio}
+Although this software isn't required, we do recommend that you use R. It's what we will be using to carry out analyses in all of our examples and what we will use to analyze data in the end-of-chapter exercises. Although there won't be any major differences using other statistical software, occasionally you may obtain different results than we do.
+
+To install R, select any of the \href{http://cran.r-project.org/mirrors.html}{available download mirrors} from its website. Select the version that is appropriate for your operating system---Windows, Mac OS, or a Linux distribution. You may also wish \href{http://www.rstudio.com/}{to install RStudio}. You will be fine if you don't install it; however, it pretties up R's graphical interface and makes working with data a bit easier for newcomers to the software. To use RStudio, you must have R installed on your computer already: installing RStudio does not also install R.
+	
+\subsection{Reading in Data}
+There are two strategies used for reading in data: the command line or RStudio's graphical interface. To load data via the command line, we will type a command such as:
+\clearpage
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+# Here, myData is what we will name our data once we load it.
+# We use the function read.csv to tell R to load our data
+# from the path specified. If you aren't sure where your
+# working directory is, type the function getwd()
+# and hit Enter.
+ 
+myData <- read.csv("/Path/to/File.csv", headers=TRUE)
+\end{Verbatim}
+\end{framed}
+
+Alternately, in RStudio's Environment tab, we can click the \verb|Import Dataset| button and choose a local file or web URL to read our data from.
+
+Whichever option you choose, be sure to use a .txt, .dat, .csv, or similar file: R can't read many proprietary file formats (E.g., Excel's .xslx; SPSS .sav; etc.). Usually, whatever program you use to manage your data will have an option to allow you to save to CSV that you can access through the \verb|File -> Save As| menu.
+
+\subsection{Creating a Script}
+Working in R, there are two ways that you can execute commands: through the console and through a script. The console is what first opens when you start R. It will usually contain some text like:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+R version 3.1.0 (2014-04-10) -- "Spring Dance"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin13.1.0 (64-bit)
+ 
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+\end{Verbatim}
+\end{framed}
+
+When you're working in the console, all you have to do is type in your command and hit Enter; the code will be automatically evaluated. Alternately, however, you can use a script by clicking \\ \verb|File -> New File -> R Script|. This allows you to write multiple lines of R code at once and then selectively run them by holding \verb|Ctrl/Cmd + Enter| (depending on whether you are using a Mac or PC keyboard). By default, this will execute whatever line is currently selected by your pointer; however, you can also highlight multiple lines, hit \verb|Ctrl/Cmd + Enter|, and evaluate everything highlighted at once.
+
+We will generally recommend using an R script as this can be saved and referenced later. It also makes it easier to go back and rerun old code or to reference old work. (Opposed to the console, where you have a much more limited history.)
+
+\section{Basic R Syntax}
+
+\subsection{Constants}
+Constants are just what they sound like: things. They don't do anything; they can't take in one number and spit out another; they're just static objects. This can mean a number or a string of text, or something more complex like a vector, matrix, or data frame. So let's first define the different data types that R supports. (NOTE: throughout the rest of the book, we will use the term data type rather than constant.)
+
+\subsubsection{Vectors}
+A vector, in this case, you can think of as being a column of data in Excel. It's just a series of items that are all stored in one object. For instance, let's say that we want a column of numbers from 1 through 10:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+# NOTE: We use the notation OBJECT <- DATA
+# to tell R to assign data to a variable.
+# This way, we can type in, for example,
+# myNumbers and R will know what data
+# we're talking about.
+
+myNumbers <- c(seq(from=1, to=10, by=1))
+moreNumbers <- c(1,2,3,4,5,6,7,8,9,10)
+\end{Verbatim}
+\end{framed}
+
+In both of the above examples, we create a column of data with the numbers 1 through 10. But these don't have to only be numeric. For instance:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+# a character vector:
+characters <- c("one","two","three","four","five")
+
+# a boolean (logical) vector:
+boolean <- c(TRUE, FALSE, FALSE, FALSE, TRUE)
+\end{Verbatim}
+\end{framed}
+
+We can see that there are three basic types of vectors you can construct: numeric; character; and logical. Numeric vectors are composed of arabic numerals; character vectors of strings of text; and logical vectors of TRUE/FALSE booleans.
+
+\subsubsection{Matrices}
+You can think of a matrix in R as either (1) a single vector split up into multiple rows/columns or (2) multiple vectors of the same length piled up next to one another. It's roughly analogous to a spreadsheet. However, the one caveat is that, just like with vectors, all elements in a matrix must have the same type (i.e., all numeric, all character, or all logical). There's no mixing and matching here. The basic syntax for creating a matrix is:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+myMatrix <- matrix(vector, nrow=r, ncol=c, byrow=FALSE, 
+     dimnames=list(c("rownames"), c("colnames"))
+\end{Verbatim}
+\end{framed}
+
+Here, vector is a vector of elements that you would like to divide into rows and columns; nrow and ncol respectively refer to the number of rows and columns in your matrix; byrow takes a TRUE/FALSE boolean and indicates whether the matrix should be filled in by rows (TRUE) or by columns (FALSE). Finally, dimnames is an optional argument that specifies the column and row names.
+
+As an example, let's create a 4x3 matrix:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+matrixVector <- c(21, 5.9, 147,
+                  28, 5.7, 168,
+                  18, 5.5, 126,
+                  24, 6.1, 195)
+myMatrix <- matrix(matrixVector, nrow=4, ncol=3, byrow=TRUE,
+                   dimnames=list(c("Chris", "John", "Amy", "Max"),
+                   c("Age", "Height", "Weight")))
+\end{Verbatim}
+\end{framed}
+
+This will result in a matrix that looks like this:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+      Age   Height   Weight
+Chris  21      5.9      147
+ John  28      5.7      168
+  Amy  18      5.5      126
+  Max  24      6.1      195
+\end{Verbatim}
+\end{framed}
+
+\subsubsection{Data Frames}
+A data frame in R is a generalized instance of a matrix: this you can truly think of as a page of an Excel spreadsheet. Each column represents a vector of a single type; however, each column can be of a different data type. So, for instance, if we wanted to turn the matrix above into a data frame but also add in a column for hair color, we would do something like:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+name <- c("Chris", "John", "Amy", "Max")
+age <- c(21, 28, 18, 24)
+height <- c(5.9, 5.7, 5.5, 6.1)
+weight <- c(147, 168, 126, 195)
+hair <- c("brown", "blonde", "red", "brown")
+ 
+myData <- data.frame(name, age, height, weight, hair)
+colnames(myData) <- c("name", "age", "height", "weight", "hair")
+\end{Verbatim}
+\end{framed}
+
+Just like the matrix, this will give us the following:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+ Name   Age   Height   Weight     Hair
+Chris    21      5.9      147    brown
+ John    28      5.7      168   blonde
+  Amy    18      5.5      126      red
+  Max    24      6.1      195    brown
+\end{Verbatim}
+\end{framed}
+
+\subsection{Factors}
+Oftentimes in experiments we will have factors: nominal variables that indicate levels. For example, we might have a placebo group and an experimental group. In this case, these are important variables for R to properly interpret; however, they are non-numeric and don't make sense to interpret as a string. In these cases, we can indicate to R that they should be interpreted as factors. For example:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+# The variable "drugCondition" contains 20 experimental trials
+# and 20 control trials. Currently, these values are stored
+# as characters. You can check this by running str(drugCondition)
+# You should see "chr" indicating the elements are characters
+ 
+drugCondition <- c(rep("experimental",20), rep("control",20))
+ 
+# We will now convert the elements to factors.
+# If you run str(drugCondition) again, you should see:
+# Factor w/ 2 levels "control","experimental"
+ 
+drugCondition <- factor(drugCondition)
+\end{Verbatim}
+\end{framed}
+
+\subsection{Functions}
+In addition to static data types, detailed above, R also uses functions. These take the form \\\verb|functionName(argument1, argument2)| (although there can be any number of arguments passed to the function---not necessarily only 2!). Functions are chunks of code that \textit{do} something: they may generate a plot or run a statistical analysis or find the mean of a set of data.
+
+Let's say, for example, that we have a numeric vector and we want to find its mean value. How do we know what function does that? Well, we can start by calling the \verb|apropos()| function: this lets us search R's entire library of functions for those that contain some text that we're searching for. So in this case:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+apropos("mean")
+ [1] ".colMeans"    ".rowMeans"    "colMeans"     "kmeans"
+ [5] "mean"         "mean.Date"    "mean.default" "mean.difftime"
+ [9] "mean.POSIXct" "mean.POSIXlt" "rowMeans"     "weighted.mean"
+\end{Verbatim}
+\end{framed}
+
+We can see that there are 12 functions R knows of that contain the word ``mean.'' Specifically, there does seem to be a \verb|mean()| function! That sounds promising. Next, let's figure out how we can use it properly. To do this, all we ever have to do is type a question mark (?) followed by the function name into the R console and R will return the documentation for that function. So here:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+?mean
+
+Description
+
+Generic function for the (trimmed) arithmetic mean.
+
+Usage
+mean(x, ...)
+
+## Default S3 method:
+mean(x, trim = 0, na.rm = FALSE, ...)
+\end{Verbatim}
+\end{framed}
+
+It looks like this function only has one required argument: \verb|x|. So if we want to find the mean of a vector of data called \verb|participantAges|, we would run:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+# We will also specify na.rm=TRUE
+# This way, if there is anyone who didn't
+# indicate their age, R won't count them
+# when it calculates the mean age
+
+mean(participantAges, na.rm=TRUE)
+[1] 21.7    # The mean age is 21.7 years old
+\end{Verbatim}
+\end{framed}
+
+\section{Exercises}
+\prob Download a data file from the web. To do this, you'll want to use the code:
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+download.file(
+    "http://book.chriswetherill.me/part1/data/introToREx01.csv",
+    "sampleData.csv", "wget", extra="--no-check-certificate")
+\end{Verbatim}
+\end{framed}
+Paste that into the R console and hit enter. If it's successful, you should see something similar to \verb|2014-05-30 20:12:15 (172 KB/s) - 'sampleData.csv' saved [8528/8528]|.
+
+\prob Now we will assign the data to an object. This makes it easier to work with once we start plotting it and running analyses on the data. To do this, run the command: \\\verb|myData <- read.csv("sampleData.csv",header=TRUE,sep=",")|. To see if you did this correctly, run the command \verb|head(myData)|. If you don't get an error, then you're good to go.
+
+\prob Finally, we will load a file from the desktop. \href{https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part1/data/introToREx01.csv}{Click here to download the data.} Save it to your desktop. Now, in RStudio, click Import Dataset, select the file, make sure that you choose Yes for the Heading option, and import it.
+
+\prob Next we will practice working with different data structures in R. Run \verb|head(myData)|; describe what the function does. What about \verb|colnames(myData)|?
+
+\prob Make a vector called \verb|myVector| containing the numbers 20 through 30.
+
+\prob Now make a matrix with two rows and five columns called \verb|myMatrix| that uses the vector you made in the previous problem.
+
+\prob Run the following code:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+sex <- c(rep("male",5),rep("female",5)
+age <- c(sample(1:100,10,replace=TRUE))
+weight <- c(sample(95:200,10,replace=TRUE))
+\end{Verbatim}
+\end{framed}
+And now combine the three vectors above with myVector to create a data frame called \verb|myDataFrame|.
+
+\prob Almost there! Finally, convert the column \verb|sex| into a factor. (HINT: to reference a single column of a data frame, try \verb|myDataFrame$sex|.)
+
+\section{Additional Resources}
+For a more complete tutorial on using R, we would recommend:
+\begin{enumerate}
+	\item \href{https://www.youtube.com/playlist?list=PLOU2XLYxmsIK9qQfztXeybpHvru-TrqAP}{Intro to R} by Google Developers (YouTube)
+	\item \href{https://www.coursera.org/specialization/jhudatascience/1/courses}{Data Science} by Johns Hopkins University (Coursera)
+	\item \href{http://cran.r-project.org/doc/manuals/R-intro.html}{An Introduction to R} by The R Project (CRAN)
+	\item \href{http://statistics.ats.ucla.edu/stat/r/}{R Resources} by IDRE (UCLA)
+\end{enumerate}

@@ -1,0 +1,184 @@
+%% Class File
+%% For default 7 x 10 trim size:
+\documentclass{bookTemplate}
+
+%% Post Script Font File
+% For PostScript text
+\usepackage{style}
+\usepackage{framed}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{fancyvrb}
+\usepackage{graphicx}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\usepackage{hyperref}
+\hypersetup{colorlinks,
+	linkcolor=darkblue,
+	filecolor=darkblue,
+	citecolor=darkblue,
+	urlcolor=blue}
+\graphicspath{{/Users/chris/Documents/appliedStats/LaTeX/assets/}}
+% for answers to problems
+%\usepackage{answers}
+
+% Sets section numbering depth
+% 0 = none; 3 = subsubsection
+% Default = 2
+\setcounter{secnumdepth}{1}
+
+% Table of Contents numbering depth
+% 0= chapter titles; 3 = subsubsection titles, 
+% Default = 2
+% \setcounter{tocdepth}{2}
+
+% Cropmarks? good for final page makeup
+% \docropmarks
+
+
+%% DRAFT STATUS
+% Uncomment to get double spacing between lines, current date and time
+% printed at bottom of page.
+% \draft
+% (If you want to keep tables from becoming double spaced also uncomment:
+% \renewcommand{\arraystretch}{0.6}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BEGIN DOCUMENT
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TITLE PAGE
+
+%% Setting up title pages, type in the appropriate names here:
+\booktitle{Applied Statistics}
+\subtitle{An Introduction to Statistical Analysis}
+
+\authors{Christopher Wetherill\\
+	\affil{Virginia Polytechnic Institute and State University}
+}
+
+%%  \\ will start a new line.
+%%  You may add \affil{} for affiliation, ie,
+%%  \authors{Robert M. Groves\\
+%%     \affil{Universitat de les Illes Balears}
+%%     Floyd J. Fowler, Jr.\\
+%%     \affil{University of New Mexico}
+%%  }
+
+%% Print Title Page:
+\titlepage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FOOTER INFO
+
+%% Add your info here:
+\offprintinfo{Applied Statistics, First Edition}{Christopher Wetherill}
+
+%% Can use \\ if title, and edition are too wide, ie,
+%% \offprintinfo{Survey Methodology,\\ Second Edition}{Robert M. Groves}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% COPYRIGHT PAGE
+
+\begin{copyrightpage}{\the\year}
+
+\end{copyrightpage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FRONTMATTER
+\tableofcontents
+
+%% Optional Foreword:
+% \begin{foreword}
+% text
+% \end{foreword}
+
+% Optional Preface:
+\include{preface}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BEGIN CONTENT OF BOOK
+
+\part{Introductory\\ Materials to\\ the Book}
+\include{part01/introToR}
+\include{part01/measuringUncertainty}
+\include{part01/researchDesign}
+\include{part01/introToInference}
+
+\part{Describing Relationships\\and Predicting Values}
+
+\part{Comparisons Among\\Multiple Samples}
+
+\part{Inferences from\\Unusual Data Structures}
+
+\part{Supplemental Materials}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% optional prologue or prologues
+% \chapter{Chapter Title}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Edited Book: Author and Affiliation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% After \chapter{Chapter Title}, you can
+% enter the author name and embed the affiliation with
+% \chapterauthors{(author name, or names)
+% \chapteraffil{(affiliation or affiliations)}
+% }    
+
+% For instance:
+% \chapter{Chapter Title}
+% \chapterauthors{G. Alvarez and R. K. Watts
+% \chapteraffil{Carnegie Mellon University, Pittsburgh, Pennsylvania}
+
+% For separate affiliations you can use \affilmark{(number)} after
+% the name of a particular author and before the matching affiliation:
+
+% For instance:
+% \chapter{Chapter Title}
+% \chapterauthors{George Smeal, Ph.D.\affilmark{1}, Sally Smith,
+% M.D.\affilmark{2}, and Stanley Kubrick\affilmark{1}
+% \chapteraffil{\affilmark{1}AT\&T Bell Laboratories
+% Murray Hill, New Jersey\\
+% \affilmark{2}Harvard Medical School,
+% Boston, Massachusetts}
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% End Matter >>>>>>>>>>>>>>>>>>
+
+% \appendix{<optional title for appendix at end of book>}
+% \appendix{} % appendix without title
+
+% \begin{references}{<widest label>}
+% \bibitem{sampref}Here is reference.
+% \end{references}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INDEX: Use only one index command set:
+
+%% 1) The default LaTeX Index
+\printindex
+
+%% 2) For Topic index and Author index:
+
+% \usepackage{multind}
+% \makeindex{topic}
+% \makeindex{authors}
+% \begin{document}
+% ...
+% add index terms to your book, ie,
+% \index{topic}{A term to go to the topic index}
+% \index{authors}{Put this author in the author index}
+
+%% (these are Wiley commands)
+%\multiprintindex{topic}{Topic index}
+%\multiprintindex{authors}{Author index}
+
+\end{document}

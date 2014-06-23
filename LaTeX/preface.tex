@@ -1,0 +1,53 @@
+%!TEX root=book.tex
+\begin{preface}
+\section{Introduction}
+\subsection{About the Author}
+Christopher Wetherill is currently a PhD student in Virginia Tech's \href{http://www.tbmh.vt.edu/}{Translational Biology, Medicine, and Health} program. He received his undergraduate degree from John Carroll University. He has consulted with individuals and nonprofits on experimental design and statistical analyses since 2012. He recently edited \href{https://infoactive.co/ebook}{Data. Design. A simple introduction to preparing and visualizing information}, a Creative Commons-licensed ebook detailing best practices for survey design and data collection and presentation.
+
+\subsection{Structure of the Book}
+This book is split into four main sections: an introduction to statistical inference; regression tools; comparisons of means among several samples; and working with unusual data structures. By and large, no part or chapter requires any existing knowledge of any previous part of chapter. The one exception to this is the introductory material: if you are not comfortable with the basic ways in which we quantify uncertainty, then you will struggle with the rest of the material. If you do not have a firm grip of the basics of statistical inference, or if you haven't thought about this in a while, you should probably take an afternoon to refresh yourself.
+
+Each chapter in this book follows the same general structure: we begin with an introduction to the topic and considerations of when and how a given test should be applied, what are its limitations, and what conditions it assumes are met. We then provide a sample case study, including all relevant background information and a complete analysis and write-up of the data. Finally, we include a summary of how to implement the test using the statistical software R and conclude with a number of comprehension exercises and data sets to be analyzed.
+
+\section{To the Student}
+\subsection{What You Will Learn}
+You shouldn't expect this book to make you an experienced statistician. That isn't what it's meant to do. Rather, this book aims to explain statistical analyses and their output in a way that is easily-digested by individuals without a strong mathematical or statistical background or who have previously had bad experiences with statistics and have shied away from the subject. The hope is that, after going through this book, you will be able to (1) understand when to apply a number of the most commonly-used statistical tests; (2) accurately construct and run the tests; and (3) easily interpret and report the output of these analyses to both technical and non-technical audiences.
+
+There may still be a point at which you do need to consult a professional statistician: in fact, this book tries to emphasize recognizing your limits and when it may be appropriate to seek outside help. When this is the case, you should still be better-equipped to present your data and whatever analyses have already been run, and to explain the central problems that you are trying to solve easily and effectively.
+
+\subsection{Case Studies and Exercises}
+Each statistical analysis presented is accompanied by one or more case studies in which we perform a complete analysis of a given data set, highlight the relevant output and how to interpret it, and give a full APA-style write-up of the analysis and results. All data used are real (unless otherwise specifically noted), and where possible we link to the original study or other supporting materials. The full data used in the analyses will always be provided so that the reader is able to perform the analysis alongside us and can confirm his or her results.
+
+Likewise, all exercises are taken from real-world problems and all original supporting materials that can be provided are. For data analysis problems, we do not provide a full stepwise write-up of the analysis: only a summary of the results that should be obtained. If your results do not agree with our answers, you are always welcome to open an \href{https://github.com/faulconbridge/appliedStats/issues}{issue on GitHub}. If you do, please properly format any R code that you choose to include: \href{https://guides.github.com/features/mastering-markdown/}{GitHub-flavored Markdown} makes this easy to do.
+
+\subsection{Mathematical Background}
+This book doesn't assume that the reader has any strong mathematical background: the emphasis of this book is on identifying, running, and interpreting appropriate statistical analyses for the data that you are working with, and not on the statistical theory that informs these tests. However, to have a good understanding of these analyses, the reader will occasionally need to learn and understand a few mathematical formulas. When these are presented, they are always accompanied with a non-technical explanation.
+
+\subsection{Recommended Software}
+All analyses presented in this book are implemented by the author using \href{http://cran.r-project.org/mirrors.html}{The R Project for Statistical Computing} and \href{http://rstudio.com/}{R Studio}, a graphical user interface for R. We chose R because, unlike SAS, SPSS, STATA, MiniTab, etc., it is entirely open-source, meaning that it is free for anyone to use and even contribute back to. Further, analyses run in R are easily reproducible: that is, it is very easy to take the code that we use to run an analysis in a case study, paste it into R, and get the exact same results that we do.
+
+We understand that different statistical packages have different interfaces and very different ways of presenting analysis results. And although we only document R in this book, we do our best to give you links to additional resources that explain how to run and interpret the analysis using other popular commercial stats packages. If you're ever desperate to run an analysis in another statistical package and we don't provide links to help you, you're welcome to open an \href{https://github.com/faulconbridge/appliedStats/issues}{issue on GitHub}, although we can't promise that we will have a good answer for you.
+
+\subsection{Common Statistical Terms}
+\begin{glossary}
+\term{Statistic}{Any quantity that can be calculated from a set of data.}
+\term{Population}{The collection of all possible measurements taken. For example, ``the heights of every 12-year-old boy in America'' or ``all automobiles with three wheels.''}
+\term{Sample}{A subset of a population. For example, ``the heights of 100 12-year-old boys from Ohio'' or ``20 tricycles bought from Toys-R-Us.''}
+\term{Parameter}{A statistic referring to a population. This is usually denoted by a Greek letter.}
+\term{Estimate}{A statistic referring to a sample. This is a ``best guess'' at the parameter for the population. Estimates are denoted by either a hat or a Roman letter.}
+\term{Mean}{The arithmetic mean of a set of data. When referring to the parameter, we denote this $\mu$; when referring to the estimate, we denote this $\bar{x}$ (pronounced ``x-bar'') or $\hat{\mu}$ (pronounced ``mu-hat'').}
+\term{Standard Deviation}{A measure of how far dispersed observations are from their mean. Denoted $\sigma$ when referring to the parameter or $s$ for the estimate.}
+\term{Standard Error}{The standard deviation of the sampling distribution of a statistic. Denoted s.e. or SE.}
+\term{}{}
+\end{glossary}
+
+\subsection{Additional Resources}
+Additional resources are provided at the end of every chapter. These will usually include:
+\begin{enumerate}
+	\item A link to the answer key for the chapter's exercises;
+	\item Links to resources for performing the chapter's analyses in other statistical packages;
+	\item Our references for writing the chapter and further readings if you would like a more advanced knowledge of the analyses covered;
+	\item A link to all data sets and other supporting materials used and referenced in the chapter and end-of-chapter exercises;
+	\item And any other miscellaneous material that we think might be helpful to you.
+\end{enumerate}
+\end{preface}
