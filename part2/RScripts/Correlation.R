@@ -79,4 +79,20 @@ for(i in 1:4) {
 ###############################################################################
 
 layout(matrix(1),1,1)
+set.seed(0)
 
+r <- 0.9
+X <- rnorm(100)
+Y = r*X + sqrt(1-r^2)*rnorm(100)
+XY <- cbind(X,Y)
+subXY <- as.data.frame(subset(XY, X>0 & X<1, select=c(X:Y)))
+
+cor.test(X,Y)
+cor.test(subXY$X, subXY$Y)
+
+plot(X,Y, col="orange", pch=16,
+     main="Effects of Distribution on Correlation")
+rect(0,-2,1,3, col="grey", density=25)
+points(subXY$X,subXY$Y, col="blue", pch=16)
+text(-2, 2.5, "r = 0.897", col="orange")
+text(-2, 2.0, "r = 0.387", col="blue")
