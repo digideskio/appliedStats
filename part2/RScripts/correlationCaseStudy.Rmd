@@ -6,7 +6,7 @@ First let's go ahead and download our data from GitHub:
 ```{r}
 # This will let us download the file from a remote URL
 
-download.file("https://raw.githubusercontent.com/faulconbridge/appliedStats/gh-pages/part1/data/ch06CaseStudy.csv","census.csv","wget",extra="--no-check-certificate")
+download.file("https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationCaseStudy.csv","census.csv","wget",extra="--no-check-certificate")
 
 # And now we will read the data into R and store it
 # in a data frame called 'data'
