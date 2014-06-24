@@ -26,14 +26,18 @@ scatterplot((Population/1000000)~Year | Sex, data=population2, labels=row.names(
             main="U.S. Population by Year and Sex")
 
 ###############################################################################
-# Correlation Matrix Example
+# Correlation Example
 ###############################################################################
 download.file(
   "https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationData03.csv",
   "adiposity.csv", "wget", extra="--no-check-certificate")
 
 bodyFat <- read.csv("adiposity.csv", header=TRUE)
+cor.test(bodyFat$Neck, bodyFat$Chest)
 
+###############################################################################
+# Correlation Matrix Example
+###############################################################################
 as.dist(cor(bodyFat))
 
 install.packages("Hmisc")

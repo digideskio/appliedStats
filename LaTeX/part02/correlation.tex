@@ -13,7 +13,7 @@ Scatterplots are used to display data using cartesian coordinates. For instance,
 \caption{United States population by decade: 1600 through 2010}
 \end{figure}
 
-\section{Scatterplots with Categorical Variables}
+\subsection{Scatterplots with Categorical Variables}
 Additionally, we can use scatterplots to visualize data with categorical indicators. For example, if we wanted to look at the U.S population by year, split by males and females (Figure \ref{fig:correlation02}).
 
 \begin{figure}
@@ -22,19 +22,17 @@ Additionally, we can use scatterplots to visualize data with categorical indicat
 \caption{United States population by decade and sex: 1600 through 2010}
 \end{figure}
 
-\subsection{Correlation}
-
-\section{Measuring Linear Association}
-Woah, hold up now: this sounds like we're heading towards some scary waters. Linear association? I thought this wasn't supposed to be a mathy book!
+\section{Correlation: Measuring Linear Association}
+Woah, hold up now: measuring linear association? This sounds like we're heading towards some scary waters. Linear association? I thought this wasn't supposed to be a mathy book!
 
 Don't worry, we didn't lie to you. That's just a bit of a scary term for a not-so-scary concept. \textbf{Linear association}, in its most basic form, just means that when you increase one variable by so many units, another variable increases by so many other units. For instance, let's say that for every degree Fahrenheit we increase, we increase the number of daily neighborhood ice cream sales by 10 cones. That's easy, right?
 
 And that's all that correlation is measuring: the degree to which a change in one variable coincides with a change in another variable. Now, importantly, this doesn't mean that one causes the other. As a matter of fact, that's so important that it gets its own section a little ways down the page. But, as long as we keep that in the back of our minds for now, we can go ahead and define correlation as:
 
-\begin{eqnarray*}
+\begin{eqnarray}
 \rho_{X,Y} =& \frac{\text{cov}(X,Y)}{\sigma_X\sigma_Y} &\text{ for a population} \\
 r=& \frac{1}{n-1}\sum_{i=1}^n\left(\frac{x_i-\bar{x}}{s_x}\right)\left(\frac{y_i-\bar{y}}{s_y}\right) &\text{ for a sample}
-\end{eqnarray*}
+\end{eqnarray}
 
 So, although this looks like we're going back into the Forbidden Forest, it's a pretty straightforward couple of equations: they're saying that this correlation coefficient \(r\) is just equal to the covariance of two variables, \(x\) and \(y\), divided by the product of their standard deviations. Or, put another way, it's the amount that two variables change together divided by the amount of that change that we can attribute to chance.
 
@@ -49,17 +47,38 @@ r=& \pm1 &\implies \text{strong correlation} \\
 r=& 0 &\implies \text{weak correlation}
 \end{eqnarray*}
 
+Using R, if we want to look at the correlation between two variables, we can do so using the \verb|cor()| function. Alternately, if we want to see if there is a \textbf{significant} correlation between those two variables, we use the \verb|cor.test()| function. For instance, if we wished to see the correlation between amounts of neck and chest fat, we would run:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+cor.test(bodyFat$Neck, bodyFat$Chest)
+
+	Pearson's product-moment correlation
+
+data:  bodyFat$Neck and bodyFat$Chest
+t = 18.7782, df = 247, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.7102541 0.8136117
+sample estimates:
+      cor 
+0.7668596 
+\end{Verbatim}
+\end{framed}
+
+As we can see, there was a correlation between the two variables of $r=0.77$ and this reached a level of statistical significance, $t = 18.78$; $p\text{-value}<0.001$. Because our $p$-value was below the $0.05$ threshold, we can conclude that the relationship between the two variables actually exists. This means that individuals with more neck fat tend to also have more chest fat, and vice versa.
+
 \section{Correlation Matrices (Multiple Correlation)}
 We know that correlation is a measure of dependence between two variables. However, there may be times when you want to examine multiple variables at once. In cases like this, it may be useful to create a \textbf{correlation matrix}. This is simply a lower-triangular matrix of correlations among multiple variables.
 
-For instance, let's say that I want to see how adiposity in different parts of the body correlate. I may do something like:
+For instance, let's say that we want to see how adiposity in different parts of the body correlate. We may do something like:
 
 \begin{framed}
 \begin{Verbatim}[samepage=TRUE]
 as.dist(cor(bodyFat))
 
           Neck    Chest   Abdomen  Hip
-+--------------------------------------
+        +-------------------------------
   Chest | 0.766 
 Abdomen | 0.728   0.911
     Hip | 0.705   0.823   0.860  
@@ -243,7 +262,7 @@ Do any of the scatterplots look concerning? Look for outliers, non-linear trends
 \subsection{Additional Resources}
 
 \begin{enumerate}
-\item \href{data/}{All data sets} used in the chapter
-\item \href{RScripts/}{All R scripts} used in the chapter
-\item \href{answers/correlation.html}{Answer key} to the chapter's exercises
+\item \href{http://book.chriswetherill.me/part2/data/}{All data sets} used in the chapter
+\item \href{http://book.chriswetherill.me/part2/RScripts/}{All R scripts} used in the chapter
+\item \href{http://book.chriswetherill.me/part2/answers/correlation.html}{Answer key} to the chapter's exercises
 \end{enumerate}

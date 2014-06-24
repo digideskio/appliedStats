@@ -12,9 +12,9 @@ Mean, median, and mode represent the three common ways of describing important f
 
 Alternately, it may be represented as:
 
-\begin{equation*}
+\begin{equation}
 \bar{x} = \frac{\sum_i^n x_i}{n}
-\end{equation*}
+\end{equation}
 
 This means we add up every item in a set of $n$ items and then divide by however many items we added together. Here, the capital sigma ($\Sigma$) indicates that we take a sum (that is, we add up all the values). This is the most commonly-used measure of central tendency, although it should never be used when dealing with ordinal or categorical data. (That is, ranked data---such as ``rate these from best to worst''---or categories---such as male/female or religion. Although technically possible, the result will be difficult to interpret, if not impossible.)
 
@@ -99,12 +99,12 @@ Even though each of these three sets of data has the same mean (0), it's pretty 
 
 Now, before we can use standard deviations, we have to calculate them. The formula for standard deviation looks like:
 
-\begin{equation*}
+\begin{equation}
 \sigma = \sqrt{
 	\frac{1}{n}\sum_{i=1}^n\left(x_i-\mu\right)^2
 	} \text{, where }
 	\mu=\frac{1}{n}\sum_{i=1}^n(x_i)
-\end{equation*}
+\end{equation}
 
 Let's unpack that: it's saying that we start by finding the mean (\( \mu \)) of the data. Next, we'll go ahead and take every data point and subtract the mean from it (the \( x_i-\mu \) part of the equation). So what we're doing is basically finding out how many units away from the mean each data point is. But there's a problem: some data points might give us a negative number, others a positive number. So we'll take that difference and raise it to the second power (remember, a negative number times a negative number is always equal to a positive number). Now we just repeat that for every other data point in our sample and add them all together.
 

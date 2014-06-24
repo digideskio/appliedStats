@@ -1,3 +1,7 @@
+###############################################################################
+# LS animation for web
+###############################################################################
+
 install.packages("animation")
 library(animation)
 
@@ -50,3 +54,36 @@ description = c("We want to find an estimate for the slope",
                 "in 25 candidate slopes, so we just compute the RSS one by one. "))
 
 ani.options(oopt)
+
+###############################################################################
+# LS static for print
+###############################################################################
+
+set.seed(0)
+x <- 1:15
+y <- x + rnorm(15)
+
+fit <- coef(lm(y ~ x))
+a <- fit[1]
+b <- fit[2]
+
+par(mfrow = c(1,1))
+ab.col <- c('gray', 'black')
+est.pch <- 19
+v.col <- 'red'
+v.lty <- 2
+v.lwd <- 2
+rss.pch <- 19
+rss.type <- 'o'
+
+bseq = tan(seq(pi/10, 3.5 * pi/10, length = 15))
+plot(x, y)
+abline(fit, col = ab.col[1])
+abline(a, bseq[6], col = ab.col[2])
+points(x, bseq[6] * x + a, pch = est.pch)
+segments(x, bseq[6] * x + a, x, y, col = v.col, lty = v.lty, lwd = v.lwd)
+
+text(3, 11, "Residual difference", col="red")
+text(3, 12.5, "Line of best fit", col="gray")
+text(3, 14, "Possible line of fit", col="black", adj=NULL)
+
