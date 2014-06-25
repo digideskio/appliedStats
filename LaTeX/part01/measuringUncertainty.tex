@@ -50,7 +50,7 @@ If we want to calculate these in R, we would do something like this:
 \subsection{Skewness and Mean vs. Median}
 To get an idea of skewness, let's make a histogram of those data that we just generated. If you aren't familiar with a histogram, it takes your data and counts how many data points fall within a certain range, giving you something like Figure \ref{fig:uncertainty01}.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \includegraphics[width=35pc]{uncertainty01}
 \caption{Histogram of approximately normal data with a slight rightward skew}
 \label{fig:uncertainty01}
@@ -60,7 +60,7 @@ The smooth line that you see there is the \textbf{normal distribution}; the colu
 
 Many times, as in this example, there isn't very much skewness and our data, even though they aren't perfect, are still fairly symmetrical. However, sometimes we will have strong outliers that really mess up that symmetry. For instance, take Figure \ref{fig:uncertainty02}.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \includegraphics[width=35pc]{uncertainty02}
 \caption{Histogram of data heavily skewed right}
 \label{fig:uncertainty02}
@@ -89,7 +89,7 @@ As you can see, both the mean and the median change. However, the median changes
 \section{Standard Deviation}
 \textbf{Standard deviation} (represented as $s$ or $\sigma$) is a measure of dispersion: that is, it tells us how far from or close to the mean our data tend to be. A data set with a small standard deviation, for instance, tells us that most of our data points are fairly close together and are all near the mean. Alternately, a large standard deviation means that our data points are much more spread out. We can visualize this using three data sets, all with mean $\mu=0$ but with different standard deviations, as in Figure \ref{fig:uncertainty03}.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \includegraphics[width=35pc]{uncertainty03}
 \caption{Three samples of data with mean \(\mu=0\) and standard deviations of 1, 3, and 6, respectively.}
 \label{fig:uncertainty03}
@@ -128,7 +128,7 @@ One big reason for using standard deviation instead of variance, at least in app
 
 This rule tells us that 65\% of all observations in a normal distribution will fall within 1 standard deviation of the mean; 97\% will fall within 2 standard deviations of the mean; and 99.5\% will fall within 3 standard deviations of the mean. We can illustrate this in Figure \ref{fig:uncertainty04}:
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \includegraphics[width=35pc]{uncertainty04}
 \caption{The 68-97-99.5\% rule states that nearly all observed data points will be within 3 standard deviations of the mean. This is often useful for flagging outliers or inappropriate distributions to fit your data to. Source: \href{http://en.wikipedia.org/wiki/Standard_deviation}{Wikipedia}}
 \label{fig:uncertainty04}
@@ -174,7 +174,7 @@ The \textbf{central limit theorem} is sort of similar: it states that the distri
 
 Make sense? Maybe not (that's okay!), so let's break it down a bit. Whenever we're talking about a distribution of averages, we call that a \textbf{sampling distribution}. To continue with our height example from above, let's say that we randomly choose 25 guys and measure their heights. Then we choose another 25 guys and measure their heights. Then we choose another 25 guys and measure their heights. Assuming that the mean male adult height is 5'8" with a 4" standard deviation (we have to represent that with decimals in R, so it becomes a mean of 5.67 feet and a standard deviation of 0.33 feet), our three samples might look like Figure \ref{fig:uncertainty05}.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \includegraphics[width=35pc]{uncertainty05}
 \caption{Heights of three randomly-selected groups of men}
 \label{fig:uncertainty05}
@@ -182,7 +182,7 @@ Make sense? Maybe not (that's okay!), so let's break it down a bit. Whenever we'
 
 We can see that there's a lot of variation among our three groups, right? And groups 2 and 3 don't really look all that normal. But, let's say that we take the average male height of each of our three samples. Now, let's repeat that with another 497 batches of 25 men each. If we make a histogram of the average height from each of those 500 groups, it will look like Figure \ref{fig:uncertainty06}.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \includegraphics[width=35pc]{uncertainty06}
 \caption{Average height of 500 groups of randomly selected men}
 \label{fig:uncertainty06}
@@ -194,7 +194,9 @@ All of a sudden, we have a normal distribution with a mean height of 5.67 feet (
 
 You might have noticed that the standard deviation of the sampling distribution above was much smaller than the standard deviation of the actual population (0.81 inches versus 4 inches). This arises because we're looking at the variation of a set of means (which themselves are the average value of a larger set of data): these will always vary less than the individual data points that we sample from. And actually, when we're talking about the variation of sample means, instead of standard deviation, we will want to use what's called the \textbf{standard error}, a specific term referring to the standard deviation of a sampling distribution. This will always be smaller than the standard deviation of the population and can be estimated by:
 
-\[ \text{SE}_{\bar{x}}= \frac{s}{\sqrt{n}} \]
+\begin{equation}
+\text{SE}_{\bar{x}}= \frac{s}{\sqrt{n}}
+\end{equation}
 
 Here, \(s\)  is the sample standard deviation (here, 0.81 inches) and \(n\)  is the number of observations (that is, the number of samples---here, 500). As you can see, the standard error is always going to be smaller than the population's actual standard deviation. In short, the \textbf{standard error} is a measure of how far a sample mean is likely to be from the population mean; the \textbf{standard deviation} is a measure of how far an individual observation is likely to be from the sample mean.
 
@@ -227,7 +229,6 @@ As discussed previously, boxplots are good to use when you're working with the m
 \includegraphics[width=35pc]{uncertainty11}
 
 Here, the line on the far left is the minimum value, the left edge of the box is Q1, the line bisecting the box is the median, the right edge of the box is Q3, and the line to the far right is the maximum value. Any circles indicate the presence of outliers based on the IQR.
-
 \section{Exercises}
 
 \prob In R, execute the following code:
