@@ -16,7 +16,7 @@ y = \beta_0 + \beta_1\cdot x
 
 So before we explain this equation, we need you to reach way back into those murky memories of your eighth grade math class when you were talking about the equation of a line. Remember that whole ``slope-intercept form'' lecture? Well, in case you don't, the equation of a line looks something like:
 \begin{equation*}
-y=m\cdot x+b
+\hat{y}=m\cdot x+b
 \end{equation*}
 where $m$ is the slope and $b$ is the intercept. Sound familiar?
 
@@ -50,9 +50,52 @@ Thankfully, these aren't equations that you're liable to ever have to understand
 
 \subsection{Coefficient of Determination}
 
+The whole of a simple linear regression boils down to just a couple numbers, one of which is the \textbf{coefficient of determination}, denoted $R^2$ (pronounced ``R-squared''). This statistic represents the proportion of the variance seen in the data that is explained by the model.
+
+If you think back to the chapter \textit{Measuring Uncertainty}, variance is the squared average distance of a data point from the mean. Let's take Figure \ref{fig:regression03} as an example. Here, we see that there is a regression equation fitted to the data with an $R^2=0.39$, indicating that about 39\% of the variance observed within the data is explained by the model.
+
+\begin{figure}[h]
+\includegraphics[width=35pc]{regression03}
+\label{fig:regression03}
+\caption{Regression model with approximately 39\% of the observed variance explained.}
+\end{figure}
+
+Now, it's important to recognize that the line of best fit that we've plotted doesn't describe our data perfectly. This is because there is an inherent bit of error---random variability---in any dataset (and thereby any equation that we use to model it). Given this, a better definition of Equation \ref{eqn:regression01} is:
+\begin{equation}
+\hat{y} = \beta_0 + \beta_1\cdot x+\epsilon
+\label{eqn:regression02}
+\end{equation}
+where $\epsilon$ represents that error. In our example, we can see that each point does not vary above or below the regression line by an equivalent amount: if there were no error, then the distance of all of the points from the regression line, above and below, should sum out to 0. (That is, points above the line are equally far from it as are points below the line.)
+
+The equation that we use to model our data will never be able to perfectly explain all of that random variation which is why we use the $R^2$ statistic to quantify the proportion of it that \textbf{can be} explained. Correspondingly, a larger value of $R^2$ corresponds to a model that better fits the data.
+
+As with Pearson's $r$ in correlational designs, $R^2$ varies from 0 to 1. (Note: Pearson's $r$ can fall on the interval (-1, 1); however, because the coefficient of determination is squared, it can only fall on the interval (0, 1). Any negative number multiplied by another negative number will always equal a positive number.)
 
 \subsection{Residuals}
 
+The formal calculation of the proportion of the variance that is explained by the model is a bit more complicated than what we presented above. To understand how $R^2$ is calculated, we first need to understand the concept of \textbf{residuals}. A residual is defined as the difference between an observed and predicted value. If we look back to Figure \ref{fig:regression03}, the residuals are represented by the dashed red lines. This is equivalent to the error term ($\epsilon$) that we mentioned in the previous section.
+
+When calculation $R^2$, we use the formula:
+\begin{equation}
+R^2 \equiv 1-\frac{SS_{residual}}{SS_{total}}
+\end{equation}
+where $SS_{residual}$ is the residual sum of squares and $SS_{total}$ is the total sum of squares. To get an idea of what these two terms mean, let's look at Figure \ref{fig:regression04}. On the left we see a representation of the total sum of squares for four data points. This is derived by finding the squared distance between each observed data point and the arithmetic mean of $y$ and adding them all together. Mathematically, we represent this as:
+\begin{equation*}
+SS_{total} =\sum_i \left(y_i-\bar{y}\right)^2
+\end{equation*}
+The idea here is that we want to find out the total distance of our data from their mean: a larger value means that the data are farther dispersed from their mean; a smaller value indicates that they all cluster closer to their mean value. (Likewise, a value closer to 0 indicates a weaker relationship between the two variables: it shows that $y$ is unaffected by the value of $x$.)
+
+Next we have the residual sum of squares. This value represents the sum of the squared distances of each point from its predicted value. In other words, it's a measure of how accurately the data can be fitted to a line. Mathematically, we represent this as:
+\begin{equation*}
+SS_\text{residual}=\sum_i \left(y_i - \hat{y}_i\right)^2
+\end{equation*}
+As with our total sum of squares, a higher value for our residual sum of squares indicates a larger discrepancy between our predicted and observed values of $y$ whereas a smaller value indicates a better fit of the model to the data. By then comparing the ration of these two values, we can assess what proportion of the total variance our model is able to explain, and thus how good of a fit it provides.
+
+\begin{figure}[h]
+\includegraphics[width=35pc]{regression04}
+\label{fig:regression04}
+\caption{$R^2$ is defined generally as $1-\frac{SS_{residual}}{SS_{total}}$. Here, we see the total sum of squares (red) as the sum of the squared distance from each observation to the arithmetic mean of $y$ ($\bar{y}$). The residual sum of squares (blue) is computed as the sum of the squared distance from each observation to its predicted value.}
+\end{figure}
 
 \section{Cautions and Considerations}
 
@@ -66,7 +109,11 @@ page 182
 
 \section{Case Study: [STUDY]}
 
-
+\begin{figure}[h]
+\includegraphics[width=35pc]{regression02}
+\label{fig:regression02}
+\caption{Measured distance versus velocity for 24 extra-galactic nebulae. Data from Hubble, E. (1929). \href{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC522427/}{A relation between distance and radial velocity among extra-galactic nebulae.} \textit{Proceedings of the National Academy of Sciences of the United States of America, 15}, 168-173. Line of best fit plotted in blue with a 95\% confidence interval for the regression line in red.}
+\end{figure}
 \section{Exercises}
 
 
