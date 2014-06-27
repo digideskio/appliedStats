@@ -174,7 +174,8 @@ First let's go ahead and download our data from GitHub:
 # This will let us download the file from a remote URL
 
 download.file(
-"http://book.chriswetherill.me/part2/data/correlationCaseStudy.csv",
+"https://raw.githubusercontent.com/faulconbridge/appliedStats/
+master/LaTeX/part03/data/correlationCaseStudy.csv",
 "census.csv","wget",extra="--no-check-certificate")
 
 # And now we will read the data into R and store it
@@ -238,17 +239,9 @@ As we can see, there are several noteworthy items presented in this table. First
 
 If it weren't obvious from the scatterplot above, this is a positive correlation with a Pearson's $r=0.37$, meaning that there exists a fair positive relationship between our two variables. I.e., when one is larger, the other will also tend to be larger.
 
-\section{Additional Resources}
-
-\begin{enumerate}
-\item \href{http://book.chriswetherill.me/part2/data/}{All data sets} used in the chapter
-\item \href{http://book.chriswetherill.me/part2/RScripts/}{All R scripts} used in the chapter
-\item \href{http://book.chriswetherill.me/part2/answers/correlation.html}{Answer key} to the chapter's exercises
-\end{enumerate}
-
 \section{Exercises}
 
-\prob Download the \href{https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationEx01.csv}{Patient Satisfaction data set} from GitHub. This dataset contains information from patients surveyed at various hospitals following their treatment to assess their satisfaction with the experience. We will be using these data for the following exercises.
+\prob Download the \href{https://raw.githubusercontent.com/faulconbridge/appliedStats/master/LaTeX/part03/data/correlationEx01.csv}{Patient Satisfaction data set} from GitHub. This dataset contains information from patients surveyed at various hospitals following their treatment to assess their satisfaction with the experience. We will be using these data for the following exercises.
 \prob Do patient ratings for \verb|nursesCommunicateWell| and \verb|doctorsCommunicateWell| correlate with one another? Provide evidence to back up your answer. Include a scatterplot of the data.
 \prob Now perform a partial correlation between those two same variables, but controlling for\\\verb|givenInformationAboutRecovery| and \verb|staffExplainedMedications|.
 \prob Create a lower-diagonal correlation matrix correlating all of the variables included in the dataset (except for the hospital ID). What correlations are significant? Are there any that are non-significant? (NOTE: You will have to remove null values using the \verb|na.omit()| function for this to work properly.
@@ -265,8 +258,16 @@ pairs(~nursesCommunicateWell + doctorsCommunicateWell +
   
 Do any of the scatterplots look concerning? Look for outliers, non-linear trends, etc.
 \prob \textbf{Test yourself:} Choose two new variables and performa bivariate correlation test. Do they correlate significantly? Do you think there are any other variables that should be controlled for? If so, perform a partial correlation, controlling for those additional variables. Do the results differ? Explain why they do. Comment on the assumptions made by the correlation tests you have run. Are they met? Are any violated?
-\prob Download the \href{https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationCaseStudy.csv}{Census American Community Survey} from GitHub. This dataset, used in the case study above, contains information about employment and other demographic characteristics nationwide.
+\prob Download the \href{https://raw.githubusercontent.com/faulconbridge/appliedStats/master/LaTeX/part03/data/correlationCaseStudy.csv}{Census American Community Survey} from GitHub. This dataset, used in the case study above, contains information about employment and other demographic characteristics nationwide.
 \prob Is there a correlation between \verb|noHighSchoolDiploma| (the proportion of residents without a HS diploma or GED equivalent) and \verb|publicTransit| (the proportion of residents who use public transit to go to and from work)?
 \prob Is there a correlation between \verb|HighSchoolOrHigher| and \verb|percentOnSNAP|? Justify your findings and include at least one figure.
 \prob Is there a correlation between \verb|medianRent| and \verb|percentImpoverished|? Are there any variables we might want to control for using a partial correlation?
 \prob \textbf{Test yourself:} Choose some (or all) of the variables in this dataset and make a correlation matrix for them. Choose a correlation that looks interesting or surprising and investigate it further. If applicable, perform a partial correlation test rather than a bivariate correlation.
+
+\section{Additional Resources}
+
+\begin{enumerate}
+\item \href{https://github.com/faulconbridge/appliedStats/tree/master/LaTeX/part03/data}{All data sets} used in the chapter
+\item \href{https://github.com/faulconbridge/appliedStats/tree/master/LaTeX/part03/RScripts}{All R scripts} used in the chapter
+\item \href{https://github.com/faulconbridge/appliedStats/blob/master/LaTeX/part03/answers/correlation.md}{Answer key} to the chapter's exercises
+\end{enumerate}

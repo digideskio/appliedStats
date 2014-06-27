@@ -61,6 +61,7 @@ ToDo:
     - [ ] Model Checking and Refinement
 - [ ] Part 4
     - [ ] Working with Time-Series Data
+    - [ ] Factor Analysis and PCA
     - [ ] Working with Rank-Ordered Data
     - [ ] Counts, Proportions, and Odds
 - [ ] Part 5

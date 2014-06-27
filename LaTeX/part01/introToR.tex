@@ -219,7 +219,8 @@ mean(participantAges, na.rm=TRUE)
 \begin{framed}
 \begin{Verbatim}[samepage=TRUE]
 download.file(
-    "http://book.chriswetherill.me/part1/data/introToREx01.csv",
+    "https://raw.githubusercontent.com/faulconbridge/appliedStats/
+master/LaTeX/part01/data/introToREx01.csv",
     "sampleData.csv", "wget", extra="--no-check-certificate")
 \end{Verbatim}
 \end{framed}
@@ -227,7 +228,7 @@ Paste that into the R console and hit enter. If it's successful, you should see 
 
 \prob Now we will assign the data to an object. This makes it easier to work with once we start plotting it and running analyses on the data. To do this, run the command: \\\verb|myData <- read.csv("sampleData.csv",header=TRUE,sep=",")|. To see if you did this correctly, run the command \verb|head(myData)|. If you don't get an error, then you're good to go.
 
-\prob Finally, we will load a file from the desktop. \href{https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part1/data/introToREx01.csv}{Click here to download the data.} Save it to your desktop. Now, in RStudio, click Import Dataset, select the file, make sure that you choose Yes for the Heading option, and import it.
+\prob Finally, we will load a file from the desktop. \href{https://raw.githubusercontent.com/faulconbridge/appliedStats/master/LaTeX/part01/data/introToREx01.csv}{Click here to download the data.} Save it to your desktop. Now, in RStudio, click Import Dataset, select the file, make sure that you choose Yes for the Heading option, and import it.
 
 \prob Next we will practice working with different data structures in R. Run \verb|head(myData)|; describe what the function does. What about \verb|colnames(myData)|?
 
