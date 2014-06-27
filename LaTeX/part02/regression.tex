@@ -10,13 +10,13 @@ In the last chapter we touched briefly on the idea of using the value of one var
 So, knowing that we use regression as a predictive tool, what \textit{is} it, exactly? Well, thankfully, it's a pretty straightforward thing that we can define as:
 
 \begin{equation}
-y = \beta_0 + \beta_1\cdot x
+\hat{y} = \beta_0 + \beta_1\cdot x
 \label{eqn:regression01}
 \end{equation}
 
 So before we explain this equation, we need you to reach way back into those murky memories of your eighth grade math class when you were talking about the equation of a line. Remember that whole ``slope-intercept form'' lecture? Well, in case you don't, the equation of a line looks something like:
 \begin{equation*}
-\hat{y}=m\cdot x+b
+y=m\cdot x+b
 \end{equation*}
 where $m$ is the slope and $b$ is the intercept. Sound familiar?
 
@@ -91,11 +91,19 @@ SS_\text{residual}=\sum_i \left(y_i - \hat{y}_i\right)^2
 \end{equation*}
 As with our total sum of squares, a higher value for our residual sum of squares indicates a larger discrepancy between our predicted and observed values of $y$ whereas a smaller value indicates a better fit of the model to the data. By then comparing the ration of these two values, we can assess what proportion of the total variance our model is able to explain, and thus how good of a fit it provides.
 
+It may help if we visualize these, as in Figure \ref{fig:regression04}. Here, the total sum of squares is represented in red on the left.  We see that the horizontal line represents the average $y$ value across our four data points---just below $2.0$. To compute the total sum of squares, we measure how far apart the $y$ value for each of our four data points is from that average and we square it. This is represented by each of the red boxes. To obtain our sum of squares, we just go ahead and add the areas of the four boxes.
+
+You can also think of the total sum of squares as a measure of the relationship between our explanatory and response variables: if there were no relationship between them, then every single data point would be exactly on the line and our sum of squares would be $0$.
+
 \begin{figure}[h]
 \includegraphics[width=35pc]{regression04}
 \label{fig:regression04}
 \caption{$R^2$ is defined generally as $1-\frac{SS_{residual}}{SS_{total}}$. Here, we see the total sum of squares (red) as the sum of the squared distance from each observation to the arithmetic mean of $y$ ($\bar{y}$). The residual sum of squares (blue) is computed as the sum of the squared distance from each observation to its predicted value.}
 \end{figure}
+
+Next we can look at the residual sum of squares, shown in blue on the right. Here we have our line of best fit along with the same four data points. To calculate this sum of squares, we follow the same procedure as before: we measure the distance on the $y$-axis between each data point and the line, we square it, and then we add together all those values. In this case, though, the difference represents the failure of our model to explain the relationship between our two variables. If it explained the relationship perfectly, then our residual sum of squares would be equal to 0.
+
+So, knowing that a larger value of our $SS_{total}$ indicates a stronger relationship and that a smaller value of our $SS_{residual}$ means a better model, we can see that larger values of $R^2$ mean that a larger proportion of the variance seen in our data is explained by the model. (Remember, dividing a small number---$SS_{residual}$---by a larger number---$SS_{total}$---gives you an even smaller result. So if $R^2$ is equal to 1 minus whatever that value is, its value will approach 1 as the model becomes better and 0 as the model becomes worse.
 
 \section{Cautions and Considerations}
 
