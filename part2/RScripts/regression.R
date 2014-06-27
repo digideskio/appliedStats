@@ -153,6 +153,63 @@ text(2.5, 25, "R-squared = 0.39")
 # Residual
 ###############################################################################
 
+x <- c(0.5, 1.4, 2.5, 3)
+y <- c(0.8, 2, 2.3, 2.9)
+
+plotResid <- function(i) {
+  fit <- coef(lm(y ~ x))
+  a <- fit[1]
+  b <- fit[2]
+  
+  # Sets margins for the plot
+  par(mar=c(2, 5, 2, 1) + 0.1)
+  
+  # Plots our data without any axis labels or tics
+  plot(x, y, pch = 16, yaxt="n",
+       xaxt="n", ylab="")
+  
+  # Plots line of best fit
+  abline(fit)
+  
+  # Adds vertical line from y = 0 to y = y[i]
+  if(y[i] < a+b*x[i]) {
+    segments(x[i], 0, x[i], a+b*x[i], col = "grey",
+             lwd = 2, lty = 1)
+  } else {
+    segments(x[i],0,x[i],y[i], col = "grey", lwd = 2, lty = 1)
+  }
+  
+  # Add horizontal lines from x = 0 to x = x[i]
+  # at y[i] and y-hat[i], respectively
+  segments(0,y[i],x[i],y[i], col = "grey", lwd = 2, lty = 1)
+  segments(0, a+b*x[i], x[i], a+b*x[i], col = "grey", lwd = 2, lty = 1)
+  
+  # Redraws data points so they are layered over the segments
+  points(x, y, pch = 16)
+  
+  # Adds all text to the plot
+  mtext("X", side = 1, line = 0.5, at = x[i],
+        cex.lab = 1, las = 1, col = "grey")
+  mtext("Y", side = 2, line = 0.5, at = y[i],
+        cex.lab = 1, las = 2, col = "grey")
+  mtext("Fitted Y", side = 2, line = 0.5, at = a+b*x[i],
+        cex.lab = 1, las = 2, col = "grey")
+  
+  # Adds arrow between observed and predicted y[i]
+  arrows(x[i]/2, a+b*x[i], x[i]/2, y[i], length = 0.125,
+         angle = 30, code = 3, col = "black",
+         lwd = 2, lty = 1)
+  
+  text(x = x[i]/1.5, y = y[i] + 0.5*((a+b*x[i])-y[i]),
+       "Residual")
+}
+
+plotResid(2)
+
+###############################################################################
+# Sum of Squares
+###############################################################################
+
 x <- c(0.5, 1, 2.9, 3)
 y <- c(0.8, 1.6, 2.3, 2.9)
 

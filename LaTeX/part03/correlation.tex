@@ -2,7 +2,9 @@
 
 \chapter{Correlation}
 
-\section{Scatterplots}
+\section{Overview of Correlation}
+
+\subsection{Scatterplots}
 Okay, so this is something that we could have presented back a few chapters ago when we talked about data visualization. Unfortunately, that wouldn't haev worked with the example we were using, so instead of completely switching gears on you, we decided to wait until now to present it.
 
 Scatterplots are used to display data using cartesian coordinates. For instance, we may wish to visualize the growth of the U.S. population by decade (Figure \ref{fig:correlation01}).
@@ -13,7 +15,7 @@ Scatterplots are used to display data using cartesian coordinates. For instance,
 \caption{United States population by decade: 1600 through 2010}
 \end{figure}
 
-\subsection{Scatterplots with Categorical Variables}
+\subsubsection{Scatterplots with Categorical Variables}
 Additionally, we can use scatterplots to visualize data with categorical indicators. For example, if we wanted to look at the U.S population by year, split by males and females (Figure \ref{fig:correlation02}).
 
 \begin{figure}
@@ -22,7 +24,7 @@ Additionally, we can use scatterplots to visualize data with categorical indicat
 \caption{United States population by decade and sex: 1600 through 2010}
 \end{figure}
 
-\section{Correlation: Measuring Linear Association}
+\subsection{Correlation: Measuring Linear Association}
 Woah, hold up now: measuring linear association? This sounds like we're heading towards some scary waters. Linear association? I thought this wasn't supposed to be a mathy book!
 
 Don't worry, we didn't lie to you. That's just a bit of a scary term for a not-so-scary concept. \textbf{Linear association}, in its most basic form, just means that when you increase one variable by so many units, another variable increases by so many other units. For instance, let's say that for every degree Fahrenheit we increase, we increase the number of daily neighborhood ice cream sales by 10 cones. That's easy, right?
@@ -68,7 +70,7 @@ sample estimates:
 
 As we can see, there was a correlation between the two variables of $r=0.77$ and this reached a level of statistical significance, $t = 18.78$; $p\text{-value}<0.001$. Because our $p$-value was below the $0.05$ threshold, we can conclude that the relationship between the two variables actually exists. This means that individuals with more neck fat tend to also have more chest fat, and vice versa.
 
-\section{Correlation Matrices (Multiple Correlation)}
+\subsection{Correlation Matrices and Multiple Correlation}
 We know that correlation is a measure of dependence between two variables. However, there may be times when you want to examine multiple variables at once. In cases like this, it may be useful to create a \textbf{correlation matrix}. This is simply a lower-triangular matrix of correlations among multiple variables.
 
 For instance, let's say that we want to see how adiposity in different parts of the body correlate. We may do something like:
@@ -113,7 +115,7 @@ rcorr(as.matrix(bodyFat))
 
 This will return all bivariate correlations and levels of significance for the specified matrix. (NB: The data must be input as a matrix for this function to work. If you are using a data frame, first pass it through the as.matrix() function.)
 
-\section{Partial Correlations}
+\subsection{Partial Correlations}
 In our previous section, we looked at correlations among multiple variables. These were all referred to as \textbf{bivariate correlations} because each correlation only looked at exactly two variables. However, we saw that each of those 5 variables correlated significantly with each of the others. So it may be more appropriate to conduct a \textbf{partial correlation}: this will take two variables---say, Neck and Chest--- and measure their degree of association after controlling for the effect of Abdomen, Hip, and Thigh. Doing so gives the result:
 
 \begin{framed}
@@ -133,13 +135,13 @@ pcor.test(neck,chest,others)
 
 We can see that the observed correlation drops from \(r=0.766\) with the bivariate correlation to \(r=0.344\) with the partial correlation. This means that, when we control for the effects of Abdomen, Hip, and Thigh adiposity, neck and chest still covary significantly with a correlation of about 0.34.
 
-\section{Some Considerations: Causality and Linearity}
-\subsubsection{Causal Inferences}
+\section{Cautions and Considerations}
+\subsection{Causal Inferences}
 Importantly, one cannot make causal inferences from correlational designs: if you think back to the chapter on research design, for a causal inference to by justified, there must be (1) temporal precedence; (2) covariation; and (3) nonspuriousness. Here, we violate the first and third assumptions. Regarding temporal precedence, neither of the measures that we are looking at clearly precedes the other: the measurements could be made simultaneously; one could always occur before the other; or the order of occurrence could be random at each point of measurement. Additionally, correlational studies don't have any control or experimental conditions in place to ensure that potential confounding variables are controlled for and don't give rise to spurious correlations.
 
 Given these concerns, we are only able to say that Variable A and Variable B tend to covary: that is, when one changes in a certain way, the other is likely to change in a certain way. For instance, consider height and weight. Let's say that there is a positive correlation between the two (i.e., that taller people tend to weigh more and that people who weigh less tend to be shorter). We can say that someone who is 6'1" is likely to weigh more than someone who is 4'10"; however, it becomes silly to say that if someone loses weight, he or she will start shrinking in height. Likewise, by gaining weight, no one will ever grow taller. There is a general trend of the data; however, this does not mean that a change in one ever causes a change in the other.
 
-\subsubsection{Linearity of the Relationship}
+\subsection{Linearity of the Relationship}
 Another consideration when looking at correlations is the relationship between the two variables of interest. Namely, there must be a linear trend. In this context, a linear trend is going to mean that every time Variable A changes by \( x \) units, Variable B will change by \(y\) units. For instance, take the four plots in Figure \ref{fig:correlation04}.
 
 \begin{figure}[h]
@@ -150,7 +152,7 @@ Another consideration when looking at correlations is the relationship between t
 
 Here we have four different relationships between our two variables with the same regression line plotted against all of them. As far as a correlation is concerned, the data follow that solid line.
 
-\subsubsection{Sensitivity to the Distribution}
+\subsection{Sensitivity to the Distribution}
 Also important is the distribution of the data. Although the degree of dependence between two variables $X$ and $Y$ is unaffected by transformations of the data where both $X$ and $Y$ are transformed by constants, the strength of correlation is highly impacted by the range of values sampled. Generally, the wider the range that is sampled, the stronger the correlation will be between the two measures.
 
 Take, for instance, Figure \ref{fig:correlation06}. In orange are the unrestricted data, giving a correlation of $r=0.897$. Yet, when we restrict our range to only values of $X$ on the interval $(0,1)$, that correlation drops to $r=0.387$ although no transformations or other alterations were made to the data. Given these concerns, there have been attempts to correct for this range restriction; however we will not detail them here. Generally, this is not often a major issue to researchers; however, if you know that your data will be somehow restricted, it is good to keep in mind that this may impact the correlation coefficient.
@@ -161,7 +163,9 @@ Take, for instance, Figure \ref{fig:correlation06}. In orange are the unrestrict
 \label{fig:correlation06}
 \end{figure}
 
-\subsection{Case Study: National Education Trends}
+\section{Implementation in R}
+
+\section{Case Study: National Education Trends}
 
 First let's go ahead and download our data from GitHub:
 
@@ -234,7 +238,15 @@ As we can see, there are several noteworthy items presented in this table. First
 
 If it weren't obvious from the scatterplot above, this is a positive correlation with a Pearson's $r=0.37$, meaning that there exists a fair positive relationship between our two variables. I.e., when one is larger, the other will also tend to be larger.
 
-\subsection{Exercises}
+\section{Additional Resources}
+
+\begin{enumerate}
+\item \href{http://book.chriswetherill.me/part2/data/}{All data sets} used in the chapter
+\item \href{http://book.chriswetherill.me/part2/RScripts/}{All R scripts} used in the chapter
+\item \href{http://book.chriswetherill.me/part2/answers/correlation.html}{Answer key} to the chapter's exercises
+\end{enumerate}
+
+\section{Exercises}
 
 \prob Download the \href{https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationEx01.csv}{Patient Satisfaction data set} from GitHub. This dataset contains information from patients surveyed at various hospitals following their treatment to assess their satisfaction with the experience. We will be using these data for the following exercises.
 \prob Do patient ratings for \verb|nursesCommunicateWell| and \verb|doctorsCommunicateWell| correlate with one another? Provide evidence to back up your answer. Include a scatterplot of the data.
@@ -258,11 +270,3 @@ Do any of the scatterplots look concerning? Look for outliers, non-linear trends
 \prob Is there a correlation between \verb|HighSchoolOrHigher| and \verb|percentOnSNAP|? Justify your findings and include at least one figure.
 \prob Is there a correlation between \verb|medianRent| and \verb|percentImpoverished|? Are there any variables we might want to control for using a partial correlation?
 \prob \textbf{Test yourself:} Choose some (or all) of the variables in this dataset and make a correlation matrix for them. Choose a correlation that looks interesting or surprising and investigate it further. If applicable, perform a partial correlation test rather than a bivariate correlation.
-
-\subsection{Additional Resources}
-
-\begin{enumerate}
-\item \href{http://book.chriswetherill.me/part2/data/}{All data sets} used in the chapter
-\item \href{http://book.chriswetherill.me/part2/RScripts/}{All R scripts} used in the chapter
-\item \href{http://book.chriswetherill.me/part2/answers/correlation.html}{Answer key} to the chapter's exercises
-\end{enumerate}

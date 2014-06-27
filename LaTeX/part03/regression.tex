@@ -73,7 +73,13 @@ As with Pearson's $r$ in correlational designs, $R^2$ varies from 0 to 1. (Note:
 
 \subsection{Residuals}
 
-The formal calculation of the proportion of the variance that is explained by the model is a bit more complicated than what we presented above. To understand how $R^2$ is calculated, we first need to understand the concept of \textbf{residuals}. A residual is defined as the difference between an observed and predicted value. If we look back to Figure \ref{fig:regression03}, the residuals are represented by the dashed red lines. This is equivalent to the error term ($\epsilon$) that we mentioned in the previous section.
+The formal calculation of the proportion of the variance that is explained by the model is a bit more complicated than what we presented above. To understand how $R^2$ is calculated, we first need to understand the concept of \textbf{residuals}. A residual is defined as the difference between an observed and predicted value. If we look back to Figure \ref{fig:regression03}, the residuals are represented by the dashed red lines. Alternately, we can see a little more explicitly what a residual is by looking at Figure \ref{fig:regression05}. This is equivalent to the error term ($\epsilon$) that we mentioned in the previous section.
+
+\begin{figure}[h]
+\includegraphics[width=35pc]{regression05}
+\label{fig:regression05}
+\caption{A residual is the difference between an observed data point and its predicted value at a given point $X$. This represents the error that the model is unable to explain.}
+\end{figure}
 
 When calculation $R^2$, we use the formula:
 \begin{equation}
@@ -107,13 +113,19 @@ So, knowing that a larger value of our $SS_{total}$ indicates a stronger relatio
 
 \section{Cautions and Considerations}
 
-
 \subsection{Basic Assumptions}
 
-page 182
+When running a regression, there are certain conditions that the model assumes are met. These include:
+\begin{enumerate}
+	\item The data represent a normally-distributed sample of 
+	\item 
+	\item 
+	\item 
+\end{enumerate}
 
 \subsection{Outliers and Influential Points}
 
+\section{Implementation in R}
 
 \section{Case Study: [STUDY]}
 
@@ -123,6 +135,5 @@ page 182
 \caption{Measured distance versus velocity for 24 extra-galactic nebulae. Data from Hubble, E. (1929). \href{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC522427/}{A relation between distance and radial velocity among extra-galactic nebulae.} \textit{Proceedings of the National Academy of Sciences of the United States of America, 15}, 168-173. Line of best fit plotted in blue with a 95\% confidence interval for the regression line in red.}
 \end{figure}
 \section{Exercises}
-
 
 \section{Additional resources}
