@@ -4,57 +4,65 @@ Applied Statistics
 ToDo:
 -----
 - [ ] Convert this to Oreilly's HTMLBook specification? Maybeh?
-- [X] Introduction
-  - [X] Why I'm writing this
-  - [X] Why you should care
-  - [X] Structure of the book (explanations, exercises, answers)
-  - [X] What you'll need (R, RStudio, etc.)
-  - [X] Statistical terminology
-- [X] R Basics
-  - [X] Installing R, RStudio
-  - [X] Reading in data
-  - [X] Basic R syntax
-  - [X] Additional resources
-- [X] Measuring Uncertainty
-  - [X] Measures of central tendency; skewness
-  - [X] SD; variance; IQR
-  - [X] Sampling distributions; CLT; SE
-  - [X] Visualizing uncertainty
-  - [X] Exercises
-  - [X] Additional resources
-- [X] Research Design
-  - [X] Relating design and analysis
-  - [X] Designing sound experiments (garbage in, garbage out)
-- [X] Intro to Statistical Inference
-  - [X] Hypotheses: directional and non-directional
-  - [X] Standardized test statistics
-  - [X] Significance: p-values; CIs; etc.
-  - [X] Drawing conclusions
-- [X] Correlation
-  - [X] Visualizing relationships
-  - [X] Measuring linear association
-  - [X] Multiple correlation
-  - [X] Partial correlation
-  - [X] Limitations (sensitivity to distribution; causality; linearity)
-  - [X] Case study
-  - [X] Exercises
-  - [X] Additional resources
-- [ ] Simple Linear Regression
-  - [ ] Uses of SLR
-  - [ ] Least squares fitting
-  - [ ] Coefficient of determination
-  - [ ] Residuals
-  - [ ] Outliers
-  - [ ] Case study
-  - [ ] Exercises
-  - [ ] Assitional resources
-- [ ] Multiple Regression
-- [ ] Related Issues in Regression
-- [ ] *t*-Tests
-- [ ] Alternatives to *t*-Tools
-- [ ] Comparisons Among Multiple Samples: One-Way ANOVA
-- [ ] Multifactor Studies
-- [ ] Multifactor Studies with Replication
-- [ ] Working with Time-Series Data
-- [ ] Working with Rank-Ordered Data
-- [ ] Counts, Proportions, and Odds
+- [ ] Part 1
+    - [X] Introduction
+      - [X] Why I'm writing this
+      - [X] Why you should care
+      - [X] Structure of the book (explanations, exercises, answers)
+      - [X] What you'll need (R, RStudio, etc.)
+      - [X] Statistical terminology
+    - [X] R Basics
+      - [X] Installing R, RStudio
+      - [X] Reading in data
+      - [X] Basic R syntax
+      - [X] Additional resources
+    - [X] Measuring Uncertainty
+      - [X] Measures of central tendency; skewness
+      - [X] SD; variance; IQR
+      - [X] Sampling distributions; CLT; SE
+      - [X] Visualizing uncertainty
+      - [X] Exercises
+      - [X] Additional resources
+    - [X] Research Design
+      - [X] Relating design and analysis
+      - [X] Designing sound experiments (garbage in, garbage out)
+    - [X] Intro to Statistical Inference
+      - [X] Hypotheses: directional and non-directional
+      - [X] Standardized test statistics
+      - [X] Significance: p-values; CIs; etc.
+      - [X] Drawing conclusions
+- [ ] Part 2
+    - [ ] *t*-Tests
+    - [ ] Alternatives to *t*-Tools
+    - [ ] Comparisons Among Multiple Samples: One-Way ANOVA
+    - [ ] Multifactor Studies
+    - [ ] Multifactor Studies with Replication
+- [ ] Part 3
+    - [X] Correlation
+      - [X] Visualizing relationships
+      - [X] Measuring linear association
+      - [X] Multiple correlation
+      - [X] Partial correlation
+      - [X] Limitations (sensitivity to distribution; causality; linearity)
+      - [X] Case study
+      - [X] Exercises
+      - [X] Additional resources
+    - [ ] Simple Linear Regression
+      - [X] Uses of SLR
+      - [X] Least squares fitting
+      - [X] Coefficient of determination
+      - [X] Residuals
+      - [ ] Outliers
+      - [ ] Case study
+      - [ ] Exercises
+      - [ ] Additional resources
+    - [ ] Multiple Regression
+    - [ ] Logistic Regression
+    - [ ] Model Checking and Refinement
+- [ ] Part 4
+    - [ ] Working with Time-Series Data
+    - [ ] Working with Rank-Ordered Data
+    - [ ] Counts, Proportions, and Odds
+- [ ] Part 5
+    - [ ] Choosing the Right Analysis
+    - [ ] Sharing Data with Others
