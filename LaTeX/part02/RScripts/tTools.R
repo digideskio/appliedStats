@@ -1,3 +1,5 @@
+library(ggplot2)
+
 ###############################################################################
 # One-Sample t-Test Example
 ###############################################################################
@@ -24,17 +26,30 @@ text(33500, 190, "Sample mean volume", col = "gray35")
 # Paired-Samples Example
 ###############################################################################
 
-set.seed(0)
-site1 <- c(rnorm(1000, mean = 36500, sd = 2000))
-site2 <- c(rnorm(1000, mean = 39000, sd = 1780))
-t.test(site1, site2, paired=TRUE)
+# Let's say that we're measuring systolic
+# blood pressures of patients before and
+# after treatment with a drug meant to 
+# reduce hypertension
 
-treeVolumes <- data.frame(Volume = c(site1, site2),
-                          Site = c(rep("Site 1", 1000), rep("Site 2", 1000)))
+set.seed(2820)
 
-ggplot(treeVolumes, aes(Volume, fill = Site)) +
-  geom_histogram(binwidth = 1000, colour = "black") + 
-  xlim(30000, 45000) +
-  xlab("Volume (cubic feet)") + 
-  ggtitle("Volumes of Douglas Firs from Two Sites")
-  
+# We have 500 patients with a preTreat systolic
+# bp of M = 145, SD = 11
+preTreat <- c(rnorm(1000, mean = 145, sd = 9))
+
+# And a postTreat systolic bp M = 130
+# and SD = 15
+postTreat <- c(rnorm(1000, mean = 138, sd = 8))
+
+# Did the treatment reduce hypertension?
+t.test(preTreat, postTreat, paired=TRUE)
+
+bloodPressures <- data.frame(Systolic = c(preTreat, postTreat),
+                          Treatment = c(rep("Pre-Treatment", 1000), 
+                                        rep("Post-Treatment", 1000)))
+
+ggplot(bloodPressures, aes(x = Systolic, fill = Treatment)) +
+  geom_bar(binwidth = 3, colour = "black", position = "identity", alpha = 0.6) + 
+  xlim(117, 174) +
+  xlab("Systolic Blood Pressure (mmHg)") + 
+  ggtitle("Systolic Blood Pressure Before and After Treatment")
