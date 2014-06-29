@@ -2,34 +2,41 @@
 # Scatterplot Example
 ###############################################################################
 download.file(
-  "https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationData01.csv",
+  "https://raw.githubusercontent.com/faulconbridge/appliedStats/master/LaTeX/part03/data/correlationData01.csv",
   "population.csv", "wget", extra="--no-check-certificate")
 
 population <- read.csv("population.csv",header=TRUE)
 View(population)
 
 plot(population$Year, population$Est..US.Population/1000000,
-     xlab="Year",ylab="Population (Millions)", main="U.S. Population by Year")
+     xlab="Year", ylab="Population (Millions)", main="U.S. Population by Year",
+     pch = 16, col = "dodgerblue4")
 
 ###############################################################################
 # Scatterplot with Categorical Indicators
 ###############################################################################
 download.file(
-  "https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationData02.csv",
+  "https://raw.githubusercontent.com/faulconbridge/appliedStats/master/LaTeX/part03/data/correlationData02.csv",
   "population2.csv", "wget", extra="--no-check-certificate")
 population2 <- read.csv("population2.csv",header=TRUE)
 
-install.packages("car")
-library(car)
-scatterplot((Population/1000000)~Year | Sex, data=population2, labels=row.names(population2),
-            reg.line=FALSE,smoother=FALSE,ylab="Population (Millions)",
-            main="U.S. Population by Year and Sex")
+male <- subset(population2, Sex == "male", select = c(Year,Population))
+female <- subset(population2, Sex == "female", select = c(Population))
+
+population <- data.frame(Year = male$Year, Male = male$Population, Female = female$Population)
+
+plot(population$Year, population$Male/1000000, pch = 16, col = "dodgerblue4",
+     xlab = "Year", ylab = "Population (Millions)",
+     main = "U.S. Population by Year and Sex")
+points(population$Year, population$Female/1000000, pch = 16, col = "dodgerblue")
+text(x = 1650, y = 150, "Males", col = "dodgerblue4")
+text(x = 1650, y = 130, "Females", col = "dodgerblue")
 
 ###############################################################################
 # Correlation Example
 ###############################################################################
 download.file(
-  "https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationData03.csv",
+  "https://raw.githubusercontent.com/faulconbridge/appliedStats/master/LaTeX/part03/data/correlationData03.csv",
   "adiposity.csv", "wget", extra="--no-check-certificate")
 
 bodyFat <- read.csv("adiposity.csv", header=TRUE)
@@ -71,11 +78,11 @@ for(i in 1:4) {
   lmi <- lm(ff, data= anscombe)
   xl <- substitute(expression(x[i]), list(i=i))  
   yl <- substitute(expression(y[i]), list(i=i))
-  plot(ff, data=anscombe, col="red", pch=21, cex=1, bg = "grey", 
+  plot(ff, data=anscombe, col="black", pch=21, cex=1, bg = "firebrick2", 
        xlim=c(3,19), ylim=c(3,13), 
        xlab="x", ylab="y"
   )  
-  abline(lmi, col="blue")
+  abline(lmi, col="firebrick")
 }
 
 ###############################################################################

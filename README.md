@@ -37,8 +37,8 @@ ToDo:
         - [X] One-sample
         - [X] Paired-samples
         - [X] Independent-samples
-        - [ ] Assumptions
-        - [ ] Equality of variance
+        - [X] Assumptions
+        - [X] Equality of variance
         - [ ] Robustness
         - [ ] Implementation in R
         - [ ] Case study

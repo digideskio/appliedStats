@@ -1,4 +1,3 @@
-library(ggplot2)
 ###############################################################################
 # Mean, Median, and Mode
 ###############################################################################
@@ -12,23 +11,26 @@ median(data)
 # Skewness and Mean vs. Median
 ###############################################################################
 
-# overlay histogram and normal density
-p0 = qplot(data, geom = 'blank') +
-  stat_function(fun = dnorm) +
-  geom_histogram(aes(y = ..density..), alpha = 0.4, binwidth=0.5)
-
-print(p0)
+hist(data, col = "dodgerblue4", density = 150,
+     xlim = c(-3,3), ylim = c(0,50), xlab = "X",
+     ylab = "Frequency", main = "Histogram of Normally-Distributed Data",
+     border = "black")
+curve(dnorm(x, mean = 0, sd = 1)*120,
+      from = -3, to = 3, add = TRUE,
+      lwd = 2, col = "black")
 
 # Include some positive outliers
 data2 <- c(data,2.3,2.4,2.5,rep(2.6,3),
            2.8,rep(3,4),3.7,4.1,4.3,4.6,5,4.8)
 
-# overlay histogram and normal density
-p0 = qplot(data2, geom = 'blank') +
-  stat_function(fun = dnorm) +
-  geom_histogram(aes(y = ..density..), alpha = 0.4, binwidth=0.5)
-
-print(p0)
+hist(data2, col = "firebrick3", density = 150,
+     xlim = c(-3,5), ylim = c(0,50),
+     breaks = 16, xlab = "X", ylab = "Frequency",
+     main = "Histogram of Normal Data with Rightward Skew",
+     border = "black")
+curve(dnorm(x, mean = 0, sd = 1)*120,
+      from = -3, to = 5, add = TRUE,
+      lwd = 2, col = "black")
 
 # Compare the means and medians of our two datasets
 mean(data)
@@ -45,18 +47,18 @@ layout(matrix(c(1,2,3),1,3))
 # Small standard deviation (sd = 1)
 x=seq(-20,20,length=200)
 y=dnorm(x,mean=0,sd=1)
-plot(x,y,type="l",lwd=2,col="red", main="SD = 1")
-polygon(c(-20,x,20),c(0,y,0),col="gray")
+plot(x,y,type="l",lwd=2,col="dodgerblue", main="SD = 1")
+polygon(c(-20,x,20),c(0,y,0),col="dodgerblue", density = 150)
 
 # Moderate standard deviation (sd = 3)
 y=dnorm(x,mean=0,sd=3)
-plot(x,y,type="l",lwd=2,col="red", main="SD = 3")
-polygon(c(-20,x,20),c(0,y,0),col="gray")
+plot(x,y,type="l",lwd=2,col="dodgerblue2", main="SD = 3")
+polygon(c(-20,x,20),c(0,y,0),col="dodgerblue2", density = 150)
 
 # Large standard deviation (sd = 6)
 y=dnorm(x,mean=0,sd=6)
-plot(x,y,type="l",lwd=2,col="red", main="SD = 6")
-polygon(c(-20,x,20),c(0,y,0),col="gray")
+plot(x,y,type="l",lwd=2,col="dodgerblue4", main="SD = 6")
+polygon(c(-20,x,20),c(0,y,0),col="dodgerblue4", density = 150)
 
 layout(matrix(c(1),1,1))
 par(mar = c(2, 2, 2, 2))
@@ -118,9 +120,12 @@ height1 <- rnorm(25, 5.6667, 1/3)
 height2 <- rnorm(25, 5.6667, 1/3)
 height3 <- rnorm(25, 5.6667, 1/3)
 
-hist(height1, main="Heights of group 1", xlab="Height (feet)")
-hist(height2, main="Heights of group 2", xlab="Height (feet)")
-hist(height3, main="Heights of group 3", xlab="Height (feet)")
+hist(height1, main="Heights of group 1", xlab="Height (feet)",
+     col = "dodgerblue", xlim = c(4.75,6.75), ylim = c(0,14))
+hist(height2, main="Heights of group 2", xlab="Height (feet)",
+     col = "dodgerblue2", xlim = c(4.75,6.75), ylim = c(0,14))
+hist(height3, main="Heights of group 3", xlab="Height (feet)",
+     col = "dodgerblue4", xlim = c(4.75,6.75), ylim = c(0,14))
 
 layout(matrix(c(1),1,1))
 
@@ -131,7 +136,13 @@ for(i in 1:500) {
   avgHeight <- rbind(avgHeight, mean(height))
 }
 
-hist(avgHeight, main="Average heights of 500 groups of men", xlab="Height (feet)")
+hist(avgHeight, main="Average heights of 500 groups of men",
+     xlab="Height (feet)", col = "firebrick3", density = 175,
+     border = "black", xlim = c(5.45,5.85), ylim = c(0, 130))
+curve(dnorm(x, mean = 5.67, sd = 0.068)*(21+2/3),
+      from = 5.45, to = 5.85, add = TRUE,
+      lwd = 2, col = "black")
+
 mean(avgHeight)
 sd(avgHeight)
 
@@ -141,20 +152,32 @@ sd(avgHeight)
 ###############################################################################
 
 # Histogram
-hist(avgHeight)
+hist(avgHeight, main="Average heights of 500 groups of men",
+     xlab="Height (feet)", col = "firebrick3", density = 175,
+     border = "black", xlim = c(5.45,5.85), ylim = c(0, 130))
 
 # Kernel density plot
-plot(density(avgHeight), main="Kernel Density of Average Heights", xlab="Height (feet)")
+plot(density(avgHeight), main="Kernel Density of Average Heights",
+     xlab="Height (feet)", col = "dodgerblue4")
+polygon(density(avgHeight), col = "dodgerblue4", density = 175)
 
 layout(matrix(c(1,2),1,2))
-hist(height1, main="Heights of Group 1", xlab="Height (feet)")
-hist(height1, breaks=10, main="Heights of Group 1", xlab="Height (feet)")
+hist(height1, main="Heights of Group 1", xlab="Height (feet)",
+     col = "firebrick", density = 175, border = "black",
+     xlim = c(5,6.5), ylim = c(0,7))
+hist(height1, breaks=10, main="Heights of Group 1",
+     xlab="Height (feet)", col = "firebrick2", border = "black",
+     xlim = c(5,6.5), ylim = c(0,7))
 
 layout(matrix(c(1),1,1))
-plot(density(height1),main="Kernel Density of Heights of Group 1", xlab="Height (feet)")
+plot(density(height1),main="Kernel Density of Heights of Group 1",
+     xlab="Height (feet)", col = "dodgerblue")
+polygon(density(height1), col = "dodgerblue", density = 175)
 
 # Boxplots
-boxplot(avgHeight, main="Boxplot of Average Male Heights", horizontal=TRUE, xlab="Height (feet)")
+boxplot(avgHeight, main="Boxplot of Average Male Heights",
+        horizontal=TRUE, xlab="Height (feet)",
+        col = "dodgerblue3")
 
 # Scatterplot
 plot(height1, height2)
