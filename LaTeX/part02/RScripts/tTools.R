@@ -6,8 +6,9 @@ set.seed(0)
 treeVolume <- c(rnorm(1000, mean = 36500, sd = 2000))
 t.test(treeVolume, mu = 39000)
 
-hist(treeVolume, freq = TRUE, density = 55, col = "blue",
-     breaks = 15, main = "Histogram of Douglas Fir Volumes",
+hist(treeVolume, freq = TRUE, density = 150, col = "dodgerblue4",
+     border = "black", breaks = 15, 
+     main = "Histogram of Douglas Fir Volumes",
      xlab = "Volume (cubic feet)", xlim = c(30000, 44000),
      ylim = c(0, 225))
 
@@ -17,7 +18,7 @@ text(41000, 190, "Population mean")
 text(41000, 175, "volume")
 
 segments(mean(treeVolume), 0, mean(treeVolume), 225,
-         lwd = 3, lty = 2, col = "gray35")
+         lwd = 3, lty = 2, col = "gray70")
 text(33500, 190, "Sample mean volume", col = "gray35")
 
 ###############################################################################
@@ -64,8 +65,10 @@ plot(x, y1, type="l", lwd=2, col="red",
      ylab = "Frequency", yaxt="n",
      xlim = c(110, 175), ylim = c(0, 0.05))
 lines(x, y2)
-polygon(c(110,x,175),c(0,y2,0), col="firebrick3", density = 100)
-polygon(c(117,x,175),c(0,y1,0), col="dodgerblue4", density = 100)
+polygon(c(110,x,175),c(0,y2,0), col="firebrick3", density = 100,
+        border = "black")
+polygon(c(117,x,175),c(0,y1,0), col="dodgerblue4", density = 100,
+        border = "black")
 
 ylab=c(seq(from=0, to=175, by=25))
 y=c(seq(from=0, to=0.05, length.out = 8))
