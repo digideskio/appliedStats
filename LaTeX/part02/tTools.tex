@@ -73,13 +73,11 @@ Now, with this test, choosing the formula to use gets a little complicated. In f
 t = \frac{\bar {x}_1 - \bar{x}_2}{s_{x_1x_2} \cdot \sqrt{\frac{2}{n}}}\text{, where }s_{x_1x_2} = \sqrt{\frac{1}{2}(s_{x_1}^2+s_{x_2}^2)}
 \label{eqn:t01}
 \end{equation}
-
 Alternately, if our samples have an unequal number of observations, but equal variances, we will use:
 \begin{equation}
-t = \frac{\bar {x}_1 - \bar{x}_2}{s_{x_1x_2} \cdot \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}\text{, where }s_{x_1x_2} = \sqrt{\frac{(n_1-1)s_{x_1}^2+(n_2-1)s_{x_2}^2}{n_1+n_2-2}}
+t = \frac{\bar {x}_1 - \bar{x}_2}{s_{x_1x_2} \cdot \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}\text{, where }s_{x_1x_2} = \sqrt{\frac{(n_1-1)s_{1}^2+(n_2-1)s_{2}^2}{n_1+n_2-2}}
 \label{eqn:t02}
 \end{equation}
-
 Or, finally, we can use Welch's \textit{t}-test when the population variances are not assumed to be equal:
 \begin{equation}
 t = {\frac{\bar{x}_1 - \bar{x}_2}{s_{\bar{x}_1 - \bar{x}_2}}}\text{, where }s_{\bar{x}_1 - \bar{x}_2} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
@@ -87,11 +85,33 @@ t = {\frac{\bar{x}_1 - \bar{x}_2}{s_{\bar{x}_1 - \bar{x}_2}}}\text{, where }s_{\
 \end{equation}
 
 Woah, that's a lot of choice. So, how do we figure out which to use, exactly? Well, it's not strictly speaking wrong to always default to using Welch's test assuming unequal variances. It's maybe not something that you necessarily \textit{should} always do, but it's better than using Equation \ref{eqn:t01} or \ref{eqn:t02} when the variances aren't actually equal. That said, we'll detail how exactly to determine which of these three tests to use in both the Equality of Variances and Implementation in R sections.
+
 \section{Cautions and Considerations}
 
 \subsection{Assumptions}
 
+The suite of \textit{t}-tools assumes that:
+\begin{enumerate}
+\item the test variable is normally distributed;
+\item the variances of the test variable are equal between the two populations;
+\item the cases represent a simple random sample of the population; and
+\item the scores on the test variable are independent of one another.
+\end{enumerate}
+
 \subsection{Equality of Variances}
+
+As we mentioned above, the suite of \textit{t}-tools largely assumes that the variances of the two samples are equal. However, when this is not actually the case, unless using Welch's test, your results can be a bit misleading. This difference arises from how each of the different tests computes the standard deviation for the two samples. Assuming unequal variances, the \textbf{pooled standard deviation} is calculated.
+
+By this estimate, the standard deviations of the two samples are combined (or pooled). However, these are first \textbf{weighted} by sample size. The idea behind this is that a standard deviation for a smaller sample doesn't carry as much importance as a standard deviation from a large sample. (The standard deviation of the large sample should be a better reflection of the population standard deviation.) Accordingly, each sample is weighted by its degrees of freedom.
+
+Yet, if the two samples don't actually have the same standard deviation, this statistic quickly becomes misleading: it's like combining elephants and elephant mice together and calling them the same thing. Pretty obviously, they aren't. And once you start trying to make inferences about them, things are going to get wonky pretty quickly.
+
+So before deciding which type of independent-samples test to run, we will first conduct Levene's test for equality of variances. This operates under the hypotheses:
+\begin{eqnarray*}
+H_0:s_1=s_2 \\
+H_A:s_1\neq s_2
+\end{eqnarray*}
+Without getting into the math behind it, the idea is that if it reaches a level of statistical significance, we can conclude that the two samples are not likely to actually have equal variances and we know to use Welch's test.
 
 \subsection{Robustness of \textit{t}-Tools}
 

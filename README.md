@@ -30,9 +30,20 @@ ToDo:
       - [X] Hypotheses: directional and non-directional
       - [X] Standardized test statistics
       - [X] Significance: p-values; CIs; etc.
+      - [ ] Degrees of Freedom
       - [X] Drawing conclusions
 - [ ] Part 2
     - [ ] *t*-Tests
+        - [X] One-sample
+        - [X] Paired-samples
+        - [X] Independent-samples
+        - [ ] Assumptions
+        - [ ] Equality of variance
+        - [ ] Robustness
+        - [ ] Implementation in R
+        - [ ] Case study
+        - [ ] Exercises
+        - [ ] Additional resources
     - [ ] Alternatives to *t*-Tools
     - [ ] Comparisons Among Multiple Samples: One-Way ANOVA
     - [ ] Multifactor Studies

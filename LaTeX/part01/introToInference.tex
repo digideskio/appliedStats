@@ -17,14 +17,20 @@ In statistical inference, we often form hypotheses about our data. These will ge
 We also operate with the understanding that is easier to prove something as false than as true. Given this, the null hypothesis is always presumed true until sufficient evidence is found supporting the alternative hypothesis. Importantly, though, we do not ever formally accept the null hypothesis: we may only fail to reject it. (Recall again that most inferential statistics seek to disprove a hypothesis rather than prove it.) In this way, we may fail to reject the null hypothesis, but never accept it. (However, we may accept the alternative hypothesis. By disproving the null, we are demonstrating that its converse must, by that fact, be true.)
 
 \subsection{Test Statistics and Statistical Significance}
+
+\subsubsection{Standardized Test Statistics}
 Whenever we perform a statistical test, we are usually given two important pieces of data: a test statistic and a p-value. Standardized test statistics can take a number of different forms (z-, t-, and F-statistics are three of the more common) and each has a slightly different interpretation. However, speaking generally, every \textbf{test statistic} is a single, quantified measure for assessing patterns in the data that distinguish between the null and alternative hypotheses.
 
-Accompanying this test statistic is the \textbf{p-value}. Universally, this measure has a single interpretation: it is the probability (from 0 to 1, inclusive) that the differences observed in the data arise due to chance and natural random variation. As such, smaller p-values indicate that there is a smaller probability of the differences seen being due to chance. Many disciplines impose a ``5\% rule'' on this statistic: that is, they consider any p-value less than 0.05 (or 5\%) as being statistically significant.
+\subsubsection{Degrees of Freedom}
+
+\subsubsection{Probability Values}
+Accompanying the test statistic is the \textbf{\textit{p}-value}. Universally, this measure has a single interpretation: it is the probability (from 0 to 1, inclusive) that the differences observed in the data arise due to chance and natural random variation. As such, smaller p-values indicate that there is a smaller probability of the differences seen being due to chance. Many disciplines impose a ``5\% rule'' on this statistic: that is, they consider any p-value less than 0.05 (or 5\%) as being statistically significant.
 
 We use the term \textbf{statistically significant} to indicate that we are reasonably confident that the differences observed in the data are in fact due to an experimental manipulation or some actual difference between the groups we're looking at. There is no specific reason for using a threshold of 5\%---and indeed sometimes a 1\% or 0.1\% cutoff will be used instead---; however, this is the most commonly-agreed-upon threshold for describing a test as significant.
 
 One further consideration when performing statistical tests is that statistical significance is not the same as practical significance. Two sets of data can easily be statistically significant without being practically significant. As an example, consider patient scores on a depression questionnaire: groups from two different clinics may have significantly different scores, but if the mean scores still classify both groups as chronically depressed, a couple-point difference doesn't make a particularly meaningful impact on either group's treatment. As such, it may often be important to distinguish between what differences are statistically significant and what differences have a practical, meaningful significance.
 
+\subsubsection{Confidence Intervals}
 Statistical tests will also typically provide a \textbf{confidence interval} for the true parameter value. That is, this measure gives a range that, with some percent confidence, should contain the ``true'' value that the researcher is trying to measure. For example, if a researcher wished to know if there was a difference in average heights of boys and girls at age 8, a 95\% CI from 0.3 -- 0.9 would indicate that there was a 95\% chance that the true mean difference in height (i.e., if we measured the height of every 8-year-old boy and girl in the world) was between 0.3 feet (or 4 inches) and 0.9 feet (or 10.8 inches). Given that this confidence interval doesn't contain 0 (which would indicate that there is no difference in heights), we can likely assume that there does exist a difference in mean height between our two populations.
 
 \section{Some Considerations about Statistical Inference}
@@ -36,13 +42,13 @@ For our conclusions about statistical tests to be valid, there are always assump
 \subsubsection{How Small a p-value?}
 As mentioned above, the magnitude of a p-value needed for a result to be called ``significant'' is arbitrary: 5\% simply happens to be what is widely agreed upon. However, this still means that 1 out of every 20 experiments will tell the researcher that a significant difference exists when there actually isn't one. If we use a 1\% threshold, that drops to 1 in every 100 trials. Still more stringent is 1 in 1000 trials, or a 0.1\% cutoff. But how small or large a p-value do we really need to convince us of an effect?
 
-Many times, a much smaller p-value will be needed to refute a well-established theory. However, if you are exploring a new program of research, larger $p$-values may be fine if they are simply exploratory analyses that will be used to indicate potential avenues for further research.
+Many times, a much smaller p-value will be needed to refute a well-established theory. However, if you are exploring a new program of research, larger \textit{p}-values may be fine if they are simply exploratory analyses that will be used to indicate potential avenues for further research.
 
 \subsubsection{The Danger of Multiple Tests}
-When performing statistical analyses, if a researcher analyses the data enough different ways, eventually he or she will obtain statistically significant results. By sheer chance, this is bound to at some point happen. However, one significant result among 20 non-significant results does not constitute strong evidence against a null hypothesis. Rather, this is a process knows as $p$-hacking: the practice of waiting until a researcher finds an analysis that will produce a favorable result and then reporting that test as definitive evidence in favor of his or her hypothesis.
+When performing statistical analyses, if a researcher analyses the data enough different ways, eventually he or she will obtain statistically significant results. By sheer chance, this is bound to at some point happen. However, one significant result among 20 non-significant results does not constitute strong evidence against a null hypothesis. Rather, this is a process knows as \textit{p}-hacking: the practice of waiting until a researcher finds an analysis that will produce a favorable result and then reporting that test as definitive evidence in favor of his or her hypothesis.
 
 \subsubsection{Type I and II Errors}
-Lastly is the issue of errors regarding your conclusion about a statistical test. A \textbf{Type I Error} is equivalent to a false positive. This occurs when a researcher achieves a significant $p$-value (i.e., $p<0.05$) and rejects the null hypothesis when there is actually no evidence for doing so. If you recall from above, $p=0.05$ means that every 1 in 20 experiments, the researcher will have a significant $p$-value when there actually isn't any difference in the populations. This is a ``fluke'' that is usually caused by sampling bias or some similar error. Regardless, it ends up that the researcher rejects the null hypothesis when he or she shouldn't have.
+Lastly is the issue of errors regarding your conclusion about a statistical test. A \textbf{Type I Error} is equivalent to a false positive. This occurs when a researcher achieves a significant \textit{p}-value (i.e., $p\text{-value}<0.05$) and rejects the null hypothesis when there is actually no evidence for doing so. If you recall from above, $p\text{-value}=0.05$ means that every 1 in 20 experiments, the researcher will have a significant \textit{p}-value when there actually isn't any difference in the populations. This is a ``fluke'' that is usually caused by sampling bias or some similar error. Regardless, it ends up that the researcher rejects the null hypothesis when he or she shouldn't have.
 
 Conversely, a \textbf{Type II Error} is a false negative, occurring when a researcher fails to reject a null hypothesis despite there actually being a significant difference between the populations being studied. This may be caused by a small sample size, small effect size or power, etc. This distinction can alternately be represented:
 
@@ -60,7 +66,7 @@ The probability of a test making a Type I error is denoted $\alpha$; the probabi
 
 \section{Recap: The Components of a Statistical Test}
 
-To recap, there are 6 main components to any statistical test and write-up: the research question, hypotheses, fundamental and standardized test statistics, the $p$-value, and the overall conclusion. As an example, let's say that we are interested in determining whether there is a significant difference in the average heights of 12-year-old boys and girls. Those six steps would look something like:
+To recap, there are 6 main components to any statistical test and write-up: the research question, hypotheses, fundamental and standardized test statistics, the \textit{p}-value, and the overall conclusion. As an example, let's say that we are interested in determining whether there is a significant difference in the average heights of 12-year-old boys and girls. Those six steps would look something like:
 
 \begin{center}
 \begin{tabular}{r l}
@@ -70,8 +76,8 @@ Research Question & Is there a difference in the average heights of boys and gir
 Hypotheses & \parbox[t]{25pc}{\(H_0:\) boy height = girl height\\\(H_A:\) boy height \(\neq\) girl height}\\
 Fundamental Statistics & \parbox[t]{25pc}{Average boy height = 4'10'' \\ Average girl height = 4'11''}\\
 Standardized Statistics & This is the t-, z-, F-, etc. statistic that a statistical test will give you.\\
-$p$-value & The statistical test will also give you a $p$-value that is between 0 and 1.\\
-Conclusion & \parbox[t]{25pc}{If the $p$-value is less than $p=0.05$, most disciplines will consider that significant evidence against the null hypothesis (\(H_0\)), meaning that we can reject it and accept the alternate hypothesis. In this case, that would mean that there \textbf{is} a significant difference between the average heights of girls and boys at age 12.}
+\textit{p}-value & The statistical test will also give you a \textit{p}-value that is between 0 and 1.\\
+Conclusion & \parbox[t]{25pc}{If the \textit{p}-value is less than $p\text{-value}=0.05$, most disciplines will consider that significant evidence against the null hypothesis (\(H_0\)), meaning that we can reject it and accept the alternate hypothesis. In this case, that would mean that there \textbf{is} a significant difference between the average heights of girls and boys at age 12.}
 \end{tabular}
 \end{center}
 
