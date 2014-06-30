@@ -118,19 +118,108 @@ Without getting into the math behind it, the idea is that if it reaches a level 
 \subsection{Resistance to Outliers}
 
 \section{Implementation in R}
+Please note: all data used in these explanations are simulated.
 
 \subsection{One-Sample}
+To conduct a one-sample \textit{t}-test in R, we use the syntax \verb|t.test(y, mu = 0)| where \verb|x| is the name of our variable of interest and \verb|mu| is set equal to the mean specified by the null hypothesis.
+
+So, for example, if we wanted to test whether the volume of a shipment of lumber was less than usual ($\mu_0=39000$ cubic feet), we would run:
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+# One-sample t-test
+set.seed(0)
+treeVolume <- c(rnorm(75, mean = 36500, sd = 2000))
+t.test(treeVolume, mu = 39000) # Ho: mu = 39000
+\end{Verbatim}
+\end{framed}
 
 \subsection{Paired-Samples}
+To conduct a paired-samples test, we need either two vectors of data, $y_1$ and $y_2$, or we need one vector of data with a second that serves as a binary grouping variable. The test is then run using the syntax \verb|t.test(y1, y2, paired=TRUE)|
+
+Going back to our example above using pre-treatment and post-treatment systolic blood pressures, our test would take the form:
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+# Paired-samples t-test
+# where y1 & y2 are numeric
+set.seed(2820)
+preTreat <- c(rnorm(1000, mean = 145, sd = 9))
+postTreat <- c(rnorm(1000, mean = 138, sd = 8))
+t.test(preTreat, postTreat, paired=TRUE)
+\end{Verbatim}
+\end{framed}
 
 \subsection{Independent Samples}
 
+The independent-samples test can take one of three forms, depending on the structure of your data and the equality of their variances. The general form of the test is \verb|t.test(y1, y2, paired=FALSE)|. By default, R assumes that the variances of \verb|y1| and \verb|y2| are unequal, thus defaulting to Welch's test. To toggle this, we use the flag \verb|var.equal=TRUE|.
+
+In the three examples shown here we test the hypothesis that Clevelanders and New Yorkers spend different amounts monthly eating out. The first example assumes that we have two numeric vectors: one with Clevelanders' spending and one with New Yorkers' spending. The second example uses a binary grouping variable with a single column of spending data. (That is, there is only one column of spending data; however, for each dollar amount, the next column specifies whether it is for a New Yorker or a Clevelander.) Finally, the third example assumes that the variances of the two samples are unequal and uses Welch's test.
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+# Independent-samples t-test
+# where y1 and y2 are numeric
+set.seed(0)
+ClevelandSpending <- rnorm(50, mean = 250, sd = 75)
+NYSpending <- rnorm(50, mean = 300, sd = 80)
+t.test(ClevelandSpending, NYSpending, var.equal=TRUE)
+
+# [...] where y1 is numeric and y2 is binary
+spending <- c(ClevelandSpending, NYSpending)
+city <- c(rep("Cleveland", 50), rep("New York", 50))
+t.test(spending~city, var.equal=TRUE)
+
+# with equal variances not assumed
+t.test(ClevelandSpending, NYSpending, var.equal=FALSE)
+\end{Verbatim}
+\end{framed}
+
 \section{Case Study: Medicare Spending on Patients}
+The data used in this example were taken from \textit{Medicare hospital spending per patient} dataset, published by the Centers for Medicare and Medicaid Services, an agency of the Department of Health and Human Services.
+
+Let's say that we're moving from New York to California and are interested in seeing how average Medicare spending per patient varies between the two states. We will first state our null and alternative hypotheses:
+\begin{eqnarray*}
+H_0&:&\mu_{\text{CA}}-\mu_{\text{NY}}=0 \\
+H_A&:&\mu_{\text{CA}}- \mu_{\text{NY}}\neq 0 \\
+\end{eqnarray*}
+We're assuming that there is actually no difference in the mean Medicare spending per patient between the two states and are testing the hypothesis that a difference \textit{does} exist. We aren't specifying the direction of the difference (i.e., we aren't specifying which state we think will have a higher mean spending rate).
+
+We can also visualize the spending patterns of the two states in Figure \ref{fig:t03}. Here, we see the Medicare spending per patient in each of the two states as a proportion of the national average spending per patient. (E.g., 1 represents the national average spending; 0.9 represents 90\% the national average spending, etc.)
 
 \begin{figure}[h]
 \includegraphics[width=35pc]{t03}
 \caption{Medicare spending per patient in New York and California. Rates of spending are reported as a proportion of the national average Medicare spending per patient.}
+\label{fig:t03}
 \end{figure}
+
+Next, we conduct Levene's test to see if we can assume equal variances or not:
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+Levene's Test for Homogeneity of Variance (center = median)
+       Df F value    Pr(>F)    
+group   1  11.703 0.0006811 ***
+      448  
+\end{Verbatim}
+\end{framed}
+
+We see that there is significant evidence, $F=11.70$, $p\text{-value}<0.001$, that the variances of the two samples differ. Given this, we will go ahead and use Welch's test to evaluate our hypotheses. Doing so gives us the result:
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+	Welch Two Sample t-test
+
+t = 1.8277, df = 430.923, p-value = 0.06828
+alternative hypothesis: true difference in means is not equal to 0
+
+95 percent confidence interval:
+ -0.001252522  0.034494749
+
+sample estimates:
+mean in group CA  |  mean in group NY 
+       0.9762290  |         0.9596078 
+\end{Verbatim}
+\end{framed}
+
+So, here we have an interesting result: it looks like the two states \textit{might} have different mean spending levels per patient, $t=1.828$, $p\text{-value}=0.0683$; however, this doesn't quite reach our level of statistical significance. Moreover, if we look at the 95\% confidence interval provided, we see that the difference between the two population means is likely between -0.001 and 0.034, meaning that if there even is a difference between the two states, at most it's a difference of 3\% in per-patient spending relative to the national average.
+
+Given this, we can conclude that although there may be a difference between the average per-patient Medicare spending of California and New York, that difference does not quite rise to the level of statistical significance. Further, even if there were a significant difference, there would not be a practical difference, as the two states are not likely to vary in spending by more than 3\% of one another.
 
 \section{Exercises}
 

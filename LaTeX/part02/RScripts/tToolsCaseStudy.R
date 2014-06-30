@@ -1,5 +1,5 @@
 # Download and view the file
-download.file("https://...", "medicareSpending.csv",
+download.file("https://raw.githubusercontent.com/faulconbridge/appliedStats/master/LaTeX/part02/data/tToolsCaseStudy01.csv", "medicareSpending.csv",
               method="wget", extra="--no-check-certificate")
 medicareSpending <- read.csv("medicareSpending.csv", header=TRUE)
 View(medicareSpending)
