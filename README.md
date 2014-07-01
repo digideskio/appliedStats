@@ -39,13 +39,34 @@ ToDo:
         - [X] Independent-samples
         - [X] Assumptions
         - [X] Equality of variance
-        - [ ] Robustness
+        - [X] Robustness
+        - [X] Implementation in R
+        - [X] Case study
+        - [ ] Exercises
+        - [ ] Additional resources
+    - [ ] Alternatives to *t*-Tools
+        - [X] What are nonparametric statistics?
+        - [X] Mann-Whitney
+        - [X] Wilcoxon signed rank
+        - [ ] Concerns and assumptions
         - [ ] Implementation in R
         - [ ] Case study
         - [ ] Exercises
         - [ ] Additional resources
-    - [ ] Alternatives to *t*-Tools
     - [ ] Comparisons Among Multiple Samples: One-Way ANOVA
+        - [ ] General use
+        - [ ] Fixed/random effects
+        - [ ] sum of squares
+        - [ ] f-test
+        - [ ] power analyses
+        - [ ] effect sizes
+        - [ ] post-hocs, planned comparisons
+        - [ ] assumptions &c
+        - [ ] robustness
+        - [ ] implementation in R
+        - [ ] case study
+        - [ ] exercises
+        - [ ] additional resources
     - [ ] Multifactor Studies
     - [ ] Multifactor Studies with Replication
 - [ ] Part 3
@@ -73,7 +94,8 @@ ToDo:
 - [ ] Part 4
     - [ ] Working with Time-Series Data
     - [ ] Factor Analysis and PCA
-    - [ ] Working with Rank-Ordered Data
+    - [ ] Cluster Analysis
+    - [ ] Working with Ranked and Other Nonparametric Data
     - [ ] Counts, Proportions, and Odds
 - [ ] Part 5
     - [ ] Choosing the Right Analysis
