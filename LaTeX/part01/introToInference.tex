@@ -23,6 +23,14 @@ Whenever we perform a statistical test, we are usually given two important piece
 
 \subsubsection{Degrees of Freedom}
 
+Degrees of freedom is one of those concepts that (at least in the social sciences) is mentioned briefly and then promptly forgotten for the rest of your career. And that's darned unfortunate, because degrees of freedom is actually an important concept and fairly nuanced to explain to a non-mathematical audience (and frankly deserving a better treatment than we give it here).
+
+A basic definition of the concept is the ``number of observations minus the number of necessary relations among these observations'' (via \href{http://dx.doi.org/10.1037%2Fh0054588}{Walker, H.}. In other words it's the total number of observations in your sample minus the number of parameters being estimated.
+
+The thinking behind this goes that your sample data can be used to estimate one of two things: the variance of the population or a parameter (e.g., a piece of data can be used to estimate the population mean or standard deviation, but not both). Now, generally, each parameter being estimated takes up only one degree of freedom with the rest left to estimate variance. That doesn't always hold true, such as when using Welch's \textit{t}-test, but it's close enough for our purposes.
+
+Again, we can't emphasize enough how much better an explanation this concept deserves and we strongly recommend that you take an afternoon to read up on it. Gerard Dallal's \href{http://www.jerrydallal.com/LHSP/dof.htm}{Degrees of Freedom} might be a good place to start!
+
 \subsubsection{Probability Values}
 Accompanying the test statistic is the \textbf{\textit{p}-value}. Universally, this measure has a single interpretation: it is the probability (from 0 to 1, inclusive) that the differences observed in the data arise due to chance and natural random variation. As such, smaller p-values indicate that there is a smaller probability of the differences seen being due to chance. Many disciplines impose a ``5\% rule'' on this statistic: that is, they consider any p-value less than 0.05 (or 5\%) as being statistically significant.
 
