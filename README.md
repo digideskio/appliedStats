@@ -4,7 +4,7 @@ Applied Statistics
 ToDo:
 -----
 - [ ] Convert this to Oreilly's HTMLBook specification? Maybeh?
-- [ ] Part 1
+- [X] Part 1
     - [X] Introduction
       - [X] Why I'm writing this
       - [X] Why you should care
@@ -30,7 +30,7 @@ ToDo:
       - [X] Hypotheses: directional and non-directional
       - [X] Standardized test statistics
       - [X] Significance: p-values; CIs; etc.
-      - [ ] Degrees of Freedom
+      - [X] Degrees of Freedom
       - [X] Drawing conclusions
 - [ ] Part 2
     - [ ] *t*-Tests
@@ -61,7 +61,7 @@ ToDo:
         - [ ] power analyses
         - [ ] effect sizes
         - [ ] post-hocs, planned comparisons
-        - [ ] assumptions &c
+        - [ ] assumptions &c.
         - [ ] robustness
         - [ ] implementation in R
         - [ ] case study
