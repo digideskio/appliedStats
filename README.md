@@ -89,6 +89,7 @@ ToDo:
       - [ ] Exercises
       - [ ] Additional resources
     - [ ] Multiple Regression
+    - [ ] Polynomial Regression
     - [ ] Logistic Regression
     - [ ] Model Checking and Refinement
 - [ ] Part 4
@@ -99,4 +100,5 @@ ToDo:
     - [ ] Counts, Proportions, and Odds
 - [ ] Part 5
     - [ ] Choosing the Right Analysis
+    - [ ] The Role of Data Transformations
     - [ ] Sharing Data with Others
