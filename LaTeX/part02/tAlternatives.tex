@@ -90,7 +90,24 @@ Following  that,  there's  another  formula that's  just  as  fun  as the  last 
 
 \subsection{Assumptions of the Mann-Whitney Test}
 
+This test assumes that:
+\begin{enumerate}
+\item All observations are independent of one another;
+\item The data are measured on an ordinal scale;
+\item The distributions of both groups are equal under the null hypothesis;
+\item The responses are continuous; and
+\item The alternative hypothesis is restricted to a shift in location (i.e., $F_1(x)=F_2(x+\delta)$).
+\end{enumerate}
+
 \subsection{Assumptions  of  the Wilcoxon Signed-Rank Test}
+
+This test assumes:
+\begin{enumerate}
+\item Data are paired and come from the same population;
+\item Each pair is chosen randomly;
+\item Each pair is independent of every other pair; and
+\item The data are measured on an ordinal scale.
+\end{enumerate}
 
 \section{Implementation in R}
 
