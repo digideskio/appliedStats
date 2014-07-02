@@ -10,7 +10,7 @@ The idea is that most test rely on parameters such as mean, variance, etc. (Thus
 
 Let's take \textit{t}-tools from the previous chapter: those rely on sample means taken from two populations that we assume to be normally distributed. If those populations don't follow this distribution, our test can fall apart and give us misleading results.
 
-WIth nonparametric tests, our data don't need to follow any particular distribution: our statistical tests are agnostic to this. We are able to achieve this break from dependence on probability distribution in one of two ways: through distribution-free statistical methods and through nonparametric statistics.
+With nonparametric tests, our data don't need to follow any particular distribution: our statistical tests are agnostic to this. We are able to achieve this break from dependence on probability distribution in one of two ways: through distribution-free statistical methods and through nonparametric statistics.
 
 In either case, nonparametric tests will usually operate on ordinal data: that is, data that are numeric, but that don't have any true 0 or necessarily equal spacing between items. For instance, if we were administering a health survey and asked respondents, "How would you rate your current health?"
 
@@ -22,11 +22,11 @@ Although there are many types of nonparametric tests, we will only go over one o
 
 \subsection{Man-Whitney U Test}
 
-First up is the Mann-Whitney U test, also variously known as the Mann-Whiteney-Wilcoxon test, the Wilcoxon rank-sum test, and the Wilcoxon-Mann-Whitney test. Whew, that's a mouthful.
+First up is the Mann-Whitney U test, also variously known as the Mann-Whitney-Wilcoxon test, the Wilcoxon rank-sum test, and the Wilcoxon-Mann-Whitney test. Whew, that's a mouthful.
 
 Thankfully, though, the test itself is a bit simpler than deciding what to call it! The basic idea here is that we are going to take the data from our two samples and rand-order them. For example, let's say that we're working in a call center and we launch a campaign to decrease customers' wait time before they are connected to a representative. We measure the wait times both before and after this campaign and want to determine whether there was an impact of the initiative.
 
-To test this, we will (1) combine the data from the two samples; (2) rank all of the values in ascending order; (3) calculate the ranks for ties (by averaging the rank of each tied item); and (4) salculate the sum of the ranks for the first sample (in this example, the wait times before our intervention). Our process might look something like this:
+To test this, we will (1) combine the data from the two samples; (2) rank all of the values in ascending order; (3) calculate the ranks for ties (by averaging the rank of each tied item); and (4) calculate the sum of the ranks for the first sample (in this example, the wait times before our intervention). Our process might look something like this:
 
 \begin{tabular}{r | l l l}
 Condition & Wait time (mins) & Rank & Tied rank \\
@@ -48,16 +48,17 @@ Before & 18.0 & 156 & 155.5 \\
 Before & 18.1 & 157 & 157 \\
 After & 18.2 & 158 & 158 \\
 Before & 18.4 & 159 & 159 \\
+\hline
 \multicolumn{3}{l}{Sum of ranks for Before Intervention} & $9743.5$ \\
 \end{tabular}
 
 So, here we have our indicator variable in the first column, our raw data in the second column, ordered from smallest to largest, and our ranked values in the third and fourth columns. Again, whenever we have a tie, we take the average rank of all tied items at that measurement. Finally, we take all of the ranks for our ``Before Intervention'' and add them up to get our W statistic.
-
+\clearpage
 And, at last, we're ready to go and conduct our fun little statistical test. To do this, we'll use the formula (it's a doozy!):
 \begin{equation}
 Z_W = \frac{\left|W-\frac{n(m+n+1}{2}\right|-0.5}{\sqrt{\frac{mn(m+n+1)}{12}}}
 \end{equation}
-where $W$ is the Mann-Whiteney test statistic that we calculated above, $n$ is the size of the first sample, and $m$ is the size of the second sample. Of course, this is only unless there are ties, in which case the equation gets even funkier. But it's all good! Modern statistical packages have you covered: no chance we're about to make you do this all by hand.
+where $W$ is the Mann-Whitney test statistic that we calculated above, $n$ is the size of the first sample, and $m$ is the size of the second sample. Of course, this is only unless there are ties, in which case the equation gets even funkier. But it's all good! Modern statistical packages have you covered: no chance we're about to make you do this all by hand.
 
 The point is, this ends up spitting out a handy $Z_W$ statistic and \textit{p}-value, real similar to a \textit{t}-test like the ones we just ran.
 
@@ -70,6 +71,7 @@ In this test, we compute what's called a signed rank (so it's a signed rank test
 Let's take the example of a high school math test: a teacher wants to find out if a review session helps her students' understanding of the concepts they've covered in the last chapter. To test this, she administers a pretest and computes each student's percentage score, gives the lesson, and then conducts a post-test and computes students' percentage scores again.
 
 For the purposes of this test, we will rank the scores based on the magnitude of their difference. For instance:
+
 \begin{tabular}{l l l | l l l l}
 Student & Pre & Post & Difference & Magnitude & Rank & Signed rank \\
 \hline
