@@ -91,6 +91,33 @@ leveneTest(bloodPressures$Systolic, bloodPressures$Treatment)
 var.test(preTreat, postTreat)
 
 ###############################################################################
+# Kurtosis
+###############################################################################
+
+par(mar = c(2.1,4.1,4.1,2.1))
+set.seed(0)
+x <- c(rep(
+  mean(
+    rnorm(10000,0,5)
+    ),1000)
+  )
+plot(density(x), xlab = "",
+     ylab = "", main = "Normal and Platykurtic Distributions",
+     col = "firebrick3",
+     xlim = c(0,0.1))
+polygon(density(x), col = "firebrick3", density = 125)
+
+set.seed(0)
+x <- c(rep(
+  mean(
+    rnorm(10000,0,7)
+  ),1000)
+)
+
+dens <- density(x)
+polygon(c(0,dens$x-0.02,0.1), c(0,dens$y,0), col="dodgerblue3", density = 125)
+
+###############################################################################
 # Implementation in R
 ###############################################################################
 

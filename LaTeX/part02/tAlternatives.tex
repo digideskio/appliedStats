@@ -1,6 +1,6 @@
 %!TEX root=../book.tex
 
-\chapter{Alternatives to $t$-Tools}
+\chapter{Alternatives to \textit{t}-Tools}
 
 \section{What Are Nonparametric Statistics?}
 
@@ -72,7 +72,7 @@ Let's take the example of a high school math test: a teacher wants to find out i
 
 For the purposes of this test, we will rank the scores based on the magnitude of their difference. For instance:
 
-\begin{tabular}{l l l | l l l l}
+\begin{tabular}{l l l | c c c c}
 Student & Pre & Post & Difference & Magnitude & Rank & Signed rank \\
 \hline
 1 & 78 & 78 & 0 & 0 & --- & --- \\
@@ -113,36 +113,38 @@ This test assumes:
 
 \section{Implementation in R}
 
-Please note: all data used in these explanations are simulated.
-
-For both tests, the same function, \verb|wilcox.test(x,y)| is called.
+Please note: all data used in these explanations are simulated. For both tests, the same function, \verb|wilcox.test(x,y)| is called. One important tidbit to remember is that the default function does not handle ties gracefully. If you have any ties in your data, you should instead use \verb|wilcox_test()| in the \verb|coin| package. We detail the use of both below.
 
 \subsection{Mann-Whitney Test}
+
+To specify that a Mann-Whitney test should be conducted, we set the \verb|paired| flag to \verb|FALSE|:
 
 \begin{framed}
 \begin{Verbatim}[samepage=TRUE]
 set.seed(0)
-before <- # SOME VECTOR THINGY
-after <- # SOME VECTOR THINGY
+before <- c(rnorm(100, 4.9, 3.8))
+after <- c(rnorm(100,3.8, 2.9))
 
-wilcox.test(before, after, paired = FALSE
+wilcox.test(before, after, paired = FALSE)
 \end{Verbatim}
 \end{framed}
 
 \subsection{Wilcoxon Signed-Rank Test}
 
+This test can be conducted with either two vectors of paired data or a single vector of difference values (i.e., $x_1-x_2$). For both tests, we indicate that a Wilcoxon signed-rank test should be conducted by setting the \verb|paired| flag to \verb|TRUE|.
+
 \begin{framed}
 \begin{Verbatim}[samepage=TRUE]
 set.seed(0)
-pretest <- # SOME VECTOR
-posttest <- # SOME VECTOR
+pretest <- c(rnorm(100,70,10))
+posttest <- c(rnorm(100,85,7))
 difference <- pretest - posttest
 
 # Paired-samples test
 wilcox.test(pretest, posttest, paired = TRUE)
 
 # Difference vector or one-sample test
-wilcox.test(difference)
+wilcox.test(difference, paired = TRUE)
 \end{Verbatim}
 \end{framed}
 

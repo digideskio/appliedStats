@@ -6,7 +6,7 @@ First let's go ahead and download our data from GitHub:
 ```{r}
 # This will let us download the file from a remote URL
 
-download.file("https://raw.githubusercontent.com/faulconbridge/appliedStats/master/part2/data/correlationCaseStudy.csv","census.csv","wget",extra="--no-check-certificate")
+download.file("https://raw.githubusercontent.com/faulconbridge/appliedStats/master/LaTeX/part03/data/correlationCaseStudy.csv","census.csv","wget",extra="--no-check-certificate")
 
 # And now we will read the data into R and store it
 # in a data frame called 'data'
@@ -26,12 +26,14 @@ Now, we have two columns that we're interested in: highSchoolorHigher and perCap
 plot(data$HighSchoolOrHigher,data$perCapitaIncome,
      xlab="Proportion with HS diploma or higher",
      ylab="Per capita income (dollars)",
-     main="Scatterplot of Education by Per Capita Income")
+     main="Scatterplot of Education by Per Capita Income",
+     pch = 21, bg = "dodgerblue2", cex.axis = 0.8,
+     cex.lab = 0.9, cex.main = 0.9)
 
 # We can also plot a line of best fit:
 
 fit <- lm(data$perCapitaIncome~data$HighSchoolOrHigher)
-abline(fit)
+abline(fit, col = "dodgerblue4")
 ```
 
 As we can see, there appears to be a positive linear relationship between per capita income and the proportion of a state's residents having a high school diploma or higher. Our next step is then to quantify the strength of this relationship. To do this, we will perform a bivariate correlation

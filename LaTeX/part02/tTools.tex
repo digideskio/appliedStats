@@ -117,10 +117,12 @@ Without getting into the math behind it, the idea is that if it reaches a level 
 
 When we talk about the robustness of a test, we're talking about how well it holds up when we violate the assumptions that it relies on. Generally speaking, a more robust test is, of course, preferable: it allows us to still reach largely valid conclusions when some or all of our assumptions are not met.
 
-When working with \textit{t}-tools, normality is generally not the biggest concern. As long as the sizes of your two samples are sufficiently large the test will remain valid, regardless of departures from normality. However, if both of the samples have the same standard deviation, these tests are moderately affected by long-tailedness (e.g., Figure [[FIGURE NO]]).
+When working with \textit{t}-tools, normality is generally not the biggest concern. As long as the sizes of your two samples are sufficiently large the test will remain valid, regardless of departures from normality. However, if both of the samples have the same standard deviation, these tests are moderately affected by long-tailedness (e.g., Figure \ref{fig:t04}).
 
 \begin{figure}[h]
+\includegraphics[width=35pc]{t04}
 \caption{Two samples with the same standard deviation and approximately the same shape. One sample (blue) has longer tails. This moderately impacts the validity of \textit{t}-tools.}
+\label{fig:t04}
 \end{figure} 
 
 If our assumption of independence, however, is violated, the \textit{t}-tool is likely to give misleading results. This assumption may be violated when there are cluster effects (samples come from the same cluster) or serial effects(samples are close together in time or space). 

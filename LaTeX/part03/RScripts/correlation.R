@@ -10,28 +10,49 @@ View(population)
 
 plot(population$Year, population$Est..US.Population/1000000,
      xlab="Year", ylab="Population (Millions)", main="U.S. Population by Year",
-     pch = 16, col = "dodgerblue4")
+     pch = 16, col = "dodgerblue4", cex.main = 0.9)
 
 ###############################################################################
 # Scatterplot with Categorical Indicators
 ###############################################################################
-download.file(
-  "https://raw.githubusercontent.com/faulconbridge/appliedStats/master/LaTeX/part03/data/correlationData02.csv",
-  "population2.csv", "wget", extra="--no-check-certificate")
-population2 <- read.csv("population2.csv",header=TRUE)
 
-male <- subset(population2, Sex == "male", select = c(Year,Population))
-female <- subset(population2, Sex == "female", select = c(Population))
+par(mar = c(4.1,4.1,4.1,2.1))
+set.seed(0)
+diagnosis <- data.frame(diagnosis = c(rep("mild", 25),
+                                      rep("moderate", 25),
+                                      rep("severe", 25)),
+                        depression = c(rnorm(25, 3, 0.4),
+                                        rnorm(25, 5, 0.3),
+                                        rnorm(25, 7, 0.5)),
+                        anxiety = c(rnorm(25, 4, 1.2),
+                                     rnorm(25, 6, 0.8),
+                                     rnorm(25, 9, 0.6))
+                        )
 
-population <- data.frame(Year = male$Year, Male = male$Population, Female = female$Population)
+with(diagnosis, plot(depression, anxiety, type = "n",
+                     xlab = "", ylab = "Anxiety",
+                     main = "Clinical Anxiety and Depression Scores",
+                     cex.main = 0.9))
+mtext("Depression", side = 1, line = 2)
 
-plot(population$Year, population$Male/1000000, pch = 16, col = "dodgerblue4",
-     xlab = "Year", ylab = "Population (Millions)",
-     main = "U.S. Population by Year and Sex")
-points(population$Year, population$Female/1000000, pch = 16, col = "dodgerblue")
-text(x = 1650, y = 150, "Males", col = "dodgerblue4")
-text(x = 1650, y = 130, "Females", col = "dodgerblue")
+with(diagnosis[diagnosis$diagnosis=="mild",], 
+               points(depression, anxiety, pch = 15,
+                      col = "dodgerblue", )
+               )
 
+with(diagnosis[diagnosis$diagnosis=="moderate",], 
+     points(depression, anxiety, pch = 16,
+            col = "dodgerblue2", )
+)
+
+with(diagnosis[diagnosis$diagnosis=="severe",], 
+     points(depression, anxiety, pch = 17,
+            col = "dodgerblue4", )
+)
+
+text(x = 7, y = 5.5, "Mild bipolar", col = "dodgerblue")
+text(x = 7, y = 4.25, "Moderate bipolar", col = "dodgerblue2")
+text(x = 7, y = 3, "Severe bipolar", col = "dodgerblue4")
 ###############################################################################
 # Correlation Example
 ###############################################################################
