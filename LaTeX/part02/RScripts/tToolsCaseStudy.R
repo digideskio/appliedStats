@@ -20,7 +20,9 @@ with(stateData[stateData$state=="CA",],
           border = "black", breaks = 16,
           main = "Medicare Spending Per Patient By State",
           xlab = "Spending Per Patient",
-          ylab = "Relative Frequency"))
+          ylab = "Relative Frequency",
+          cex.main = 0.8, cex.lab = 0.9,
+          cex.axis = 0.8, las = 1))
 
 with(stateData[stateData$state=="NY",],
      hist(spendingPerPatient, add = TRUE,
@@ -29,8 +31,12 @@ with(stateData[stateData$state=="NY",],
           col = "dodgerblue3", density = 75,
           border = "black"))
 
-text(x = 0.7, y = 4.5, "California (M=0.98)", col = "firebrick2")
-text(x = 0.7, y = 3.5, "New York (M=0.96)", col = "dodgerblue3")
+text(x = 0.7, y = 4.5,
+     "California (M=0.98)", col = "firebrick2",
+     cex = 0.8)
+text(x = 0.7, y = 3.5,
+     "New York (M=0.96)", col = "dodgerblue3",
+     cex = 0.8)
 
 # We can visualize the data from any state easily
 # using this dummy code: just swap in whatever
