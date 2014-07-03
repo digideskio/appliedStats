@@ -26,6 +26,11 @@
   </script>
 </head>
 <body>
+  <div style ="position:fixed;width:100%;min-width:300px;height:100%;min-height:300px;opacity:0.9;filter: alpha(opacity=90);background-color:#2F353B;color:#f8f8f8;z-index:9;">
+    <p style="margin: 125px auto auto auto; color:#f8f8f8; width:30%;min-width:300px;height:30%;min-height:300px;">
+      Uh-oh! We've decided to hold off on working on this site until we finish with the \(\LaTeX\) version of the book. In the meanwhile, please feel free to <a href="https://github.com/faulconbridge/appliedStats/raw/master/LaTeX/book.pdf" target="_blank">check it out on GitHub.</a>
+    </p>
+  </div>
   <div class="content">
     <h1 class="title">Applied Statistics</h1>
     <h2 class="title">An Introduction to Statistical Analysis</h2>

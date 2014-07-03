@@ -48,20 +48,18 @@ ToDo:
         - [X] What are nonparametric statistics?
         - [X] Mann-Whitney
         - [X] Wilcoxon signed rank
-        - [ ] Concerns and assumptions
-        - [ ] Implementation in R
+        - [X] Concerns and assumptions
+        - [X] Implementation in R
         - [ ] Case study
         - [ ] Exercises
         - [ ] Additional resources
     - [ ] Comparisons Among Multiple Samples: One-Way ANOVA
-        - [ ] General use
-        - [ ] Fixed/random effects
-        - [ ] sum of squares
-        - [ ] f-test
-        - [ ] power analyses
-        - [ ] effect sizes
+        - [X] General use
+        - [X] Fixed/random effects
+        - [X] sum of squares
+        - [X] F-test
         - [ ] post-hocs, planned comparisons
-        - [ ] assumptions &c.
+        - [X] assumptions &c.
         - [ ] robustness
         - [ ] implementation in R
         - [ ] case study

@@ -34,15 +34,47 @@ Random effects models assume that there is some inherent amount of individual va
 
 \subsection{Sum of Squares}
 
-Residual, treatment, and total sums of squares are discussed more fully in our chapter on simple linear regression.
+Residual, treatment, and total sums of squares are discussed more fully in our chapter on simple linear regression. The basic idea here is that there are two big sources of error: the treatment and the residual. Every time we have an experiment and are taking measurements, there is going to be some amount of background noise inherent in that: the point of statistical modeling is to reduce the amount of noise that we are unable to explain.
 
-\subsection{The F-Test}
+As such, there is noise from the treatment (individuals responding differently to the stimuli) and noise from the residual (those random fluctuations that our model is unable to explain). These combine to form a total measure of the error. In the context of an ANOVA, the residual error (termed the residual sum of squares) is equivalent to the variance within each group; the treatment sum of squares equivalent to the variance between groups. Take for instance Figures \ref{fig:anova02} and \ref{fig:anova03}.
 
-\subsection{Recommended Legwork}
+\begin{figure}[h]
+\includegraphics[width=35pc]{anova02}
+\label{fig:anova02}
+\caption{Patient survival rates using two competing treatment regimens. Here, between-groups variance is illustrated, showing the distance between the means of the two treatment groups.}
+\end{figure}
 
-\subsubsection{Power Analyses}
+In Figure \ref{fig:anova02}, we are looking at the difference in locations of the two treatment groups relative to one another. A greater distance between the two treatment groups indicates that there exists a more substantial effect of the treatment on patient outcomes. Understandably, larger between-groups variances make it easier for our statistical test to establish the significance of a difference: the less overlap between groups, the more clear the difference becomes.
 
-\subsubsection{Effect Size}
+\begin{figure}[h]
+\includegraphics[width=35pc]{anova03}
+\label{fig:anova03}
+\caption{Patient survival rates using two competing treatment regimens. Here, within-groups variance is illustrated, showing the spread of the measurements within each treatment group.}
+\end{figure}
+
+Likewise, in Figure \ref{fig:anova03}, we see the variance within groups. The treatment group in light blue has a larger variance than does the treatment group on the right in dark blue. Unlike between-groups variance, here we rather see smaller within-group variances. The reason for this is that a larger within-groups variance means that we need an even \textbf{bigger} between-groups variance to compensate (or a much larger sample size): this type of variance obscures the effect of our treatment by introducing additional noise to our model.
+
+Formally, we define these measurements as sums of squares, calculated:
+\begin{eqnarray*}
+SS_{residual} &=& \sum_{i=1}^n \left(y_i - \hat{y}_i\right)^2 \\
+SS_{treatment} &=& \sum_{i=1}^n \left(\hat{y}_i-\bar{y}_i\right) \\
+SS_{total} &=& SS_{residual}+SS_{treatment} \\
+\end{eqnarray*}
+
+\subsection{The \textit{F}-Test}
+
+The \textit{F}-test is used to take these observed variances and give a standardized test statistic allowing us to quantify the magnitude of the difference observed between our treatment groups. It is calculated by:
+\begin{equation}
+F = \frac{MS_{treatment}}{MS_{residual}}
+\end{equation}
+
+The mean square ($MS$) statistics are calculated by:
+\begin{equation*}
+F = \frac{\text{Between-groups}}{\text{Within-groups}} = \frac{MS_{treatment}}{MS_{residual}} = \frac{SS_{treatment}/(I-1)}{SS_{residual}/(n-1)}
+\end{equation*}
+where $I$ is the number of treatments and $n$ is the total number of observations.
+
+Values of the \textit{F}-statistic above 1 indicate that the observed results are further and further inconsistent with the null hypothesis. However, the exact value of $F$ needed for statistical significance will vary as a function of your degrees of freedom.
 
 \subsection{Follow-Up Analyses}
 
@@ -53,6 +85,15 @@ Residual, treatment, and total sums of squares are discussed more fully in our c
 \section{Cautions and Considerations}
 
 \subsection{Assumptions}
+
+This test assumes that:
+
+\begin{enumerate}
+\item the samples are normally-distributed;
+\item the samples are independent;
+\item the cases represent a simple random sample of the population; and
+\item the variances of the treatment groups are equal.
+\end{enumerate}
 
 \subsection{Robustness of the Test}
 
