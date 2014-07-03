@@ -104,8 +104,8 @@ x <- c(rep(
 plot(density(x), xlab = "",
      ylab = "", main = "Normal and Platykurtic Distributions",
      col = "firebrick3",
-     xlim = c(0,0.1))
-polygon(density(x), col = "firebrick3", density = 125)
+     xlim = c(0,0.1), cex.main = 0.9)
+polygon(density(x), col = "firebrick3", density = 150)
 
 set.seed(0)
 x <- c(rep(
@@ -115,7 +115,7 @@ x <- c(rep(
 )
 
 dens <- density(x)
-polygon(c(0,dens$x-0.02,0.1), c(0,dens$y,0), col="dodgerblue3", density = 125)
+polygon(c(0,dens$x-0.02,0.1), c(0,dens$y,0), col="dodgerblue3", density = 75)
 
 ###############################################################################
 # Implementation in R
