@@ -81,6 +81,7 @@ The formal calculation of the proportion of the variance that is explained by th
 \caption{A residual is the difference between an observed data point and its predicted value at a given point $X$. This represents the error that the model is unable to explain.}
 \end{figure}
 
+\subsubsection{$R^2$ and Residuals}
 When calculation $R^2$, we use the formula:
 \begin{equation}
 R^2 \equiv 1-\frac{SS_{residual}}{SS_{total}}
@@ -111,6 +112,20 @@ Next we can look at the residual sum of squares, shown in blue on the right. Her
 
 So, knowing that a larger value of our $SS_{total}$ indicates a stronger relationship and that a smaller value of our $SS_{residual}$ means a better model, we can see that larger values of $R^2$ mean that a larger proportion of the variance seen in our data is explained by the model. (Remember, dividing a small number---$SS_{residual}$---by a larger number---$SS_{total}$---gives you an even smaller result. So if $R^2$ is equal to 1 minus whatever that value is, its value will approach 1 as the model becomes better and 0 as the model becomes worse.
 
+\subsubsection{Residuals in the Context of a Linear Model}
+
+When we construct a regression model, looking at a plot of the fitted values by the residuals can be a good diagnostic tool. (In R we achieve this by calling \verb|plot(resid(fit), fitted(fit)| where \verb|fit| is the linear model that we have created. See our Implementation in R section for details of how to create a linear model.) Figure \ref{fig:regression08} illustrates some common patterns among residual plots.
+
+\begin{figure}[h]
+\includegraphics[width=35pc]{regression08}
+\label{fig:regression08}
+\caption{Typical patterns for biased and unbiased, heteroscedastic and homoscedastic residuals}
+\end{figure}
+
+Here, what we really want to see is something like the graph in the top left---unbiased and homoscedasatic. When this is the case, our residuals will form roughly a rectangle on our plot. It indicates that the model fits our data fairly well. When we start seeing any of the other patterns illustrated, however, that may indicate either that the data need to be transformed or that a different model should be fit differently (e.g., a different type of regression is appropriate).
+
+Unfortunately, the examples given here are all highly stylized: in practice, it's often a much murkier picture that you're left to interpret and make a best guess on. There are some tools to help you that we outline in our chapter on Data Transformations, but by and large this is something that you just need to get a feel for through practice and repeated exposure.
+
 \section{Cautions and Considerations}
 
 \subsection{Basic Assumptions}
@@ -127,12 +142,52 @@ When running a regression, there are certain conditions that the model assumes a
 
 \section{Implementation in R}
 
-\section{Case Study: [STUDY]}
+\section{Case Study: Evidence for the Big Bang}
+
+Let's, for throwback Thursday's sake, head back to the late 1920s when physicists were hotly debating models of the universe, whether it was expanding, whether it was an \href{http://en.wikipedia.org/wiki/Steady_state_theory}{eternal steady state universe}, and so forth. Let's say for a moment we're working with Edwin Hubble and we're trying to demonstrate conclusively that in fact the Big Bang is the best cosmological model for the development of the early universe.
+
+But this is a crazy idea! It's heretical! How can we hope to demonstrate its validity? Well, simplifying the story a bit, Hubble realized if this model were true, we could predict the distance of an extra-galactic nebula from Earth using its measured recession velocity. But, you ask, why does this matter? Well, let's take a look at Figure \ref{fig:regression06}
+
+\begin{figure}[h]
+
+\label{fig:regression06}
+\caption{Movement of galaxies from a central point and all that fun stuff!}
+\end{figure}
+
+The idea is that, if the Big Bang were the correct model, then it would make sense for us to see galaxies further away from the earth to be receding at a faster speed than those closer to us. If a galaxy were moving in approximately the same direction as ours, then either (1) it would be moving faster than ours; (2) ours would be moving faster than it; or (3) they would be moving at approximately the same speeds. In either case 1 or 2, this would result in the two galaxies moving further apart. In the third case, as long as the two are not moving in exactly the same direction (i.e., $\theta \neq 0$ where $\theta$ is the interior angle between the trajectories of the two galaxies), we will also continue to move farther apart (but at a slower rate). And of course if the galaxies are moving in opposite directions, their recession velocity will be greater still.
 
 \begin{figure}[h]
 \includegraphics[width=35pc]{regression02}
 \label{fig:regression02}
 \caption{Measured distance versus velocity for 24 extra-galactic nebulae. Data from Hubble, E. (1929). \href{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC522427/}{A relation between distance and radial velocity among extra-galactic nebulae.} \textit{Proceedings of the National Academy of Sciences of the United States of America, 15}, 168-173. Line of best fit plotted in blue with a 95\% confidence interval for the regression line in red.}
+\end{figure}
+
+So, knowing this, we can plot the relationship between recession velocity and distance for the 24 extra-galactic nebulae that Hubble observed (seen in Figure \ref{fig:regression02}). Doing so, we see that there appears to be a positive relationship between the two. Indeed, if we construct a simple linear model, we see:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.3990982  0.1184697   3.369  0.00277 ** 
+Velocity    0.0013729  0.0002274   6.036 4.48e-06 ***
+
+Residual standard error: 0.405 on 22 degrees of freedom
+Multiple R-squared:  0.6235,	Adjusted R-squared:  0.6064 
+F-statistic: 36.44 on 1 and 22 DF,  p-value: 4.477e-06
+\end{Verbatim}
+\end{framed}
+
+We can see that we have obtained a significant overall model, $F(1,22) = 36.44$; $p\text{-value}<0.001$, with velocity contributing significantly to that model, $t=6.04$; $p\text{-value}<0.001$. This in turn gives us the ability to predict a galaxy's distance from Earth given its recession velocity, via the formula:
+\begin{equation*}
+\text{Distance}=0.399+0.00137\cdot\text{Velocity}
+\end{equation*}
+
+Moreover, looking at a plot of our fitted valued by our residuals (Figure \ref{fig:regression07}), we see that it appears approximately unbiased and homoscedastic, indicating that we likely have a well-fitted model and that our data don't need to be transformed in any way. Given all this, we can fairly conclude that there is a relationship between the distance of an extra-galactic nebula from Earth and its recession velocity, implying that, indeed, all bodies in the universe are moving apart from one another, having originated from a central point at one time in the universe's history. That is, we find significant support for the Big Bang Theory.
+
+\begin{figure}[h]
+\includegraphics[width=35pc]{regression07}
+\label{fig:regression07}
+\caption{Regression plot for our linear model predicting extra-galactic nebula distance by recession velocity}
 \end{figure}
 \section{Exercises}
 

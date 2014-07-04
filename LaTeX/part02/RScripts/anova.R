@@ -38,8 +38,8 @@ layout(matrix(c(1),1))
 par(mar=c(4.1,4.1,4.1,2.1))
 
 # Between-groups variance example
-group1 <- rnorm(x, mean = 58, sd = 4)
-group2 <- rnorm(x, mean = 82, sd = 3)
+group1 <- rnorm(1000, mean = 58, sd = 4)
+group2 <- rnorm(1000, mean = 82, sd = 3)
 
 hist(group1, col = "dodgerblue1",
      border = "black", las = 1,
@@ -62,8 +62,8 @@ text("Between-Groups Variance", x = 69.5, y = 230,
      cex = 0.75)
 
 # Within-groups variance example
-group3 <- rnorm(x, mean = 54, sd = 6)
-group4 <- rnorm(x, mean = 82, sd = 2)
+group3 <- rnorm(1000, mean = 54, sd = 6)
+group4 <- rnorm(1000, mean = 82, sd = 2)
 
 hist(group3, col = "dodgerblue1",
      border = "black", las = 1,

@@ -83,6 +83,7 @@ ToDo:
       - [X] Coefficient of determination
       - [X] Residuals
       - [ ] Outliers
+      - [ ] Assumptions
       - [ ] Case study
       - [ ] Exercises
       - [ ] Additional resources

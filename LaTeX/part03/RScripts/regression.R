@@ -197,3 +197,62 @@ rect(x, y, x + ((a+b*x)-y), a+b*x,
      col = "blue", density = 55)
 text(1.25, 3.25, "Residual Sum of Squares", col = "blue", cex = 0.75)
 points(x,y, pch = 16)
+
+###############################################################################
+# Residual Plots
+###############################################################################
+
+residPlot <- function(x, y, main) {
+  plot(x, y, yaxt="n",xaxt="n",
+       ylab="", xlab = "",
+       main = main, pch = 16,
+       col = "dodgerblue3",
+       cex.main = 0.8)
+}
+
+layout(matrix(c(1:6),2,3))
+par(mar=c(0.2, 0.2, 4.1, 0.2))
+set.seed(0)
+
+# unbiased and homoscedastic
+resid <- rnorm(100, mean = 0, sd = 1)
+fitted <- rnorm(100, mean = 0, sd = 1)
+residPlot(resid, fitted, main = "Unbiased and Homoscedastic")
+rect(-2, -1.5, 2, 2, col = "lightsteelblue2", density = 50)
+
+# unbiased and heteroscedastic
+resid <- rnorm(100, mean = 4, sd = 1)
+fitted <- resid*sort(rnorm(100, 0, 0.3))
+residPlot(resid, fitted, main = "Unbiased and Heteroscedastic")
+polygon(x = c(1, 6, 6), y = c(0, -3, 3),
+        col = "lightsteelblue2", density = 50)
+
+# biased and homoscedastic
+resid <- rnorm(100, mean = 0, sd = 1)
+fitted <- resid+resid*rnorm(100, mean = 0, sd = 0.3)
+residPlot(resid, fitted, main = "Biased and Homoscedastic")
+polygon(x = c(-2, -2, 2, 2),
+        y = c(-2.5, -1.5, 3, 2),
+        col = "lightsteelblue2", density = 50)
+
+# biased and heteroscedastic
+resid <- rnorm(100, mean = 4, sd = 1)
+fitted <- resid+resid*sort(rnorm(100, 2, 0.4))
+residPlot(resid, fitted, main = "Biased and Heteroscedastic")
+polygon(x = c(2, 2, 6, 6),
+        y = c(5, 6, 20, 15),
+        col = "lightsteelblue2", density = 50)
+
+# biased and homoscedastic
+resid <- rnorm(100, mean = 0, sd = 1)
+fitted <- -1*(resid^2+rnorm(100, mean = 0, sd = 1))
+residPlot(resid, fitted, main = "Biased and Homoscedastic")
+curve(-(x^2-2), -pi, pi, add = TRUE, lwd = 3, col = "lightsteelblue2")
+curve(-(x^2+2), -pi, pi, add = TRUE, lwd = 3, col = "lightsteelblue2")
+
+# biased and heteroscedastic
+resid <- sort(rnorm(100, mean = 0, sd = 1))
+fitted <- -1*(resid^2+rnorm(100, mean = 0, sd = 1.5))
+residPlot(-1*resid, fitted, main = "Biased and Heteroscedastic")
+curve(-((x+0.5)^2+3), -3, 3, add = TRUE, lwd = 3, col = "lightsteelblue2")
+curve(-((x-0.5)^2-3), -3, 3, add = TRUE, lwd = 3, col = "lightsteelblue2")

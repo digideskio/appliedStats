@@ -20,17 +20,53 @@ velocity <- c(170,290,-130,-70,-185,-220,200,290,270,
               200,300,-30,650,150,500,920,450,500,
               500,960,500,850,800,1090)
 
-hubble <- data.frame(object,distance,velocity)
+# hubble <- data.frame(object,distance,velocity)
+# 
+# fit <- lm(hubble$distance~hubble$velocity)
+# 
+# hubble <- data.frame(hubble, predict(fit, interval = 'prediction'))
+# 
+# ggplot(hubble, aes(x = velocity, y = distance)) +
+#   geom_smooth(method = 'lm', aes(fill = 'confidence'),alpha = 1.0) +
+#   geom_point(colour = 'black', size = 3) +
+#   labs(x ="Recession Velocity (km/sec)",
+#        y ="Distance (megaparsecs)",
+#        title ="Measured distance versus velocity 
+#        for 24 extra-galactic nebulae") +
+#   theme(legend.position = "none")
 
-fit <- lm(hubble$distance~hubble$velocity)
+plotCI <- function (x, y, xlab, ylab, main) {
+  plot(x, y, pch = 16, col = "dodgerblue4",
+       xlab = xlab, ylab = ylab,
+       main = main, cex.main = 0.8,
+       cex.axis = 0.8, cex.lab = 0.9,
+       las = 1)
+  
+  fit <- lm(y~x)
+  summary(fit)
 
-hubble <- data.frame(hubble, predict(fit, interval = 'prediction'))
+  abline(fit, col = "dodgerblue4")
+  
+  CI <- predict(fit, interval = "confidence")
+  
+  cint <- data.frame(velocity, lower = CI[,2], upper = CI[,3])
+  cint <- cint[order(velocity),]
+  with(cint, points(velocity, lower, type = "l",
+                    col = "firebrick3", lwd = 2))
+  with(cint, points(velocity, upper, type = "l",
+                    col = "firebrick3", lwd = 2))
+  
+  plot(resid(fit),fitted(fit),
+       pch = 16, col = "steelblue3",
+       xlab = "Residuals", ylab = "Fitted values",
+       main = paste("Residual Plot for\n", ylab, "by", xlab),
+       cex.main = 0.8, cex.lab = 0.9,
+       cex.axis = 0.9, las = 1)
+  
+  summary(fit)
+}
 
-ggplot(hubble, aes(x = velocity, y = distance)) +
-  geom_smooth(method = 'lm', aes(fill = 'confidence'),alpha = 1.0) +
-  geom_point(colour = 'black', size = 3) +
-  labs(x ="Recession Velocity (km/sec)",
-       y ="Distance (megaparsecs)",
-       title ="Measured distance versus velocity 
-       for 24 extra-galactic nebulae") +
-  theme(legend.position = "none")
+plotCI(x = velocity, y = distance,
+       xlab = "Recession Velocity (km/sec)",
+       ylab = "Distance (megaparsecs)",
+       main = "Measured distance versus velocity")
