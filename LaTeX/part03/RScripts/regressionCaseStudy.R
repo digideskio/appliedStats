@@ -2,8 +2,8 @@
 # Hubble Example
 ###############################################################################
 
-install.packages("ggplot2")
-library(ggplot2)
+# install.packages("ggplot2")
+# library(ggplot2)
 
 object <- c("S.Mag.","L.Mag.","N.G.C. 6822","N.G.C. 598",
             "N.G.C. 221","N.G.C. 224","N.G.C. 5457","N.G.C. 4763",
@@ -40,7 +40,8 @@ plotCI <- function (x, y, xlab, ylab, main) {
        xlab = xlab, ylab = ylab,
        main = main, cex.main = 0.8,
        cex.axis = 0.8, cex.lab = 0.9,
-       las = 1)
+       las = 1, xlim = c(min(x), max(x)),
+       ylim = c(min(y), max(y)))
   
   fit <- lm(y~x)
   summary(fit)
@@ -49,21 +50,21 @@ plotCI <- function (x, y, xlab, ylab, main) {
   
   CI <- predict(fit, interval = "confidence")
   
-  cint <- data.frame(velocity, lower = CI[,2], upper = CI[,3])
-  cint <- cint[order(velocity),]
-  with(cint, points(velocity, lower, type = "l",
+  cint <- data.frame(x, lower = CI[,2], upper = CI[,3])
+  cint <- cint[order(x),]
+  with(cint, points(x, lower, type = "l",
                     col = "firebrick3", lwd = 2))
-  with(cint, points(velocity, upper, type = "l",
+  with(cint, points(x, upper, type = "l",
                     col = "firebrick3", lwd = 2))
   
-  plot(resid(fit),fitted(fit),
-       pch = 16, col = "steelblue3",
-       xlab = "Residuals", ylab = "Fitted values",
-       main = paste("Residual Plot for\n", ylab, "by", xlab),
-       cex.main = 0.8, cex.lab = 0.9,
-       cex.axis = 0.9, las = 1)
-  
-  summary(fit)
+#   plot(resid(fit),fitted(fit),
+#        pch = 16, col = "steelblue3",
+#        xlab = "Residuals", ylab = "Fitted values",
+#        main = paste("Residual Plot for\n", ylab, "by", xlab),
+#        cex.main = 0.8, cex.lab = 0.9,
+#        cex.axis = 0.9, las = 1)
+#   
+#   summary(fit)
 }
 
 plotCI(x = velocity, y = distance,

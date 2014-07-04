@@ -57,8 +57,9 @@ Likewise, in Figure \ref{fig:anova03}, we see the variance within groups. The tr
 Formally, we define these measurements as sums of squares, calculated:
 \begin{eqnarray*}
 SS_{residual} &=& \sum_{i=1}^n \left(y_i - \hat{y}_i\right)^2 \\
-SS_{treatment} &=& \sum_{i=1}^n \left(\hat{y}_i-\bar{y}_i\right) \\
+SS_{treatment} &=& \sum_{i=1}^n \left(\hat{y}_i-\bar{y}_i\right)^2 \\
 SS_{total} &=& SS_{residual}+SS_{treatment} \\
+&=& \sum_{i=1}^n\left(y_i-\bar{y}_i\right)^2
 \end{eqnarray*}
 
 \subsection{The \textit{F}-Test}

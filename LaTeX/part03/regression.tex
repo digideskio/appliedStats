@@ -82,7 +82,7 @@ The formal calculation of the proportion of the variance that is explained by th
 \end{figure}
 
 \subsubsection{$R^2$ and Residuals}
-When calculation $R^2$, we use the formula:
+When calculating $R^2$, we use the formula:
 \begin{equation}
 R^2 \equiv 1-\frac{SS_{residual}}{SS_{total}}
 \end{equation}
@@ -119,12 +119,12 @@ When we construct a regression model, looking at a plot of the fitted values by 
 \begin{figure}[h]
 \includegraphics[width=35pc]{regression08}
 \label{fig:regression08}
-\caption{Typical patterns for biased and unbiased, heteroscedastic and homoscedastic residuals}
+\caption{Typical patterns for biased and unbiased, heteroscedastic and homoscedastic residuals. Heteroscedasticity means that not all observations in a sample or population have the same variance and usually indicates that the data should be transformed. A residual plot is biased if the fitted values at any given value of the residual do not average out to be 0.}
 \end{figure}
 
 Here, what we really want to see is something like the graph in the top left---unbiased and homoscedasatic. When this is the case, our residuals will form roughly a rectangle on our plot. It indicates that the model fits our data fairly well. When we start seeing any of the other patterns illustrated, however, that may indicate either that the data need to be transformed or that a different model should be fit differently (e.g., a different type of regression is appropriate).
 
-Unfortunately, the examples given here are all highly stylized: in practice, it's often a much murkier picture that you're left to interpret and make a best guess on. There are some tools to help you that we outline in our chapter on Data Transformations, but by and large this is something that you just need to get a feel for through practice and repeated exposure.
+Unfortunately, the examples given here are all highly stylized: in practice, it's often a much murkier picture that you're left to interpret and make a best guess on. There are some tools to help you that we outline in our chapter on Data Transformations, but by and large this is something that you just need to get a feel for through practice and repeated exposure. Typically, however, bias among your residuals indicates that the model that you chose is not appropriate for your data. Alternately, heteroscedastic residuals usually indicate the need for a data transformation.
 
 \section{Cautions and Considerations}
 
