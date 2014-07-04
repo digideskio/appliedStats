@@ -26,7 +26,7 @@ In a fixed-effects model, there is a basic assumption that the individual-specif
 
 Random effects models assume that there is some inherent amount of individual variance not accounted for by the treatment. So if we were talking about a regression equation with a random intercept $a_i$ and fixed slope $b$, each individual would have his or hew own regression line, parallel to every other individual but with a differing intercept (cf. Figure \ref{fig:anova01}).
 
-\begin{figure}[h]
+\begin{figure}[htp]
 \includegraphics[width=35pc]{anova01}
 \caption{A regression equation assuming fixed-effects factors for all individuals (left) and a random-effects intercept for 5 individuals (right).}
 \label{fig:anova01}
@@ -38,18 +38,18 @@ Residual, treatment, and total sums of squares are discussed more fully in our c
 
 As such, there is noise from the treatment (individuals responding differently to the stimuli) and noise from the residual (those random fluctuations that our model is unable to explain). These combine to form a total measure of the error. In the context of an ANOVA, the residual error (termed the residual sum of squares) is equivalent to the variance within each group; the treatment sum of squares equivalent to the variance between groups. Take for instance Figures \ref{fig:anova02} and \ref{fig:anova03}.
 
-\begin{figure}[h]
+\begin{figure}[htp]
 \includegraphics[width=35pc]{anova02}
-\label{fig:anova02}
 \caption{Patient survival rates using two competing treatment regimens. Here, between-groups variance is illustrated, showing the distance between the means of the two treatment groups.}
+\label{fig:anova02}
 \end{figure}
 
 In Figure \ref{fig:anova02}, we are looking at the difference in locations of the two treatment groups relative to one another. A greater distance between the two treatment groups indicates that there exists a more substantial effect of the treatment on patient outcomes. Understandably, larger between-groups variances make it easier for our statistical test to establish the significance of a difference: the less overlap between groups, the more clear the difference becomes.
 
-\begin{figure}[h]
+\begin{figure}[htp]
 \includegraphics[width=35pc]{anova03}
-\label{fig:anova03}
 \caption{Patient survival rates using two competing treatment regimens. Here, within-groups variance is illustrated, showing the spread of the measurements within each treatment group.}
+\label{fig:anova03}
 \end{figure}
 
 Likewise, in Figure \ref{fig:anova03}, we see the variance within groups. The treatment group in light blue has a larger variance than does the treatment group on the right in dark blue. Unlike between-groups variance, here we rather see smaller within-group variances. The reason for this is that a larger within-groups variance means that we need an even \textbf{bigger} between-groups variance to compensate (or a much larger sample size): this type of variance obscures the effect of our treatment by introducing additional noise to our model.

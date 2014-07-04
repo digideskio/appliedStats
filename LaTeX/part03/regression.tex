@@ -32,7 +32,7 @@ If you think back to Equation \ref{eqn:regression01}, our two coefficients were 
 
 We can visualize this process in Figure \ref{fig:regression01}. Here, we see a number of data points as white circles. There is also a solid black line that represents a possible line of best fit. However, are the predicted data points (solid black circles) as close to the observed data as possible? Looking at the red dashed line between our predictions and observations, it looks like we could do a better job reducing that difference.
 
-\begin{figure}[h]
+\begin{figure}[htp]
 \includegraphics[width=35pc]{regression01}
 \caption{Data with a least-squares line of best fit (grey), one potential line of best fit (black), and the residual difference between the predicted and observed values (red). Lease squares fitting seeks to minimize the overall distance between every observed value and predicted value, resulting in a single line of best fit.}
 \label{fig:regression01}
@@ -54,10 +54,10 @@ The whole of a simple linear regression boils down to just a couple numbers, one
 
 If you think back to the chapter \textit{Measuring Uncertainty}, variance is the squared average distance of a data point from the mean. Let's take Figure \ref{fig:regression03} as an example. Here, we see that there is a regression equation fitted to the data with an $R^2=0.39$, indicating that about 39\% of the variance observed within the data is explained by the model.
 
-\begin{figure}[h]
+\begin{figure}[htp]
 \includegraphics[width=35pc]{regression03}
-\label{fig:regression03}
 \caption{Regression model with approximately 39\% of the observed variance explained.}
+\label{fig:regression03}
 \end{figure}
 
 Now, it's important to recognize that the line of best fit that we've plotted doesn't describe our data perfectly. This is because there is an inherent bit of error---random variability---in any dataset (and thereby any equation that we use to model it). Given this, a better definition of Equation \ref{eqn:regression01} is:
@@ -75,10 +75,10 @@ As with Pearson's $r$ in correlational designs, $R^2$ varies from 0 to 1. (Note:
 
 The formal calculation of the proportion of the variance that is explained by the model is a bit more complicated than what we presented above. To understand how $R^2$ is calculated, we first need to understand the concept of \textbf{residuals}. A residual is defined as the difference between an observed and predicted value. If we look back to Figure \ref{fig:regression03}, the residuals are represented by the dashed red lines. Alternately, we can see a little more explicitly what a residual is by looking at Figure \ref{fig:regression05}. This is equivalent to the error term ($\epsilon$) that we mentioned in the previous section.
 
-\begin{figure}[h]
+\begin{figure}[htp]
 \includegraphics[width=35pc]{regression05}
-\label{fig:regression05}
 \caption{A residual is the difference between an observed data point and its predicted value at a given point $X$. This represents the error that the model is unable to explain.}
+\label{fig:regression05}
 \end{figure}
 
 \subsubsection{$R^2$ and Residuals}
@@ -102,10 +102,10 @@ It may help if we visualize these, as in Figure \ref{fig:regression04}. Here, th
 
 You can also think of the total sum of squares as a measure of the relationship between our explanatory and response variables: if there were no relationship between them, then every single data point would be exactly on the line and our sum of squares would be $0$.
 
-\begin{figure}[h]
+\begin{figure}[htp]
 \includegraphics[width=35pc]{regression04}
-\label{fig:regression04}
 \caption{$R^2$ is defined generally as $1-\frac{SS_{residual}}{SS_{total}}$. Here, we see the total sum of squares (red) as the sum of the squared distance from each observation to the arithmetic mean of $y$ ($\bar{y}$). The residual sum of squares (blue) is computed as the sum of the squared distance from each observation to its predicted value.}
+\label{fig:regression04}
 \end{figure}
 
 Next we can look at the residual sum of squares, shown in blue on the right. Here we have our line of best fit along with the same four data points. To calculate this sum of squares, we follow the same procedure as before: we measure the distance on the $y$-axis between each data point and the line, we square it, and then we add together all those values. In this case, though, the difference represents the failure of our model to explain the relationship between our two variables. If it explained the relationship perfectly, then our residual sum of squares would be equal to 0.
@@ -116,10 +116,10 @@ So, knowing that a larger value of our $SS_{total}$ indicates a stronger relatio
 
 When we construct a regression model, looking at a plot of the fitted values by the residuals can be a good diagnostic tool. (In R we achieve this by calling \verb|plot(resid(fit), fitted(fit)| where \verb|fit| is the linear model that we have created. See our Implementation in R section for details of how to create a linear model.) Figure \ref{fig:regression08} illustrates some common patterns among residual plots.
 
-\begin{figure}[h]
+\begin{figure}[htp]
 \includegraphics[width=35pc]{regression08}
-\label{fig:regression08}
 \caption{Typical patterns for biased and unbiased, heteroscedastic and homoscedastic residuals. Heteroscedasticity means that not all observations in a sample or population have the same variance and usually indicates that the data should be transformed. A residual plot is biased if the fitted values at any given value of the residual do not average out to be 0.}
+\label{fig:regression08}
 \end{figure}
 
 Here, what we really want to see is something like the graph in the top left---unbiased and homoscedasatic. When this is the case, our residuals will form roughly a rectangle on our plot. It indicates that the model fits our data fairly well. When we start seeing any of the other patterns illustrated, however, that may indicate either that the data need to be transformed or that a different model should be fit differently (e.g., a different type of regression is appropriate).
@@ -148,18 +148,18 @@ Let's, for throwback Thursday's sake, head back to the late 1920s when physicist
 
 But this is a crazy idea! It's heretical! How can we hope to demonstrate its validity? Well, simplifying the story a bit, Hubble realized if this model were true, we could predict the distance of an extra-galactic nebula from Earth using its measured recession velocity. But, you ask, why does this matter? Well, let's take a look at Figure \ref{fig:regression06}
 
-\begin{figure}[h]
+\begin{figure}[htp]
 
-\label{fig:regression06}
 \caption{Movement of galaxies from a central point and all that fun stuff!}
+\label{fig:regression06}
 \end{figure}
 
 The idea is that, if the Big Bang were the correct model, then it would make sense for us to see galaxies further away from the earth to be receding at a faster speed than those closer to us. If a galaxy were moving in approximately the same direction as ours, then either (1) it would be moving faster than ours; (2) ours would be moving faster than it; or (3) they would be moving at approximately the same speeds. In either case 1 or 2, this would result in the two galaxies moving further apart. In the third case, as long as the two are not moving in exactly the same direction (i.e., $\theta \neq 0$ where $\theta$ is the interior angle between the trajectories of the two galaxies), we will also continue to move farther apart (but at a slower rate). And of course if the galaxies are moving in opposite directions, their recession velocity will be greater still.
 
-\begin{figure}[h]
+\begin{figure}[htp]
 \includegraphics[width=35pc]{regression02}
-\label{fig:regression02}
 \caption{Measured distance versus velocity for 24 extra-galactic nebulae. Data from Hubble, E. (1929). \href{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC522427/}{A relation between distance and radial velocity among extra-galactic nebulae.} \textit{Proceedings of the National Academy of Sciences of the United States of America, 15}, 168-173. Line of best fit plotted in blue with a 95\% confidence interval for the regression line in red.}
+\label{fig:regression02}
 \end{figure}
 
 So, knowing this, we can plot the relationship between recession velocity and distance for the 24 extra-galactic nebulae that Hubble observed (seen in Figure \ref{fig:regression02}). Doing so, we see that there appears to be a positive relationship between the two. Indeed, if we construct a simple linear model, we see:
@@ -184,10 +184,10 @@ We can see that we have obtained a significant overall model, $F(1,22) = 36.44$;
 
 Moreover, looking at a plot of our fitted valued by our residuals (Figure \ref{fig:regression07}), we see that it appears approximately unbiased and homoscedastic, indicating that we likely have a well-fitted model and that our data don't need to be transformed in any way. Given all this, we can fairly conclude that there is a relationship between the distance of an extra-galactic nebula from Earth and its recession velocity, implying that, indeed, all bodies in the universe are moving apart from one another, having originated from a central point at one time in the universe's history. That is, we find significant support for the Big Bang Theory.
 
-\begin{figure}[h]
+\begin{figure}[htp]
 \includegraphics[width=35pc]{regression07}
-\label{fig:regression07}
 \caption{Regression plot for our linear model predicting extra-galactic nebula distance by recession velocity}
+\label{fig:regression07}
 \end{figure}
 \section{Exercises}
 

@@ -23,6 +23,8 @@ The \textbf{median} of a set of data is, quite literally, the middle value. If w
 Finally, the \textbf{mode} is the most frequently-occurring number in a series of data. Usually, we will compute the mode when working with categorical data: for instance, it could tell us that the majority of survey respondents were female or were Jewish or lived in the Midwest.
 
 If we want to calculate these in R, we would do something like this:
+
+\begin{framed}
 \begin{Verbatim}[samepage=TRUE]
 # First we will generate 200 random values
 # with mean 0 and standard deviation 1
@@ -46,6 +48,7 @@ If we want to calculate these in R, we would do something like this:
 # That means that our data are a little skewed
 # We'll talk about skewness in the next section.
 \end{Verbatim}
+\end{framed}
 
 \subsection{Skewness and Mean vs. Median}
 To get an idea of skewness, let's make a histogram of those data that we just generated. If you aren't familiar with a histogram, it takes your data and counts how many data points fall within a certain range, giving you something like Figure \ref{fig:uncertainty01}.
@@ -65,9 +68,10 @@ Many times, as in this example, there isn't very much skewness and our data, eve
 \caption{Histogram of data heavily skewed right}
 \label{fig:uncertainty02}
 \end{figure}
-\clearpage
+
 There, we have a strong and obvious rightward skew. Now, let's go ahead and compare the means and medians of our two datasets:
 
+\begin{framed}
 \begin{Verbatim}[samepage=TRUE]
 # First we'll compare the means
 > mean(data)
@@ -83,6 +87,7 @@ There, we have a strong and obvious rightward skew. Now, let's go ahead and comp
 > median(data2)
 [1] -0.005767173
 \end{Verbatim}
+\end{framed}
 
 As you can see, both the mean and the median change. However, the median changes much less than the mean does. (There's a change of 0.26 in the means versus a change of 0.10 in the medians.) In cases where you have strongly skewed data, it will often be better to describe them using the median rather than the mean: specifically, the median is what we call \textbf{resistant to outliers}. In other words, when you have a few outliers (numbers that are far away from every other data point), the median will be changed much less than the mean will.
 
@@ -232,6 +237,7 @@ Here, the line on the far left is the minimum value, the left edge of the box is
 \section{Exercises}
 
 \prob In R, execute the following code:
+\begin{framed}
 \begin{Verbatim}[samepage=TRUE]
 set.seed(0)
 height1 <- rnorm(25, 5.6667, 1/3)
@@ -243,6 +249,7 @@ for(i in 1:500) {
   avgHeight <- rbind(avgHeight, mean(height))
 }
 \end{Verbatim}
+\end{framed}
 
 \prob What are the mean and median values of \verb|height1| and \verb|avgHeight|? What are their standard deviations?
 

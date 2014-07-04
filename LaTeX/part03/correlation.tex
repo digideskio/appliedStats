@@ -9,19 +9,19 @@ Okay, so this is something that we could have presented back a few chapters ago 
 
 Scatterplots are used to display data using cartesian coordinates. For instance, we may wish to visualize the growth of the U.S. population by decade (Figure \ref{fig:correlation01}).
 
-\begin{figure}[h]
-\includegraphics[width=35pc]{correlation01}
-\label{fig:correlation01}
-\caption{United States population by decade: 1600 through 2010}
+\begin{figure}[htp]
+	\includegraphics[width=35pc]{correlation01}
+	\caption{United States population by decade: 1600 through 2010}
+	\label{fig:correlation01}
 \end{figure}
 
 \subsubsection{Scatterplots with Categorical Variables}
 Additionally, we can use scatterplots to visualize data with categorical indicators. For example, if we were interested in the depression and anxiety scores of patients with mild, moderate, and severe bipolar diagnoses (Figure \ref{fig:correlation02}).
 
-\begin{figure}[h]
-\includegraphics[width=35pc]{correlation02}
-\label{fig:correlation02}
-\caption{Depression and anxiety scores of patients with bipolar depression}
+\begin{figure}[htp]
+	\includegraphics[width=35pc]{correlation02}
+	\caption{Depression and anxiety scores of patients with bipolar depression}
+	\label{fig:correlation02}
 \end{figure}
 
 \subsection{Correlation: Measuring Linear Association}
@@ -36,9 +36,9 @@ And that's all that correlation is measuring: the degree to which a change in on
 r=& \frac{1}{n-1}\sum_{i=1}^n\left(\frac{x_i-\bar{x}}{s_x}\right)\left(\frac{y_i-\bar{y}}{s_y}\right) &\text{ for a sample}
 \end{eqnarray}
 
-So, although this looks like we're going back into the Forbidden Forest, it's a pretty straightforward couple of equations: they're saying that this correlation coefficient \(r\) is just equal to the covariance of two variables, \(x\) and \(y\), divided by the product of their standard deviations. Or, put another way, it's the amount that two variables change together divided by the amount of that change that we can attribute to chance.
+So, although this looks like we're going back into the Forbidden Forest, it's a pretty straightforward couple of equations: they're saying that this correlation coefficient $r$ is just equal to the covariance of two variables, $x$ and $y$, divided by the product of their standard deviations. Or, put another way, it's the amount that two variables change together divided by the amount of that change that we can attribute to chance.
 
-This will then give us a single value, \(r\), which can be anywhere from -1 to +1. Now, in this case, both negative and positive 1 mean the same thing (or pretty close to the same thing): this coefficient tells us about the strength of the relationship between the two variables. So, if we have \(r=-1\), that means that for every increase of \(x\) units of one variable, we decrease by \(y\) units of a second variable. Likewise, for \(r=1\), this tells us that for every \(x\) units that we increase one variable, we increase the other by exactly \(y\) units. Finally, if we have \(r=0\), that tells us that there is absolutely no relationship between our two variables. In other words, you could increase one variable by over 9000 units and absolutely nothing would change in your second variable.
+This will then give us a single value, $r$, which can be anywhere from -1 to +1. Now, in this case, both negative and positive 1 mean the same thing (or pretty close to the same thing): this coefficient tells us about the strength of the relationship between the two variables. So, if we have $r=-1$, that means that for every increase of $x$ units of one variable, we decrease by $y$ units of a second variable. Likewise, for $r=1$, this tells us that for every $x$ units that we increase one variable, we increase the other by exactly $y$ units. Finally, if we have $r=0$, that tells us that there is absolutely no relationship between our two variables. In other words, you could increase one variable by over 9000 units and absolutely nothing would change in your second variable.
 
 Unfortunately, most of us will never see a correlation that strong in real life: that would mean that there is absolutely no variance of your data. Now, if we're talking about a physical law and measuring it with incredibly high-precision instruments, it's entirely possible that we will have a correlation that strong. However, in most studies, there will be some random variance thrown in that weakens the correlation.
 
@@ -77,10 +77,10 @@ pairs(~Neck+Chest+Abdomen+Hip+Thigh,
 \end{Verbatim}
 \end{framed}
 
-\begin{figure}[h]
-\includegraphics[width=35pc]{correlation03}
-\label{fig:correlation03}
-\caption{Lower-triangular scatterplot matrix for multiple correlations}
+\begin{figure}[htp]
+	\includegraphics[width=35pc]{correlation03}
+	\caption{Lower-triangular scatterplot matrix for multiple correlations}
+	\label{fig:correlation03}
 \end{figure}
 
 Finally, we will likely want to assess the significance of these correlations. To do so, we will have to install the Hmisc package:
@@ -105,12 +105,12 @@ Importantly, one cannot make causal inferences from correlational designs: if yo
 Given these concerns, we are only able to say that Variable A and Variable B tend to covary: that is, when one changes in a certain way, the other is likely to change in a certain way. For instance, consider height and weight. Let's say that there is a positive correlation between the two (i.e., that taller people tend to weigh more and that people who weigh less tend to be shorter). We can say that someone who is 6'1" is likely to weigh more than someone who is 4'10"; however, it becomes silly to say that if someone loses weight, he or she will start shrinking in height. Likewise, by gaining weight, no one will ever grow taller. There is a general trend of the data; however, this does not mean that a change in one ever causes a change in the other.
 
 \subsection{Linearity of the Relationship}
-Another consideration when looking at correlations is the relationship between the two variables of interest. Namely, there must be a linear trend. In this context, a linear trend is going to mean that every time Variable A changes by \( x \) units, Variable B will change by \(y\) units. For instance, take the four plots in Figure \ref{fig:correlation04}.
+Another consideration when looking at correlations is the relationship between the two variables of interest. Namely, there must be a linear trend. In this context, a linear trend is going to mean that every time Variable A changes by $x$ units, Variable B will change by $y$ units. For instance, take the four plots in Figure \ref{fig:correlation04}.
 
-\begin{figure}[h]
-\includegraphics[width=35pc]{correlation04}
-\label{fig:correlation04}
-\caption{Four separate data sets, each with the same mean and correlation. Source: \href{http://en.wikipedia.org/wiki/Correlation}{Wikipedia}}
+\begin{figure}[htp]
+	\includegraphics[width=35pc]{correlation04}
+	\caption{Four separate data sets, each with the same mean and correlation. Source: \href{http://en.wikipedia.org/wiki/Correlation}{Wikipedia}}
+	\label{fig:correlation04}
 \end{figure}
 
 Here we have four different relationships between our two variables with the same regression line plotted against all of them. As far as a correlation is concerned, the data follow that solid line.
@@ -120,10 +120,10 @@ Also important is the distribution of the data. Although the degree of dependenc
 
 Take, for instance, Figure \ref{fig:correlation06}. In orange are the unrestricted data, giving a correlation of $r=0.897$. Yet, when we restrict our range to only values of $X$ on the interval $(0,1)$, that correlation drops to $r=0.387$ although no transformations or other alterations were made to the data. Given these concerns, there have been attempts to correct for this range restriction; however we will not detail them here. Generally, this is not often a major issue to researchers; however, if you know that your data will be somehow restricted, it is good to keep in mind that this may impact the correlation coefficient.
 
-\begin{figure}[h]
-\includegraphics[width=35pc]{correlation06}
-\caption{Pearson correlation coefficients between X and Y are shown when the two variables' ranges are unrestricted (orange) and when the range of X is restricted to the interval (0,1) (blue)}
-\label{fig:correlation06}
+\begin{figure}[htp]
+	\includegraphics[width=35pc]{correlation06}
+	\caption{Pearson correlation coefficients between X and Y are shown when the two variables' ranges are unrestricted (orange) and when the range of X is restricted to the interval (0,1) (blue)}
+	\label{fig:correlation06}
 \end{figure}
 
 \section{Implementation in R}
@@ -169,16 +169,16 @@ pcor.test(neck,chest,others)
 \end{Verbatim}
 \end{framed}
 
-We can see that the observed correlation drops from \(r=0.766\) with the bivariate correlation to \(r=0.344\) with the partial correlation. This means that, when we control for the effects of Abdomen, Hip, and Thigh adiposity, neck and chest still covary significantly with a correlation of about 0.34.
+We can see that the observed correlation drops from $r=0.766$ with the bivariate correlation to $r=0.344$ with the partial correlation. This means that, when we control for the effects of Abdomen, Hip, and Thigh adiposity, neck and chest still covary significantly with a correlation of about 0.34.
 
 \section{Case Study: National Education Trends}
 
 These data are taken from the Census' American Community Survey. Here, we have two columns that we're interested in: \verb|highSchoolorHigher| and \verb|perCapitaIncome|. We would like to see if there is a relation between a state's per capita income and the proportion of its residents to have completed high school or higher. So let's start by constructing a scatterplot of the two variables, seen in Figure \ref{fig:correlation05}:
 
-\begin{figure}[h!]
-\includegraphics[width=35pc]{correlation05}
-\label{fig:correlation05}
-\caption{Scatterplot of perCapitaIncome and HighSchoolOrHigher}
+\begin{figure}[htp]
+	\includegraphics[width=35pc]{correlation05}
+	\caption{Scatterplot of perCapitaIncome and HighSchoolOrHigher}
+	\label{fig:correlation05}
 \end{figure}
 
 As we can see, there appears to be a positive linear relationship between per capita income and the proportion of a state's residents having a high school diploma or higher. Our next step is then to quantify the strength of this relationship. To do this, we will perform a bivariate correlation, giving us the results:
