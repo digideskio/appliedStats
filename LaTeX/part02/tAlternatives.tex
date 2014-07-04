@@ -148,7 +148,40 @@ wilcox.test(difference, paired = TRUE)
 \end{Verbatim}
 \end{framed}
 
-\section{Case Study: [STUDY]}
+\section{Case Study: Heavy Metal Accumulation}
+
+In 2004, \href{http://www.sciencedirect.com/science/article/pii/S0269749104001058}{Laureysensa, et al.} looked at the ability of a number of poplars to resorb heavy metals from the soil in which they were planted. Specifically, they were interested in looking at seasonal variation in these resorption patterns: whether the poplars would more actively take up heavy metals from the soil during certain times of the year than others.
+
+To this end, they looked at the resorption patterns of 13 different cloned poplars for aluminum, cadmium, iron, manganese, and zinc and measured their heavy metal content ($\mu g/g$) in both August and November of the same year. However, due to oddities of the data, a typical parametric test to look at seasonal differences might not be appropriate. Rather, we will use Wilcoxon's signed rank test.
+
+For this study, let's focus only on one of the heavy metals measured: aluminum. We can start by visualizing the distributions of both samples (Figure \ref{fig:tAlt01}).
+
+\begin{figure}[htp]
+\includegraphics[width=35pc]{tAlternative01}
+\caption{}
+\label{fig:tAlt01}
+\end{figure}
+
+As we can see, their probability densities differ somewhat from one another and both depart from the normal distribution. Given this, we can assume that a \textit{t}-test may not be most appropriate to judge the differences between these two samples.
+
+Knowing that, we can construct our null and alternative hypotheses for these data:
+\begin{eqnarray*}
+H_0:& \tilde{\mu}_{\text{aug}} = \tilde{\mu}_{\text{nov}} \\
+H_A:&  \tilde{\mu}_{\text{aug}} \neq \tilde{\mu}_{\text{nov}} \\
+\end{eqnarray*}
+where $\tilde{\mu}$ is the median for each sample. We then conduct a Wilcoxon signed rank test to evaluate these hypotheses:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+	Wilcoxon signed rank test
+
+data:  august and november
+V = 16, p-value = 0.03979
+alternative hypothesis: true location shift is not equal to 0
+\end{Verbatim}
+\end{framed}
+
+This test indicates that the the medians of the two samples do differ to a level of statistical significance, $V = 16$; $p\text{-value}=0.040$, indicating that resorption of aluminum among poplars is more efficient during the winter months ($\tilde{x}=15.3$) than during the fall ($\tilde{x}=10.0$).
 
 \section{Exercises}
 

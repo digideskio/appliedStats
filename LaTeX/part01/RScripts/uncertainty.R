@@ -44,20 +44,24 @@ median(data2)
 ###############################################################################
 
 layout(matrix(c(1,2,3),1,3))
+par(mar = c(1,1,4.1,1))
 # Small standard deviation (sd = 1)
 x=seq(-20,20,length=200)
 y=dnorm(x,mean=0,sd=1)
-plot(x,y,type="l",lwd=2,col="dodgerblue", main="SD = 1")
+plot(x,y,type="l",lwd=2,col="dodgerblue", main="SD = 1",
+     yaxt="n",xaxt="n")
 polygon(c(-20,x,20),c(0,y,0),col="dodgerblue", density = 150)
 
 # Moderate standard deviation (sd = 3)
 y=dnorm(x,mean=0,sd=3)
-plot(x,y,type="l",lwd=2,col="dodgerblue2", main="SD = 3")
+plot(x,y,type="l",lwd=2,col="dodgerblue2", main="SD = 3",
+     yaxt="n",xaxt="n")
 polygon(c(-20,x,20),c(0,y,0),col="dodgerblue2", density = 150)
 
 # Large standard deviation (sd = 6)
 y=dnorm(x,mean=0,sd=6)
-plot(x,y,type="l",lwd=2,col="dodgerblue4", main="SD = 6")
+plot(x,y,type="l",lwd=2,col="dodgerblue4", main="SD = 6",
+     yaxt="n",xaxt="n")
 polygon(c(-20,x,20),c(0,y,0),col="dodgerblue4", density = 150)
 
 layout(matrix(c(1),1,1))

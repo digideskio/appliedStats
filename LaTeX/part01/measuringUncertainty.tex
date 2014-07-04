@@ -94,7 +94,7 @@ As you can see, both the mean and the median change. However, the median changes
 \section{Standard Deviation}
 \textbf{Standard deviation} (represented as $s$ or $\sigma$) is a measure of dispersion: that is, it tells us how far from or close to the mean our data tend to be. A data set with a small standard deviation, for instance, tells us that most of our data points are fairly close together and are all near the mean. Alternately, a large standard deviation means that our data points are much more spread out. We can visualize this using three data sets, all with mean $\mu=0$ but with different standard deviations, as in Figure \ref{fig:uncertainty03}.
 
-\begin{figure}[h!]
+\begin{figure}[htp]
 \includegraphics[width=35pc]{uncertainty03}
 \caption{Three samples of data with mean \(\mu=0\) and standard deviations of 1, 3, and 6, respectively.}
 \label{fig:uncertainty03}
@@ -111,9 +111,9 @@ Now, before we can use standard deviations, we have to calculate them. The formu
 	\mu=\frac{1}{n}\sum_{i=1}^n(x_i)
 \end{equation}
 
-Let's unpack that: it's saying that we start by finding the mean (\( \mu \)) of the data. Next, we'll go ahead and take every data point and subtract the mean from it (the \( x_i-\mu \) part of the equation). So what we're doing is basically finding out how many units away from the mean each data point is. But there's a problem: some data points might give us a negative number, others a positive number. So we'll take that difference and raise it to the second power (remember, a negative number times a negative number is always equal to a positive number). Now we just repeat that for every other data point in our sample and add them all together.
+Let's unpack that: it's saying that we start by finding the mean ($ \mu $) of the data. Next, we'll go ahead and take every data point and subtract the mean from it (the $ x_i-\mu $ part of the equation). So what we're doing is basically finding out how many units away from the mean each data point is. But there's a problem: some data points might give us a negative number, others a positive number. So we'll take that difference and raise it to the second power (remember, a negative number times a negative number is always equal to a positive number). Now we just repeat that for every other data point in our sample and add them all together.
 
-So now we have summed up all of those squared differences, right? Next, we will divide by the number (\( n \)) of observations (just like when we calculated the mean) to get the \textbf{average distance from the mean}. But there's one last step before we're done: since we raised everything to the second power a couple steps ago, we have to undo that operation. To do this, we'll take the square root of everything, leaving us at last with the standard deviation.
+So now we have summed up all of those squared differences, right? Next, we will divide by the number ($ n $) of observations (just like when we calculated the mean) to get the \textbf{average distance from the mean}. But there's one last step before we're done: since we raised everything to the second power a couple steps ago, we have to undo that operation. To do this, we'll take the square root of everything, leaving us at last with the standard deviation.
 
 \subsection{Variance}
 In many ways, variance and standard deviation are two sides of the same coin. If you remember, standard deviation is calculated:

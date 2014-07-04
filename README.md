@@ -50,7 +50,7 @@ ToDo:
         - [X] Wilcoxon signed rank
         - [X] Concerns and assumptions
         - [X] Implementation in R
-        - [ ] Case study
+        - [X] Case study
         - [ ] Exercises
         - [ ] Additional resources
     - [ ] Comparisons Among Multiple Samples: One-Way ANOVA
