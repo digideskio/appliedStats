@@ -142,6 +142,59 @@ When running a regression, there are certain conditions that the model assumes a
 
 \section{Implementation in R}
 
+The basic command to implement a linear regression in R is \verb|lm(y ~ x, data = dataset)|. We can display the results of the regression using the \verb|summary()| function. If, for instance, we were working with a dataset titled \verb|demographics| and we wanted to use \verb|yearsEducation| to predict \verb|annualIncome|, we would run:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE, commandchars=\\\{\}]
+model <- lm(annualIncome \mytilde yearsEducation)
+summary(model)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-128.41  -35.08   -8.67   34.34  194.76 
+
+Coefficients:
+                Estimate   Std. Error   t-value   Pr(>|t|)    
+(Intercept)    917.8839        9.6425    95.191    < 2e-16 ***
+yearsEducation   0.4180        0.1166     3.585   0.000691 ***
+---
+Signif. codes:  0 `***' 0.001 `**' 0.01 `*' 0.05 `.' 0.1 ` ' 1
+
+Residual standard error: 56.76 on 58 degrees of freedom
+Multiple R-squared:  0.1814,	Adjusted R-squared:  0.1673 
+F-statistic: 12.86 on 1 and 58 DF,  p-value: 0.0006908
+\end{Verbatim}
+\end{framed}
+
+We can interpret this as a model with an overall significance of $F(1,58) = 12.86$; $p\text{-value}=0.0006$. Further, this one predictor is able to explain 18.1\% of the variance observed in the data ($R^2=0.181$).
+
+If we wish to assess goodness of fit of the model through a plot of its residuals against its fitted values, we run \verb|plot(fitted(modelName), resid(modelName))|. In this example:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE]
+plot(fitted(model), resid(model),
+     # Specify the labels for the x- and y-axes
+     xlab = "Predicted Income",
+     ylab = "Residuals",
+
+     # Specify the plot title
+     main = "Residuals by Fitted Values",
+
+     # Specify the orientation of the axis values,
+     # the type of point to use on the graph,
+     # and the color of the points
+     las = 1, pch = 16, col = "dodgerblue")
+\end{Verbatim}
+\end{framed}
+
+\begin{figure}[htp]
+\includegraphics[width=35pc]{regression09}
+\caption{Residual plot for the sample model}
+\label{fig:regression09}
+\end{figure}
+
+As we can see from Figure \ref{fig:regression09}, however, the residual plot in this example a little problematic: many of the points are concentrated to the far left of the x-axis and are sparse to the larger x values. This may indicate that some transformation of our original data are necessary.
+
 \section{Case Study: Evidence for the Big Bang}
 
 Let's, for throwback Thursday's sake, head back to the late 1920s when physicists were hotly debating models of the universe, whether it was expanding, whether it was an \href{http://en.wikipedia.org/wiki/Steady_state_theory}{eternal steady state universe}, and so forth. Let's say for a moment we're working with Edwin Hubble and we're trying to demonstrate conclusively that in fact the Big Bang is the best cosmological model for the development of the early universe.
@@ -182,7 +235,7 @@ We can see that we have obtained a significant overall model, $F(1,22) = 36.44$;
 \text{Distance}=0.399+0.00137\cdot\text{Velocity}
 \end{equation*}
 
-Moreover, looking at a plot of our fitted valued by our residuals (Figure \ref{fig:regression07}), we see that it appears approximately unbiased and homoscedastic, indicating that we likely have a well-fitted model and that our data don't need to be transformed in any way. Given all this, we can fairly conclude that there is a relationship between the distance of an extra-galactic nebula from Earth and its recession velocity, implying that, indeed, all bodies in the universe are moving apart from one another, having originated from a central point at one time in the universe's history. That is, we find significant support for the Big Bang Theory.
+Moreover, looking at a plot of our fitted valuer by our residuals (Figure \ref{fig:regression07}), we see that it appears approximately unbiased and homoscedastic, indicating that we likely have a well-fitted model and that our data don't need to be transformed in any way. Given all this, we can fairly conclude that there is a relationship between the distance of an extra-galactic nebula from Earth and its recession velocity, implying that, indeed, all bodies in the universe are moving apart from one another, having originated from a central point at one time in the universe's history. That is, we find significant support for the Big Bang Theory.
 
 \begin{figure}[htp]
 \includegraphics[width=35pc]{regression07}
