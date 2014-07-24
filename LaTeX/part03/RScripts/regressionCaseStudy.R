@@ -5,6 +5,10 @@
 # install.packages("ggplot2")
 # library(ggplot2)
 
+###############################################################################
+# Input data
+###############################################################################
+
 object <- c("S.Mag.","L.Mag.","N.G.C. 6822","N.G.C. 598",
             "N.G.C. 221","N.G.C. 224","N.G.C. 5457","N.G.C. 4763",
             "N.G.C. 5194","N.G.C. 4449","N.G.C. 4214","N.G.C. 3031",
@@ -20,6 +24,10 @@ velocity <- c(170,290,-130,-70,-185,-220,200,290,270,
               200,300,-30,650,150,500,920,450,500,
               500,960,500,850,800,1090)
 
+###############################################################################
+# Plot with ggplot2
+###############################################################################
+
 # hubble <- data.frame(object,distance,velocity)
 # 
 # fit <- lm(hubble$distance~hubble$velocity)
@@ -34,6 +42,10 @@ velocity <- c(170,290,-130,-70,-185,-220,200,290,270,
 #        title ="Measured distance versus velocity 
 #        for 24 extra-galactic nebulae") +
 #   theme(legend.position = "none")
+
+###############################################################################
+# Plot data
+###############################################################################
 
 plotCI <- function (x, y, xlab, ylab, main) {
   plot(x, y, pch = 16, col = "dodgerblue4",
@@ -71,3 +83,16 @@ plotCI(x = velocity, y = distance,
        xlab = "Recession Velocity (km/sec)",
        ylab = "Distance (megaparsecs)",
        main = "Measured distance versus velocity")
+
+###############################################################################
+# Specify Model
+###############################################################################
+
+fit <- lm(distance ~ velocity)
+
+plot(fitted(fit), resid(fit),
+     xlab = "Predicted Distances (Megaparsecs)",
+     ylab = "Residuals",
+     main = "Residuals by Fitted Values",
+     las = 1, pch = 16, col = "dodgerblue4",
+     xlim = c(0,2), ylim = c(-1,1))
