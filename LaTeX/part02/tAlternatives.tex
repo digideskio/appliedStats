@@ -4,7 +4,7 @@
 
 \section{What Are Nonparametric Statistics?}
 
-Nonparametric statistics are those that are not based on paramaterized probability distributions. Did that lose you? That's okay if you're scratching your head.
+Nonparametric statistics \index{Nonparametric statistics} are those that are not based on paramaterized probability distributions. Did that lose you? That's okay if you're scratching your head.
 
 The idea is that most test rely on parameters such as mean, variance, etc. (Thus, this family of procedures is known as parametric statistics.) When we're talking about nonparametric statistics, we mean that we aren't making assumptions about the data belonging to any particular distribution.
 
@@ -22,7 +22,7 @@ Although there are many types of nonparametric tests, we will only go over one o
 
 \subsection{Man-Whitney U Test}
 
-First up is the Mann-Whitney U test, also variously known as the Mann-Whitney-Wilcoxon test, the Wilcoxon rank-sum test, and the Wilcoxon-Mann-Whitney test. Whew, that's a mouthful.
+First up is the Mann-Whitney U test \index{Mann-Whitney U test}, also variously known as the Mann-Whitney-Wilcoxon \index{Mann-Whitney-Wilcoxon test} test, the Wilcoxon rank-sum test \index{Wilcoxon rank-sum test}, and the Wilcoxon-Mann-Whitney test \index{Wilcoxon-Mann-Whitney test}. Whew, that's a mouthful.
 
 Thankfully, though, the test itself is a bit simpler than deciding what to call it! The basic idea here is that we are going to take the data from our two samples and rand-order them. For example, let's say that we're working in a call center and we launch a campaign to decrease customers' wait time before they are connected to a representative. We measure the wait times both before and after this campaign and want to determine whether there was an impact of the initiative.
 
@@ -53,7 +53,7 @@ Before & 18.4 & 159 & 159 \\
 \end{tabular}
 
 So, here we have our indicator variable in the first column, our raw data in the second column, ordered from smallest to largest, and our ranked values in the third and fourth columns. Again, whenever we have a tie, we take the average rank of all tied items at that measurement. Finally, we take all of the ranks for our ``Before Intervention'' and add them up to get our W statistic.
-\clearpage
+
 And, at last, we're ready to go and conduct our fun little statistical test. To do this, we'll use the formula (it's a doozy!):
 \begin{equation}
 Z_W = \frac{\left|W-\frac{n(m+n+1}{2}\right|-0.5}{\sqrt{\frac{mn(m+n+1)}{12}}}

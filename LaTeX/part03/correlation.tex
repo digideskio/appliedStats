@@ -7,7 +7,7 @@
 \subsection{Scatterplots}
 Okay, so this is something that we could have presented back a few chapters ago when we talked about data visualization. Unfortunately, that wouldn't have worked with the example we were using, so instead of completely switching gears on you, we decided to wait until now to present it.
 
-Scatterplots are used to display data using cartesian coordinates. For instance, we may wish to visualize the growth of the U.S. population by decade (Figure \ref{fig:correlation01}).
+Scatterplots \index{Scatterplot} are used to display data using cartesian coordinates. For instance, we may wish to visualize the growth of the U.S. population by decade (Figure \ref{fig:correlation01}).
 
 \begin{figure}[htp]
 	\includegraphics[width=35pc]{correlation01}
@@ -25,11 +25,11 @@ Additionally, we can use scatterplots to visualize data with categorical indicat
 \end{figure}
 
 \subsection{Correlation: Measuring Linear Association}
-Woah, hold up now: measuring linear association? This sounds like we're heading towards some scary waters. Linear association? I thought this wasn't supposed to be a mathy book!
+Woah, hold up now: measuring linear association \index{Linear association}? This sounds like we're heading towards some scary waters. Linear association? I thought this wasn't supposed to be a mathy book!
 
 Don't worry, we didn't lie to you. That's just a bit of a scary term for a not-so-scary concept. \textbf{Linear association}, in its most basic form, just means that when you increase one variable by so many units, another variable increases by so many other units. For instance, let's say that for every degree Fahrenheit we increase, we increase the number of daily neighborhood ice cream sales by 10 cones. That's easy, right?
 
-And that's all that correlation is measuring: the degree to which a change in one variable coincides with a change in another variable. Now, importantly, this doesn't mean that one causes the other. As a matter of fact, that's so important that it gets its own section a little ways down the page. But, as long as we keep that in the back of our minds for now, we can go ahead and define correlation as:
+And that's all that correlation \index{Correlation} is measuring: the degree to which a change in one variable coincides with a change in another variable. Now, importantly, this doesn't mean that one causes the other. As a matter of fact, that's so important that it gets its own section a little ways down the page. But, as long as we keep that in the back of our minds for now, we can go ahead and define correlation as:
 
 \begin{eqnarray}
 \rho_{X,Y} =& \frac{\text{cov}(X,Y)}{\sigma_X\sigma_Y} &\text{ for a population} \\
@@ -51,7 +51,7 @@ r=& 0 &\implies \text{weak correlation}
 
 
 \subsection{Correlation Matrices and Multiple Correlation}
-We know that correlation is a measure of dependence between two variables. However, there may be times when you want to examine multiple variables at once. In cases like this, it may be useful to create a \textbf{correlation matrix}. This is simply a lower-triangular matrix of correlations among multiple variables.
+We know that correlation is a measure of dependence between two variables. However, there may be times when you want to examine multiple variables at once. In cases like this, it may be useful to create a \textbf{correlation matrix} \index{Correlation matrix}. This is simply a lower-triangular matrix of correlations among multiple variables.
 
 For instance, let's say that we want to see how adiposity in different parts of the body correlate. We may do something like:
 
@@ -93,10 +93,10 @@ rcorr(as.matrix(bodyFat))
 \end{Verbatim}
 \end{framed}
 
-This will return all bivariate correlations and levels of significance for the specified matrix. (NB: The data must be input as a matrix for this function to work. If you are using a data frame, first pass it through the \verb|as.matrix()| function.)
+This will return all bivariate correlations \index{Correlation!Bivariate correlation} and levels of significance for the specified matrix. (NB: The data must be input as a matrix for this function to work. If you are using a data frame, first pass it through the \verb|as.matrix()| function.)
 
 \subsection{Partial Correlations}
-In our previous section, we looked at correlations among multiple variables. These were all referred to as \textbf{bivariate correlations} because each correlation only looked at exactly two variables. However, we saw that each of those 5 variables correlated significantly with each of the others. So it may be more appropriate to conduct a \textbf{partial correlation}: this will take two variables---say, Neck and Chest---and measure their degree of association after controlling for the effect of Abdomen, Hip, and Thigh. This approach is generally preferred if there are other known sources of covariance that you also measured.
+In our previous section, we looked at correlations among multiple variables. These were all referred to as \textbf{bivariate correlations} because each correlation only looked at exactly two variables. However, we saw that each of those 5 variables correlated significantly with each of the others. So it may be more appropriate to conduct a \textbf{partial correlation} \index{Correlation!Partial correlation}: this will take two variables---say, Neck and Chest---and measure their degree of association after controlling for the effect of Abdomen, Hip, and Thigh. This approach is generally preferred if there are other known sources of covariance that you also measured.
 
 \section{Cautions and Considerations}
 \subsection{Causal Inferences}
@@ -206,28 +206,30 @@ If it weren't obvious from the scatterplot above, this is a positive correlation
 
 \section{Exercises}
 
-\prob Download the \href{https://raw.githubusercontent.com/faulconbridge/appliedStats/master/LaTeX/part03/data/correlationEx01.csv}{Patient Satisfaction data set} from GitHub. This dataset contains information from patients surveyed at various hospitals following their treatment to assess their satisfaction with the experience. We will be using these data for the following exercises.
-\prob Do patient ratings for \verb|nursesCommunicateWell| and \verb|doctorsCommunicateWell| correlate with one another? Provide evidence to back up your answer. Include a scatterplot of the data.
-\prob Now perform a partial correlation between those two same variables, but controlling for\\\verb|givenInformationAboutRecovery| and \verb|staffExplainedMedications|.
-\prob Create a lower-diagonal correlation matrix correlating all of the variables included in the dataset (except for the hospital ID). What correlations are significant? Are there any that are non-significant? (NOTE: You will have to remove null values using the \verb|na.omit()| function for this to work properly.
-\prob Construct a scatterplot matrix of all bivariate correlations using the code:
-\begin{framed}
-\begin{Verbatim}[samepage=TRUE]
+\begin{enumerate}
+	\item Download the \href{https://raw.githubusercontent.com/faulconbridge/appliedStats/master/LaTeX/part03/data/correlationEx01.csv}{Patient Satisfaction data set} from GitHub. This dataset contains information from patients surveyed at various hospitals following their treatment to assess their satisfaction with the experience. We will be using these data for the following exercises.
+	\item Do patient ratings for \verb|nursesCommunicateWell| and \verb|doctorsCommunicateWell| correlate with one another? Provide evidence to back up your answer. Include a scatterplot of the data.
+	\item Now perform a partial correlation between those two same variables, but controlling for\\\verb|givenInformationAboutRecovery| and \verb|staffExplainedMedications|.
+	\item Create a lower-diagonal correlation matrix correlating all of the variables included in the dataset (except for the hospital ID). What correlations are significant? Are there any that are non-significant? (NOTE: You will have to remove null values using the \verb|na.omit()| function for this to work properly.
+	\item Construct a scatterplot matrix of all bivariate correlations using the code:
+	\begin{framed}
+	\begin{Verbatim}[samepage=TRUE]
 pairs(~nursesCommunicateWell + doctorsCommunicateWell +
   receivedImmediateHelp + painManagedByTreatment +
   staffExplainedMedications + bathroomsAlwaysClean +
   givenInformationAboutRecovery + rateHospitalPositively,
   data=ex01, upper.panel=NULL)
-\end{Verbatim}
-\end{framed}
-  
-Do any of the scatterplots look concerning? Look for outliers, non-linear trends, etc.
-\prob \textbf{Test yourself:} Choose two new variables and performa bivariate correlation test. Do they correlate significantly? Do you think there are any other variables that should be controlled for? If so, perform a partial correlation, controlling for those additional variables. Do the results differ? Explain why they do. Comment on the assumptions made by the correlation tests you have run. Are they met? Are any violated?
-\prob Download the \href{https://raw.githubusercontent.com/faulconbridge/appliedStats/master/LaTeX/part03/data/correlationCaseStudy.csv}{Census American Community Survey} from GitHub. This dataset, used in the case study above, contains information about employment and other demographic characteristics nationwide.
-\prob Is there a correlation between \verb|noHighSchoolDiploma| (the proportion of residents without a HS diploma or GED equivalent) and \verb|publicTransit| (the proportion of residents who use public transit to go to and from work)?
-\prob Is there a correlation between \verb|HighSchoolOrHigher| and \verb|percentOnSNAP|? Justify your findings and include at least one figure.
-\prob Is there a correlation between \verb|medianRent| and \verb|percentImpoverished|? Are there any variables we might want to control for using a partial correlation?
-\prob \textbf{Test yourself:} Choose some (or all) of the variables in this dataset and make a correlation matrix for them. Choose a correlation that looks interesting or surprising and investigate it further. If applicable, perform a partial correlation test rather than a bivariate correlation.
+	\end{Verbatim}
+	\end{framed}
+	  
+	Do any of the scatterplots look concerning? Look for outliers, non-linear trends, etc.
+	\item \textbf{Test yourself:} Choose two new variables and performa bivariate correlation test. Do they correlate significantly? Do you think there are any other variables that should be controlled for? If so, perform a partial correlation, controlling for those additional variables. Do the results differ? Explain why they do. Comment on the assumptions made by the correlation tests you have run. Are they met? Are any violated?
+	\item Download the \href{https://raw.githubusercontent.com/faulconbridge/appliedStats/master/LaTeX/part03/data/correlationCaseStudy.csv}{Census American Community Survey} from GitHub. This dataset, used in the case study above, contains information about employment and other demographic characteristics nationwide.
+	\item Is there a correlation between \verb|noHighSchoolDiploma| (the proportion of residents without a HS diploma or GED equivalent) and \verb|publicTransit| (the proportion of residents who use public transit to go to and from work)?
+	\item Is there a correlation between \verb|HighSchoolOrHigher| and \verb|percentOnSNAP|? Justify your findings and include at least one figure.
+	\item Is there a correlation between \verb|medianRent| and \verb|percentImpoverished|? Are there any variables we might want to control for using a partial correlation?
+	\item \textbf{Test yourself:} Choose some (or all) of the variables in this dataset and make a correlation matrix for them. Choose a correlation that looks interesting or surprising and investigate it further. If applicable, perform a partial correlation test rather than a bivariate correlation.
+\end{enumerate}
 
 \section{Additional Resources}
 

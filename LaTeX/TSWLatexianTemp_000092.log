@@ -1,0 +1,1583 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.25)  10 AUG 2014 08:55
+entering extended mode
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/Users/chris/Documents/appliedStats/LaTeX/TSWLatexianTemp_000092.tex
+(/Users/chris/Documents/appliedStats/LaTeX/TSWLatexianTemp_000092.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip43
+\fb@frw=\dimen103
+\fb@frh=\dimen104
+\FrameRule=\dimen105
+\FrameSep=\dimen106
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks14
+\pgfutil@tempdima=\dimen107
+\pgfutil@tempdimb=\dimen108
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box26
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
+))
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen109
+\Gin@req@width=\dimen110
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks16
+\pgfkeys@temptoks=\toks17
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks18
+))
+\pgf@x=\dimen111
+\pgf@y=\dimen112
+\pgf@xa=\dimen113
+\pgf@ya=\dimen114
+\pgf@xb=\dimen115
+\pgf@yb=\dimen116
+\pgf@xc=\dimen117
+\pgf@yc=\dimen118
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count89
+\c@pgf@countb=\count90
+\c@pgf@countc=\count91
+\c@pgf@countd=\count92
+\t@pgf@toka=\toks19
+\t@pgf@tokb=\toks20
+\t@pgf@tokc=\toks21
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+))) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count93
+\pgfsyssoftpath@bigbuffer@items=\count94
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+)) (/usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen119
+\pgfmath@count=\count95
+\pgfmath@box=\box27
+\pgfmath@toks=\toks22
+\pgfmath@stack@operand=\toks23
+\pgfmath@stack@operation=\toks24
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count96
+)) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen120
+\pgf@picmaxx=\dimen121
+\pgf@picminy=\dimen122
+\pgf@picmaxy=\dimen123
+\pgf@pathminx=\dimen124
+\pgf@pathmaxx=\dimen125
+\pgf@pathminy=\dimen126
+\pgf@pathmaxy=\dimen127
+\pgf@xx=\dimen128
+\pgf@xy=\dimen129
+\pgf@yx=\dimen130
+\pgf@yy=\dimen131
+\pgf@zx=\dimen132
+\pgf@zy=\dimen133
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen134
+\pgf@path@lasty=\dimen135
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
+\pgf@shorten@end@additional=\dimen136
+\pgf@shorten@start@additional=\dimen137
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
+\pgfpic=\box28
+\pgf@hbox=\box29
+\pgf@layerbox@main=\box30
+\pgf@picture@serial@count=\count97
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
+\pgflinewidth=\dimen138
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
+\pgf@pt@x=\dimen139
+\pgf@pt@y=\dimen140
+\pgf@pt@temp=\dimen141
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
+\pgfarrowsep=\dimen142
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen143
+\pgf@sys@shading@range@num=\count98
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
+\pgfexternal@startupbox=\box31
+)) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+))) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+\pgfnodeparttextbox=\box32
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen144
+\pgf@nodesepend=\dimen145
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+)) (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen146
+\pgffor@skip=\dimen147
+\pgffor@stack=\toks25
+\pgffor@toks=\toks26
+)) (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+\pgf@plot@mark@count=\count99
+\pgfplotmarksize=\dimen148
+)
+\tikz@lastx=\dimen149
+\tikz@lasty=\dimen150
+\tikz@lastxsaved=\dimen151
+\tikz@lastysaved=\dimen152
+\tikzleveldistance=\dimen153
+\tikzsiblingdistance=\dimen154
+\tikz@figbox=\box33
+\tikz@figbox@bg=\box34
+\tikz@tempbox=\box35
+\tikz@tempbox@bg=\box36
+\tikztreelevel=\count100
+\tikznumberofchildren=\count101
+\tikznumberofcurrentchild=\count102
+\tikz@fig@count=\count103
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count104
+\pgfmatrixcurrentcolumn=\count105
+\pgf@matrix@numberofcolumns=\count106
+)
+\tikz@expandcount=\count107
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+))) (/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks27
+\ex@=\dimen155
+)) (/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen156
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count108
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count109
+\leftroot@=\count110
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count111
+\DOTSCASE@=\count112
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box37
+\strutbox@=\box38
+\big@size=\dimen157
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count113
+\c@MaxMatrixCols=\count114
+\dotsspace@=\muskip10
+\c@parentequation=\count115
+\dspbrk@lvl=\count116
+\tag@help=\toks28
+\row@=\count117
+\column@=\count118
+\maxfields@=\count119
+\andhelp@=\toks29
+\eqnshift@=\dimen158
+\alignsep@=\dimen159
+\tagshift@=\dimen160
+\tagwidth@=\dimen161
+\totwidth@=\dimen162
+\lineht@=\dimen163
+\@envbody=\toks30
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks31
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count120
+\float@exts=\toks32
+\float@box=\box39
+\@float@everytoks=\toks33
+\@floatcapt=\box40
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix <2008/02/07> (tvz)
+\FV@CodeLineNo=\count121
+\FV@InFile=\read2
+\FV@TabBox=\box41
+\c@FancyVerbLine=\count122
+\FV@StepNumber=\count123
+\FV@OutFile=\write4
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count124
+\Gm@cntv=\count125
+\c@Gm@tempcnt=\count126
+\Gm@bindingoffset=\dimen164
+\Gm@wd@mp=\dimen165
+\Gm@odd@mp=\dimen166
+\Gm@even@mp=\dimen167
+\Gm@layoutwidth=\dimen168
+\Gm@layoutheight=\dimen169
+\Gm@layouthoffset=\dimen170
+\Gm@layoutvoffset=\dimen171
+\Gm@dimlist=\toks34
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip47
+\f@ncyO@elh=\skip48
+\f@ncyO@erh=\skip49
+\f@ncyO@olh=\skip50
+\f@ncyO@orh=\skip51
+\f@ncyO@elf=\skip52
+\f@ncyO@erf=\skip53
+\f@ncyO@olf=\skip54
+\f@ncyO@orf=\skip55
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen172
+\Hy@linkcounter=\count127
+\Hy@pagecounter=\count128
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count129
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `final' set `true' on input line 4319.
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count130
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen173
+\Fld@menulength=\count131
+\Field@Width=\dimen174
+\Fld@charsize=\dimen175
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count132
+\c@Item=\count133
+\c@Hfootnote=\count134
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count135
+\c@bookmark@seq@number=\count136
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
+)
+\Hy@SectionHShift=\skip56
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 74.
+\@indexfile=\write5
+\openout5 = `TSWLatexianTemp_000092.idx'.
+
+
+Writing index file TSWLatexianTemp_000092.idx
+No file TSWLatexianTemp_000092.aux.
+\openout1 = `TSWLatexianTemp_000092.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+ABD: EveryShipout initializing macros (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count137
+\scratchdimen=\dimen176
+\scratchbox=\box42
+\nofMPsegments=\count138
+\nofMParguments=\count139
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count140
+\MPscratchDim=\dimen177
+\MPnumerator=\count141
+\makeMPintoPDFobject=\count142
+\everyMPtoPDFconversion=\toks36
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-30.0pt
+* \headheight=12.0pt
+* \headsep=18.0pt
+* \topskip=10.0pt
+* \footskip=18.0pt
+* \marginparwidth=125.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=18.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box43
+Package hyperref Info: Link coloring ON on input line 107.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count143
+)
+LaTeX Info: Redefining \ref on input line 107.
+LaTeX Info: Redefining \pageref on input line 107.
+LaTeX Info: Redefining \nameref on input line 107.
+\@outlinefile=\write6
+\openout6 = `TSWLatexianTemp_000092.out'.
+
+\SpaceAboveChapterNumber=\dimen178
+ (./title.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--11
+
+ []
+
+[1
+
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+\openout2 = `copyright.aux'.
+
+ (./copyright.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--32
+
+ []
+
+[2
+
+
+]) [3]
+\tf@toc=\write7
+\openout7 = `TSWLatexianTemp_000092.toc'.
+
+ [4
+
+
+] [5
+
+]
+\openout2 = `part01/preface.aux'.
+
+ (./part01/preface.tex
+Chapter 1.
+[6
+
+
+] [7]) [8]
+\openout2 = `part01/introToR.aux'.
+
+ (./part01/introToR.tex
+Chapter 2.
+[9
+
+
+
+]
+Underfull \vbox (badness 1205) has occurred while \output is active []
+
+ [10
+
+] [11] [12] [13] [14]) [15]
+\openout2 = `part01/measuringUncertainty.aux'.
+
+ (./part01/measuringUncertainty.tex
+Chapter 3.
+
+Underfull \vbox (badness 10000) detected at line 51
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16
+
+
+
+]
+
+LaTeX Warning: Reference `fig:uncertainty01' on page 17 undefined on input line 54.
+
+Package epstopdf Info: Source file: <./assets/uncertainty01.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 69510 bytes
+(epstopdf)             Output file: <./assets/uncertainty01-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 25568 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/uncertainty01-eps-converted-to.pdf ./assets/uncertainty01.eps>
+(epstopdf)             \includegraphics on input line 57.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/uncertainty01-eps-converted-to.pdf, id=154, 570.13pt x 281.05pt>
+File: ./assets/uncertainty01-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/uncertainty01-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/uncertainty01-eps-converted-to.pdf used on input line 57.
+(pdftex.def)             Requested size: 420.0pt x 207.04314pt.
+ [17 <./assets/uncertainty01-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:uncertainty02' on page 18 undefined on input line 64.
+
+Package epstopdf Info: Source file: <./assets/uncertainty02.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 72568 bytes
+(epstopdf)             Output file: <./assets/uncertainty02-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 26442 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/uncertainty02-eps-converted-to.pdf ./assets/uncertainty02.eps>
+(epstopdf)             \includegraphics on input line 67.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/uncertainty02-eps-converted-to.pdf, id=173, 570.13pt x 281.05pt>
+File: ./assets/uncertainty02-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/uncertainty02-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/uncertainty02-eps-converted-to.pdf used on input line 67.
+(pdftex.def)             Requested size: 420.0pt x 207.04314pt.
+
+
+LaTeX Warning: Reference `fig:uncertainty03' on page 18 undefined on input line 95.
+
+
+Underfull \vbox (badness 5105) has occurred while \output is active []
+
+ [18 <./assets/uncertainty02-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./assets/uncertainty03.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 71668 bytes
+(epstopdf)             Output file: <./assets/uncertainty03-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 27255 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/uncertainty03-eps-converted-to.pdf ./assets/uncertainty03.eps>
+(epstopdf)             \includegraphics on input line 98.
+Package epstopdf Info: Output file is already uptodate.
+ <./assets/uncertainty03-eps-converted-to.pdf, id=190, 483.8075pt x 246.9225pt>
+File: ./assets/uncertainty03-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/uncertainty03-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/uncertainty03-eps-converted-to.pdf used on input line 98.
+(pdftex.def)             Requested size: 420.0pt x 214.36493pt.
+
+Underfull \vbox (badness 1769) has occurred while \output is active []
+
+ [19 <./assets/uncertainty03-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:uncertainty04' on page 20 undefined on input line 134.
+
+Package epstopdf Info: Source file: <./assets/uncertainty04.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 8063 bytes
+(epstopdf)             Output file: <./assets/uncertainty04-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 10141 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/uncertainty04-eps-converted-to.pdf ./assets/uncertainty04.eps>
+(epstopdf)             \includegraphics on input line 137.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/uncertainty04-eps-converted-to.pdf, id=207, 614.295pt x 325.215pt>
+File: ./assets/uncertainty04-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/uncertainty04-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/uncertainty04-eps-converted-to.pdf used on input line 137.
+(pdftex.def)             Requested size: 420.0pt x 222.3541pt.
+ [20 <./assets/uncertainty04-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:uncertainty05' on page 21 undefined on input line 180.
+
+[21]
+Package epstopdf Info: Source file: <./assets/uncertainty05.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 7440 bytes
+(epstopdf)             Output file: <./assets/uncertainty05-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 12302 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/uncertainty05-eps-converted-to.pdf ./assets/uncertainty05.eps>
+(epstopdf)             \includegraphics on input line 183.
+Package epstopdf Info: Output file is already uptodate.
+ <./assets/uncertainty05-eps-converted-to.pdf, id=234, 570.13pt x 281.05pt>
+File: ./assets/uncertainty05-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/uncertainty05-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/uncertainty05-eps-converted-to.pdf used on input line 183.
+(pdftex.def)             Requested size: 420.0pt x 207.04314pt.
+
+
+LaTeX Warning: Reference `fig:uncertainty06' on page 22 undefined on input line 188.
+
+Package epstopdf Info: Source file: <./assets/uncertainty06.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 74166 bytes
+(epstopdf)             Output file: <./assets/uncertainty06-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 26924 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/uncertainty06-eps-converted-to.pdf ./assets/uncertainty06.eps>
+(epstopdf)             \includegraphics on input line 191.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/uncertainty06-eps-converted-to.pdf, id=235, 570.13pt x 281.05pt>
+File: ./assets/uncertainty06-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/uncertainty06-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/uncertainty06-eps-converted-to.pdf used on input line 191.
+(pdftex.def)             Requested size: 420.0pt x 207.04314pt.
+ [22 <./assets/uncertainty05-eps-converted-to.pdf> <./assets/uncertainty06-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./assets/uncertainty07.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 72864 bytes
+(epstopdf)             Output file: <./assets/uncertainty07-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 26257 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/uncertainty07-eps-converted-to.pdf ./assets/uncertainty07.eps>
+(epstopdf)             \includegraphics on input line 213.
+Package epstopdf Info: Output file is already uptodate.
+ <./assets/uncertainty07-eps-converted-to.pdf, id=262, 570.13pt x 281.05pt>
+File: ./assets/uncertainty07-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/uncertainty07-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/uncertainty07-eps-converted-to.pdf used on input line 213.
+(pdftex.def)             Requested size: 420.0pt x 207.04314pt.
+Package epstopdf Info: Source file: <./assets/uncertainty08.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 49403 bytes
+(epstopdf)             Output file: <./assets/uncertainty08-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 27467 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/uncertainty08-eps-converted-to.pdf ./assets/uncertainty08.eps>
+(epstopdf)             \includegraphics on input line 218.
+Package epstopdf Info: Output file is already uptodate.
+ <./assets/uncertainty08-eps-converted-to.pdf, id=263, 570.13pt x 281.05pt>
+File: ./assets/uncertainty08-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/uncertainty08-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/uncertainty08-eps-converted-to.pdf used on input line 218.
+(pdftex.def)             Requested size: 420.0pt x 207.04314pt.
+ [23 <./assets/uncertainty07-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./assets/uncertainty09.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 51484 bytes
+(epstopdf)             Output file: <./assets/uncertainty09-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 21519 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/uncertainty09-eps-converted-to.pdf ./assets/uncertainty09.eps>
+(epstopdf)             \includegraphics on input line 222.
+Package epstopdf Info: Output file is already uptodate.
+ <./assets/uncertainty09-eps-converted-to.pdf, id=284, 570.13pt x 281.05pt>
+File: ./assets/uncertainty09-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/uncertainty09-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/uncertainty09-eps-converted-to.pdf used on input line 222.
+(pdftex.def)             Requested size: 420.0pt x 207.04314pt.
+Package epstopdf Info: Source file: <./assets/uncertainty10.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 49095 bytes
+(epstopdf)             Output file: <./assets/uncertainty10-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 27368 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/uncertainty10-eps-converted-to.pdf ./assets/uncertainty10.eps>
+(epstopdf)             \includegraphics on input line 226.
+Package epstopdf Info: Output file is already uptodate.
+ <./assets/uncertainty10-eps-converted-to.pdf, id=285, 570.13pt x 281.05pt>
+File: ./assets/uncertainty10-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/uncertainty10-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/uncertainty10-eps-converted-to.pdf used on input line 226.
+(pdftex.def)             Requested size: 420.0pt x 207.04314pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24 <./assets/uncertainty08-eps-converted-to.pdf> <./assets/uncertainty09-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./assets/uncertainty11.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 4458 bytes
+(epstopdf)             Output file: <./assets/uncertainty11-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 11121 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/uncertainty11-eps-converted-to.pdf ./assets/uncertainty11.eps>
+(epstopdf)             \includegraphics on input line 234.
+Package epstopdf Info: Output file is already uptodate.
+ <./assets/uncertainty11-eps-converted-to.pdf, id=310, 570.13pt x 281.05pt>
+File: ./assets/uncertainty11-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/uncertainty11-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/uncertainty11-eps-converted-to.pdf used on input line 234.
+(pdftex.def)             Requested size: 420.0pt x 207.04314pt.
+
+Underfull \vbox (badness 1067) detected at line 253
+ []
+
+
+Underfull \vbox (badness 5175) has occurred while \output is active []
+
+ [25 <./assets/uncertainty10-eps-converted-to.pdf> <./assets/uncertainty11-eps-converted-to.pdf>]) [26]
+\openout2 = `part01/researchDesign.aux'.
+
+ (./part01/researchDesign.tex
+Chapter 4.
+
+LaTeX Warning: Reference `fig:research01' on page 27 undefined on input line 17.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27
+
+
+
+] [28]
+
+LaTeX Warning: Reference `fig:research02' on page 29 undefined on input line 113.
+
+Package epstopdf Info: Source file: <./assets/research01.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 5983 bytes
+(epstopdf)             Output file: <./assets/research01-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 11830 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/research01-eps-converted-to.pdf ./assets/research01.eps>
+(epstopdf)             \includegraphics on input line 116.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/research01-eps-converted-to.pdf, id=366, 564.1075pt x 303.1325pt>
+File: ./assets/research01-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/research01-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/research01-eps-converted-to.pdf used on input line 116.
+(pdftex.def)             Requested size: 420.0pt x 225.69754pt.
+ [29 <./assets/research01-eps-converted-to.pdf>] [30]) [31] [32]
+\openout2 = `part01/introToInference.aux'.
+
+ (./part01/introToInference.tex
+Chapter 5.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33
+
+
+
+] [34] [35]) [36] [37
+
+
+]
+\openout2 = `part02/tTools.aux'.
+
+ (./part02/tTools.tex
+Chapter 6.
+Package epstopdf Info: Source file: <./assets/t01.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 74996 bytes
+(epstopdf)             Output file: <./assets/t01-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 27391 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/t01-eps-converted-to.pdf ./assets/t01.eps>
+(epstopdf)             \includegraphics on input line 38.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/t01-eps-converted-to.pdf, id=458, 570.13pt x 281.05pt>
+File: ./assets/t01-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/t01-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/t01-eps-converted-to.pdf used on input line 38.
+(pdftex.def)             Requested size: 420.0pt x 207.04314pt.
+ [38
+
+
+]
+
+LaTeX Warning: Reference `fig:t01' on page 39 undefined on input line 45.
+
+
+LaTeX Warning: Reference `fig:t02' on page 39 undefined on input line 51.
+
+Package epstopdf Info: Source file: <./assets/t02.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 51880 bytes
+(epstopdf)             Output file: <./assets/t02-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 27212 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/t02-eps-converted-to.pdf ./assets/t02.eps>
+(epstopdf)             \includegraphics on input line 54.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/t02-eps-converted-to.pdf, id=468, 570.13pt x 281.05pt>
+File: ./assets/t02-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/t02-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/t02-eps-converted-to.pdf used on input line 54.
+(pdftex.def)             Requested size: 420.0pt x 207.04314pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39 <./assets/t01-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `eqn:t01' on page 40 undefined on input line 87.
+
+
+LaTeX Warning: Reference `eqn:t02' on page 40 undefined on input line 87.
+
+[40 <./assets/t02-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:t04' on page 41 undefined on input line 120.
+
+Package epstopdf Info: Source file: <./assets/t03.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 56609 bytes
+(epstopdf)             Output file: <./assets/t03-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 26506 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/t03-eps-converted-to.pdf ./assets/t03.eps>
+(epstopdf)             \includegraphics on input line 123.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/t03-eps-converted-to.pdf, id=508, 483.8075pt x 246.9225pt>
+File: ./assets/t03-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/t03-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/t03-eps-converted-to.pdf used on input line 123.
+(pdftex.def)             Requested size: 420.0pt x 214.36493pt.
+ [41]
+Underfull \vbox (badness 1057) has occurred while \output is active []
+
+ [42 <./assets/t03-eps-converted-to.pdf>] [43]
+
+LaTeX Warning: Reference `fig:t03' on page 44 undefined on input line 201.
+
+Package epstopdf Info: Source file: <./assets/t04.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 53855 bytes
+(epstopdf)             Output file: <./assets/t04-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 21853 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/t04-eps-converted-to.pdf ./assets/t04.eps>
+(epstopdf)             \includegraphics on input line 204.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/t04-eps-converted-to.pdf, id=548, 483.8075pt x 246.9225pt>
+File: ./assets/t04-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/t04-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/t04-eps-converted-to.pdf used on input line 204.
+(pdftex.def)             Requested size: 420.0pt x 214.36493pt.
+
+Underfull \vbox (badness 1635) detected at line 234
+ []
+
+
+Underfull \vbox (badness 5847) has occurred while \output is active []
+
+ [44 <./assets/t04-eps-converted-to.pdf>]) [45]
+\openout2 = `part02/tAlternatives.aux'.
+
+ (./part02/tAlternatives.tex
+Chapter 7.
+[46
+
+
+
+] [47] [48
+
+]
+Overfull \hbox (27.8746pt too wide) in paragraph at lines 116--117
+\OT1/cmr/m/n/10 Please note: all data used in these ex-pla-na-tions are sim-u-lated. For both tests, the same func-tion, []\OT1/cmtt/m/n/10 wilcox.test(x,y)
+ []
+
+[49]
+
+LaTeX Warning: Reference `fig:tAlt01' on page 50 undefined on input line 157.
+
+Package epstopdf Info: Source file: <./assets/tAlternative01.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 44655 bytes
+(epstopdf)             Output file: <./assets/tAlternative01-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 24398 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/tAlternative01-eps-converted-to.pdf ./assets/tAlternative01.eps>
+(epstopdf)             \includegraphics on input line 160.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/tAlternative01-eps-converted-to.pdf, id=609, 483.8075pt x 246.9225pt>
+File: ./assets/tAlternative01-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/tAlternative01-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/tAlternative01-eps-converted-to.pdf used on input line 160.
+(pdftex.def)             Requested size: 420.0pt x 214.36493pt.
+ [50 <./assets/tAlternative01-eps-converted-to.pdf>]) [51]
+\openout2 = `part02/anova.aux'.
+
+ (./part02/anova.tex
+Chapter 8.
+
+LaTeX Warning: Reference `fig:anova01' on page 52 undefined on input line 28.
+
+Package epstopdf Info: Source file: <./assets/anova01.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 8122 bytes
+(epstopdf)             Output file: <./assets/anova01-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 14565 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/anova01-eps-converted-to.pdf ./assets/anova01.eps>
+(epstopdf)             \includegraphics on input line 31.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/anova01-eps-converted-to.pdf, id=633, 483.8075pt x 246.9225pt>
+File: ./assets/anova01-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/anova01-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/anova01-eps-converted-to.pdf used on input line 31.
+(pdftex.def)             Requested size: 420.0pt x 214.36493pt.
+
+Underfull \vbox (badness 2547) has occurred while \output is active []
+
+ [52
+
+
+
+]
+
+LaTeX Warning: Reference `fig:anova02' on page 53 undefined on input line 40.
+
+
+LaTeX Warning: Reference `fig:anova03' on page 53 undefined on input line 40.
+
+Package epstopdf Info: Source file: <./assets/anova02.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 5424 bytes
+(epstopdf)             Output file: <./assets/anova02-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 13353 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/anova02-eps-converted-to.pdf ./assets/anova02.eps>
+(epstopdf)             \includegraphics on input line 43.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/anova02-eps-converted-to.pdf, id=643, 483.8075pt x 246.9225pt>
+File: ./assets/anova02-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/anova02-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/anova02-eps-converted-to.pdf used on input line 43.
+(pdftex.def)             Requested size: 420.0pt x 214.36493pt.
+
+
+LaTeX Warning: Reference `fig:anova02' on page 53 undefined on input line 48.
+
+Package epstopdf Info: Source file: <./assets/anova03.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 5952 bytes
+(epstopdf)             Output file: <./assets/anova03-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 13625 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/anova03-eps-converted-to.pdf ./assets/anova03.eps>
+(epstopdf)             \includegraphics on input line 51.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/anova03-eps-converted-to.pdf, id=644, 483.8075pt x 246.9225pt>
+File: ./assets/anova03-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/anova03-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/anova03-eps-converted-to.pdf used on input line 51.
+(pdftex.def)             Requested size: 420.0pt x 214.36493pt.
+
+
+LaTeX Warning: Reference `fig:anova03' on page 53 undefined on input line 56.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [53 <./assets/anova01-eps-converted-to.pdf>] [54 <./assets/anova02-eps-converted-to.pdf> <./assets/anova03-eps-converted-to.pdf>])
+Underfull \vbox (badness 1997) has occurred while \output is active []
+
+ [55] [56]
+\openout2 = `part02/multifactor.aux'.
+
+ (./part02/multifactor.tex
+Chapter 9.
+) [57
+
+
+
+]
+\openout2 = `part02/multifactorRep.aux'.
+
+ (./part02/multifactorRep.tex
+Chapter 10.
+) [58
+
+
+
+] [59
+
+
+]
+\openout2 = `part03/correlation.aux'.
+
+ (./part03/correlation.tex
+Chapter 11.
+
+LaTeX Warning: Reference `fig:correlation01' on page 60 undefined on input line 10.
+
+Package epstopdf Info: Source file: <./assets/correlation01.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 5193 bytes
+(epstopdf)             Output file: <./assets/correlation01-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 14168 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/correlation01-eps-converted-to.pdf ./assets/correlation01.eps>
+(epstopdf)             \includegraphics on input line 13.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/correlation01-eps-converted-to.pdf, id=743, 483.8075pt x 246.9225pt>
+File: ./assets/correlation01-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/correlation01-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/correlation01-eps-converted-to.pdf used on input line 13.
+(pdftex.def)             Requested size: 420.0pt x 214.36493pt.
+
+
+LaTeX Warning: Reference `fig:correlation02' on page 60 undefined on input line 19.
+
+Package epstopdf Info: Source file: <./assets/correlation02.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 7764 bytes
+(epstopdf)             Output file: <./assets/correlation02-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 14572 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/correlation02-eps-converted-to.pdf ./assets/correlation02.eps>
+(epstopdf)             \includegraphics on input line 22.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/correlation02-eps-converted-to.pdf, id=744, 483.8075pt x 246.9225pt>
+File: ./assets/correlation02-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/correlation02-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/correlation02-eps-converted-to.pdf used on input line 22.
+(pdftex.def)             Requested size: 420.0pt x 214.36493pt.
+
+Underfull \vbox (badness 3701) has occurred while \output is active []
+
+ [60
+
+
+ <./assets/correlation01-eps-converted-to.pdf>] [61 <./assets/correlation02-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:correlation03' on page 62 undefined on input line 71.
+
+Package epstopdf Info: Source file: <./assets/correlation03.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 70384 bytes
+(epstopdf)             Output file: <./assets/correlation03-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 150953 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/correlation03-eps-converted-to.pdf ./assets/correlation03.eps>
+(epstopdf)             \includegraphics on input line 81.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/correlation03-eps-converted-to.pdf, id=783, 614.295pt x 325.215pt>
+File: ./assets/correlation03-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/correlation03-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/correlation03-eps-converted-to.pdf used on input line 81.
+(pdftex.def)             Requested size: 420.0pt x 222.3541pt.
+ [62]
+
+LaTeX Warning: Reference `fig:correlation04' on page 63 undefined on input line 108.
+
+Package epstopdf Info: Source file: <./assets/correlation04.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 8591 bytes
+(epstopdf)             Output file: <./assets/correlation04-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 11638 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/correlation04-eps-converted-to.pdf ./assets/correlation04.eps>
+(epstopdf)             \includegraphics on input line 111.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/correlation04-eps-converted-to.pdf, id=791, 570.13pt x 281.05pt>
+File: ./assets/correlation04-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/correlation04-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/correlation04-eps-converted-to.pdf used on input line 111.
+(pdftex.def)             Requested size: 420.0pt x 207.04314pt.
+ [63 <./assets/correlation03-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:correlation06' on page 64 undefined on input line 121.
+
+Package epstopdf Info: Source file: <./assets/correlation06.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 10993 bytes
+(epstopdf)             Output file: <./assets/correlation06-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 18120 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/correlation06-eps-converted-to.pdf ./assets/correlation06.eps>
+(epstopdf)             \includegraphics on input line 124.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/correlation06-eps-converted-to.pdf, id=808, 614.295pt x 325.215pt>
+File: ./assets/correlation06-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/correlation06-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/correlation06-eps-converted-to.pdf used on input line 124.
+(pdftex.def)             Requested size: 420.0pt x 222.3541pt.
+
+Underfull \vbox (badness 10000) detected at line 149
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64 <./assets/correlation04-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) detected at line 170
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [65 <./assets/correlation06-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:correlation05' on page 66 undefined on input line 176.
+
+Package epstopdf Info: Source file: <./assets/correlation05.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 5801 bytes
+(epstopdf)             Output file: <./assets/correlation05-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 15785 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/correlation05-eps-converted-to.pdf ./assets/correlation05.eps>
+(epstopdf)             \includegraphics on input line 179.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/correlation05-eps-converted-to.pdf, id=841, 483.8075pt x 246.9225pt>
+File: ./assets/correlation05-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/correlation05-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/correlation05-eps-converted-to.pdf used on input line 179.
+(pdftex.def)             Requested size: 420.0pt x 214.36493pt.
+
+Underfull \vbox (badness 2142) detected at line 201
+ []
+
+
+Underfull \vbox (badness 7433) has occurred while \output is active []
+
+ [66 <./assets/correlation05-eps-converted-to.pdf>] [67]) [68]
+\openout2 = `part03/regression.aux'.
+
+ (./part03/regression.tex
+Chapter 12.
+
+LaTeX Warning: Reference `eqn:regression01' on page 69 undefined on input line 31.
+
+
+LaTeX Warning: Reference `fig:regression01' on page 69 undefined on input line 33.
+
+Package epstopdf Info: Source file: <./assets/regression01.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 5991 bytes
+(epstopdf)             Output file: <./assets/regression01-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 11730 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/regression01-eps-converted-to.pdf ./assets/regression01.eps>
+(epstopdf)             \includegraphics on input line 36.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/regression01-eps-converted-to.pdf, id=888, 613.29124pt x 325.215pt>
+File: ./assets/regression01-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/regression01-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/regression01-eps-converted-to.pdf used on input line 36.
+(pdftex.def)             Requested size: 420.0pt x 222.71634pt.
+
+
+LaTeX Warning: Reference `fig:regression01' on page 69 undefined on input line 41.
+
+[69
+
+
+
+]
+
+LaTeX Warning: Reference `fig:regression03' on page 70 undefined on input line 55.
+
+Package epstopdf Info: Source file: <./assets/regression03.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 7208 bytes
+(epstopdf)             Output file: <./assets/regression03-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 13311 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/regression03-eps-converted-to.pdf ./assets/regression03.eps>
+(epstopdf)             \includegraphics on input line 58.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/regression03-eps-converted-to.pdf, id=898, 613.29124pt x 325.215pt>
+File: ./assets/regression03-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/regression03-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/regression03-eps-converted-to.pdf used on input line 58.
+(pdftex.def)             Requested size: 420.0pt x 222.71634pt.
+
+
+LaTeX Warning: Reference `eqn:regression01' on page 70 undefined on input line 63.
+
+[70 <./assets/regression01-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:regression03' on page 71 undefined on input line 76.
+
+
+LaTeX Warning: Reference `fig:regression05' on page 71 undefined on input line 76.
+
+Package epstopdf Info: Source file: <./assets/regression05.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 4322 bytes
+(epstopdf)             Output file: <./assets/regression05-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 8647 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/regression05-eps-converted-to.pdf ./assets/regression05.eps>
+(epstopdf)             \includegraphics on input line 79.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/regression05-eps-converted-to.pdf, id=913, 613.29124pt x 325.215pt>
+File: ./assets/regression05-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/regression05-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/regression05-eps-converted-to.pdf used on input line 79.
+(pdftex.def)             Requested size: 420.0pt x 222.71634pt.
+
+
+LaTeX Warning: Reference `fig:regression04' on page 71 undefined on input line 89.
+
+[71 <./assets/regression03-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:regression04' on page 72 undefined on input line 101.
+
+Package epstopdf Info: Source file: <./assets/regression04.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 17011 bytes
+(epstopdf)             Output file: <./assets/regression04-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 15423 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/regression04-eps-converted-to.pdf ./assets/regression04.eps>
+(epstopdf)             \includegraphics on input line 106.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/regression04-eps-converted-to.pdf, id=931, 613.29124pt x 325.215pt>
+File: ./assets/regression04-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/regression04-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/regression04-eps-converted-to.pdf used on input line 106.
+(pdftex.def)             Requested size: 420.0pt x 222.71634pt.
+ [72 <./assets/regression05-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:regression08' on page 73 undefined on input line 117.
+
+Package epstopdf Info: Source file: <./assets/regression08.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 36864 bytes
+(epstopdf)             Output file: <./assets/regression08-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 52259 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/regression08-eps-converted-to.pdf ./assets/regression08.eps>
+(epstopdf)             \includegraphics on input line 120.
+Package epstopdf Info: Output file is already uptodate.
+<./assets/regression08-eps-converted-to.pdf, id=944, 483.8075pt x 246.9225pt>
+File: ./assets/regression08-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/regression08-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/regression08-eps-converted-to.pdf used on input line 120.
+(pdftex.def)             Requested size: 420.0pt x 214.36493pt.
+ [73 <./assets/regression04-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) detected at line 167
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [74 <./assets/regression08-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./assets/regression09.eps>
+(epstopdf)                    date: 2014-07-23 14:08:05
+(epstopdf)                    size: 5759 bytes
+(epstopdf)             Output file: <./assets/regression09-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-23 14:08:34
+(epstopdf)                    size: 15242 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/regression09-eps-converted-to.pdf ./assets/regression09.eps>
+(epstopdf)             \includegraphics on input line 191.
+Package epstopdf Info: Output file is already uptodate.
+ <./assets/regression09-eps-converted-to.pdf, id=982, 509.905pt x 260.975pt>
+File: ./assets/regression09-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/regression09-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/regression09-eps-converted-to.pdf used on input line 191.
+(pdftex.def)             Requested size: 420.0pt x 214.97253pt.
+
+
+LaTeX Warning: Reference `fig:regression09' on page 75 undefined on input line 196.
+
+[75]
+Package epstopdf Info: Source file: <./assets/regression02.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 5710 bytes
+(epstopdf)             Output file: <./assets/regression02-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 13699 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/regression02-eps-converted-to.pdf ./assets/regression02.eps>
+(epstopdf)             \includegraphics on input line 207.
+Package epstopdf Info: Output file is already uptodate.
+ <./assets/regression02-eps-converted-to.pdf, id=989, 483.8075pt x 246.9225pt>
+File: ./assets/regression02-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/regression02-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/regression02-eps-converted-to.pdf used on input line 207.
+(pdftex.def)             Requested size: 420.0pt x 214.36493pt.
+
+
+LaTeX Warning: Reference `fig:regression02' on page 76 undefined on input line 212.
+
+
+LaTeX Warning: Reference `fig:regression07' on page 76 undefined on input line 232.
+
+[76 <./assets/regression09-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./assets/regression07.eps>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 4669 bytes
+(epstopdf)             Output file: <./assets/regression07-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-05 23:17:27
+(epstopdf)                    size: 13168 bytes
+(epstopdf)             Command: <epstopdf --outfile=./assets/regression07-eps-converted-to.pdf ./assets/regression07.eps>
+(epstopdf)             \includegraphics on input line 235.
+Package epstopdf Info: Output file is already uptodate.
+ <./assets/regression07-eps-converted-to.pdf, id=1008, 483.8075pt x 246.9225pt>
+File: ./assets/regression07-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./assets/regression07-eps-converted-to.pdf>
+Package pdftex.def Info: ./assets/regression07-eps-converted-to.pdf used on input line 235.
+(pdftex.def)             Requested size: 420.0pt x 214.36493pt.
+) [77 <./assets/regression02-eps-converted-to.pdf>] [78 <./assets/regression07-eps-converted-to.pdf>]
+\openout2 = `part03/multipleRegression.aux'.
+
+ (./part03/multipleRegression.tex
+Chapter 13.
+) [79
+
+
+
+]
+\openout2 = `part03/logRegression.aux'.
+
+ (./part03/logRegression.tex
+Chapter 14.
+) [80
+
+
+
+]
+\openout2 = `part03/checking.aux'.
+
+ (./part03/checking.tex
+Chapter 15.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 3.
+
+) [81
+
+
+
+] [82
+
+
+]
+\openout2 = `part04/timeSeries.aux'.
+
+ (./part04/timeSeries.tex
+Chapter 16.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 3.
+
+) [83
+
+
+]
+\openout2 = `part04/factor.aux'.
+
+ (./part04/factor.tex
+Chapter 17.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 3.
+
+) [84
+
+
+
+]
+\openout2 = `part04/rank.aux'.
+
+ (./part04/rank.tex
+Chapter 18.
+) [85
+
+
+
+]
+\openout2 = `part04/counts.aux'.
+
+ (./part04/counts.tex
+Chapter 19.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 3.
+
+) [86
+
+
+
+] [87
+
+
+]
+\openout2 = `part05/cheat.aux'.
+
+ (./part05/cheat.tex
+Chapter 20.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 3.
+
+) [88
+
+
+]
+\openout2 = `part05/leek.aux'.
+
+ (./part05/leek.tex
+Chapter 21.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 3.
+
+) [89
+
+
+
+]
+No file TSWLatexianTemp_000092.ind.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
+(./TSWLatexianTemp_000092.aux (./copyright.aux) (./part01/preface.aux) (./part01/introToR.aux) (./part01/measuringUncertainty.aux) (./part01/researchDesign.aux) (./part01/introToInference.aux) (./part02/tTools.aux) (./part02/tAlternatives.aux) (./part02/anova.aux) (./part02/multifactor.aux) (./part02/multifactorRep.aux) (./part03/correlation.aux) (./part03/regression.aux) (./part03/multipleRegression.aux) (./part03/logRegression.aux) (./part03/checking.aux) (./part04/timeSeries.aux) (./part04/factor.aux) (./part04/rank.aux) (./part04/counts.aux) (./part05/cheat.aux) (./part05/leek.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 196.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 196.
+
+
+Package rerunfilecheck Warning: File `TSWLatexianTemp_000092.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `TSWLatexianTemp_000092.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  BD930D0BAE748A1A1F0242E488681AF5;8958.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
+ ) 
+Here is how much of TeX's memory you used:
+ 17239 strings out of 493108
+ 320952 string characters out of 6134847
+ 387686 words of memory out of 5000000
+ 19849 multiletter control sequences out of 15000+600000
+ 9121 words of font info for 32 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,12n,54p,1136b,580s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on TSWLatexianTemp_000092.pdf (89 pages, 1085868 bytes).
+PDF statistics:
+ 1290 PDF objects out of 1440 (max. 8388607)
+ 1041 compressed objects within 11 object streams
+ 430 named destinations out of 1000 (max. 500000)
+ 183 words of extra memory for PDF output out of 10000 (max. 10000000)
+

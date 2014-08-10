@@ -1,0 +1,128 @@
+\BOOKMARK [-1][-]{part.1}{I Introductory Materials to the Book}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Preface}{part.1}% 2
+\BOOKMARK [1][-]{section.1.1}{Introduction}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{To the Student}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{Introduction to R}{part.1}% 5
+\BOOKMARK [1][-]{section.2.1}{Getting Started}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{Basic R Syntax}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{Exercises}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.4}{Additional Resources}{chapter.2}% 9
+\BOOKMARK [0][-]{chapter.3}{Measuring Uncertainty}{part.1}% 10
+\BOOKMARK [1][-]{section.3.1}{Measures of Central Tendency and Spread}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{Standard Deviation}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Sampling Distributions}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.4}{Visualizing Data}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.5}{Exercises}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.6}{Additonal Resources}{chapter.3}% 16
+\BOOKMARK [0][-]{chapter.4}{Research Design}{part.1}% 17
+\BOOKMARK [1][-]{section.4.1}{Relating Design and Analysis}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.2}{Designing Sound Experiments}{chapter.4}% 19
+\BOOKMARK [0][-]{chapter.5}{Introduction to Statistical Inference}{part.1}% 20
+\BOOKMARK [1][-]{section.5.1}{What Is Statistical Inference}{chapter.5}% 21
+\BOOKMARK [1][-]{section.5.2}{Some Considerations about Statistical Inference}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.3}{Recap: The Components of a Statistical Test}{chapter.5}% 23
+\BOOKMARK [-1][-]{part.2}{II Comparisons Among Multiple Samples}{}% 24
+\BOOKMARK [0][-]{chapter.6}{t-Tools}{part.2}% 25
+\BOOKMARK [1][-]{section.6.1}{Overview of t-Tools}{chapter.6}% 26
+\BOOKMARK [1][-]{section.6.2}{Cautions and Considerations}{chapter.6}% 27
+\BOOKMARK [1][-]{section.6.3}{Implementation in R}{chapter.6}% 28
+\BOOKMARK [1][-]{section.6.4}{Case Study: Medicare Spending on Patients}{chapter.6}% 29
+\BOOKMARK [1][-]{section.6.5}{Exercises}{chapter.6}% 30
+\BOOKMARK [1][-]{section.6.6}{Additional Resources}{chapter.6}% 31
+\BOOKMARK [0][-]{chapter.7}{Alternatives to t-Tools}{part.2}% 32
+\BOOKMARK [1][-]{section.7.1}{What Are Nonparametric Statistics?}{chapter.7}% 33
+\BOOKMARK [1][-]{section.7.2}{Overview of Nonparametric Tools for Two Samples}{chapter.7}% 34
+\BOOKMARK [1][-]{section.7.3}{Cautions and Considerations}{chapter.7}% 35
+\BOOKMARK [1][-]{section.7.4}{Implementation in R}{chapter.7}% 36
+\BOOKMARK [1][-]{section.7.5}{Case Study: Heavy Metal Accumulation}{chapter.7}% 37
+\BOOKMARK [1][-]{section.7.6}{Exercises}{chapter.7}% 38
+\BOOKMARK [1][-]{section.7.7}{Additional Resources}{chapter.7}% 39
+\BOOKMARK [0][-]{chapter.8}{One-Way ANOVA}{part.2}% 40
+\BOOKMARK [1][-]{section.8.1}{Overview of One-Way ANOVAs}{chapter.8}% 41
+\BOOKMARK [1][-]{section.8.2}{Cautions and Considerations}{chapter.8}% 42
+\BOOKMARK [1][-]{section.8.3}{Implementation in R}{chapter.8}% 43
+\BOOKMARK [1][-]{section.8.4}{Case Study: [STUDY]}{chapter.8}% 44
+\BOOKMARK [1][-]{section.8.5}{Exercises}{chapter.8}% 45
+\BOOKMARK [1][-]{section.8.6}{Additional Resources}{chapter.8}% 46
+\BOOKMARK [0][-]{chapter.9}{Multifactor Studies}{part.2}% 47
+\BOOKMARK [1][-]{section.9.1}{Overview of Multiple ANOVAs}{chapter.9}% 48
+\BOOKMARK [1][-]{section.9.2}{Cautions and Considerations}{chapter.9}% 49
+\BOOKMARK [1][-]{section.9.3}{Implementation in R}{chapter.9}% 50
+\BOOKMARK [1][-]{section.9.4}{Case Study: [STUDY]}{chapter.9}% 51
+\BOOKMARK [1][-]{section.9.5}{Exercises}{chapter.9}% 52
+\BOOKMARK [1][-]{section.9.6}{Additional Resources}{chapter.9}% 53
+\BOOKMARK [0][-]{chapter.10}{Multifactor Studies with Replication}{part.2}% 54
+\BOOKMARK [1][-]{section.10.1}{Overview of Repeated Measures Designs}{chapter.10}% 55
+\BOOKMARK [1][-]{section.10.2}{Cautions and Considerations}{chapter.10}% 56
+\BOOKMARK [1][-]{section.10.3}{Implementation in R}{chapter.10}% 57
+\BOOKMARK [1][-]{section.10.4}{Case Study: [STUDY]}{chapter.10}% 58
+\BOOKMARK [1][-]{section.10.5}{Exercises}{chapter.10}% 59
+\BOOKMARK [1][-]{section.10.6}{Additional Resources}{chapter.10}% 60
+\BOOKMARK [-1][-]{part.3}{III Describing Relationships and Predicting Values}{}% 61
+\BOOKMARK [0][-]{chapter.11}{Correlation}{part.3}% 62
+\BOOKMARK [1][-]{section.11.1}{Overview of Correlation}{chapter.11}% 63
+\BOOKMARK [1][-]{section.11.2}{Cautions and Considerations}{chapter.11}% 64
+\BOOKMARK [1][-]{section.11.3}{Implementation in R}{chapter.11}% 65
+\BOOKMARK [1][-]{section.11.4}{Case Study: National Education Trends}{chapter.11}% 66
+\BOOKMARK [1][-]{section.11.5}{Exercises}{chapter.11}% 67
+\BOOKMARK [1][-]{section.11.6}{Additional Resources}{chapter.11}% 68
+\BOOKMARK [0][-]{chapter.12}{Simple Linear Regression}{part.3}% 69
+\BOOKMARK [1][-]{section.12.1}{Overview of Simple Linear Regression}{chapter.12}% 70
+\BOOKMARK [1][-]{section.12.2}{Cautions and Considerations}{chapter.12}% 71
+\BOOKMARK [1][-]{section.12.3}{Implementation in R}{chapter.12}% 72
+\BOOKMARK [1][-]{section.12.4}{Case Study: Evidence for the Big Bang}{chapter.12}% 73
+\BOOKMARK [1][-]{section.12.5}{Exercises}{chapter.12}% 74
+\BOOKMARK [1][-]{section.12.6}{Additional resources}{chapter.12}% 75
+\BOOKMARK [0][-]{chapter.13}{Multiple Regression}{part.3}% 76
+\BOOKMARK [1][-]{section.13.1}{Overview of Multiple Regression}{chapter.13}% 77
+\BOOKMARK [1][-]{section.13.2}{Cautions and Considerations}{chapter.13}% 78
+\BOOKMARK [1][-]{section.13.3}{Implementation in R}{chapter.13}% 79
+\BOOKMARK [1][-]{section.13.4}{Case Study: [STUDY]}{chapter.13}% 80
+\BOOKMARK [1][-]{section.13.5}{Exercises}{chapter.13}% 81
+\BOOKMARK [1][-]{section.13.6}{Additional Resources}{chapter.13}% 82
+\BOOKMARK [0][-]{chapter.14}{Logistic Regression}{part.3}% 83
+\BOOKMARK [1][-]{section.14.1}{Overview of Logistic Regression}{chapter.14}% 84
+\BOOKMARK [1][-]{section.14.2}{Cautions and Considerations}{chapter.14}% 85
+\BOOKMARK [1][-]{section.14.3}{Implementation in R}{chapter.14}% 86
+\BOOKMARK [1][-]{section.14.4}{Case Study: [STUDY]}{chapter.14}% 87
+\BOOKMARK [1][-]{section.14.5}{Exercises}{chapter.14}% 88
+\BOOKMARK [1][-]{section.14.6}{Additional Resources}{chapter.14}% 89
+\BOOKMARK [0][-]{chapter.15}{Model Refinement and Variable Selection}{part.3}% 90
+\BOOKMARK [1][-]{section.15.1}{General Strategies for Model Refinement}{chapter.15}% 91
+\BOOKMARK [1][-]{section.15.2}{Cautions and Considerations}{chapter.15}% 92
+\BOOKMARK [1][-]{section.15.3}{Implementation in R}{chapter.15}% 93
+\BOOKMARK [1][-]{section.15.4}{Case Study: [STUDY]}{chapter.15}% 94
+\BOOKMARK [1][-]{section.15.5}{Exercises}{chapter.15}% 95
+\BOOKMARK [1][-]{section.15.6}{Additional Resources}{chapter.15}% 96
+\BOOKMARK [-1][-]{part.4}{IV Inferences from Unusual Data Structures}{}% 97
+\BOOKMARK [0][-]{chapter.16}{Time-Series Data and Serial Correlation}{part.4}% 98
+\BOOKMARK [1][-]{section.16.1}{Overview of Time-Series Tools}{chapter.16}% 99
+\BOOKMARK [1][-]{section.16.2}{Cautions and Considerations}{chapter.16}% 100
+\BOOKMARK [1][-]{section.16.3}{Implementation in R}{chapter.16}% 101
+\BOOKMARK [1][-]{section.16.4}{Case Study: [STUDY]}{chapter.16}% 102
+\BOOKMARK [1][-]{section.16.5}{Exercises}{chapter.16}% 103
+\BOOKMARK [1][-]{section.16.6}{Additional Resources}{chapter.16}% 104
+\BOOKMARK [0][-]{chapter.17}{Factor Analysis and Principle Component Analysis}{part.4}% 105
+\BOOKMARK [1][-]{section.17.1}{Overview of Factor Analyses}{chapter.17}% 106
+\BOOKMARK [1][-]{section.17.2}{Cautions and Considerations}{chapter.17}% 107
+\BOOKMARK [1][-]{section.17.3}{Implementation in R}{chapter.17}% 108
+\BOOKMARK [1][-]{section.17.4}{Case Study: [STUDY]}{chapter.17}% 109
+\BOOKMARK [1][-]{section.17.5}{Exercises}{chapter.17}% 110
+\BOOKMARK [1][-]{section.17.6}{Additional Resources}{chapter.17}% 111
+\BOOKMARK [0][-]{chapter.18}{Rank-Ordered Data}{part.4}% 112
+\BOOKMARK [1][-]{section.18.1}{Overview of Tools for Ranked Data}{chapter.18}% 113
+\BOOKMARK [1][-]{section.18.2}{Cautions and Considerations}{chapter.18}% 114
+\BOOKMARK [1][-]{section.18.3}{Implementation in R}{chapter.18}% 115
+\BOOKMARK [1][-]{section.18.4}{Case Study: [STUDY]}{chapter.18}% 116
+\BOOKMARK [1][-]{section.18.5}{Exercises}{chapter.18}% 117
+\BOOKMARK [1][-]{section.18.6}{Additional Resources}{chapter.18}% 118
+\BOOKMARK [0][-]{chapter.19}{Tables of Counts, Proportions, and Odds}{part.4}% 119
+\BOOKMARK [1][-]{section.19.1}{Overview of Chi-Squared Tests}{chapter.19}% 120
+\BOOKMARK [1][-]{section.19.2}{Cautions and Considerations}{chapter.19}% 121
+\BOOKMARK [1][-]{section.19.3}{Implementation in R}{chapter.19}% 122
+\BOOKMARK [1][-]{section.19.4}{Case Study: [STUDY]}{chapter.19}% 123
+\BOOKMARK [1][-]{section.19.5}{Exercises}{chapter.19}% 124
+\BOOKMARK [1][-]{section.19.6}{Additional Resources}{chapter.19}% 125
+\BOOKMARK [-1][-]{part.5}{V Supplemental Materials}{}% 126
+\BOOKMARK [0][-]{chapter.20}{Choosing the Right Analysis: A Cheat Sheet}{part.5}% 127
+\BOOKMARK [0][-]{chapter.21}{Getting Outside Help: How to Share Data}{part.5}% 128

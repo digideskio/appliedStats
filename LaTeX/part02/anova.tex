@@ -9,23 +9,23 @@ To understand ANOVAs, let's think back once more to \textit{t}-tests. There, we'
 
 Well, using what we've learned up to now, we're stuck: there's nothing more we can do. But of course that's not \textit{really} the case, is it? Otherwise we wouldn't be writing this chapter!
 
-The idea with a one-way ANOVA (\textbf{AN}alysis \textbf{O}f \textbf{VA}riance) is that we have a variable of interest, but three or more levels of our grouping variable. For instance, we might be looking at student test scores as a function of classroom type: regular, honors, AP (advanced placement), or IB (international baccalaureate). That's way beyond the scope of any \textit{t}-test that we've come across. Thankfully, though, the ANOVA is happy to step in to fill the gap.
+The idea with a one-way ANOVA (\textbf{AN}alysis \textbf{O}f \textbf{VA}riance) \index{ANOVA (one-way)}is that we have a variable of interest, but three or more levels of our grouping variable. For instance, we might be looking at student test scores as a function of classroom type: regular, honors, AP (advanced placement), or IB (international baccalaureate). That's way beyond the scope of any \textit{t}-test that we've come across. Thankfully, though, the ANOVA is happy to step in to fill the gap.
 
 Before we can actually run the test, however, there is some background information that we need to understand first.
 
 \subsection{Fixed and Random Effects}
 
-For starters, we should be familiar with fixed, random, and mixed effects models. Broadly speaking, these refer to how the treatment factors are defined within the context of the experiment.
+For starters, we should be familiar with fixed and random effects models. Broadly speaking, these refer to how the treatment factors are defined within the context of the experiment.
 
 One caveat before we get started, though: there is no single agreed-upon definition for fixed and random effects. Rather, the precise definition is going to depend on the exact context of your experiment and your program of research. For a quick overview of these different definitions (or at least a spattering of them), check out \href{http://andrewgelman.com/2005/01/25/why_i_dont_use/}{Andrew Gelman's write-up, linked here}.
 
 \subsubsection{Fixed Effects}
 
-In a fixed-effects model, there is a basic assumption that the individual-specific effect is correlated with the independent variable(s). The idea here is that person-to-person, there is little variance beyond that caused by the treatment effect.
+In a fixed-effects model \index{Fixed effects}, there is a basic assumption that the individual-specific effect is correlated with the independent variable(s). The idea here is that person-to-person, there is little variance beyond that caused by the treatment effect.
 
 \subsubsection{Random Effects}
 
-Random effects models assume that there is some inherent amount of individual variance not accounted for by the treatment. So if we were talking about a regression equation with a random intercept $a_i$ and fixed slope $b$, each individual would have his or hew own regression line, parallel to every other individual but with a differing intercept (cf. Figure \ref{fig:anova01}).
+Random effects \index{Random effects} models assume that there is some inherent amount of individual variance not accounted for by the treatment. So if we were talking about a regression equation with a random intercept $a_i$ and fixed slope $b$, each individual would have his or hew own regression line, parallel to every other individual but with a differing intercept (cf. Figure \ref{fig:anova01}).
 
 \begin{figure}[htp]
 \includegraphics[width=35pc]{anova01}
@@ -35,7 +35,7 @@ Random effects models assume that there is some inherent amount of individual va
 
 \subsection{Sum of Squares}
 
-Residual, treatment, and total sums of squares are discussed more fully in our chapter on simple linear regression. The basic idea here is that there are two big sources of error: the treatment and the residual. Every time we have an experiment and are taking measurements, there is going to be some amount of background noise inherent in that: the point of statistical modeling is to reduce the amount of noise that we are unable to explain.
+Residual \index{Residual sum of squares}, treatment \index{Treatment sum of squares}, and total sums of squares \index{Total sum of squares} are discussed more fully in our chapter on simple linear regression. The basic idea here is that there are two big sources of error: the treatment and the residual. Every time we have an experiment and are taking measurements, there is going to be some amount of background noise inherent in that: the point of statistical modeling is to reduce the amount of noise that we are unable to explain.
 
 As such, there is noise from the treatment (individuals responding differently to the stimuli) and noise from the residual (those random fluctuations that our model is unable to explain). These combine to form a total measure of the error. In the context of an ANOVA, the residual error (termed the residual sum of squares) is equivalent to the variance within each group; the treatment sum of squares equivalent to the variance between groups. Take for instance Figures \ref{fig:anova02} and \ref{fig:anova03}.
 
@@ -65,12 +65,12 @@ SS_{total} &=& SS_{residual}+SS_{treatment} \\
 
 \subsection{The \textit{F}-Test}
 
-The \textit{F}-test is used to take these observed variances and give a standardized test statistic allowing us to quantify the magnitude of the difference observed between our treatment groups. It is calculated by:
+The \textit{F}-test \index{F-test} is used to take these observed variances and give a standardized test statistic allowing us to quantify the magnitude of the difference observed between our treatment groups. It is calculated by:
 \begin{equation}
 F = \frac{MS_{treatment}}{MS_{residual}}
 \end{equation}
 
-The mean square ($MS$) statistics are calculated by:
+The mean square ($MS$) statistics \index{Mean square} are calculated by:
 \begin{equation*}
 F = \frac{\text{Between-groups}}{\text{Within-groups}} = \frac{MS_{treatment}}{MS_{residual}} = \frac{SS_{treatment}/(I-1)}{SS_{residual}/(n-1)}
 \end{equation*}

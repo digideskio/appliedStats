@@ -1,0 +1,73 @@
+\indexentry{Data types|hyperpage}{10}
+\indexentry{Data types!Vector|hyperpage}{11}
+\indexentry{Data types!Matrix|hyperpage}{11}
+\indexentry{Data types!Data frame|hyperpage}{12}
+\indexentry{Data types!Factor|hyperpage}{12}
+\indexentry{Data types!Function|hyperpage}{13}
+\indexentry{Mean|hyperpage}{16}
+\indexentry{Median|hyperpage}{16}
+\indexentry{Mode|hyperpage}{16}
+\indexentry{Skewness|hyperpage}{17}
+\indexentry{Standard deviation|hyperpage}{19}
+\indexentry{Variance|hyperpage}{20}
+\indexentry{Interquartile range|hyperpage}{21}
+\indexentry{Regression to the mean|hyperpage}{21}
+\indexentry{Central limit theorem|hyperpage}{21}
+\indexentry{Sampling distribution|hyperpage}{22}
+\indexentry{Histogram|hyperpage}{23}
+\indexentry{Kernel density|hyperpage}{23}
+\indexentry{Boxplot|hyperpage}{25}
+\indexentry{Accuracy|hyperpage}{27}
+\indexentry{Precision|hyperpage}{27}
+\indexentry{Validity|hyperpage}{27}
+\indexentry{Precision|hyperpage}{27}
+\indexentry{Internal validity|hyperpage}{29}
+\indexentry{Sampling strategies|hyperpage}{30}
+\indexentry{External validity|hyperpage}{31}
+\indexentry{Null hypothesis|hyperpage}{33}
+\indexentry{Alternative hypothesis|hyperpage}{33}
+\indexentry{Test statistic|hyperpage}{34}
+\indexentry{Degrees of freedom|hyperpage}{34}
+\indexentry{P-value|hyperpage}{34}
+\indexentry{Confidence interval|hyperpage}{35}
+\indexentry{Type I Error|hyperpage}{35}
+\indexentry{Type II Error|hyperpage}{35}
+\indexentry{$t$-test|hyperpage}{38}
+\indexentry{$t$-test!One sample|hyperpage}{38}
+\indexentry{$t$-test!Paired samples|hyperpage}{39}
+\indexentry{$t$-test!Independent samples|hyperpage}{40}
+\indexentry{$t$-test!Welch's|hyperpage}{41}
+\indexentry{Equal variance|hyperpage}{41}
+\indexentry{Standard deviation!Pooled|hyperpage}{41}
+\indexentry{Equal variance!Levene's test|hyperpage}{41}
+\indexentry{Nonparametric statistics|hyperpage}{46}
+\indexentry{Mann-Whitney U test|hyperpage}{46}
+\indexentry{Mann-Whitney-Wilcoxon test|hyperpage}{46}
+\indexentry{Wilcoxon rank-sum test|hyperpage}{46}
+\indexentry{Wilcoxon-Mann-Whitney test|hyperpage}{46}
+\indexentry{ANOVA (one-way)|hyperpage}{52}
+\indexentry{Fixed effects|hyperpage}{52}
+\indexentry{Random effects|hyperpage}{52}
+\indexentry{Residual sum of squares|hyperpage}{53}
+\indexentry{Treatment sum of squares|hyperpage}{53}
+\indexentry{Total sum of squares|hyperpage}{53}
+\indexentry{F-test|hyperpage}{55}
+\indexentry{Mean square|hyperpage}{55}
+\indexentry{Scatterplot|hyperpage}{60}
+\indexentry{Linear association|hyperpage}{61}
+\indexentry{Correlation|hyperpage}{61}
+\indexentry{Correlation matrix|hyperpage}{62}
+\indexentry{Correlation!Bivariate correlation|hyperpage}{62}
+\indexentry{Correlation!Partial correlation|hyperpage}{63}
+\indexentry{Simple linear regression|hyperpage}{69}
+\indexentry{Least squares estimation|hyperpage}{69}
+\indexentry{R$^2$|hyperpage}{70}
+\indexentry{Error|hyperpage}{71}
+\indexentry{Pearson's $r$|hyperpage}{71}
+\indexentry{Residual|hyperpage}{71}
+\indexentry{Residual sum of squares|hyperpage}{71}
+\indexentry{Total sum of squares|hyperpage}{71}
+\indexentry{Residual!Residual diagnostics|hyperpage}{73}
+\indexentry{Bias|hyperpage}{73}
+\indexentry{Residual!Homoscedasticity|hyperpage}{73}
+\indexentry{Residual!Heteroscedasticity|hyperpage}{73}

@@ -6,7 +6,7 @@
 
 \subsection{One-Sample \textit{t}-Test}
 
-The one-sample \textit{t}-test is one of the simplest entry points to inferential statistics there is. Simply put, it seeks to determine if the average value of a set of data differs significantly from some theoretical quantity. Say, for instance, we are working in a lumber mill and it looks like a shipment of Douglas fir trees is a bit smaller than usual. We know that a typical Douglas fir from this region is about 225 feet tall and has a radius of 7.5 feet, giving us a total volume of about $39000$ cubic feet.
+The one-sample \textit{t}-test \index{$t$-test} \index{$t$-test!One sample} is one of the simplest entry points to inferential statistics there is. Simply put, it seeks to determine if the average value of a set of data differs significantly from some theoretical quantity. Say, for instance, we are working in a lumber mill and it looks like a shipment of Douglas fir trees is a bit smaller than usual. We know that a typical Douglas fir from this region is about 225 feet tall and has a radius of 7.5 feet, giving us a total volume of about $39000$ cubic feet.
 
 So we take the measurements for each of the trees in this shipment and find that the average volume is $36500$ cubic feet with a standard deviation around $\sigma = 2000$ cubic feet. Do we have sufficient proof that these trees are actually smaller than our typical shipment?
 
@@ -32,7 +32,7 @@ where each of the variables is what we defined in our hypotheses above. Plugging
 t(124)&=&\frac{36500-39000}{2000/\sqrt{125}} \\
 &=& -13.98
 \end{eqnarray*}
-Although we have our standardized \textit{t}-statistic, we still don't know if it reaches a level of significance or not. historically, we would have to go to a table of \textit{p}-values and look up the one that was closest to our \textit{t}-statistic given the degrees of freedom (here, 124, or $n-1$). Thankfully, we now have software that is able to compute this value for us much more precisely and quickly. In this case, we end up with a \textit{p}-value $< 0.001$, showing that the result is highly significant.
+Although we have our standardized \textit{t}-statistic, we still don't know if it reaches a level of significance or not. Historically, we would have to go to a table of \textit{p}-values and look up the one that was closest to our \textit{t}-statistic given the degrees of freedom (here, 124, or $n-1$). Thankfully, we now have software that is able to compute this value for us much more precisely and quickly. In this case, we end up with a \textit{p}-value $< 0.001$, showing that the result is highly significant.
 
 \begin{figure}[htp]
 \includegraphics[width=35pc]{t01}
@@ -46,7 +46,7 @@ So, we can ultimately conclude that this shipment of Douglas firs is statistical
 
 \subsection{Paired-Samples \textit{t}-Test}
 
-So now that we're familiar with a one-sample \textit{t}-test, the next two tests in the suite become really easy to understand. In a one-sample \textit{t}-test, we're testing one sample of data against a mean that we already know; with a paired-samples test, we extend that to two samples of data that are usually matched along some criteria. For instance, we might be looking at the difference in grieving patterns between mothers and fathers; or personality differences between heterozygous twins; or blood pressure of clinic patients before and after a given drug treatment.
+So now that we're familiar with a one-sample \textit{t}-test \index{$t$-test!Paired samples}, the next two tests in the suite become really easy to understand. In a one-sample \textit{t}-test, we're testing one sample of data against a mean that we already know; with a paired-samples test, we extend that to two samples of data that are usually matched along some criteria. For instance, we might be looking at the difference in grieving patterns between mothers and fathers; or personality differences between heterozygous twins; or blood pressure of clinic patients before and after a given drug treatment.
 
 In every case, our two variables are somehow \textit{related} to one another and for every data point in column A there is a corresponding data point in column B. For instance, let's say that we work at a large health clinic and we're testing a new drug, Procardia, that's meant to reduce hypertension. We find 1000 individuals with a high systolic blood pressure ($M=145$mmHg, $SD=9$), we give them Procardia for a month, and then measure their blood pressure again. We find that the mean systolic blood pressure has decreased to $138$mmHg with a standard deviation $8$. We can visualize this difference in Figure \ref{fig:t02}.
 
@@ -64,7 +64,7 @@ Plugging in our data, we end up with $t(999)=19.75$, $p\text{-value}<0.001$, ind
 
 \subsection{Independent-Samples \textit{t}-Test}
 
-Finally is the independent-samples \textit{t}-test. Functionally, this is nearly identical to the paired-samples test: the only major difference is that it is used when the two samples are not paired or somehow related to one another. We would use this test if we were interested in determining, for example, whether there was a difference between depression scores of outpatients at two different clinics; or whether New Yorkers and Clevelanders spend different amounts of money each month eating out; or do two strains of a bacteria respond differently to an antimicrobial gel?
+Finally is the independent-samples \textit{t}-test \index{$t$-test!Independent samples}. Functionally, this is nearly identical to the paired-samples test: the only major difference is that it is used when the two samples are not paired or somehow related to one another. We would use this test if we were interested in determining, for example, whether there was a difference between depression scores of outpatients at two different clinics; or whether New Yorkers and Clevelanders spend different amounts of money each month eating out; or do two strains of a bacteria respond differently to an antimicrobial gel?
 
 In each of these examples, there is no pairing: New Yorkers are an entirely different population from Clevelanders; the two strains of bacteria have been isolated from one another in a lab for generations. There aren't any obvious commonalities between the two samples.
 
@@ -84,7 +84,7 @@ t = {\frac{\bar{x}_1 - \bar{x}_2}{s_{\bar{x}_1 - \bar{x}_2}}}\text{, where }s_{\
 \label{eqn:t03}
 \end{equation}
 
-Woah, that's a lot of choice. So, how do we figure out which to use, exactly? Well, it's not strictly speaking wrong to always default to using Welch's test assuming unequal variances. It's maybe not something that you necessarily \textit{should} always do, but it's better than using Equation \ref{eqn:t01} or \ref{eqn:t02} when the variances aren't actually equal. That said, we'll detail how exactly to determine which of these three tests to use in both the Equality of Variances and Implementation in R sections.
+Woah, that's a lot of choice. So, how do we figure out which to use, exactly? Well, it's not strictly speaking wrong to always default to using Welch's test \index{$t$-test!Welch's} assuming unequal variances. It's maybe not something that you necessarily \textit{should} always do, but it's better than using Equation \ref{eqn:t01} or \ref{eqn:t02} when the variances aren't actually equal. That said, we'll detail how exactly to determine which of these three tests to use in both the Equality of Variances and Implementation in R sections.
 
 \section{Cautions and Considerations}
 
@@ -100,13 +100,13 @@ The suite of \textit{t}-tools assumes that:
 
 \subsection{Equality of Variances}
 
-As we mentioned above, the suite of \textit{t}-tools largely assumes that the variances of the two samples are equal. However, when this is not actually the case, unless using Welch's test, your results can be a bit misleading. This difference arises from how each of the different tests computes the standard deviation for the two samples. Assuming unequal variances, the \textbf{pooled standard deviation} is calculated.
+As we mentioned above, the suite of \textit{t}-tools largely assumes that the variances \index{Equal variance} of the two samples are equal. However, when this is not actually the case, unless using Welch's test, your results can be a bit misleading. This difference arises from how each of the different tests computes the standard deviation for the two samples. Assuming unequal variances, the \textbf{pooled standard deviation} \index{Standard deviation!Pooled} is calculated.
 
 By this estimate, the standard deviations of the two samples are combined (or pooled). However, these are first \textbf{weighted} by sample size. The idea behind this is that a standard deviation for a smaller sample doesn't carry as much importance as a standard deviation from a large sample. (The standard deviation of the large sample should be a better reflection of the population standard deviation.) Accordingly, each sample is weighted by its degrees of freedom.
 
 Yet, if the two samples don't actually have the same standard deviation, this statistic quickly becomes misleading: it's like combining elephants and elephant mice together and calling them the same thing. Pretty obviously, they aren't. And once you start trying to make inferences about them, things are going to get wonky pretty quickly.
 
-So before deciding which type of independent-samples test to run, we will first conduct Levene's test for equality of variances. This operates under the hypotheses:
+So before deciding which type of independent-samples test to run, we will first conduct Levene's test \index{Equal variance!Levene's test} for equality of variances. This operates under the hypotheses:
 \begin{eqnarray*}
 H_0:s_1=s_2 \\
 H_A:s_1\neq s_2
