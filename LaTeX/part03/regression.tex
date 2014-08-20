@@ -122,7 +122,7 @@ When we construct a regression model, looking at a plot of the fitted values by 
 \label{fig:regression08}
 \end{figure}
 
-Here, what we really want to see is something like the graph in the top left---unbiased \index{Bias} and homoscedastic \index{Residual!Homoscedasticity}. When this is the case, our residuals will form roughly a rectangle on our plot. It indicates that the model fits our data fairly well. When we start seeing any of the other patterns illustrated, however, that may indicate either that the data need to be transformed or that a different model should be fit differently (e.g., a different type of regression is appropriate).
+Here, what we really want to see is something like the graph in the top left---unbiased \index{Bias} and homoscedastic\index{Residual!Homoscedasticity}. When this is the case, our residuals will form roughly a rectangle on our plot. It indicates that the model fits our data fairly well. When we start seeing any of the other patterns illustrated, however, that may indicate either that the data need to be transformed or that a different model should be fit differently (e.g., a different type of regression is appropriate).
 
 Unfortunately, the examples given here are all highly stylized: in practice, it's often a much murkier picture that you're left to interpret and make a best guess on. There are some tools to help you that we outline in our chapter on Data Transformations, but by and large this is something that you just need to get a feel for through practice and repeated exposure. Typically, however, bias among your residuals indicates that the model that you chose is not appropriate for your data. Alternately, heteroscedastic \index{Residual!Heteroscedasticity} residuals usually indicate the need for a data transformation.
 
@@ -229,7 +229,7 @@ We can see that we have obtained a significant overall model, $F(1,22) = 36.44$;
 \text{Distance}=0.399+0.00137\cdot\text{Velocity}
 \end{equation*}
 
-Moreover, looking at a plot of our fitted valuer by our residuals (Figure \ref{fig:regression07}), we see that it appears approximately unbiased and homoscedastic, indicating that we likely have a well-fitted model and that our data don't need to be transformed in any way. Given all this, we can fairly conclude that there is a relationship between the distance of an extra-galactic nebula from Earth and its recession velocity, implying that, indeed, all bodies in the universe are moving apart from one another, having originated from a central point at one time in the universe's history. That is, we find significant support for the Big Bang Theory.
+Moreover, looking at a plot of our fitted values by our residuals (Figure \ref{fig:regression07}), we see that it appears approximately unbiased and homoscedastic, indicating that we likely have a well-fitted model and that our data don't need to be transformed in any way. Given all this, we can fairly conclude that there is a relationship between the distance of an extra-galactic nebula from Earth and its recession velocity, implying that, indeed, all bodies in the universe are moving apart from one another, having originated from a central point at one time in the universe's history. That is, we find significant support for the Big Bang Theory.
 
 \begin{figure}[htp]
 \includegraphics[width=35pc]{regression07}
