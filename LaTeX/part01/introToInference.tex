@@ -12,7 +12,7 @@ We have developed these statistical models to make predictions about populations
 Squarely in the middle lie descriptive statistics: these provide a descriptive overview of a set of data; however, they are not (in and of themselves) able to predict trends or quantify difference. It is only when they are applied in the context of statistical models that they can be used to reach decisive conclusions from and about our data.
 
 \subsection{Hypotheses for Means}
-In statistical inference, we often form hypotheses about our data. These will generally take the form of a null and alternative hypothesis. Alternative hypotheses may be one- or two-sided. The null hypothesis \index{Null hypothesis} (abbreviated \(H_0\); pronounced ``H-null'') always predicts that there is no difference between our control and treatment groups (i.e., \(H_0: \mu=\mu_0\) where \(\mu\) is the mean of our treatment group and \(\mu_0\) is the mean of the control group). Predictably, the alternative hypothesis \index{Alternative hypothesis} (\(H_A\); pronounced ``H-A'') predicts that a difference in our two groups exists. If one-sided, it predicts a direction of the difference (e.g., \(H_A: \mu > \mu_0\); two-sided hypotheses predict only that a difference exists, but are agnostic as to the direction of that difference (\(H_A: \mu \neq \mu_0\)).
+In statistical inference, we often form hypotheses about our data. These will generally take the form of a null and alternative hypothesis. Alternative hypotheses may be one- or two-sided. The null hypothesis \index{Null hypothesis} (abbreviated $H_0$; pronounced ``H-null'') always predicts that there is no difference between our control and treatment groups (i.e., $H_0: \mu=\mu_0$ where $\mu$ is the mean of our treatment group and $\mu_0$ is the mean of the control group). Predictably, the alternative hypothesis \index{Alternative hypothesis} ($H_A$; pronounced ``H-A'') predicts that a difference in our two groups exists. If one-sided, it predicts a direction of the difference (e.g., $H_A: \mu > \mu_0$); two-sided hypotheses predict only that a difference exists, but are agnostic as to the direction of that difference ($H_A: \mu \neq \mu_0$).
 
 We also operate with the understanding that is easier to prove something as false than as true. Given this, the null hypothesis is always presumed true until sufficient evidence is found supporting the alternative hypothesis. Importantly, though, we do not ever formally accept the null hypothesis: we may only fail to reject it. (Recall again that most inferential statistics seek to disprove a hypothesis rather than prove it.) In this way, we may fail to reject the null hypothesis, but never accept it. (However, we may accept the alternative hypothesis. By disproving the null, we are demonstrating that its converse must, by that fact, be true.)
 
@@ -85,11 +85,11 @@ To recap, there are 6 main components to any statistical test and write-up: the 
 Item & Example \\
 \hline
 Research Question & Is there a difference in the average heights of boys and girls at 12 years old?\\
-Hypotheses & \parbox[t]{25pc}{\(H_0:\) boy height = girl height\\\(H_A:\) boy height \(\neq\) girl height}\\
+Hypotheses & \parbox[t]{25pc}{$H_0:$ boy height = girl height\\$H_A:$ boy height $\neq$ girl height}\\
 Fundamental Statistics & \parbox[t]{25pc}{Average boy height = 4'10'' \\ Average girl height = 4'11''}\\
 Standardized Statistics & This is the t-, z-, F-, etc. statistic that a statistical test will give you.\\
 \textit{p}-value & The statistical test will also give you a \textit{p}-value that is between 0 and 1.\\
-Conclusion & \parbox[t]{25pc}{If the \textit{p}-value is less than $p\text{-value}=0.05$, most disciplines will consider that significant evidence against the null hypothesis (\(H_0\)), meaning that we can reject it and accept the alternate hypothesis. In this case, that would mean that there \textbf{is} a significant difference between the average heights of girls and boys at age 12.}
+Conclusion & \parbox[t]{25pc}{If the \textit{p}-value is less than $p\text{-value}=0.05$, most disciplines will consider that significant evidence against the null hypothesis ($H_0$), meaning that we can reject it and accept the alternate hypothesis. In this case, that would mean that there \textbf{is} a significant difference between the average heights of girls and boys at age 12.}
 \end{tabular}
 \end{center}
 

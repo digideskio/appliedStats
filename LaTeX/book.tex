@@ -83,8 +83,9 @@
 	\pagestyle{fancy}
 	\renewcommand{\headrulewidth}{0pt}
 	\fancyhf{}
-	\fancyhead[CE]{\bfseries Applied Statistics}
-	\fancyhead[CO]{\bfseries \chaptername}
+	\renewcommand{\chaptermark}[1]{ \markboth{#1}{} }
+	\fancyhead[LE]{\bfseries \nouppercase{\leftmark} }
+	\fancyhead[RO]{\bfseries Applied Statistics}
 	\fancyfoot[CEO]{\thepage}
 		
 	% Sets section numbering depth
