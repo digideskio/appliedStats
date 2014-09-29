@@ -132,13 +132,16 @@ Unfortunately, the examples given here are all highly stylized: in practice, it'
 
 When running a regression, there are certain conditions that the model assumes are met. These include:
 \begin{enumerate}
-	\item The data represent a normally-distributed sample of 
-	\item 
-	\item 
-	\item 
+	\item The data represent a normally-distributed sample taken from the population;
+	\item There is weak exogeneity (i.e., the values of $x$ can be treated as fixed values and not as random variables);
+	\item There is constant variance among the errors of the response variables;
+	\item The errors are independent of one another; and
+	\item There is no (multi)collinearity among the predictors.
 \end{enumerate}
 
 \subsection{Outliers and Influential Points}
+
+
 
 \section{Implementation in R}
 
