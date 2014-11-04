@@ -118,7 +118,9 @@ So now we have summed up all of those squared differences, right? Next, we will 
 \subsection{Variance}
 In many ways, variance and standard deviation are two sides of the same coin. If you remember, standard deviation is calculated:
 
-    \[ \sigma = \sqrt{\frac{1}{n}\sum_{i=1}^n\left(x_i-\mu\right)^2}\text{, where } \mu=\frac{1}{n}\sum_{i=1}^n(x_i) \]
+\begin{equation*}
+	\sigma = \sqrt{\frac{1}{n}\sum_{i=1}^n\left(x_i-\mu\right)^2}\text{, where } \mu=\frac{1}{n}\sum_{i=1}^n(x_i)
+\end{equation*}
 
 Variance \index{Variance}, then, is:
 
@@ -242,7 +244,7 @@ Here, the line on the far left is the minimum value, the left edge of the box is
 	\begin{Verbatim}[samepage=TRUE]
 set.seed(0)
 height1 <- rnorm(25, 5.6667, 1/3)
- 
+
 avgHeight <- NULL
  
 for(i in 1:500) {
