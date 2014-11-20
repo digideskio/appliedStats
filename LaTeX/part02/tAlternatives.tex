@@ -26,7 +26,7 @@ First up is the Mann-Whitney U test \index{Mann-Whitney U test}, also variously 
 
 Thankfully, though, the test itself is a bit simpler than deciding what to call it! The basic idea here is that we are going to take the data from our two samples and rand-order them. For example, let's say that we're working in a call center and we launch a campaign to decrease customers' wait time before they are connected to a representative. We measure the wait times both before and after this campaign and want to determine whether there was an impact of the initiative.
 
-To test this, we will (1) combine the data from the two samples; (2) rank all of the values in ascending order; (3) calculate the ranks for ties (by averaging the rank of each tied item); and (4) calculate the sum of the ranks for the first sample (in this example, the wait times before our intervention). Our process might look something like this:\\
+To test this, we will (1) combine the data from the two samples; (2) rank all of the values in ascending order; (3) calculate the ranks for ties (by averaging the rank of each tied item); and (4) calculate the sum of the ranks for the first sample (in this example, the wait times before our intervention). Our process might look something like this:\\[0.4cm]
 
 \begin{tabular}{r | l l l}
 Condition & Wait time (mins) & Rank & Tied rank \\
@@ -37,20 +37,14 @@ After & 0.1 & 3 & 1.5 \\
 Before & 0.2 & 4 & 4 \\
 Before & 0.3 & 5 & 5.5 \\
 Before & 0.3 & 6 & 5.5 \\
-After & 0.4 & 7 & 7 \\
-Before & 0.5 & 8  & 8 \\
 \vdots & \vdots & \vdots & \vdots \\
-After & 17.2 & 152 & 152 \\
-After & 17.8 & 153 & 153 \\
-Before & 17.9 & 154 & 154 \\
-After & 18.0 & 155 & 155.5 \\
 Before & 18.0 & 156 & 155.5 \\
 Before & 18.1 & 157 & 157 \\
 After & 18.2 & 158 & 158 \\
 Before & 18.4 & 159 & 159 \\
 \hline
 \multicolumn{3}{l}{Sum of ranks for Before Intervention} & $9743.5$ \\
-\end{tabular}\\
+\end{tabular}\\[0.4cm]
 
 So, here we have our indicator variable in the first column, our raw data in the second column, ordered from smallest to largest, and our ranked values in the third and fourth columns. Again, whenever we have a tie, we take the average rank of all tied items at that measurement. Finally, we take all of the ranks for our ``Before Intervention'' and add them up to get our W statistic.
 
@@ -70,7 +64,7 @@ In this test, we compute what's called a signed rank (so it's a signed rank test
 
 Let's take the example of a high school math test: a teacher wants to find out if a review session helps her students' understanding of the concepts they've covered in the last chapter. To test this, she administers a pretest and computes each student's percentage score, gives the lesson, and then conducts a post-test and computes students' percentage scores again.
 
-For the purposes of this test, we will rank the scores based on the magnitude of their difference. For instance:\\
+For the purposes of this test, we will rank the scores based on the magnitude of their difference. For instance:\\[0.4cm]
 
 \begin{tabular}{l l l | c c c c}
 Student & Pre & Post & Difference & Magnitude & Rank & Signed rank \\
@@ -82,7 +76,7 @@ Student & Pre & Post & Difference & Magnitude & Rank & Signed rank \\
 5 & 84 & 80 & 4 & 4 & 4 & 3.5 \\
 6 & 90 & 98 & -8 & 8 & 5 & -5 \\
 \vdots & \multicolumn{2}{c}{\vdots} & \multicolumn{2}{c}{\vdots} & \multicolumn{2}{c}{\vdots} \\
-\end{tabular}\\
+\end{tabular}\\[0.4cm]
 
 Here we (1) order the data by the magnitude of their differences; (2) rank those data; (3) compute the average rank for tied values; and (4) include the sign of the original difference (i.e., whether the difference is positive or negative). Then we add up all of the signed rank values  to compute  an  overall  $W$  statistic.
 
@@ -157,8 +151,8 @@ To this end, they looked at the resorption patterns of 13 different cloned popla
 For this study, let's focus only on one of the heavy metals measured: aluminum. We can start by visualizing the distributions of both samples (Figure \ref{fig:tAlt01}).
 
 \begin{figure}[htp]
-\includegraphics[width=35pc]{tAlternative01}
-\caption{}
+\includegraphics[width=\textwidth]{tAlternative01}
+\caption{Probability density function of aluminum concentration (micrograms per gram of tree mass) for the months of August and November}
 \label{fig:tAlt01}
 \end{figure}
 
@@ -177,7 +171,8 @@ where $\tilde{\mu}$ is the median for each sample. We then conduct a Wilcoxon si
 
 data:  august and november
 V = 16, p-value = 0.03979
-alternative hypothesis: true location shift is not equal to 0
+alternative hypothesis: true location shift is not equal
+                        to 0
 \end{Verbatim}
 \end{framed}
 

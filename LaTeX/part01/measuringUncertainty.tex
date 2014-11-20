@@ -54,7 +54,7 @@ If we want to calculate these in R, we would do something like this:
 To get an idea of skewness\index{Skewness}, let's make a histogram of those data that we just generated. If you aren't familiar with a histogram, it takes your data and counts how many data points fall within a certain range, giving you something like Figure \ref{fig:uncertainty01}.
 
 \begin{figure}[h!]
-\includegraphics[width=35pc]{uncertainty01}
+\includegraphics[width=\textwidth]{uncertainty01}
 \caption{Histogram of approximately normal data with a slight rightward skew}
 \label{fig:uncertainty01}
 \end{figure}
@@ -64,7 +64,7 @@ The smooth line that you see there is the \textbf{normal distribution}; the colu
 Many times, as in this example, there isn't very much skewness and our data, even though they aren't perfect, are still fairly symmetrical. However, sometimes we will have strong outliers that really mess up that symmetry. For instance, take Figure \ref{fig:uncertainty02}.
 
 \begin{figure}[h!]
-\includegraphics[width=35pc]{uncertainty02}
+\includegraphics[width=\textwidth]{uncertainty02}
 \caption{Histogram of data heavily skewed right}
 \label{fig:uncertainty02}
 \end{figure}
@@ -95,7 +95,7 @@ As you can see, both the mean and the median change. However, the median changes
 \textbf{Standard deviation} \index{Standard deviation} (represented as $s$ or $\sigma$) is a measure of dispersion: that is, it tells us how far from or close to the mean our data tend to be. A data set with a small standard deviation, for instance, tells us that most of our data points are fairly close together and are all near the mean. Alternately, a large standard deviation means that our data points are much more spread out. We can visualize this using three data sets, all with mean $\mu=0$ but with different standard deviations, as in Figure \ref{fig:uncertainty03}.
 
 \begin{figure}[htp]
-\includegraphics[width=35pc]{uncertainty03}
+\includegraphics[width=\textwidth]{uncertainty03}
 \caption{Three samples of data with mean \(\mu=0\) and standard deviations of 1, 3, and 6, respectively.}
 \label{fig:uncertainty03}
 \end{figure}
@@ -136,30 +136,23 @@ One big reason for using standard deviation instead of variance, at least in app
 This rule tells us that 65\% of all observations in a normal distribution will fall within 1 standard deviation of the mean; 97\% will fall within 2 standard deviations of the mean; and 99.5\% will fall within 3 standard deviations of the mean. We can illustrate this in Figure \ref{fig:uncertainty04}:
 
 \begin{figure}[h!]
-\includegraphics[width=35pc]{uncertainty04}
+\includegraphics[width=\textwidth]{uncertainty04}
 \caption{The 68-97-99.5\% rule states that nearly all observed data points will be within 3 standard deviations of the mean. This is often useful for flagging outliers or inappropriate distributions to fit your data to. Source: \href{http://en.wikipedia.org/wiki/Standard_deviation}{Wikipedia}}
 \label{fig:uncertainty04}
 \end{figure}
 
-So, for instance, if we wanted to find what proportion of our data would be more than 1 standard deviation above the mean, we would add 13.6\%, 2.1\%, and 0.1\% to end up with 15.8\% of our data being more than 1 standard deviation above the mean.
-
-\begin{framed}
-\noindent \textbf{{\large Remember:}}
-
-\textbf{Standard deviation} is the average distance of a data point from the mean of your data. \textbf{Variance} is the squared average distance of a data point from the mean. Standard deviation is always in the same units as your data; variance is in units\(^2\).
-\end{framed}
+So, for instance, if we wanted to find what proportion of our data would be more than 1 standard deviation above the mean, we would add 13.6\%, 2.1\%, and 0.1\% to end up with 15.8\% of our data being more than 1 standard deviation above the mean.\sidenote{Remember: \textbf{Standard deviation} is the average distance of a data point from the mean of your data. \textbf{Variance} is the squared average distance of a data point from the mean. Standard deviation is always in the same units as your data; variance is in units\(^2\).}
 
 \subsection{Interquartile Range}
 The last measure of spread that we will discuss is the interquartile range \index{Interquartile range}. This is most commonly used when the median used rather than the mean. This number is based off of what is known as the ``5-number summary,'' defined as:
 
-\begin{glossary}
-\term{Minimum}{The smallest value in your data set}
-\term{Q1}{The value in your data set that is larger than 25\% of all other values}
-\term{Median}{The median value in your data set}
-\term{Q3}{The value in your data set that is larger than 75\% of all other values}
-\term{Maximum}{The largest value in your data set}
-\term{}{}
-\end{glossary}
+\begin{description}
+\item[Minimum]{The smallest value in your data set}
+\item[Q1]{The value in your data set that is larger than 25\% of all other values}
+\item[Median]{The median value in your data set}
+\item[Q3]{The value in your data set that is larger than 75\% of all other values}
+\item[Maximum]{The largest value in your data set}
+\end{description}
 
 You'll quickly recognize this information if you're familiar with boxplots (if not, we cover them below). To derive the interquartile range (IQR) from these, we simply take Q3 - Q1. From the definitions above, we know that exactly 50\% of our data points lie between these two values. Given this, the IQR can be said to be another measure of the dispersion of our data: instead of a 65-97-99.5\% rule, here we have a 50-25-25\% rule: 50\% of our observations lie within the range given by the IQR; 25\% lie above it; and 25\% lie below it. As with standard deviation, a smaller IQR indicates a tighter spread of data (i.e., more of the data points are squished together) and a larger IQR indicates more variance of the data.
 
@@ -181,19 +174,19 @@ The \textbf{central limit theorem} \index{Central limit theorem} is sort of simi
 
 Make sense? Maybe not (that's okay!), so let's break it down a bit. Whenever we're talking about a distribution of averages, we call that a \textbf{sampling distribution} \index{Sampling distribution}. To continue with our height example from above, let's say that we randomly choose 25 guys and measure their heights. Then we choose another 25 guys and measure their heights. Then we choose another 25 guys and measure their heights. Assuming that the mean male adult height is 5'8" with a 4" standard deviation (we have to represent that with decimals in R, so it becomes a mean of 5.67 feet and a standard deviation of 0.33 feet), our three samples might look like Figure \ref{fig:uncertainty05}.
 
-\begin{figure}[h!]
-\includegraphics[width=35pc]{uncertainty05}
+\begin{figure*}[h!]
+\includegraphics[width=\textwidth]{uncertainty05}
 \caption{Heights of three randomly-selected groups of men}
 \label{fig:uncertainty05}
-\end{figure}
+\end{figure*}
 
 We can see that there's a lot of variation among our three groups, right? And groups 2 and 3 don't really look all that normal. But, let's say that we take the average male height of each of our three samples. Now, let's repeat that with another 497 batches of 25 men each. If we make a histogram of the average height from each of those 500 groups, it will look like Figure \ref{fig:uncertainty06}.
 
-\begin{figure}[h!]
-\includegraphics[width=35pc]{uncertainty06}
+\begin{figure*}[h!]
+\includegraphics[width=\textwidth]{uncertainty06}
 \caption{Average height of 500 groups of randomly selected men}
 \label{fig:uncertainty06}
-\end{figure}
+\end{figure*}
 
 All of a sudden, we have a normal distribution with a mean height of 5.67 feet (or 5'8") and a standard deviation of 0.068 feet (or 0.81 inches). We see that the mean of our sampling distribution is exactly equal to the mean of our population: that's the central limit theorem in action.
 
@@ -212,20 +205,20 @@ Here, \(s\)  is the sample standard deviation (here, 0.81 inches) and \(n\)  is 
 \subsection{Histograms}
 A \textbf{histogram} \index{Histogram} displays the number of observations that fall within a given range. For instance, in the height examples above, we would count the number of men in our sample between 5 feet and 5.2 feet and display them all in one column. Then we'd do the same for 5.2 to 5.4 feet, for 5.4 to 5.6 feet, and so on. This gives us something like:
 
-\includegraphics[width=35pc]{uncertainty07}
+\includegraphics[width=\textwidth]{uncertainty07}
 
 \subsection{Kernel Density Plots}
 A kernel density plot \index{Kernel density} is similar to a histogram in that it shows us about what proportion of our sample is likely to be at any certain value. The big difference between kernel density plots and histograms is that density plots are continuous: whereas histograms take all of your data and lump them together in ranges, a density plot displays these data continuously. For instance, taking the same data that we used in our histogram example:
 
-\includegraphics[width=35pc]{uncertainty08}
+\includegraphics[width=\textwidth]{uncertainty08}
 
 Comparing the two graphs, they tell about the same story. However, the kernel density plot isn't subject to issues of binning. Specifically, when using histograms, the width of the bins that you use (or the range of each column) can drastically impact your interpretation of the data. For instance, if we increase the number of bins, we get something like:
 
-\includegraphics[width=35pc]{uncertainty09}
+\includegraphics[width=\textwidth]{uncertainty09}
 
 As the range of each bin varies, we can go from a nice-looking normal distribution to a much worse looking non-normal distribution. But with a kernel density plot, you remove those issues in interpretation:
 
-\includegraphics[width=35pc]{uncertainty10}
+\includegraphics[width=\textwidth]{uncertainty10}
 
 As we can see, in reality, it actually is a roughly normal distribution with some funky skewness over to the right.
 
@@ -233,7 +226,7 @@ As we can see, in reality, it actually is a roughly normal distribution with som
 
 As discussed previously, boxplots \index{Boxplot} are good to use when you're working with the median, interquartile range, and 5-number summary. These take that 5-number summary and present the data visually:
 
-\includegraphics[width=35pc]{uncertainty11}
+\includegraphics[width=\textwidth]{uncertainty11}
 
 Here, the line on the far left is the minimum value, the left edge of the box is Q1, the line bisecting the box is the median, the right edge of the box is Q3, and the line to the far right is the maximum value. Any circles indicate the presence of outliers based on the IQR.
 \section{Exercises}

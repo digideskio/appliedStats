@@ -11,13 +11,13 @@ To install R, select any of the \href{http://cran.r-project.org/mirrors.html}{av
 
 \subsection{Reading in Data}
 There are two strategies used for reading in data: the command line or RStudio's graphical interface. To load data via the command line, we will type a command such as:
-\clearpage
+
 \begin{framed}
 \begin{Verbatim}[samepage=TRUE]
-# Here, myData is what we will name our data once we load it.
-# We use the function read.csv to tell R to load our data
-# from the path specified. If you aren't sure where your
-# working directory is, type the function getwd()
+# Here, myData is what we will name our data once we load
+# it. We use the function read.csv to tell R to load our
+# data from the path specified. If you aren't sure where
+# your working directory is, type the function getwd()
 # and hit Enter.
  
 myData <- read.csv("/Path/to/File.csv", headers=TRUE)
@@ -34,11 +34,13 @@ Working in R, there are two ways that you can execute commands: through the cons
 \begin{framed}
 \begin{Verbatim}[samepage=TRUE]
 R version 3.1.0 (2014-04-10) -- "Spring Dance"
-Copyright (C) 2014 The R Foundation for Statistical Computing
+Copyright (C) 2014 The R Foundation for Statistical
+Computing
 Platform: x86_64-apple-darwin13.1.0 (64-bit)
  
 R is free software and comes with ABSOLUTELY NO WARRANTY.
-You are welcome to redistribute it under certain conditions.
+You are welcome to redistribute it under certain
+conditions.
 Type 'license()' or 'licence()' for distribution details.
 \end{Verbatim}
 \end{framed}
@@ -102,8 +104,10 @@ matrixVector <- c(21, 5.9, 147,
                   28, 5.7, 168,
                   18, 5.5, 126,
                   24, 6.1, 195)
-myMatrix <- matrix(matrixVector, nrow=4, ncol=3, byrow=TRUE,
-                   dimnames=list(c("Chris", "John", "Amy", "Max"),
+myMatrix <- matrix(matrixVector, nrow=4, ncol=3,
+                   byrow=TRUE,
+                   dimnames=list(c("Chris", "John",
+                                   "Amy", "Max"),
                    c("Age", "Height", "Weight")))
 \end{Verbatim}
 \end{framed}
@@ -132,7 +136,8 @@ weight <- c(147, 168, 126, 195)
 hair <- c("brown", "blonde", "red", "brown")
  
 myData <- data.frame(name, age, height, weight, hair)
-colnames(myData) <- c("name", "age", "height", "weight", "hair")
+colnames(myData) <- c("name", "age", "height", "weight",
+                      "hair")
 \end{Verbatim}
 \end{framed}
 
@@ -153,12 +158,14 @@ Oftentimes in experiments we will have factors \index{Data types!Factor}: nomina
 
 \begin{framed}
 \begin{Verbatim}[samepage=TRUE]
-# The variable "drugCondition" contains 20 experimental trials
-# and 20 control trials. Currently, these values are stored
-# as characters. You can check this by running str(drugCondition)
-# You should see "chr" indicating the elements are characters
+# The variable "drugCondition" contains 20 experimental
+# trials and 20 control trials. Currently, these values
+# are stored as characters. You can check this by running
+# str(drugCondition). You should see "chr" indicating
+# the elements are characters
  
-drugCondition <- c(rep("experimental",20), rep("control",20))
+drugCondition <- c(rep("experimental",20),
+                   rep("control",20))
  
 # We will now convert the elements to factors.
 # If you run str(drugCondition) again, you should see:
@@ -176,9 +183,10 @@ Let's say, for example, that we have a numeric vector and we want to find its me
 \begin{framed}
 \begin{Verbatim}[samepage=TRUE]
 apropos("mean")
- [1] ".colMeans"    ".rowMeans"    "colMeans"     "kmeans"
- [5] "mean"         "mean.Date"    "mean.default" "mean.difftime"
- [9] "mean.POSIXct" "mean.POSIXlt" "rowMeans"     "weighted.mean"
+ [1]  ".colMeans"    ".rowMeans"     "colMeans"
+ [4]  "kmeans"       "mean"          "mean.Date"
+ [7]  "mean.default" "mean.difftime" "mean.POSIXct"
+ [10] "mean.POSIXlt" "rowMeans"      "weighted.mean"
 \end{Verbatim}
 \end{framed}
 
@@ -221,12 +229,13 @@ mean(participantAges, na.rm=TRUE)
 		\begin{framed}
 		\begin{Verbatim}[samepage=TRUE]
 download.file(
-    "https://raw.githubusercontent.com/faulconbridge/appliedStats/
-master/LaTeX/part01/data/introToREx01.csv",
-    "sampleData.csv", "wget", extra="--no-check-certificate")
+    "https://raw.githubusercontent.com/faulconbridge/
+appliedStats/master/LaTeX/part01/data/introToREx01.csv",
+    "sampleData.csv", "wget",
+    extra="--no-check-certificate")
 		\end{Verbatim}
 		\end{framed}
-	Paste that into the R console and hit enter. If it's successful, you should see something similar to \verb|2014-05-30 20:12:15 (172 KB/s) - 'sampleData.csv' saved [8528/8528]|.
+	Paste that into the R console and hit enter. If it's successful, you should see something similar to \verb|2014-05-30 20:12:15 (172 KB/s)| \verb|- 'sampleData.csv' saved [8528/8528]|.
 	
 	\item Now we will assign the data to an object. This makes it easier to work with once we start plotting it and running analyses on the data. To do this, run the command: \\\verb|myData <- read.csv("sampleData.csv",header=TRUE,sep=",")|. To see if you did this correctly, run the command \verb|head(myData)|. If you don't get an error, then you're good to go.
 	
