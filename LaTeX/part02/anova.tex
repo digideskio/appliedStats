@@ -8,7 +8,7 @@ To understand ANOVAs, let's think back once more to \textit{t}-tests. There, we'
 
 Well, using what we've learned up to now, we're stuck: there's nothing more we can do. But of course that's not \textit{really} the case, is it? Otherwise we wouldn't be writing this chapter!
 
-The idea with a one-way ANOVA (\textbf{AN}alysis \textbf{O}f \textbf{VA}riance) \index{ANOVA (one-way)}is that we have a variable of interest, but three or more levels of our grouping variable. For instance, we might be looking at student test scores as a function of classroom type: regular, honors, AP (advanced placement), or IB (international baccalaureate). That's way beyond the scope of any \textit{t}-test that we've come across. Thankfully, though, the ANOVA is happy to step in to fill the gap.
+The idea with a one-way ANOVA (\textbf{AN}alysis \textbf{O}f \textbf{VA}riance)\index{ANOVA (one-way)}is that we have a variable of interest, but three or more levels of our grouping variable. For instance, we might be looking at student test scores as a function of classroom type: regular, honors, AP (advanced placement), or IB (international baccalaureate). That's way beyond the scope of any \textit{t}-test that we've come across. Thankfully, though, the ANOVA is happy to step in to fill the gap.
 
 Before we can actually run the test, however, there is some background information that we need to understand first.
 
@@ -20,11 +20,11 @@ One caveat before we get started, though: there is no single agreed-upon definit
 
 \subsubsection{Fixed Effects}
 
-In a fixed-effects model \index{Fixed effects}, there is a basic assumption that the individual-specific effect is correlated with the independent variable(s). The idea here is that person-to-person, there is little variance beyond that caused by the treatment effect.
+In a fixed-effects model\index{Fixed effects}, there is a basic assumption that the individual-specific effect is correlated with the independent variable(s). The idea here is that person-to-person, there is little variance beyond that caused by the treatment effect.
 
 \subsubsection{Random Effects}
 
-Random effects \index{Random effects} models assume that there is some inherent amount of individual variance not accounted for by the treatment. So if we were talking about a regression equation with a random intercept $a_i$ and fixed slope $b$, each individual would have his or hew own regression line, parallel to every other individual but with a differing intercept (cf. Figure \ref{fig:anova01}).
+Random effects\index{Random effects} models assume that there is some inherent amount of individual variance not accounted for by the treatment. So if we were talking about a regression equation with a random intercept $a_i$ and fixed slope $b$, each individual would have his or hew own regression line, parallel to every other individual but with a differing intercept (cf. Figure \ref{fig:anova01}).
 
 \begin{figure}[htp]
 \includegraphics[width=\textwidth]{anova01}
@@ -34,7 +34,7 @@ Random effects \index{Random effects} models assume that there is some inherent 
 
 \subsection{Sum of Squares}
 
-Residual \index{Residual sum of squares}, treatment \index{Treatment sum of squares}, and total sums of squares \index{Total sum of squares} are discussed more fully in our chapter on simple linear regression. The basic idea here is that there are two big sources of error: the treatment and the residual. Every time we have an experiment and are taking measurements, there is going to be some amount of background noise inherent in that: the point of statistical modeling is to reduce the amount of noise that we are unable to explain.
+Residual\index{Residual sum of squares}, treatment\index{Treatment sum of squares}, and total sums of squares\index{Total sum of squares} are discussed more fully in our chapter on simple linear regression. The basic idea here is that there are two big sources of error: the treatment and the residual. Every time we have an experiment and are taking measurements, there is going to be some amount of background noise inherent in that: the point of statistical modeling is to reduce the amount of noise that we are unable to explain.
 
 As such, there is noise from the treatment (individuals responding differently to the stimuli) and noise from the residual (those random fluctuations that our model is unable to explain). These combine to form a total measure of the error. In the context of an ANOVA, the residual error (termed the residual sum of squares) is equivalent to the variance within each group; the treatment sum of squares equivalent to the variance between groups. Take for instance Figures \ref{fig:anova02} and \ref{fig:anova03}.
 
@@ -64,12 +64,12 @@ SS_{total} &=& SS_{residual}+SS_{treatment} \\
 
 \subsection{The \textit{F}-Test}
 
-The \textit{F}-test \index{F-test} is used to take these observed variances and give a standardized test statistic allowing us to quantify the magnitude of the difference observed between our treatment groups. It is calculated by:
+The \textit{F}-test\index{F-test} is used to take these observed variances and give a standardized test statistic allowing us to quantify the magnitude of the difference observed between our treatment groups. It is calculated by:
 \begin{equation}
 F = \frac{MS_{treatment}}{MS_{residual}}
 \end{equation}
 
-The mean square ($MS$) statistics \index{Mean square} are calculated by:
+The mean square ($MS$) statistics\index{Mean square} are calculated by:
 \begin{equation*}
 F = \frac{\text{Between-groups}}{\text{Within-groups}} = \frac{MS_{treatment}}{MS_{residual}} = \frac{SS_{treatment}/(I-1)}{SS_{residual}/(n-1)}
 \end{equation*}
@@ -77,11 +77,11 @@ where $I$ is the number of treatments and $n$ is the total number of observation
 
 Values of the \textit{F}-statistic above 1 indicate that the observed results are further and further inconsistent with the null hypothesis. However, the exact value of $F$ needed for statistical significance will vary as a function of your degrees of freedom.
 
-\subsection{Follow-Up Analyses}
+\subsection{Post-Hoc Tests}
 
-\subsubsection{Post-Hoc Tests}
+Now, when you conduct an ANOVA, you're usually going to be comparing 3 or 4 or more groups to one another. Unfortunately, the ANOVA will only tell you if two or more of the group means significantly differ from one another. So, say I want to see if there's a difference in mean annual income among people with some high school education; a high school diploma; some college; or a bachelor's degree. Any ANOVA I run would simply say, ``Yup! There's a difference in there somewhere.''
 
-\subsubsection{Planned Comparisons and Linear Contrasts}
+That's not particularly helpful if we want to know {\itshape which} specific groups are different from which others. In this case, we would carry out what's known as a post-hoc comparison\index{Post-Hoc Comparisons}: these are like a series of \textit{t}-tests looking at every pair of combinations and evaluating them for significant differences. This might tell us that, for example, high school dropouts on average have a lower annual income than college graduates. Considerably more useful information than we had before!
 
 \section{Cautions and Considerations}
 
@@ -100,7 +100,27 @@ This test assumes that:
 
 \section{Implementation in R}
 
-\subsection{aov() vs. lme() vs. lmer()}
+The basic syntax to specify an ANOVA in R is: \verb|aov(y ~ x)|. The results of this model can then by displayed using the \verb|summary()| function. If, for instance, we were working with a dataset titled \verb|demographics| and we wanted to use \verb|yearsEducation| to predict \verb|annualIncome|, we would run:
+
+\begin{framed}
+\begin{Verbatim}[samepage=TRUE, commandchars=\\\{\}]
+model <- aov(Income ~ Education, data=educationData)
+summary(model)
+
+            Df    Sum Sq   Mean Sq F value Pr(>F)    
+Educ         4 6.882e+11 1.721e+11   89.61 <2e-16 ***
+Residuals 2579 4.952e+12 1.920e+09 
+\end{Verbatim}
+\end{framed}
+
+We can interpret this as indicating, with a significance $F = 89.61$; $p\text{-value}<2\e{-16}$, that a difference does exist between two or more of our groupwise means. Or, stated in terms of our original hypotheses:
+
+\begin{eqnarray*}
+H_{0}&:& \mu_{1} = \mu_{2} = \ldots = \mu_{n} \\
+H_{A}&:& \mu_{i} \neq \mu_{j}
+\end{eqnarray*}
+
+we found significant evidence against the null hypothesis. However, we do not at this point know where the differences among our group means exist. To puzzle this out, we'll turn to post-hoc analyses (illustrated below in the Case Study).
 
 \section{Case Study: [STUDY]}
 

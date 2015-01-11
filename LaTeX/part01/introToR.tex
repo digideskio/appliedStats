@@ -49,13 +49,13 @@ When you're working in the console, all you have to do is type in your command a
 
 We will generally recommend using an R script as this can be saved and referenced later. It also makes it easier to go back and rerun old code or to reference old work. (Opposed to the console, where you have a much more limited history.)
 
-\section{Basic R Syntax} \index{Data types}
+\section{Basic R Syntax}\index{Data types}
 
 \subsection{Constants}
 Constants are just what they sound like: things. They don't do anything; they can't take in one number and spit out another; they're just static objects. This can mean a number or a string of text, or something more complex like a vector, matrix, or data frame. So let's first define the different data types that R supports. (NOTE: throughout the rest of the book, we will use the term data type rather than constant.)
 
 \subsubsection{Vectors}
-A vector \index{Data types!Vector}, in this case, you can think of as being a column of data in Excel. It's just a series of items that are all stored in one object. For instance, let's say that we want a column of numbers from 1 through 10:
+A vector\index{Data types!Vector}, in this case, you can think of as being a column of data in Excel. It's just a series of items that are all stored in one object. For instance, let's say that we want a column of numbers from 1 through 10:
 
 \begin{framed}
 \begin{Verbatim}[samepage=TRUE]
@@ -85,7 +85,7 @@ boolean <- c(TRUE, FALSE, FALSE, FALSE, TRUE)
 We can see that there are three basic types of vectors you can construct: numeric; character; and logical. Numeric vectors are composed of arabic numerals; character vectors of strings of text; and logical vectors of TRUE/FALSE booleans.
 
 \subsubsection{Matrices}
-You can think of a matrix \index{Data types!Matrix} in R as either (1) a single vector split up into multiple rows/columns or (2) multiple vectors of the same length piled up next to one another. It's roughly analogous to a spreadsheet. However, the one caveat is that, just like with vectors, all elements in a matrix must have the same type (i.e., all numeric, all character, or all logical). There's no mixing and matching here. The basic syntax for creating a matrix is:
+You can think of a matrix\index{Data types!Matrix} in R as either (1) a single vector split up into multiple rows/columns or (2) multiple vectors of the same length piled up next to one another. It's roughly analogous to a spreadsheet. However, the one caveat is that, just like with vectors, all elements in a matrix must have the same type (i.e., all numeric, all character, or all logical). There's no mixing and matching here. The basic syntax for creating a matrix is:
 
 \begin{framed}
 \begin{Verbatim}[samepage=TRUE]
@@ -125,7 +125,7 @@ Chris  21      5.9      147
 \end{framed}
 
 \subsubsection{Data Frames}
-A data frame \index{Data types!Data frame} in R is a generalized instance of a matrix: this you can truly think of as a page of an Excel spreadsheet. Each column represents a vector of a single type; however, each column can be of a different data type. So, for instance, if we wanted to turn the matrix above into a data frame but also add in a column for hair color, we would do something like:
+A data frame\index{Data types!Data frame} in R is a generalized instance of a matrix: this you can truly think of as a page of an Excel spreadsheet. Each column represents a vector of a single type; however, each column can be of a different data type. So, for instance, if we wanted to turn the matrix above into a data frame but also add in a column for hair color, we would do something like:
 
 \begin{framed}
 \begin{Verbatim}[samepage=TRUE]
@@ -154,7 +154,7 @@ Chris    21      5.9      147    brown
 \end{framed}
 
 \subsection{Factors}
-Oftentimes in experiments we will have factors \index{Data types!Factor}: nominal variables that indicate levels. For example, we might have a placebo group and an experimental group. In this case, these are important variables for R to properly interpret; however, they are non-numeric and don't make sense to interpret as a string. In these cases, we can indicate to R that they should be interpreted as factors. For example:
+Oftentimes in experiments we will have factors\index{Data types!Factor}: nominal variables that indicate levels. For example, we might have a placebo group and an experimental group. In this case, these are important variables for R to properly interpret; however, they are non-numeric and don't make sense to interpret as a string. In these cases, we can indicate to R that they should be interpreted as factors. For example:
 
 \begin{framed}
 \begin{Verbatim}[samepage=TRUE]
@@ -176,7 +176,7 @@ drugCondition <- factor(drugCondition)
 \end{framed}
 
 \subsection{Functions}
-In addition to static data types, detailed above, R also uses functions \index{Data types!Function}. These take the form \\\verb|functionName(argument1, argument2)| (although there can be any number of arguments passed to the function---not necessarily only 2!). Functions are chunks of code that \textit{do} something: they may generate a plot or run a statistical analysis or find the mean of a set of data.
+In addition to static data types, detailed above, R also uses functions\index{Data types!Function}. These take the form \\\verb|functionName(argument1, argument2)| (although there can be any number of arguments passed to the function---not necessarily only 2!). Functions are chunks of code that \textit{do} something: they may generate a plot or run a statistical analysis or find the mean of a set of data.
 
 Let's say, for example, that we have a numeric vector and we want to find its mean value. How do we know what function does that? Well, we can start by calling the \verb|apropos()| function: this lets us search R's entire library of functions for those that contain some text that we're searching for. So in this case:
 
